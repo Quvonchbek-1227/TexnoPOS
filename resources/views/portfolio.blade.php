@@ -25,18 +25,19 @@
 
 		@include('includes.responsiv-menu')
 		<!--responsive-menu end-->
-
+		<?php 
+			$name = explode(' ',$mentor[0]->full_name)[0];
+		?>
 		<section class="pager-section" style="background-image: url({{asset('')}})">
 			<div class="container">
 				<div class="pager-content text-center">
-					<h2>Quwanishbek Yuldashev</h2>
+					<h2>{{$mentor[0]->full_name}}</h2>
 					<ul>
-						<li><a href="#" title="">Home</a></li>
-						<li><a href="#" title="">Classes</a></li>
-						<li><span>Events</span></li>
+						<li><a href="{{route('home_page')}}" title="">Home</a></li>
+						<li><a href="#" title="">Mentor</a></li>
 					</ul>
 				</div><!--pager-content end-->
-				<h2 class="page-titlee" style="color: red;">Quwanishbek</h2>
+				<h2 class="page-titlee" style="color: red;">{{$name}}</h2>
 			</div>
 		</section><!--pager-section end-->
 
@@ -46,11 +47,17 @@
 					<div class="row">
 						<div class="col-lg-4">
 							<div class="teacher-coly">
-								<img src="https://via.placeholder.com/371x505" alt="">
+								<img src="{{asset('assets/img/mentors/'.$mentor[0]->mentor_img)}}" alt="">
 								<ul class="social-icons">
-									<li><a href="#" title=""><i class="fab fa-facebook-f"></i></a></li>
-									<li><a href="#" title=""><i class="fab fa-instagram"></i></a></li>
-									<li><a href="#" title=""><i class="fab fa-telegram"></i></a></li>
+									@if (isset($mentor[0]->facebook))
+										<li><a href="" title=""><i class="fab fa-facebook-f"></i></a></li>
+									@endif
+									@if (isset($mentor[0]->instagram))
+										<li><a href="https://www.instagram.com/$mentor[0]->instagram/" title=""><i class="fab fa-instagram"></i></a></li>
+									@endif
+									@if (isset($mentor[0]->telegram))
+										<li><a href="" title=""><i class="fab fa-telegram"></i></a></li>
+									@endif
 								</ul>
 							</div><!--teacher-coly end-->
 						</div>
@@ -59,34 +66,40 @@
 
 									{{-- O`quvtuvchi yoki o`quvchi   ekanligi darajasi, kasibi START --}}
 
-								<h3>Instructor</h3>
+								@if ($status == 'mentor')
+									<h3>{{$mentor[0]->course_name}} Mentor</h3>	
+								@elseif ($status == 'programmer')
+									<h3>Programmist</h3>
+								@elseif ($status == 'student')
+									<h3>Pitkeruwshi</h3>		
+								@endif
 
 									{{-- O`quvtuvchi yoki o`quvchi   ekanligi darajasi, kasibi END --}}
 								<div class="row">
 									<div class="col-lg-4 col-md-4 col-sm-6">
 										<div class="rol-z">
-											<img src="assets/img/ro1.png" alt="">
+											<img src="{{asset('assets/img/ro1.png')}}" alt="">
 											<div class="rol-info">
 												<h3>Telefon</h3>
-												<span>+2 342 5446 67</span>
+												<span>{{$mentor[0]->phone}}</span>
 											</div>
 										</div><!--rol-z end-->
 									</div>
 									<div class="col-lg-4 col-md-4 col-sm-6">
 										<div class="rol-z">
-											<img src="assets/img/ro2.png" alt="">
+											<img src="{{asset('assets/img/ro2.png')}}" alt="">
 											<div class="rol-info">
 												<h3>Email</h3>
-												<span>name@domain.com</span>
+												<span>{{$mentor[0]->email}}</span>
 											</div>
 										</div><!--rol-z end-->
 									</div>
 									<div class="col-lg-4 col-md-4 col-sm-6">
 										<div class="rol-z style2">
-											<img src="assets/img/ro3.png" alt="">
+											<img src="{{asset('assets/img/ro3.png')}}" alt="">
 											<div class="rol-info">
 														{{-- Mentorga telefon qilish --}}
-												<h3><a href="tel:123-456-7890" title="">Qoniraw etin`<br />Ha`zir</a></h3>
+												<h3><a href="tel:{{$mentor[0]->phone}}" title="">Qoniraw etin`<br />Ha`zir</a></h3>
 
 											</div>
 										</div><!--rol-z end-->
@@ -94,57 +107,41 @@
 								</div>
 												{{-- O`quvtuvchi(o`quvchi)ning shaxsiy malumotlari START --}}
 								<p>
-									Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vel venenatis felis. Fusce id lectus sit amet nisi ornare ultricies. In sagittis lacinia lorem et tristique. Quisque mauris neque, sollicitudin sit amet imperdiet in, scelerisque sit amet arcu. In vehicula sem eget nisi convallis, a mattis orci imperdiet. Curabitur vitae sapien vel lectus sagittis consequat. Nullam enim velit, dignissim vel viverra ac, eleifend ut tellus.
+									{{$mentor[0]->about}}
 								</p>
 												{{-- O`quvtuvchi(o`quvchi)ning shaxsiy malumotlari END --}}
 								<ul class="tech-detils">
 									<li>
 										<h3>Tuwilg`an Kuni</h3>
-										<span>15.03.1987</span>
+										<span>{{$mentor[0]->mentor_birth}}</span>
 									</li>
 									<li>
 										<h3>Bitirgen</h3>
-										<span>Music School of Music Arts</span>
+										<span>{{$mentor[0]->bitirgen}}</span>
 									</li>
 									<li>
 										<h3>Ta`jriybesi</h3>
-										<span>10 years</span>
+										<span>{{$mentor[0]->experiense}}</span>
 									</li>
 								</ul><!--tech-detils end-->
 								<div class="skills-tech">
 									<h3>Jeke Konlikpeler</h3>
+									@foreach ($texnalogies as $texnalogiy)
+										
 									<div class="progess-row">
-										<h3>Teaching</h3>
-										<div class="progress">
-											<div class="progress-bar wow slideInLeft bg-clr1" data-wow-duration="1000ms" role="progressbar" style="width: 100%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+										<h3>{{$texnalogiy->tex_name}}</h3>
+										<div class="progress">	
+																						{{-- bg-clr1 --}}
+											<div class="progress-bar wow slideInLeft " data-wow-duration="1000ms" role="progressbar" style="width: {{$texnalogiy->procent}}%" aria-valuenow="{{$texnalogiy->procent}}" aria-valuemin="0" aria-valuemax="100"></div>
 										</div>	
-										<span>100% </span>
+										<span>{{$texnalogiy->procent}} %</span>
 									</div>
-									<div class="progess-row">
-										<h3>Speaking</h3>
-										<div class="progress">
-											<div class="progress-bar wow slideInLeft bg-clr2" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-										</div>	
-										<span>80% </span>
-									</div>
-									<div class="progess-row">
-										<h3>Family Support</h3>
-										<div class="progress">
-											<div class="progress-bar wow slideInLeft bg-clr3" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
-										</div>	
-										<span>85% </span>
-									</div>
-									<div class="progess-row">
-										<h3>Children's Well-being</h3>
-										<div class="progress">
-											<div class="progress-bar wow slideInLeft bg-clr4" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-										</div>	
-										<span>90% </span>
-									</div>
+
+									@endforeach
 								</div><!--skills-tech end-->
 													{{-- O`quvtuvchi(o`quvchi) o`zlashtirgan texnalogiyalar bo`yicha qisqa malumot START --}}
 								<p>
-									Quisque congue ultrices nibh, id consectetur velit consectetur ut. Suspendisse porttitor vulputate imperdiet. Proin rhoncus, mauris sit amet consectetur laoreet, mauris mi volutpat urna, at molestie urna libero quis leo. Pellentesque ut molestie nisi. Suspendisse ut nulla eleifend ligula vulputate tincidunt sed eget orci.
+									{{$mentor[0]->portfolio_detail}}
 								</p>
 													{{-- O`quvtuvchi(o`quvchi) o`zlashtirgan texnalogiyalar bo`yicha qisqa malumot END --}}
 								
@@ -154,7 +151,14 @@
 				</div><!--teacher-single-page end-->
 				<div class="teachers-section teacher-page">
 					<div class="section-title text-center">
-						<h2>Basqa Mentorlar</h2>
+						@if ($status == 'mentor')
+							<h2>Basqa Mentorlar</h2>	
+						@elseif ($status == 'programmer')
+							<h2>Basqa Programmistler</h2>
+						@elseif ($status == 'student')
+							<h2>Basqa Pitkeruwshiler</h2>		
+						@endif
+						
 					</div><!--section-title end-->
 					<div class="teachers">
 						<div class="row">

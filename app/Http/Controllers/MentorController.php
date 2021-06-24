@@ -39,7 +39,10 @@ class MentorController extends Controller
         ]);
     }
 
+   
     public function mentor_portfolio($id){
+
+        $status = 'mentor';
         $texnalogies = DB::table('mentors')
         ->join('texnalogies_mentors','mentors.id','=','texnalogies_mentors.id_mentor')
         ->join('texnalogies','texnalogies_mentors.id_texnalogiy','=','texnalogies.id')
@@ -48,11 +51,11 @@ class MentorController extends Controller
             'texnalogies.name as tex_name',
             'procent'
         ]);
-        $mentors = DB::table('mentors')
+        $mentor = DB::table('mentors')
         ->join('courses','mentors.id_course','=','courses.id')
         ->where('mentors.id','=',$id)
         ->get([
-            'full_name',
+            'mentors.full_name',
             'phone',
             'email',
             'about',
@@ -66,6 +69,11 @@ class MentorController extends Controller
             'courses.name as course_name',
             'mentors.birthday as mentor_birth'
         ]);
-        return $mentors;
+        return view('portfolio',[
+            'texnalogies'=>$texnalogies,
+            'mentor'=>$mentor,
+            'status'=>$status
+        ]);
+        //return $mentor;
     }
 }
