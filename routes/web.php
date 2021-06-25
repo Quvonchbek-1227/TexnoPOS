@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MainController;
 use App\Http\Controllers\CourseController;
 use App\Http\Controllers\MentorController;
+use App\Http\Controllers\ProgrammersController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -25,9 +26,7 @@ Route::get('/mentor/{id}',[MentorController::class,'mentor_portfolio'])->name('m
 
 Route::get('/mentors',[MentorController::class,'get_mentors'])->name('mentors');
 
-Route::get('/mentor', function () {
-    return view('teachers');
-});
+Route::get('/programmers',[ProgrammersController::class,'get_programmers'])->name('get_programmers');
 
 Route::get('/tch', function () {
     return view('portfolio');

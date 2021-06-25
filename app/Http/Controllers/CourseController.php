@@ -16,7 +16,7 @@ class CourseController extends Controller
     }
     
     public function get_courses(){
-        // img,name,id_course,id_mentor,days,sub_time,price,full_name
+        
 
         $courses = DB::table('courses')
         ->join('mentors','courses.id_mentor','=','mentors.id')

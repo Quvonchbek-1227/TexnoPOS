@@ -12,6 +12,7 @@ class MentorController extends Controller
 
 
     public function get_mentors(){
+        $status = 'mentor';
         $mentors = DB::table('mentors')
         ->join('courses','mentors.id_course','=','courses.id')
         ->select([
@@ -31,11 +32,11 @@ class MentorController extends Controller
             'courses.name as course_name'
         ]);
 
-       // return $courses;
+       
         return view('teachers',[
             'mentors'=>$mentors,
-            'courses'=>$courses
-            
+            'courses'=>$courses,
+            'status'=>$status     
         ]);
     }
 
@@ -69,11 +70,29 @@ class MentorController extends Controller
             'courses.name as course_name',
             'mentors.birthday as mentor_birth'
         ]);
+
+        //img,full_name,tg.ins,face,course_name,mentor_id||mentors=>
+        $mentors = DB::table('mentors')
+        ->join('courses','mentors.id_course','=','courses.id')
+        ->take(4)
+        ->inRandomOrder()
+        ->get([
+            'full_name',
+            'mentors.img as mentor_img',
+            'courses.name as course_name',
+            'mentors.id as id_mentor',
+            'telegram',
+            'instagram',
+            'facebook',
+            'courses.id as id_course'
+        ]);
+
         return view('portfolio',[
             'texnalogies'=>$texnalogies,
             'mentor'=>$mentor,
+            'mentors'=>$mentors,
             'status'=>$status
         ]);
-        //return $mentor;
+         //return $mentors;
     }
 }

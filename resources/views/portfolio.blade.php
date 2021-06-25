@@ -160,84 +160,47 @@
 						@endif
 						
 					</div><!--section-title end-->
+
 					<div class="teachers">
 						<div class="row">
+							@foreach ($mentors as $user)
+
 							<div class="col-lg-3 col-md-3 col-sm-6 col-6 full-wdth">
 								<div class="teacher">
 									<div class="teacher-img">
-										<img src="https://via.placeholder.com/1120x1680" alt="" class="w-100">
+										@if ($status == 'mentor')
+											<img src="{{asset('assets/img/mentors/'.$user->mentor_img)}}" alt="" class="w-100">							
+										@endif
+				
 										<div class="sc-div">
 											<ul>
-												<li><a href="#" title=""><i class="fab fa-instagram"></i></a></li>
-												<li><a href="#" title=""><i class="fab fa-linkedin-in"></i></a></li>
-												<li><a href="#" title=""><i class="fab fa-facebook-f"></i></a></li>
+												@isset($user->instagram)
+													<li><a href="https://instagram.com/{{$user->instagram}}" title=""><i class="fab fa-instagram"></i></a></li>
+												@endisset
+												@isset($user->telegram)
+												<li><a href="https://t.me/{{$user->telegram}}" title=""><i class="fab fa-telegram"></i></a></li>
+												@endisset
+												@isset($user->facebook)
+												<li><a href="https://facebook.com/{{$user->facebook}}" title=""><i class="fab fa-facebook-f"></i></a></li>
+												@endisset
 											</ul>
-											<span><img src="assets/img/plus.png" alt=""></span>
+											<span><img src="{{asset('assets/img/plus.png')}}" alt=""></span>
 										</div>
 									</div>
 									<div class="teacher-info">
-										<h3><a href="#" title="">Polina Kerston</a></h3>
-										<span>English Teacher</span>
+										@if ($status == 'mentor')
+										<h3><a href="{{route('mentor_portfolio',['id'=>$user->id_mentor])}}" title="">{{$user->full_name}}</a></h3>
+										@endif
+										@if ($status == 'mentor')
+											<a href="{{ route('course_detail', ['id'=>$user->id_course]) }}">
+												<span>{{$user->course_name}} Mentor</span>
+											</a>
+										@endif
 									</div>
 								</div><!--teacher end-->
 							</div>
-							<div class="col-lg-3 col-md-3 col-sm-6 col-6 full-wdth">
-								<div class="teacher">
-									<div class="teacher-img">
-										<img src="https://via.placeholder.com/1376x2064" alt="" class="w-100">
-										<div class="sc-div">
-											<ul>
-												<li><a href="#" title=""><i class="fab fa-instagram"></i></a></li>
-												<li><a href="#" title=""><i class="fab fa-linkedin-in"></i></a></li>
-												<li><a href="#" title=""><i class="fab fa-facebook-f"></i></a></li>
-											</ul>
-											<span><img src="assets/img/plus.png" alt=""></span>
-										</div>
-									</div>
-									<div class="teacher-info">
-										<h3><a href="#" title="">Quwanishbek@ Yuldashev</a></h3>
-										<span>Instructor</span>
-									</div>
-								</div><!--teacher end-->
-							</div>
-							<div class="col-lg-3 col-md-3 col-sm-6 col-6 full-wdth">
-								<div class="teacher">
-									<div class="teacher-img">
-										<img src="https://via.placeholder.com/1336x2004" alt="" class="w-100">
-										<div class="sc-div">
-											<ul>
-												<li><a href="#" title=""><i class="fab fa-instagram"></i></a></li>
-												<li><a href="#" title=""><i class="fab fa-linkedin-in"></i></a></li>
-												<li><a href="#" title=""><i class="fab fa-facebook-f"></i></a></li>
-											</ul>
-											<span><img src="assets/img/plus.png" alt=""></span>
-										</div>
-									</div>
-									<div class="teacher-info">
-										<h3><a href="#" title="">Chikelu Obasea</a></h3>
-										<span>Art Teacher</span>
-									</div>
-								</div><!--teacher end-->
-							</div>
-							<div class="col-lg-3 col-md-3 col-sm-6 col-6 full-wdth">
-								<div class="teacher">
-									<div class="teacher-img">
-										<img src="https://via.placeholder.com/1204x1804" alt="" class="w-100">
-										<div class="sc-div">
-											<ul>
-												<li><a href="#" title=""><i class="fab fa-instagram"></i></a></li>
-												<li><a href="#" title=""><i class="fab fa-linkedin-in"></i></a></li>
-												<li><a href="#" title=""><i class="fab fa-facebook-f"></i></a></li>
-											</ul>
-											<span><img src="assets/img/plus.png" alt=""></span>
-										</div>
-									</div>
-									<div class="teacher-info">
-										<h3><a href="#" title="">Katayama Fumiki</a></h3>
-										<span>Teacher</span>
-									</div>
-								</div><!--teacher end-->
-							</div>
+								
+							@endforeach
 						</div>
 					</div><!--teachers end-->
 				</div>

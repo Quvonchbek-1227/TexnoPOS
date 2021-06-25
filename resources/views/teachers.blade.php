@@ -2,12 +2,18 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Shelly School HTML Template</title>
+	@if ($status == 'mentor')
+		<title>TexnoPOS Mentorlari</title>
+	@elseif ($status == 'programmer')
+		<title>TexnoPOS Programmistleri</title>
+	@elseif ($status == 'student')
+		<title>TexnoPOS Pikeruwshileri</title>
+	@endif
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="description" content="Shelly - Website" />
 	<meta name="author" content="merkulove">
 	<meta name="keywords" content="" />
-	<link rel="icon" href="assets/img/favicon.png">
+	{{-- <link rel="icon" href="assets/img/favicon.png"> --}}
 	<link rel="stylesheet" type="text/css" href="assets/css/animate.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/font-awesome.min.css">
