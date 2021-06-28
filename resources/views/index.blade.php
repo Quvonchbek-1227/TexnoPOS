@@ -326,63 +326,40 @@
                 <!--section-title end-->
                 <div class="blog-posts">
                     <div class="row">
+                        
+                        @foreach ($blogs as $blog)
+                        <?php
+                        $text = str_split($blog->text);    
+                    ?>
+
                         <div class="col-lg-4 col-md-6 col-sm-6">
                             <div class="blog-post">
                                 <div class="blog-thumbnail">
-                                    <img src="https://via.placeholder.com/1680x1120" alt="" class="w-100">
-                                    <span class="category">English</span>
+                                    <img src="{{ asset('assets/img/blogs/'.$blog->img) }}" alt="" class="w-100">
+                                    <span class="category">TEXNOPOS</span>
                                 </div>
                                 <div class="blog-info">
                                     <ul class="meta">
-                                        <li><a href="#" title="">17/09/2020</a></li>
-                                        <li><a href="#" title="">by Admin</a></li>
-                                        <li><img src="assets/img/icon13.png" alt="" /><a href="#" title="">Teachers,</a><a href="#" title=""> School</a></li>
+                                        <li><a href="#" title="">{{$blog->date}}</a></li>
+                                        {{-- <li><a href="#" title="">by Admin</a></li> --}}
+                                        <li><img src="{{asset('assets/img/icon13.png')}}" alt="" />TEXNOPOS IT MEKTEBI</li>
                                     </ul>
-                                    <h3><a href="post.html" title="">Campus clean workshop</a></h3>
-                                    <p>Nam mattis felis id sodales rutrum. Nulla ornare tristique mauris, a laoreet erat ornare sit amet</p>
+                                    <h3><a href="post.html" title="">{{$blog->title}}</a></h3>
+                                    <p>
+                                        <?php
+                                            for ($i=0; $i < 50; $i++) { 
+                                                echo $text[$i];
+                                            }    
+                                        ?>
+                                    </p>
                                     <a href="post.html" title="" class="read-more">Read <i class="fa fa-long-arrow-alt-right"></i></a>
                                 </div>
                             </div>
                             <!--blog-post end-->
                         </div>
-                        <div class="col-lg-4 col-md-6 col-sm-6">
-                            <div class="blog-post">
-                                <div class="blog-thumbnail">
-                                    <img src="https://via.placeholder.com/1440x960" alt="" class="w-100">
-                                    <span class="category">English</span>
-                                </div>
-                                <div class="blog-info">
-                                    <ul class="meta">
-                                        <li><a href="#" title="">17/09/2020</a></li>
-                                        <li><a href="#" title="">by Admin</a></li>
-                                        <li><img src="assets/img/icon13.png" alt="" /><a href="#" title="">Teachers,</a><a href="#" title=""> School</a></li>
-                                    </ul>
-                                    <h3><a href="post.html" title="">Campus clean workshop</a></h3>
-                                    <p>Nam mattis felis id sodales rutrum. Nulla ornare tristique mauris, a laoreet erat ornare sit amet</p>
-                                    <a href="post.html" title="" class="read-more">Read <i class="fa fa-long-arrow-alt-right"></i></a>
-                                </div>
-                            </div>
-                            <!--blog-post end-->
-                        </div>
-                        <div class="col-lg-4 col-md-6 col-sm-6">
-                            <div class="blog-post">
-                                <div class="blog-thumbnail">
-                                    <img src="https://via.placeholder.com/1680x1120" alt="" class="w-100">
-                                    <span class="category">English</span>
-                                </div>
-                                <div class="blog-info">
-                                    <ul class="meta">
-                                        <li><a href="#" title="">17/09/2020</a></li>
-                                        <li><a href="#" title="">by Admin</a></li>
-                                        <li><img src="assets/img/icon13.png" alt="" /><a href="#" title="">Teachers,</a><a href="#" title=""> School</a></li>
-                                    </ul>
-                                    <h3><a href="post.html" title="">Campus clean workshop</a></h3>
-                                    <p>Nam mattis felis id sodales rutrum. Nulla ornare tristique mauris, a laoreet erat ornare sit amet</p>
-                                    <a href="post.html" title="" class="read-more">Read <i class="fa fa-long-arrow-alt-right"></i></a>
-                                </div>
-                            </div>
-                            <!--blog-post end-->
-                        </div>
+                        
+                        @endforeach
+
                     </div>
                 </div>
                 <!--blog-posts end-->

@@ -7,6 +7,8 @@ use App\Http\Controllers\MentorController;
 use App\Http\Controllers\ProgrammersController;
 use App\Http\Controllers\StudentController;
 use App\Http\Controllers\BlogController;
+use App\Http\Controllers\ContactsController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -40,20 +42,17 @@ Route::get('/blog',[BlogController::class,'get_blogs'])->name('get_blogs');
 
 Route::get('/blog/{id}',[BlogController::class,'get_post'])->name('get_post');
 
-Route::get('/bg', function () {
-    return view('cours-single');
+
+// Route::get('/contacts',ContactsController::class,'contacts')->name('contacts');
+
+Route::get('/contacts', function () {
+    return view('contacts');
 });
+
 Route::get('/about', function () {
     return view('about');
 });
 
-
-Route::get('/post', function () {
-    return view('post');
-});
-Route::get('/contacts', function () {
-    return view('contacts');
-});
 Route::get('/events', function () {
     return view('events');
 });

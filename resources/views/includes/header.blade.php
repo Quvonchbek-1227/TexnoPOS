@@ -91,7 +91,7 @@
                             <li><a href="post.html" title="">Blog Single</a></li>
                         </ul>
                     </li>
-                    <li><a href="contacts.html" title="">Baylanıs</a></li>
+                    {{-- <li><a href="{{ route('contacts') }}" title="">Baylanıs</a></li> --}}
                 </ul>
             </nav>
             <!--nav end-->

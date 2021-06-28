@@ -43,7 +43,7 @@
 			<div class="container">
 				<div class="row">
 
-					<?php $i = 0;?>	
+					<?php $q = 0;?>	
 					
 					@foreach ($blogs as $blog)
 					
@@ -75,6 +75,7 @@
 												for($i=0;$i<50;$i++){
 													echo $arr[$i];
 												}	
+												echo '...';
 											?>
 										</p>
 										<a href="{{ route('get_post', ['id'=>$blog->id]) }}" title="" class="read-more">Toliq Post <i class="fa fa-long-arrow-alt-right"></i></a>
@@ -86,8 +87,8 @@
 					</div>
 
 					
-					@if ($i == 0)
-					<?php $i++; ?>
+					@if ($q == 0)
+					<?php $q++; ?>
 					<div class="col-lg-3">{{-- O`ng tarafdagi yon menyu --}}
 						<div class="sidebar">
 							<div class="widget widget-categories">

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3307
--- Generation Time: Jun 28, 2021 at 06:53 AM
+-- Generation Time: Jun 28, 2021 at 09:27 PM
 -- Server version: 5.7.24
 -- PHP Version: 7.4.1
 
@@ -111,6 +111,19 @@ INSERT INTO `mentors` (`id`, `full_name`, `phone`, `email`, `about`, `portfolio_
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `messages`
+--
+
+CREATE TABLE `messages` (
+  `id` int(11) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `email` varchar(30) NOT NULL,
+  `message` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `post`
 --
 
@@ -128,7 +141,11 @@ CREATE TABLE `post` (
 
 INSERT INTO `post` (`id`, `title`, `date`, `text`, `img`) VALUES
 (1, 'Lorem ipsum dolor 1', '2021-06-21', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. In quisquam aspernatur doloribus quo explicabo tempora odio commodi, numquam esse maxime quaerat minima eveniet possimus enim. Cum incidunt rerum adipisci quae repudiandae esse nisi totam praesentium odit iure. Minima ipsum excepturi, maiores tempora, cupiditate sapiente ab distinctio obcaecati officiis enim maxime.', 'android.jpg'),
-(2, 'Lorem ipsum dolor 1', '2021-06-21', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. In quisquam aspernatur doloribus quo explicabo tempora odio commodi, numquam esse maxime quaerat minima eveniet possimus enim. Cum incidunt rerum adipisci quae repudiandae esse nisi totam praesentium odit iure. Minima ipsum excepturi, maiores tempora, cupiditate sapiente ab distinctio obcaecati officiis enim maxime.', 'kotlin.jpg');
+(2, 'Lorem ipsum dolor 1', '2021-06-21', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. In quisquam aspernatur doloribus quo explicabo tempora odio commodi, numquam esse maxime quaerat minima eveniet possimus enim. Cum incidunt rerum adipisci quae repudiandae esse nisi totam praesentium odit iure. Minima ipsum excepturi, maiores tempora, cupiditate sapiente ab distinctio obcaecati officiis enim maxime.', 'kotlin.jpg'),
+(3, 'Lorem ipsum dolor 3', '2021-06-21', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. In quisquam aspernatur doloribus quo explicabo tempora odio commodi, numquam esse maxime quaerat minima eveniet possimus enim. Cum incidunt rerum adipisci quae repudiandae esse nisi totam praesentium odit iure. Minima ipsum excepturi, maiores tempora, cupiditate sapiente ab distinctio obcaecati officiis enim maxime.', 'kotlinrus.jpg'),
+(4, 'Lorem ipsum dolor 4', '2021-06-21', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. In quisquam aspernatur doloribus quo explicabo tempora odio commodi, numquam esse maxime quaerat minima eveniet possimus enim. Cum incidunt rerum adipisci quae repudiandae esse nisi totam praesentium odit iure. Minima ipsum excepturi, maiores tempora, cupiditate sapiente ab distinctio obcaecati officiis enim maxime.', 'python.jpg'),
+(5, 'Lorem ipsum dolor 5', '2021-06-21', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. In quisquam aspernatur doloribus quo explicabo tempora odio commodi, numquam esse maxime quaerat minima eveniet possimus enim. Cum incidunt rerum adipisci quae repudiandae esse nisi totam praesentium odit iure. Minima ipsum excepturi, maiores tempora, cupiditate sapiente ab distinctio obcaecati officiis enim maxime.', 'front.jpg'),
+(6, 'Lorem ipsum dolor 6', '2021-06-21', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. In quisquam aspernatur doloribus quo explicabo tempora odio commodi, numquam esse maxime quaerat minima eveniet possimus enim. Cum incidunt rerum adipisci quae repudiandae esse nisi totam praesentium odit iure. Minima ipsum excepturi, maiores tempora, cupiditate sapiente ab distinctio obcaecati officiis enim maxime.', 'web.jpg');
 
 -- --------------------------------------------------------
 
@@ -165,6 +182,20 @@ INSERT INTO `programmer` (`id`, `full_name`, `phone`, `email`, `about`, `portfol
 (6, 'Quwanishbek Yuldashev', '+998996822712', 'yuldashevquwanishbek@gmail.com', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo sequi veniam est itaque numquam ut exercitationem, maxime illo provident esse excepturi laboriosam inventore placeat quidem officia culpa tenetur. Inventore, quae!', 'cabo sequi veniam est itaque numquam ut exercitationem, maxime illo provident esse excepturi laboriosam inventore placeat quidem officia culpa tenetur. Inventore, quae!ui veniam est itaque numquam ut exercitationem, maxime illo provident esse excepturi laboriosam inventore placeat quidem officia culpa tenetur. Inventore, quae!', '1 jil', 'TATU Nukus Filiali,No`kis Temirjollari KOK,TexnoPOS IT mektebi web (fullstak) kursin', 'yuldashevquwanishbek', 'Yuldashev Quwansihebk', 'quwanishbek_1227', 'front.jpg', ''),
 (7, 'Quwanishbek Yuldashev', '+998996822712', 'yuldashevquwanishbek@gmail.com', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo sequi veniam est itaque numquam ut exercitationem, maxime illo provident esse excepturi laboriosam inventore placeat quidem officia culpa tenetur. Inventore, quae!', 'cabo sequi veniam est itaque numquam ut exercitationem, maxime illo provident esse excepturi laboriosam inventore placeat quidem officia culpa tenetur. Inventore, quae!ui veniam est itaque numquam ut exercitationem, maxime illo provident esse excepturi laboriosam inventore placeat quidem officia culpa tenetur. Inventore, quae!', '1 jil', 'TATU Nukus Filiali,No`kis Temirjollari KOK,TexnoPOS IT mektebi web (fullstak) kursin', 'yuldashevquwanishbek', 'Yuldashev Quwansihebk', 'quwanishbek_1227', 'front.jpg', ''),
 (8, 'Quwanishbek Yuldashev', '+998996822712', 'yuldashevquwanishbek@gmail.com', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo sequi veniam est itaque numquam ut exercitationem, maxime illo provident esse excepturi laboriosam inventore placeat quidem officia culpa tenetur. Inventore, quae!', 'cabo sequi veniam est itaque numquam ut exercitationem, maxime illo provident esse excepturi laboriosam inventore placeat quidem officia culpa tenetur. Inventore, quae!ui veniam est itaque numquam ut exercitationem, maxime illo provident esse excepturi laboriosam inventore placeat quidem officia culpa tenetur. Inventore, quae!', '1 jil', 'TATU Nukus Filiali,No`kis Temirjollari KOK,TexnoPOS IT mektebi web (fullstak) kursin', 'yuldashevquwanishbek', 'Yuldashev Quwansihebk', 'quwanishbek_1227', 'front.jpg', '');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `registratsiya`
+--
+
+CREATE TABLE `registratsiya` (
+  `id` int(11) NOT NULL,
+  `name` varchar(50) NOT NULL,
+  `email` varchar(50) NOT NULL,
+  `course_name` varchar(20) NOT NULL,
+  `text` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -348,6 +379,12 @@ ALTER TABLE `mentors`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `messages`
+--
+ALTER TABLE `messages`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `post`
 --
 ALTER TABLE `post`
@@ -357,6 +394,12 @@ ALTER TABLE `post`
 -- Indexes for table `programmer`
 --
 ALTER TABLE `programmer`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `registratsiya`
+--
+ALTER TABLE `registratsiya`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -406,16 +449,28 @@ ALTER TABLE `mentors`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
+-- AUTO_INCREMENT for table `messages`
+--
+ALTER TABLE `messages`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT for table `post`
 --
 ALTER TABLE `post`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `programmer`
 --
 ALTER TABLE `programmer`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+
+--
+-- AUTO_INCREMENT for table `registratsiya`
+--
+ALTER TABLE `registratsiya`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `students`

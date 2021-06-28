@@ -25,8 +25,13 @@ class MainController extends Controller
             'days'
         ]);
 
+        $blogs = DB::table('post')
+        ->orderBy('id','desc')
+        ->get();
+
         return view('index',[
-            'courses'=>$courses
+            'courses'=>$courses,
+            'blogs'=>$blogs
         ]);
         //return $courses;
     }
