@@ -8,11 +8,11 @@
 	<meta name="author" content="merkulove">
 	<meta name="keywords" content="" />
 	<link rel="icon" href="assets/img/favicon.png">
-	<link rel="stylesheet" type="text/css" href="assets/css/animate.css">
-	<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="assets/css/font-awesome.min.css">
-	<link rel="stylesheet" type="text/css" href="assets/css/main.css">
-	<link rel="stylesheet" type="text/css" href="assets/css/responsive.css">
+	<link rel="stylesheet" type="text/css" href="{{asset('assets/css/animate.css')}}">
+	<link rel="stylesheet" type="text/css" href="{{asset('assets/css/bootstrap.min.css')}}">
+	<link rel="stylesheet" type="text/css" href="{{asset('assets/css/font-awesome.min.css')}}">
+	<link rel="stylesheet" type="text/css" href="{{asset('assets/css/main.css')}}">
+	<link rel="stylesheet" type="text/css" href="{{asseT('assets/css/responsive.css')}}">
 </head>
 
 
@@ -35,18 +35,19 @@
 				<div class="row">
 					<div class="col-xl-8 col-lg-8">
 						<div class="class-single-content">
-							<h2>Python For Kids</h2>
+							<h2>{{$course[0]->name}}</h2>
 							<ul class="meta-box">
-								<li><a href="#" title="">Home</a></li>
-								<li><span>Classes</span></li>
+								{{-- <li><a href="#" title="">Home</a></li>
+								<li><span>Classes</span></li> --}}
 							</ul>
 							<div class="class-gallery">
 								<div class="class-gallery-img">
-									<a href="https://via.placeholder.com/761x400" title="" class="html5lightbox" data-group="set1">
-										<img src="https://via.placeholder.com/761x400" alt="">
+									<a href="{{ asset('assets/img/courses/'.$course[0]->course_img) }}" title="" class="html5lightbox" data-group="set1">
+										<img src="{{ asset('assets/img/courses/'.$course[0]->course_img) }}" alt="">
 									</a>
 								</div><!--class-gallery-img end-->
-								<div class="row">
+
+								{{-- <div class="row">
 									<div class="col-lg-3 col-md-3 col-sm-3 col-3">
 										<div class="class-gallery-img">
 											<a href="https://via.placeholder.com/1000x704" title="" class="html5lightbox" data-group="set1">
@@ -75,10 +76,12 @@
 											</a>
 										</div><!--class-gallery-img end-->
 									</div>
-								</div>
+								</div> --}}
+
 							</div><!--class-gallery end-->
+
 							<p>
-								Donec luctus hendrerit sagittis. Cras pellentesque convallis tempus. Praesent finibus lacus at urna fringilla, fermentum sodales enim sodales. Sed vel eros a mi egestas consectetur. Donec eleifend ornare mauris, in tincidunt ex laoreet et. Donec eu arcu euismod, pellentesque arcu eu, condimentum nibh. Sed blandit id mauris sed suscipit.
+								{{$course[0]->description}}
 							</p>
 							<a href="classes.html" title="" class="btn-default">Dizimnen ótiw<i class="fa fa-long-arrow-alt-right"></i></a>
 						</div><!--class-single-content end-->
@@ -89,28 +92,28 @@
 								<h3 class="widget-title">Kurs Haqqinda</h3>
 								<ul>
 									<li>
-										<h4>Dushenbi-Shenbi</h4>
-										<span>10 AM - 12 AM</span>
+										<h4>{{$course[0]->days}}</h4>
+										<span>{{$course[0]->sub_time}}</span>
 									</li>
 									<li>
 										<h4>Jas araligi</h4>
-										<span>9-14 Years</span>
+										<span>{{$course[0]->age}}</span>
 									</li>
 									<li>
 										<h4>Qabillaw Sani</h4>
-										<span>20-30 Kids</span>
+										<span>{{$course[0]->student_count}}</span>
 									</li>
 									<li>
 										<h4>Kurs Dawamiylig`i</h4>
-										<span>25 hours</span>
+										<span>{{$course[0]->hour}}</span>
 									</li>
 								</ul>
 								<div class="tech-info">
 									<div class="tech-tble">
 										<img src="https://via.placeholder.com/54x54" alt="">
 										<div class="tch-info">
-											<h3>Sharapat Kalabayev</h3>
-											<span>Android Mentor</span>
+											<h3>{{$course[0]->full_name}}</h3>
+											<span>{{$course[0]->name}} Mentor</span>
 										</div>
 									</div>
 									<a href="contacts.html" title="" class="btn-default">Dizimnen ótiw<i class="fa fa-long-arrow-alt-right"></i></a>
@@ -119,7 +122,7 @@
 							<div class="widget widget-class">
 								<div class="wd-class-post">
 									<div class="wd-class-thumb">
-										<img src="assets/img/ci1.png" alt="">
+										<img src="{{asset('assets/img/ci1.png')}}" alt="">
 									</div>
 									<div class="wd-class-info">
 										<h3>Class Program</h3>
@@ -130,66 +133,32 @@
 							<div class="widget widget-classes-carousel">
 								<h3 class="widget-title">Basqa Kurslar</h3>
 								<div class="classes-section classes-section-sidebar classes-widget-slider">
+									
+									@foreach ($courses as $key)
+										
+									
+
 									<div class="classes-col">
 										<div class="class-thumb">
-											<img src="https://via.placeholder.com/1680x1120" alt="" class="w-100">
+											<img src="{{ asset('assets/img/courses/'.$key->course_img) }}" alt="" class="w-100">
 											<a href="contacts.html" title="" class="crt-btn">
-												<img src="assets/img/icon10.png" alt="">
+												<img src="{{asset('assets/img/icon10.png')}}" alt="">
 											</a>
 										</div>
 										<div class="class-info">
-											<h3>Python For Kids</h3>
-											<span>Mon-Fri</span>
-											<span>10 AM - 12 AM</span>
+											<h3>{{$key->course_name}}</h3>
+											<span>{{$key->days}}</span>
+											<span>{{$key->sub_time}}</span>
 											<div class="d-flex flex-wrap align-items-center">
 												<div class="posted-by">
 													<img src="https://via.placeholder.com/26x26" alt="">
-													<a href="#" title="">Amanda Kern</a>
+													<a href="#" title="">{{$key->full_name}}</a>
 												</div>
-												<strong class="price">$45</strong>
+												<strong class="price">{{$key->price}}</strong>
 											</div>
-										</div>
+										</div>									
 									</div>
-									<div class="classes-col">
-										<div class="class-thumb">
-											<img src="https://via.placeholder.com/1970x1326" alt="" class="w-100">
-											<a href="contacts.html" title="" class="crt-btn">
-												<img src="assets/img/icon10.png" alt="">
-											</a>
-										</div>
-										<div class="class-info">
-											<h3>Basic English Speaking and Grammar</h3>
-											<span>Mon-Fri</span>
-											<span>10 AM - 12 AM</span>
-											<div class="d-flex flex-wrap align-items-center">
-												<div class="posted-by">
-													<img src="https://via.placeholder.com/26x26" alt="">
-													<a href="#" title="">Amanda Kern</a>
-												</div>
-												<strong class="price">$45</strong>
-											</div>
-										</div>
-									</div>
-									<div class="classes-col">
-										<div class="class-thumb">
-											<img src="https://via.placeholder.com/1440x960" alt="" class="w-100">
-											<a href="contacts.html" title="" class="crt-btn">
-												<img src="assets/img/icon10.png" alt="">
-											</a>
-										</div>
-										<div class="class-info">
-											<h3>Basic English Speaking and Grammar</h3>
-											<span>Mon-Fri</span>
-											<span>10 AM - 12 AM</span>
-											<div class="d-flex flex-wrap align-items-center">
-												<div class="posted-by">
-													<img src="https://via.placeholder.com/26x26" alt="">
-													<a href="#" title="">Amanda Kern</a>
-												</div>
-												<strong class="price">$45</strong>
-											</div>
-										</div>
-									</div>
+									@endforeach
 								</div><!--classes-section end-->
 							</div><!--widget-classes-carousel end-->
 							
@@ -210,14 +179,15 @@
 
 	</div>
 
-<script src="assets/js/jquery.js"></script>
-<script src="assets/js/bootstrap.min.js"></script>
-<script src="assets/js/isotope.js"></script>
-<script src="assets/js/html5lightbox.js"></script>
-<script src="assets/js/slick.min.js"></script>
-<script src="assets/js/tweenMax.js"></script>
-<script src="assets/js/wow.min.js"></script>
-<script src="assets/js/scripts.js"></script>
+	<script src="{{ asset('assets/js/jquery.js') }}"></script>
+    <script src="{{ asset('assets/js/bootstrap.min.js') }}"></script>
+    <script src="{{ asset('assets/js/isotope.js') }}"></script>
+    <script src="{{ asset('assets/js/html5lightbox.js') }}"></script>
+    <script src="{{ asset('assets/js/slick.min.js') }}"></script>
+    <script src="{{ asset('assets/js/tweenMax.js') }}"></script>
+    <script src="{{ asset('assets/js/wow.min.js') }}"></script>
+    <script src="{{ asset('assets/js/scripts.js') }}"></script>
+    <script src="{{ asset('assets/js/myjs.js') }}"></script>
 
 </body>
 

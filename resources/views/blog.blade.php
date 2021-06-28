@@ -7,12 +7,12 @@
 	<meta name="description" content="Shelly - Website" />
 	<meta name="author" content="merkulove">
 	<meta name="keywords" content="" />
-	<link rel="icon" href="assets/img/favicon.png">
-	<link rel="stylesheet" type="text/css" href="assets/css/animate.css">
-	<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="assets/css/font-awesome.min.css">
-	<link rel="stylesheet" type="text/css" href="assets/css/main.css">
-	<link rel="stylesheet" type="text/css" href="assets/css/responsive.css">
+	<link rel="icon" href="{{ asset('assets/img/favicon.png') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/animate.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/font-awesome.min.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{asset('assets/css/main.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/responsive.css') }}">
 </head>
 
 
@@ -42,6 +42,12 @@
 		<section class="page-content">
 			<div class="container">
 				<div class="row">
+
+					<?php $i = 0;?>	
+					
+					@foreach ($blogs as $blog)
+					
+					
 					<div class="col-lg-9">
 						<div class="blog-section p-0 posts-page">
 							<div class="blog-posts">
@@ -49,38 +55,40 @@
 								<div class="blog-post">
 									<div class="blog-thumbnail">
 										<a href="#" title="">
-											<img src="https://via.placeholder.com/2172x1448" alt="" class="w-100">
+											<img src="{{ asset('assets/img/blogs/'.$blog->img) }}" alt="" class="" style="width: 100%;">
 										</a>
-										<span class="category">English, Teachers, Shelly</span>
+										<span class="category">TEXNOPOS IT MEKTEBI</span>
 									</div>
 									<div class="blog-info">
 										<ul class="meta">
-											<li><a href="#" title="">17/09/2020</a></li>
-											<li><a href="#" title="">by Admin</a></li>
-											<li><img src="assets/img/icon13.png" alt="" /><a href="#" title="">Teachers,</a><a href="#" title=""> School</a></li>
+											<li><a href="#" title="">{{$blog->date}}</a></li>
+											{{-- <li><a href="#" title="">by Admin</a></li> --}}
+											{{-- <li><img src="{{asset('assets/img/icon13.png')}}" alt="" /><a href="#" title="">Teachers,</a><a href="#" title=""> School</a></li> --}}
 										</ul>
-										<h3 class="stick"><a href="post.html" title="">Standard Post Sticky</a></h3>
-										<p>Nullam erat dolor, hendrerit id turpis laoreet, congue dapibus odio. Duis tempor eros tortor, a ornare arcu egestas quis. Donec vehicula eget quam maximus interdum. Duis ultrices sapien eget metus luctus finibus. Morbi nec lobortis ante, sed condimentum nisl. Nam laoreet ullamcorper magna et fringilla</p>
-										<a href="post.html" title="" class="read-more">Read <i class="fa fa-long-arrow-alt-right"></i></a>
+										<h3 class="stick"><a href="#" title="">{{$blog->title}}</a></h3>
+										<p>
+											<?php 
+
+												$arr = str_split($blog->text);
+												// $mas = str_split($arr,2);
+
+												for($i=0;$i<50;$i++){
+													echo $arr[$i];
+												}	
+											?>
+										</p>
+										<a href="{{ route('get_post', ['id'=>$blog->id]) }}" title="" class="read-more">Toliq Post <i class="fa fa-long-arrow-alt-right"></i></a>
 									</div>
 								</div><!--blog-post end-->
 
 							</div><!--blog-posts end-->
 						</div><!--blog-section end-->
-						<div class="mdp-pagiation">
-							<nav aria-label="Page navigation example">
-								<ul class="pagination">
-							    	<li class="page-item"><a class="page-link" href="#">1</a></li>
-							    	<li class="page-item"><a class="page-link active" href="#">2</a></li>
-							    	<li class="page-item"><a class="page-link" href="#">3</a></li>
-							    	<li class="page-item"><a class="page-link" href="#">4</a></li>
-							    	<li class="page-item"><a class="page-link" href="#">...</a></li>
-							    	<li class="page-item"><a class="page-link" href="#">15</a></li>
-							  	</ul>
-							</nav>
-						</div><!--pagination-end-->
 					</div>
-					<div class="col-lg-3">
+
+					
+					@if ($i == 0)
+					<?php $i++; ?>
+					<div class="col-lg-3">{{-- O`ng tarafdagi yon menyu --}}
 						<div class="sidebar">
 							<div class="widget widget-categories">
 								<h3 class="widget-title">Categories</h3>
@@ -105,35 +113,24 @@
 							</div>
 							<!--widget-categories end-->
 							<div class="widget widget-posts">
-								<h3 class="widget-title">Latest Posts</h3>
+								<h3 class="widget-title">En` song`i postlar</h3>
 								<div class="wd-posts">
+									
+									@for ($i=0; $i < count($blogs); $i++)
+									@if ($i >= 5)
+										@break
+									@endif
 									<div class="wd-post d-flex flex-wrap">
 										<div class="wd-thumb">
-											<img src="https://via.placeholder.com/52x52" alt="">
+											<img src="{{ asset('assets/img/blogs/'.$blogs[$i]->img) }}" width="50px" height="60px">
 										</div>
 										<div class="wd-info">
-											<h3><a href="post.html" title="">Duis tempor eros tortor, a ornare</a></h3>
-											<span>17/09/2020</span>
+											<h4><a href="{{ route('get_post', ['id'=>$blogs[$i]->id]) }}" title="">{{$blogs[$i]->title}}</a></h4>
+											<span>{{$blogs[$i]->date}}</span>
 										</div>
-									</div><!--wd-post end-->
-									<div class="wd-post d-flex flex-wrap">
-										<div class="wd-thumb">
-											<img src="https://via.placeholder.com/52x52" alt="">
-										</div>
-										<div class="wd-info">
-											<h3><a href="post.html" title="">Duis tempor eros tortor, a ornare</a></h3>
-											<span>17/09/2020</span>
-										</div>
-									</div><!--wd-post end-->
-									<div class="wd-post d-flex flex-wrap">
-										<div class="wd-thumb">
-											<img src="https://via.placeholder.com/52x52" alt="">
-										</div>
-										<div class="wd-info">
-											<h3><a href="post.html" title="">Duis tempor eros tortor, a ornare</a></h3>
-											<span>17/09/2020</span>
-										</div>
-									</div><!--wd-post end-->
+									</div>
+									@endfor
+									
 								</div><!--wd-posts end-->
 							</div><!--widget-posts end-->
 							
@@ -212,6 +209,11 @@
 							</div><!--widget-calendar end-->
 						</div><!--sidebar end-->
 					</div>
+					@endif
+					
+					@endforeach
+
+					
 				</div>
 			</div>
 		</section><!--page-content end-->
@@ -226,15 +228,15 @@
 	</div>
 
 
-
-<script src="assets/js/jquery.js"></script>
-<script src="assets/js/bootstrap.min.js"></script>
-<script src="assets/js/isotope.js"></script>
-<script src="assets/js/html5lightbox.js"></script>
-<script src="assets/js/slick.min.js"></script>
-<script src="assets/js/tweenMax.js"></script>
-<script src="assets/js/wow.min.js"></script>
-<script src="assets/js/scripts.js"></script>
+    <script src="{{ asset('assets/js/jquery.js') }}"></script>
+    <script src="{{ asset('assets/js/bootstrap.min.js') }}"></script>
+    <script src="{{ asset('assets/js/isotope.js') }}"></script>
+    <script src="{{ asset('assets/js/html5lightbox.js') }}"></script>
+    <script src="{{ asset('assets/js/slick.min.js') }}"></script>
+    <script src="{{ asset('assets/js/tweenMax.js') }}"></script>
+    <script src="{{ asset('assets/js/wow.min.js') }}"></script>
+    <script src="{{ asset('assets/js/scripts.js') }}"></script>
+    <script src="{{ asset('assets/js/myjs.js') }}"></script>
 
 
 </body>

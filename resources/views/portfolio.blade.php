@@ -2,12 +2,12 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Shelly School HTML Template</title>
+	<title>{{$mentor[0]->full_name}}</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="description" content="Shelly - Website" />
 	<meta name="author" content="merkulove">
 	<meta name="keywords" content="" />
-	<link rel="icon" href="assets/img/favicon.png">
+	{{-- <link rel="icon" href="assets/img/favicon.png"> --}}
 	<link rel="stylesheet" type="text/css" href="{{asset('assets/css/animate.css')}}">
 	<link rel="stylesheet" type="text/css" href="{{asset('assets/css/bootstrap.min.css')}}">
 	<link rel="stylesheet" type="text/css" href="{{asset('assets/css/font-awesome.min.css')}}">
@@ -47,16 +47,22 @@
 					<div class="row">
 						<div class="col-lg-4">
 							<div class="teacher-coly">
-								<img src="{{asset('assets/img/mentors/'.$mentor[0]->mentor_img)}}" alt="">
+								@if ($status == 'mentor')
+									<img src="{{asset('assets/img/mentors/'.$mentor[0]->mentor_img)}}" alt="">
+								@elseif ($status == 'programmer')
+									<img src="{{asset('assets/img/programmers/'.$mentor[0]->mentor_img)}}" alt="">
+								@elseif ($status == 'student')
+									<img src="{{asset('assets/img/students/'.$mentor[0]->mentor_img)}}" alt="">
+								@endif
 								<ul class="social-icons">
 									@if (isset($mentor[0]->facebook))
-										<li><a href="" title=""><i class="fab fa-facebook-f"></i></a></li>
+										<li><a href="https://facebook.com/{{$mentor[0]->facebook}}" title=""><i class="fab fa-facebook-f"></i></a></li>
 									@endif
 									@if (isset($mentor[0]->instagram))
-										<li><a href="https://www.instagram.com/$mentor[0]->instagram/" title=""><i class="fab fa-instagram"></i></a></li>
+										<li><a href="https://www.instagram.com/{{$mentor[0]->instagram}}/" title=""><i class="fab fa-instagram"></i></a></li>
 									@endif
 									@if (isset($mentor[0]->telegram))
-										<li><a href="" title=""><i class="fab fa-telegram"></i></a></li>
+										<li><a href="https://t.me.com/{{$mentor[0]->telegram}}" title=""><i class="fab fa-telegram"></i></a></li>
 									@endif
 								</ul>
 							</div><!--teacher-coly end-->
@@ -170,8 +176,11 @@
 									<div class="teacher-img">
 										@if ($status == 'mentor')
 											<img src="{{asset('assets/img/mentors/'.$user->mentor_img)}}" alt="" class="w-100">							
+										@elseif ($status == 'programmer')
+											<img src="{{asset('assets/img/programmers/'.$user->mentor_img)}}" alt="" class="w-100">
+										@elseif ($status == 'student')
+											<img src="{{asset('assets/img/students/'.$user->mentor_img)}}" alt="" class="w-100">
 										@endif
-				
 										<div class="sc-div">
 											<ul>
 												@isset($user->instagram)
@@ -189,11 +198,21 @@
 									</div>
 									<div class="teacher-info">
 										@if ($status == 'mentor')
-										<h3><a href="{{route('mentor_portfolio',['id'=>$user->id_mentor])}}" title="">{{$user->full_name}}</a></h3>
+											<h3><a href="{{route('mentor_portfolio',['id'=>$user->id_mentor])}}" title="">{{$user->full_name}}</a></h3>
+										@elseif ($status == 'programmer')
+											<h3><a href="{{route('programmer_portfolio',['id'=>$user->id_mentor])}}" title="">{{$user->full_name}}</a></h3>
+										@elseif ($status == 'student')
+											<h3><a href="{{route('student_portfolio',['id'=>$user->id_mentor])}}" title="">{{$user->full_name}}</a></h3>
 										@endif
+
 										@if ($status == 'mentor')
 											<a href="{{ route('course_detail', ['id'=>$user->id_course]) }}">
 												<span>{{$user->course_name}} Mentor</span>
+											</a>
+										@endif
+										@if ($status == 'student')
+											<a href="{{ route('course_detail', ['id'=>$user->id_course]) }}">
+												<span>{{$user->course_name}} Pitkerushisi</span>
 											</a>
 										@endif
 									</div>
@@ -220,14 +239,14 @@
 
 	</div>
 
-<script src="assets/js/jquery.js"></script>
-<script src="assets/js/bootstrap.min.js"></script>
-<script src="assets/js/isotope.js"></script>
-<script src="assets/js/html5lightbox.js"></script>
-<script src="assets/js/slick.min.js"></script>
-<script src="assets/js/tweenMax.js"></script>
-<script src="assets/js/wow.min.js"></script>
-<script src="assets/js/scripts.js"></script>
+<script src="{{asset('assets/js/jquery.js')}}"></script>
+<script src="{{asset('assets/js/bootstrap.min.js')}}"></script>
+<script src="{{asset('assets/js/isotope.js')}}"></script>
+<script src="{{asset('assets/js/html5lightbox.js')}}"></script>
+<script src="{{asset('assets/js/slick.min.js')}}"></script>
+<script src="{{asset('assets/js/tweenMax.js')}}"></script>
+<script src="{{asset('assets/js/wow.min.js')}}"></script>
+<script src="{{asset('assets/js/scripts.js')}}"></script>
 
 </body>
 

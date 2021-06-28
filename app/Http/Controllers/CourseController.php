@@ -10,9 +10,48 @@ class CourseController extends Controller
 {
     public function course_detail($id){
         
-      $course = Course::all()->where('id','=',$id);
+      $course = DB::table('courses')
+      ->join('mentors','courses.id_mentor','=','mentors.id')
+      ->where('courses.id','=',$id)
+      ->get([
+          'name',
+          'hour',
+          'age',
+          'sub_time',
+          'student_count',
+          'id_mentor',
+          'courses.img as course_img',
+          'description',
+          'price',
+          'days',
+          'full_name'
+      ]);
 
-      return $course;
+
+
+
+      $courses = DB::table('courses')
+      ->join('mentors','courses.id_mentor','=','mentors.id')
+      ->get([
+          'courses.id as id_course',
+          'courses.name as course_name',
+          'id_mentor',
+          'courses.img as course_img',
+          'courses.days',
+          'sub_time',
+          'price',
+          'mentors.full_name'
+
+      ]);
+
+      
+
+      //return $course;
+
+      return view('cours-single',[
+          'course'=>$course,
+          'courses'=>$courses
+      ]);
     }
     
     public function get_courses(){

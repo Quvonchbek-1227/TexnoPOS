@@ -37,7 +37,13 @@
 		<section class="pager-section">
 			<div class="container">
 				<div class="pager-content text-center">
-					<h2>Teachers</h2>
+					@if ($status == 'mentor')
+						<h2>Teachers</h2>
+					@elseif ($status == 'programmer')
+						<h2>Programmers</h2>
+					@elseif ($status == 'student')
+						<h2>Students</h2>
+					@endif
 					<ul>
 						<li><a href="#" title="">Home</a></li>
 						<li><span>Teachers</span></li>
@@ -57,7 +63,13 @@
 							<div class="col-lg-3 col-md-3 col-sm-6 col-6 full-wdth">
 								<div class="teacher">
 									<div class="teacher-img">
-										<img src="{{asset('assets/img/mentors/'.$mentor->mentor_img)}}" class="w-100">
+										@if ($status == 'mentor')
+											<img src="{{asset('assets/img/mentors/'.$mentor->mentor_img)}}" class="w-100">
+										@elseif ($status == 'programmer')
+											<img src="{{asset('assets/img/programmers/'.$mentor->mentor_img)}}" class="w-100">
+										@elseif ($status == 'student')
+											<img src="{{asset('assets/img/students/'.$mentor->mentor_img)}}" class="w-100">
+										@endif
 										<div class="sc-div">
 											<ul>
 												@if (isset($mentor->telegram))
@@ -74,8 +86,19 @@
 										</div>
 									</div>
 									<div class="teacher-info">
-										<h3><a href="{{ route('mentor_portfolio', ['id'=>$mentor->id_mentor]) }}" title="">{{$mentor->full_name}}</a></h3>
-										<span><a href="{{route('course_detail',['id'=>$mentor->id_course])}}">{{$mentor->course_name}} Mentor</a></span>
+										@if ($status == 'mentor')
+											<h3><a href="{{ route('mentor_portfolio', ['id'=>$mentor->id_mentor]) }}" title="">{{$mentor->full_name}}</a></h3>
+										@elseif ($status == 'programmer')
+											<h3><a href="{{ route('programmer_portfolio', ['id'=>$mentor->id_mentor]) }}" title="">{{$mentor->full_name}}</a></h3>
+										@elseif ($status == 'student')
+											<h3><a href="{{ route('student_portfolio', ['id'=>$mentor->id_mentor]) }}" title="">{{$mentor->full_name}}</a></h3>
+										@endif
+
+										@if ($status == 'mentor')
+											<span><a href="{{route('course_detail',['id'=>$mentor->id_course])}}">{{$mentor->course_name}} Mentor</a></span>
+										@elseif ($status == 'student')
+											<span><a href="{{route('course_detail',['id'=>$mentor->id_course])}}">{{$mentor->course_name}} Pitkerushisi</a></span>
+										@endif
 									</div>
 								</div><!--teacher end-->
 							</div>

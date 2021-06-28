@@ -2,15 +2,15 @@
     <div class="container">
         <div class="header-content d-flex flex-wrap align-items-center">
             <div class="logo">
-                <a href="index.html" title="">
-                    <img width='250' src="assets/img/logo.png" alt="" srcset="assets/img/logo.png 2x">
+                <a href="{{ route('home_page') }}" title="">
+                    <img width='250' src="{{asset('assets/img/logo.png')}}" alt="" srcset="{{asset('assets/img/logo.png')}} 2x">
                 </a>
             </div>
             <!--logo end-->
             <ul class="contact-add d-flex flex-wrap">
                 <li>
                     <div class="contact-info">
-                        <img src="assets/img/icon1.png" alt="">
+                        <img src="{{asset('assets/img/icon1.png')}}" alt="">
                         <div class="contact-tt">
                             <h4>Telefon</h4>
                             <span>+99890 592 71 17</span>
@@ -21,7 +21,7 @@
                 </li>
                 <li>
                     <div class="contact-info">
-                        <img src="assets/img/icon2.png" alt="">
+                        <img src="{{asset('assets/img/icon2.png')}}" alt="">
                         <div class="contact-tt">
                             <h4>Jumıs waqtı</h4>
                             <span>Dúysenbi - Ekshenbi </span>
@@ -32,7 +32,7 @@
                 </li>
                 <li>
                     <div class="contact-info">
-                        <img src="assets/img/icon3.png" alt="">
+                        <img src="{{asset('assets/img/icon3.png')}}" alt="">
                         <div class="contact-tt">
                             <h4>Mánzil</h4>
                             <span>Ǵárezsizlik kóshesi 80/4</span>
@@ -56,18 +56,19 @@
             <nav>
                 <ul>
                     <li><a href="{{ route('home_page') }}" title="">Bas Bet</a></li>
-                    <li><a href="about.html" title="">Biz haqqımızda</a>
+                    <li><a href="#" title="">Biz haqqımızda</a>
                         <ul>
                             <li><a href="{{route('mentors')}}" title="">Mentorlar</a>
                                 {{-- <ul>
                                     <li><a href="event-single.html" title="">Event Single</a></li>
                                 </ul> --}}
                             </li>
-                            <li><a href="schedule.html" title="">Programmistler</a></li>
-                            <li><a href="error.html" title="">Dizaynerler</a></li>
+                            <li><a href="{{route('get_programmers')}}" title="">Programmistler</a></li>
+                            <li><a href="{{route('get_students')}}" title="">Pitkeruwshiler</a></li>
+                            {{-- <li><a href="error.html" title="">Dizaynerler</a></li> --}}
                         </ul>
                     </li>
-                    <li><a href="classes.html" title="">Kurslar</a>
+                    <li><a href="#" title="">Kurslar</a>
                         <ul>
                             {{-- @for ($i=0;$i < 4;$i++)
                             <li><a href="{{route('course_detail',['id'=>$courses[$i]->id_course])}}">{{$courses[$i]->course_name}}</a></li>
@@ -79,13 +80,13 @@
                             </li>
                         </ul>
                     </li>
-                    <li><a href="teachers.html" title="">Portfolio</a>
-                        <ul>
+                    <li><a href="#" title="">Portfolio</a>
+                        {{-- <ul>
                             <li><a href="schedule.html" title="">TexnoPOS</a></li>
                             <li><a href="teacher-single.html" title="">Pitkeruwshiler</a></li>
-                        </ul>
+                        </ul> --}}
                     </li>
-                    <li><a href="blog.html" title="">Blog</a>
+                    <li><a href="{{ route('get_blogs') }}" title="">Blog</a>
                         <ul>
                             <li><a href="post.html" title="">Blog Single</a></li>
                         </ul>

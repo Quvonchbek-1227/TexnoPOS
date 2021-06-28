@@ -7,12 +7,12 @@
 	<meta name="description" content="Shelly - Website" />
 	<meta name="author" content="merkulove">
 	<meta name="keywords" content="" />
-	<link rel="icon" href="assets/img/favicon.png">
-	<link rel="stylesheet" type="text/css" href="assets/css/animate.css">
-	<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="assets/css/font-awesome.min.css">
-	<link rel="stylesheet" type="text/css" href="assets/css/main.css">
-	<link rel="stylesheet" type="text/css" href="assets/css/responsive.css">
+	<link rel="icon" href="{{ asset('assets/img/favicon.png') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/animate.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/font-awesome.min.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{asset('assets/css/main.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/responsive.css') }}">
 </head>
 
 
@@ -27,20 +27,22 @@
 		@include('includes.responsiv-menu')
 		<!--responsive-menu end-->
 
-		<section class="pager-section blog-version">
+		<?php $text = $post[0]->text;?>
+
+		<section class="pager-section blog-version" style="background-image: url('{{asset('assets/img/blogs/'.$post[0]->img)}}');">
 			<div class="container">
 				<div class="pager-content text-center">
 					<ul>
 						<li><a href="#" title="">Home</a></li>
 						<li><a href="#" title="">Blog</a></li>
-						<li><span>Natural Sciences & Mathematics Courses</span></li>
+						<li><span>{{$post[0]->title}}</span></li>
 					</ul>
-					<h2>Natural Sciences & Mathematics</h2>
-					<span class="categry">English, Teachers, Shelly</span>
+					<h2>{{$post[0]->title}}</h2>
+					{{-- <span class="categry">English, Teachers, Shelly</span> --}}
 					<ul class="meta">
-						<li><a href="#" title="">17/09/2020</a></li>
-						<li><a href="#" title="">by Admin</a></li>
-						<li><img src="assets/img/icon13.png" alt="" /><a href="#" title="">Teachers,</a><a href="#" title=""> School</a></li>
+						<li><a href="#" title="">{{$post[0]->date}}</a></li>
+						{{-- <li><a href="#" title="">by Admin</a></li> --}}
+						<li><img src="{{asset('assets/img/icon13.png')}}" alt="" />TEXNOPOS IT MEKTEBI</li>
 					</ul>
 				</div><!--pager-content end-->
 			</div>
@@ -52,7 +54,7 @@
 					<div class="col-lg-9">
 						<div class="blog-post single">
 							<p style="font-size: 20px ">
-								Donec hendrerit mauris sed tellus consequat, vitae eleifend risus posuere. Fusce vulputate dui ultrices mauris iaculis ultrices. Praesent hendrerit augue non massa efficitur, varius placerat nibh consectetur. Cras maximus semper magna, ut laoreet eros bibendum sit amet. Proin ut posuere neque. Curabitur eget mauris sit amet lorem faucibus lacinia. Duis sapien tellus, aliquam sit amet augue in, feugiat tempus orci.
+								{{$post[0]->text}}
 							</p>
 						</div><!--blog-post single end-->
 
@@ -84,33 +86,21 @@
 							<div class="widget widget-posts">
 								<h3 class="widget-title">Latest Posts</h3>
 								<div class="wd-posts">
+									@for ($i=0; $i < count($blogs); $i++)
+									@if ($i >= 5)
+										@break
+									@endif
 									<div class="wd-post d-flex flex-wrap">
 										<div class="wd-thumb">
-											<img src="https://via.placeholder.com/52x52" alt="">
+											<img src="{{ asset('assets/img/blogs/'.$blogs[$i]->img) }}" width="50px" height="60px">
 										</div>
 										<div class="wd-info">
-											<h3><a href="#" title="">Duis tempor eros tortor, a ornare</a></h3>
-											<span>17/09/2020</span>
+											<h4><a href="{{ route('get_post', ['id'=>$blogs[$i]->id]) }}" title="">{{$blogs[$i]->title}}</a></h4>
+											<span>{{$blogs[$i]->date}}</span>
 										</div>
-									</div><!--wd-post end-->
-									<div class="wd-post d-flex flex-wrap">
-										<div class="wd-thumb">
-											<img src="https://via.placeholder.com/52x52" alt="">
-										</div>
-										<div class="wd-info">
-											<h3><a href="#" title="">Duis tempor eros tortor, a ornare</a></h3>
-											<span>17/09/2020</span>
-										</div>
-									</div><!--wd-post end-->
-									<div class="wd-post d-flex flex-wrap">
-										<div class="wd-thumb">
-											<img src="https://via.placeholder.com/52x52" alt="">
-										</div>
-										<div class="wd-info">
-											<h3><a href="#" title="">Duis tempor eros tortor, a ornare</a></h3>
-											<span>17/09/2020</span>
-										</div>
-									</div><!--wd-post end-->
+									</div>
+									@endfor
+
 								</div><!--wd-posts end-->
 							</div><!--widget-posts end-->
 							<div class="widget widget-calendar">
@@ -198,23 +188,18 @@
 		@include('includes.footer') 
 		<!--footer end-->
 
-		<!--back to top begin-->
-		<button class="back-to-top">
-			<i class="fas fa-arrow-up"></i>
-		</button>
-		<!--back to top end-->
-
 	</div>
 
 
-<script src="assets/js/jquery.js"></script>
-<script src="assets/js/bootstrap.min.js"></script>
-<script src="assets/js/isotope.js"></script>
-<script src="assets/js/html5lightbox.js"></script>
-<script src="assets/js/slick.min.js"></script>
-<script src="assets/js/tweenMax.js"></script>
-<script src="assets/js/wow.min.js"></script>
-<script src="assets/js/scripts.js"></script>
+    <script src="{{ asset('assets/js/jquery.js') }}"></script>
+    <script src="{{ asset('assets/js/bootstrap.min.js') }}"></script>
+    <script src="{{ asset('assets/js/isotope.js') }}"></script>
+    <script src="{{ asset('assets/js/html5lightbox.js') }}"></script>
+    <script src="{{ asset('assets/js/slick.min.js') }}"></script>
+    <script src="{{ asset('assets/js/tweenMax.js') }}"></script>
+    <script src="{{ asset('assets/js/wow.min.js') }}"></script>
+    <script src="{{ asset('assets/js/scripts.js') }}"></script>
+    <script src="{{ asset('assets/js/myjs.js') }}"></script>
 
 </body>
 
