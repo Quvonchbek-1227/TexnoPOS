@@ -87,11 +87,11 @@
                         </ul> --}}
                     </li>
                     <li><a href="{{ route('get_blogs') }}" title="">Blog</a>
-                        <ul>
+                        {{-- <ul>
                             <li><a href="post.html" title="">Blog Single</a></li>
-                        </ul>
+                        </ul> --}}
                     </li>
-                    {{-- <li><a href="{{ route('contacts') }}" title="">Baylanıs</a></li> --}}
+                    <li><a href="{{ route('contacts') }}" title="">Baylanıs</a></li>
                 </ul>
             </nav>
             <!--nav end-->

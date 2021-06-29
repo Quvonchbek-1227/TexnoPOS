@@ -121,46 +121,7 @@
          * AJAX Contact Form Script
          * Working Contact Form
          */
-        if ($('#contact-form').length) {
 
-            $('#submit').on("click", function() {
-
-                var o = new Object();
-                var form = '#contact-form';
-                var name = $('#contact-form .name').val();
-                var email = $('#contact-form .email').val();
-
-                if (name == '' || email == '') {
-
-                    $('#contact-form .response').html('<div class="failed">Please fill the required fields.</div>');
-                    return false;
-
-                }
-
-                $.ajax({
-
-                    url: "mail.php",
-                    method: "POST",
-                    data: $(form).serialize(),
-                    beforeSend: function() {
-                        $('#contact-form .response').html('<div class="text-info"><img src="assets/img/preloader.gif" alt="Loading..."> Loading...</div>');
-                    },
-                    success: function(data) {
-                        $('form').trigger("reset");
-                        $('#contact-form .response').fadeIn().html(data);
-                        setTimeout(function() {
-                            $('#contact-form .response').fadeOut("slow");
-                        }, 5000);
-                    },
-                    error: function() {
-                        $('#contact-form .response').fadeIn().html(data);
-                    }
-
-                });
-
-            });
-
-        }
 
         /**
          * Back to top button

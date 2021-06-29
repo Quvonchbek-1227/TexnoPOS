@@ -27,6 +27,7 @@ class MainController extends Controller
 
         $blogs = DB::table('post')
         ->orderBy('id','desc')
+        ->take(3)
         ->get();
 
         return view('index',[

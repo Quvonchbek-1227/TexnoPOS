@@ -317,14 +317,7 @@
 
 
 
-<script src="assets/js/jquery.js"></script>
-<script src="assets/js/bootstrap.min.js"></script>
-<script src="assets/js/isotope.js"></script>
-<script src="assets/js/html5lightbox.js"></script>
-<script src="assets/js/slick.min.js"></script>
-<script src="assets/js/tweenMax.js"></script>
-<script src="assets/js/wow.min.js"></script>
-<script src="assets/js/scripts.js"></script>
+	@include('includes.script')
 
 </body>
 

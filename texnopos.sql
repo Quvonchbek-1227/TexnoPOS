@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3307
--- Generation Time: Jun 28, 2021 at 09:27 PM
+-- Generation Time: Jun 29, 2021 at 11:59 AM
 -- Server version: 5.7.24
 -- PHP Version: 7.4.1
 
@@ -121,6 +121,23 @@ CREATE TABLE `messages` (
   `message` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+--
+-- Dumping data for table `messages`
+--
+
+INSERT INTO `messages` (`id`, `name`, `email`, `message`) VALUES
+(1, 'Quwanishbek', 'yeadamQoysa@gmail.com', 'dedwedwed'),
+(2, 'Quwanishbek', 'yeadamQoysa@gmail.com', 'dedwedwed'),
+(3, 'Quvonchbek', 'aaaa@gmail.com', 'wxxwxwxwxew'),
+(4, 'Quwanishbek', 'aaaa@gmail.com', 'eerereere'),
+(5, 'Quwanishbek', 'aaaa@gmail.com', 'eerereere'),
+(6, 'Quwanishbek', 'aaaa@gmail.com', 'eerereere'),
+(7, 'Quvonchbek', 'aaaa@gmail.com', 'wxxwxwxwxew'),
+(8, 'Quvonchbek', 'ecweecerce@gmail', 'ewewecwecw'),
+(9, 'Quvonchbek', 'ecweecerce@gmail', 'ewewecwecw'),
+(10, 'Quvonchbek', 'ecweecerce@gmail', 'ewewecwecw'),
+(11, 'Quvonchbek', 'yeadamQoysa@gmail.com', 'sxsxwsxswdsdsssdsd');
+
 -- --------------------------------------------------------
 
 --
@@ -192,10 +209,21 @@ INSERT INTO `programmer` (`id`, `full_name`, `phone`, `email`, `about`, `portfol
 CREATE TABLE `registratsiya` (
   `id` int(11) NOT NULL,
   `name` varchar(50) NOT NULL,
-  `email` varchar(50) NOT NULL,
-  `course_name` varchar(20) NOT NULL,
+  `phone` varchar(50) NOT NULL,
+  `id_course` int(20) NOT NULL,
   `text` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `registratsiya`
+--
+
+INSERT INTO `registratsiya` (`id`, `name`, `phone`, `id_course`, `text`) VALUES
+(1, 'Quvonchbek', 'aaaa@gmail.com', 5, 'sdsdcsdccdcf'),
+(2, 'Quvonchbek', 'aaaa@gmail.com', 5, 'sdsdcsdccdcf'),
+(3, 'Quwanishbek', 'aaaa@gmail.com', 4, 'giyvyygbuhbugy'),
+(4, 'Quvonchbek', 'aaaa@gmail.com', 4, 'yifyigvbggbiugbigibgui'),
+(5, 'Quvonchbek', '(+998) 88-888-88-88', 1, 'sdcecece');
 
 -- --------------------------------------------------------
 
@@ -452,7 +480,7 @@ ALTER TABLE `mentors`
 -- AUTO_INCREMENT for table `messages`
 --
 ALTER TABLE `messages`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT for table `post`
@@ -470,7 +498,7 @@ ALTER TABLE `programmer`
 -- AUTO_INCREMENT for table `registratsiya`
 --
 ALTER TABLE `registratsiya`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `students`

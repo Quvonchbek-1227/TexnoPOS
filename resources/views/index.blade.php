@@ -352,7 +352,7 @@
                                             }    
                                         ?>
                                     </p>
-                                    <a href="post.html" title="" class="read-more">Read <i class="fa fa-long-arrow-alt-right"></i></a>
+                                    <a href="{{ route('get_post', ['id'=>$blog->id]) }}" title="" class="read-more">Toliq Oqiw <i class="fa fa-long-arrow-alt-right"></i></a>
                                 </div>
                             </div>
                             <!--blog-post end-->
@@ -379,15 +379,7 @@
 
 
 
-    <script src="{{ asset('assets/js/jquery.js') }}"></script>
-    <script src="{{ asset('assets/js/bootstrap.min.js') }}"></script>
-    <script src="{{ asset('assets/js/isotope.js') }}"></script>
-    <script src="{{ asset('assets/js/html5lightbox.js') }}"></script>
-    <script src="{{ asset('assets/js/slick.min.js') }}"></script>
-    <script src="{{ asset('assets/js/tweenMax.js') }}"></script>
-    <script src="{{ asset('assets/js/wow.min.js') }}"></script>
-    <script src="{{ asset('assets/js/scripts.js') }}"></script>
-    <script src="{{ asset('assets/js/myjs.js') }}"></script>
+    @include('includes.script')
 
 
 </body>

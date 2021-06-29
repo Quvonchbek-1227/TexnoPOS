@@ -21,6 +21,31 @@ class ContactsController extends Controller
             'courses'=>$courses
         ]);
     }
+    public function add_message(Request $request){
+        $connected = 'true';
+        $email = $request->email;
+        $name = $request->name;
+        $message = $request->message;
+        $add = DB::table('messages')->insert([
+            'name'=>$name,
+            'email'=>$email,
+            'message'=>$message
+        ]);
+
+        return redirect('/contacts');
+
+    }
+    public function add_user(Request $request){
+        $add = DB::table('registratsiya')
+        ->insert([
+            'name'=>$request->name,
+            'phone'=>$request->phone,
+            'id_course'=>$request->course,
+            'text'=>$request->message
+        ]);
+        return redirect()->back();
+    }
+
 
     
 }

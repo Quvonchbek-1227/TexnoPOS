@@ -8,6 +8,8 @@ use App\Http\Controllers\ProgrammersController;
 use App\Http\Controllers\StudentController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\ContactsController;
+use App\Http\Controllers\MessageController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -42,12 +44,16 @@ Route::get('/blog',[BlogController::class,'get_blogs'])->name('get_blogs');
 
 Route::get('/blog/{id}',[BlogController::class,'get_post'])->name('get_post');
 
+Route::get('/contacts',[ContactsController::class,'contacts'])->name('contacts');
 
-// Route::get('/contacts',ContactsController::class,'contacts')->name('contacts');
+Route::post('/message',[ContactsController::class,'add_message'])->name('add_message');
 
-Route::get('/contacts', function () {
-    return view('contacts');
-});
+
+Route::post('/adduser',[ContactsController::class,'add_user'])->name('add_user');
+
+// Route::get('/contacts', function () {
+//     return view('contacts');
+// });
 
 Route::get('/about', function () {
     return view('about');
