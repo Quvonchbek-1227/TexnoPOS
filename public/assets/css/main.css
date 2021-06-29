@@ -236,7 +236,7 @@ p {
     font-size: 18.29px;
     font-weight: 500;
     font-family: Poppins, sans-serif;
-    background-color: #37009A;
+    background-color: #141518;
     height: 40px;
     line-height: 40px;
     padding: 0 60px;
@@ -247,11 +247,11 @@ p {
 
 .btn-default:hover {
     color: #fff;
-    background-color: #1E0058;
+    background-color: #141518;
 }
 
 .btn-default:hover i {
-    color: #1E0058;
+    color: #141518;
 }
 
 .btn-default i {
@@ -261,7 +261,7 @@ p {
     line-height: 28px;
     text-align: center;
     border-radius: 50px;
-    color: #37009A;
+    color: #141518;
     position: absolute;
     top: 50%;
     transition: all 0.4s ease-in-out;
@@ -291,7 +291,7 @@ p {
     text-align: center;
     color: #fff;
     font-size: 16px;
-    background-color: #1E0058;
+    background-color: #141518;
 }
 
 .social-links li a:hover {
@@ -384,7 +384,7 @@ header .navigation-bar nav ul li a {
 }
 
 header .navigation-bar nav ul li a:hover {
-    color: #1E0058;
+    color: #141518;
 }
 
 header .navigation-bar nav ul li a:before {
@@ -489,7 +489,7 @@ header .navigation-bar nav ul ul ul {
 }
 
 .main-section .main-title {
-    color: #1E0058;
+    color: #141518;
     font-size: 110px;
     font-weight: 600;
     position: fixed;
@@ -577,7 +577,7 @@ header .navigation-bar nav ul ul ul {
 
 .main-banner .banner-text>h2 span {
     display: inline-block;
-    color: #1E0058;
+    color: #141518;
     position: relative;
 }
 
@@ -594,7 +594,7 @@ header .navigation-bar nav ul ul ul {
     left: 0;
     width: 100%;
     height: 2px;
-    background-color: #1E0058;
+    background-color: #141518;
     opacity: 1;
     visibility: visible;
     transition: all 0.4s ease-in-out;
@@ -654,14 +654,14 @@ header .navigation-bar nav ul ul ul {
     padding: 0;
     right: 20px;
     border: 0;
-    color: #37009A;
+    color: #141518;
     background-color: inherit;
     transform: translateY(-50%);
     transition: all 0.4s ease-in-out;
 }
 
 .main-banner .banner-text .search-form button:hover {
-    color: #1E0058;
+    color: #141518;
 }
 
 .section-title {
@@ -677,7 +677,7 @@ header .navigation-bar nav ul ul ul {
 }
 
 .section-title>h2>span {
-    color: #1E0058;
+    color: #141518;
 }
 
 .section-title p {
@@ -842,7 +842,7 @@ header .navigation-bar nav ul ul ul {
 
 .classes-section .classes-col .class-info .price {
     margin-left: auto;
-    color: #37009A;
+    color: #141518;
     font-size: 18.29px;
     font-weight: 700;
     font-family: Poppins, sans-serif;
@@ -875,7 +875,7 @@ header .navigation-bar nav ul ul ul {
     bottom: -20px;
     right: 20px;
     width: 40px;
-    background: linear-gradient(180deg, #37009A, #1E0058);
+    background: linear-gradient(180deg, #141518, #141518);
     z-index: 99;
     text-align: center;
     border-radius: 30px;
@@ -924,7 +924,7 @@ header .navigation-bar nav ul ul ul {
 
 .teachers-section .teachers .teacher .teacher-info>span {
     display: block;
-    color: #37009A;
+    color: #141518;
     font-size: 14.23px;
     font-weight: 600;
 }
@@ -943,7 +943,7 @@ header .navigation-bar nav ul ul ul {
 
 .course-section .find-course .sec-title>h3 {
     font-size: 20.32px;
-    color: #37009A;
+    color: #141518;
     font-weight: 500;
 }
 
@@ -1011,7 +1011,7 @@ header .navigation-bar nav ul ul ul {
 
 .course-section .courses-list .course-card .course-meta+span {
     display: inline-block;
-    color: #37009A;
+    color: #141518;
     font-size: 18px;
     margin-left: auto;
     font-weight: 700;
@@ -1053,7 +1053,7 @@ header .navigation-bar nav ul ul ul {
 .course-section .all-btn {
     float: right;
     display: inline-block;
-    color: #37009A;
+    color: #141518;
     font-size: 14.23px;
     font-weight: 600;
     margin-top: 20px;
@@ -1109,7 +1109,7 @@ header .navigation-bar nav ul ul ul {
     font-size: 14.23px;
     height: 24px;
     line-height: 24px;
-    background-color: #37009A;
+    background-color: #141518;
     border-radius: 30px;
 }
 
@@ -1130,7 +1130,7 @@ header .navigation-bar nav ul ul ul {
 }
 
 .blog-section .blog-posts .blog-post .blog-info>h3:hover {
-    color: #1E0058;
+    color: #141518;
 }
 
 .blog-section .blog-posts .blog-post .blog-info p {
@@ -1139,7 +1139,7 @@ header .navigation-bar nav ul ul ul {
 
 .blog-section .blog-posts .blog-post .blog-info .read-more {
     display: inline-block;
-    color: #37009A;
+    color: #141518;
     font-size: 14.23px;
     font-weight: 600;
 }
@@ -1173,7 +1173,7 @@ header .navigation-bar nav ul ul ul {
 }
 
 .newsletter-section .newsletter-sec {
-    background: linear-gradient(90deg, #37009A, #1E0058);
+    background: linear-gradient(90deg, #141518, #141518);
     background-repeat: no-repeat;
     padding: 57px 100px 55px;
     border-radius: 40px;
@@ -1351,7 +1351,7 @@ footer .widget-links li a {
 }
 
 footer .widget-links li a:hover {
-    color: #1E0058;
+    color: #141518;
     padding-left: 5px;
 }
 
@@ -1418,7 +1418,7 @@ footer .bottom-footer .social-links {
     color: #2b2b2b;
     font-size: 14.23px;
     font-style: italic;
-    background-color: #37009A;
+    background-color: #141518;
     padding: 0 20px;
     height: 24px;
     line-height: 24px;
@@ -1478,7 +1478,7 @@ footer .bottom-footer .social-links {
 }
 
 .pager-section .page-titlee {
-    color: #1E0058;
+    color: #141518;
     font-size: 162.6px;
     font-weight: 600;
     opacity: 0.1;
@@ -1515,7 +1515,7 @@ footer .bottom-footer .social-links {
 
 .about-page-content .act-inffo>span {
     text-transform: uppercase;
-    color: #1E0058;
+    color: #141518;
     font-size: 14.23px;
     font-weight: 500;
     font-family: Poppins, sans-serif;
@@ -1611,7 +1611,7 @@ footer .bottom-footer .social-links {
 
 .classes-page .classes-banner>span {
     display: inline-block;
-    color: #1E0058;
+    color: #141518;
     font-size: 14.23px;
     font-weight: 500;
     text-transform: uppercase;
@@ -1671,7 +1671,7 @@ footer .bottom-footer .social-links {
     left: 0;
     width: 100%;
     height: 2px;
-    background-color: #1E0058;
+    background-color: #141518;
     opacity: 0;
     visibility: hidden;
     transition: all 0.4s ease-in-out;
@@ -1765,8 +1765,8 @@ footer .bottom-footer .social-links {
 }
 
 .schedule-page .nav-tabs li a.active {
-    border-color: #1E0058 !important;
-    color: #1E0058;
+    border-color: #141518 !important;
+    color: #141518;
 }
 
 .schedule-page .schedule-content {
@@ -1821,13 +1821,13 @@ footer .bottom-footer .social-links {
 
 .schedule-page .schedule-content .schp-list li .mkd-info {
     padding: 41px 20px 35px;
-    background: linear-gradient(180deg, #37009A, #1E0058);
+    background: linear-gradient(180deg, #141518, #141518);
     text-align: center;
     height: 100%;
 }
 
 .schedule-page .schedule-content .schp-list li .mkd-info.bg-2 {
-    background: linear-gradient(180deg, #159957, #37009A);
+    background: linear-gradient(180deg, #159957, #141518);
 }
 
 .schedule-page .schedule-content .schp-list li .mkd-info>h3 {
@@ -2040,7 +2040,7 @@ footer .bottom-footer .social-links {
 
 .blog-post.single blockquote>span {
     display: block;
-    color: #1E0058;
+    color: #141518;
     font-size: 12.19px;
     font-style: italic;
     position: relative;
@@ -2101,7 +2101,7 @@ footer .bottom-footer .social-links {
 }
 
 .mdp-post-comments ul li .mdp-comment .mdp-com .reply-btn i {
-    color: #37009A;
+    color: #141518;
     margin-right: 4px;
 }
 
@@ -2180,7 +2180,7 @@ footer .bottom-footer .social-links {
 }
 
 .sidebar .widget-categories ul li a:hover {
-    color: #1E0058;
+    color: #141518;
 }
 
 .sidebar .widget-categories ul li span {
@@ -2213,7 +2213,7 @@ footer .bottom-footer .social-links {
 }
 
 .sidebar .widget-posts .wd-posts .wd-post .wd-info>h3:hover {
-    color: #1E0058;
+    color: #141518;
 }
 
 .sidebar .widget-posts .wd-posts .wd-post .wd-info>span {
@@ -2257,7 +2257,7 @@ footer .bottom-footer .social-links {
 }
 
 .sidebar .widget-comments ul li:hover {
-    color: #1E0058;
+    color: #141518;
 }
 
 .sidebar .widget-comments ul li:hover a {
@@ -2286,7 +2286,7 @@ footer .bottom-footer .social-links {
     left: 0;
     width: 7px;
     height: 7px;
-    background-color: #37009A;
+    background-color: #141518;
     border-radius: 50%;
     transform: translateY(-50%);
 }
@@ -2300,7 +2300,7 @@ footer .bottom-footer .social-links {
 }
 
 .sidebar .widget-archives ul li a:hover {
-    color: #1E0058;
+    color: #141518;
 }
 
 .sidebar .widget-tags ul {
@@ -2353,7 +2353,7 @@ footer .bottom-footer .social-links {
 }
 
 .sidebar .widget-calendar .mdp-calendar table tbody td.active {
-    background: linear-gradient(270deg, #37009A, #1E0058);
+    background: linear-gradient(270deg, #141518, #141518);
     color: #fff;
     border-radius: 50%;
 }
@@ -2383,7 +2383,7 @@ footer .bottom-footer .social-links {
 }
 
 .sidebar .widget-calendar .mdp-calendar .controls li a:hover {
-    color: #37009A;
+    color: #141518;
 }
 
 .sidebar .widget-calendar .mdp-calendar .controls li a i {
@@ -2408,7 +2408,7 @@ footer .bottom-footer .social-links {
     font-size: 14.23px;
     height: 24px;
     line-height: 24px;
-    background-color: #37009A;
+    background-color: #141518;
     border-radius: 30px;
     position: relative;
     top: -10px;
@@ -2434,7 +2434,7 @@ footer .bottom-footer .social-links {
     left: 0;
     width: 16px;
     height: 16px;
-    background: linear-gradient(270deg, #37009A, #1E0058);
+    background: linear-gradient(270deg, #141518, #141518);
     transform: translateY(-50%);
     border-radius: 50%;
 }
@@ -2508,7 +2508,7 @@ footer .bottom-footer .social-links {
     font-size: 14.23px;
     height: 24px;
     line-height: 24px;
-    background-color: #37009A;
+    background-color: #141518;
     border-radius: 30px;
     display: inline-block;
     margin-bottom: 12px;
@@ -2551,7 +2551,7 @@ footer .bottom-footer .social-links {
 
 .blog-section.posts-page .blog-posts .blog-post.quote-post .blog-info>span {
     display: block;
-    color: #1E0058;
+    color: #141518;
     font-size: 12.19px;
     font-style: italic;
     position: relative;
@@ -2679,7 +2679,7 @@ footer .bottom-footer .social-links {
     display: block;
     width: 100%;
     height: 2px;
-    background-color: #37009A;
+    background-color: #141518;
     margin-bottom: 5px;
     transition: all 0.4s ease-in-out;
 }
@@ -2820,7 +2820,7 @@ footer .bottom-footer .social-links {
 
 .failed,
 .text-info {
-    background: #1E0058;
+    background: #141518;
     padding: 10px;
     margin-bottom: 20px;
     color: #fff !important;
@@ -2854,7 +2854,7 @@ footer .bottom-footer .social-links {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: #1E0058;
+    color: #141518;
     font-size: 300px;
     font-weight: 600;
     opacity: 0.05;
@@ -2870,7 +2870,7 @@ footer .bottom-footer .social-links {
 }
 
 .error-page .error-text h2 {
-    color: #1E0058;
+    color: #141518;
     font-size: 150px;
     font-weight: 700;
     margin-bottom: 20px;
@@ -2890,11 +2890,11 @@ footer .bottom-footer .social-links {
 }
 
 .error-page .error-text .social-icons li a {
-    background: linear-gradient(270deg, #159957, #37009A);
+    background: linear-gradient(270deg, #159957, #141518);
 }
 
 .error-page .error-text .social-icons li a:hover {
-    background: linear-gradient(180deg, #37009A, #1E0058);
+    background: linear-gradient(180deg, #141518, #141518);
 }
 
 .social-icons li {
@@ -2913,7 +2913,7 @@ footer .bottom-footer .social-links {
     line-height: 50px;
     border-radius: 50px;
     text-align: center;
-    background: linear-gradient(270deg, #159957, #37009A);
+    background: linear-gradient(270deg, #159957, #141518);
     color: #fff;
     font-size: 24px;
 }
@@ -2950,14 +2950,14 @@ footer .bottom-footer .social-links {
 
 .teacher-col .teacher--info>span {
     display: block;
-    color: #37009A;
+    color: #141518;
     font-size: 14px;
     text-transform: capitalize;
     margin-bottom: 21px;
 }
 
 .teacher-col .teacher--info .social-icons li a {
-    background: linear-gradient(180deg, #37009A, #1E0058);
+    background: linear-gradient(180deg, #141518, #141518);
 }
 
 .search-content .blog-section {
@@ -3137,7 +3137,7 @@ footer .bottom-footer .social-links {
 
 .class-sidebar .widget-information ul li>span {
     margin-left: auto;
-    color: #37009A;
+    color: #141518;
     font-size: 14px;
     font-weight: 700;
     font-style: italic;
@@ -3205,7 +3205,7 @@ footer .bottom-footer .social-links {
     width: 50px;
     height: 50px;
     line-height: 50px;
-    background: linear-gradient(270deg, #37009A, #1E0058);
+    background: linear-gradient(270deg, #141518, #141518);
     border-radius: 50%;
     text-align: center;
 }
@@ -3262,7 +3262,7 @@ footer .bottom-footer .social-links {
 
 .class-sidebar .widget-classes-carousel .slick-dots li.slick-active button {
     width: 20px;
-    background: linear-gradient(270deg, #159957, #37009A);
+    background: linear-gradient(270deg, #159957, #141518);
 }
 
 .class-sidebar .widget-contact-dp {
@@ -3351,7 +3351,7 @@ footer .bottom-footer .social-links {
 .sg-event>span {
     display: inline-block;
     color: #fff;
-    background: linear-gradient(180deg, #37009A, #1E0058);
+    background: linear-gradient(180deg, #141518, #141518);
 }
 
 .sg-event>span {
@@ -3414,7 +3414,7 @@ footer .bottom-footer .social-links {
 
 .clt li .clt-info h3 span {
     display: block;
-    color: #37009A;
+    color: #141518;
     font-size: 18px;
     font-weight: 500;
     margin-top: 5px;
@@ -3451,7 +3451,7 @@ footer .bottom-footer .social-links {
     top: 0;
     left: 0;
     width: 100%;
-    background: linear-gradient(180deg, #37009A, #1E0058);
+    background: linear-gradient(180deg, #141518, #141518);
     height: 100%;
     z-index: -1;
     border-radius: 50%;
@@ -3459,7 +3459,7 @@ footer .bottom-footer .social-links {
 }
 
 .teacher-single-page .teacher-coly .social-icons li a:hover:before {
-    background: linear-gradient(0deg, #37009A, #1E0058);
+    background: linear-gradient(0deg, #141518, #141518);
 }
 
 .teacher-single-page .teacher-content {
@@ -3468,7 +3468,7 @@ footer .bottom-footer .social-links {
 }
 
 .teacher-single-page .teacher-content>h3 {
-    color: #1E0058;
+    color: #141518;
     font-size: 20px;
     font-style: italic;
     margin-bottom: 21px;
@@ -3576,7 +3576,7 @@ footer .bottom-footer .social-links {
 
 .teacher-single-page .teacher-content .tech-detils li span {
     display: inline-block;
-    color: #37009A;
+    color: #141518;
     font-size: 14px;
     font-style: italic;
     font-weight: 700;
@@ -3626,11 +3626,11 @@ footer .bottom-footer .social-links {
 }
 
 .teacher-single-page .teacher-content .skills-tech .progess-row .progress .progress-bar.bg-clr2 {
-    background-color: #37009A;
+    background-color: #141518;
 }
 
 .teacher-single-page .teacher-content .skills-tech .progess-row .progress .progress-bar.bg-clr3 {
-    background-color: #37009A;
+    background-color: #141518;
 }
 
 .teacher-single-page .teacher-content .skills-tech .progess-row .progress .progress-bar.bg-clr4 {
@@ -3654,7 +3654,7 @@ footer .bottom-footer .social-links {
 }
 
 .schedule-mobile-content .ttb-list>ul li .dd-info {
-    background: linear-gradient(180deg, #37009A, #1E0058);
+    background: linear-gradient(180deg, #141518, #141518);
     padding: 35px 20px;
 }
 
@@ -3675,7 +3675,7 @@ footer .bottom-footer .social-links {
 }
 
 .schedule-mobile-content .ttb-list>ul li:nth-child(2n) .dd-info {
-    background: linear-gradient(180deg, #159957, #37009A);
+    background: linear-gradient(180deg, #159957, #141518);
 }
 
 .back-to-top {
@@ -3689,10 +3689,10 @@ footer .bottom-footer .social-links {
     overflow: hidden;
     border-radius: 50%;
     color: #fff;
-    background-image: linear-gradient(180deg, #37009A, #1E0058);
+    background-image: linear-gradient(180deg, #141518, #141518);
 }
 
 .back-to-top:hover {
     transition: 10s;
-    background-image: linear-gradient(210deg, #37009A, #1E0058);
+    background-image: linear-gradient(210deg, #141518, #141518);
 }

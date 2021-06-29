@@ -10,7 +10,7 @@
             <ul class="contact-add d-flex flex-wrap">
                 <li>
                     <div class="contact-info">
-                        <img src="{{asset('assets/img/icon1.png')}}" alt="">
+                        <img width='25' src="{{asset('assets/img/icon1.png')}}" alt="">
                         <div class="contact-tt">
                             <h4>Telefon</h4>
                             <span>+99890 592 71 17</span>
@@ -21,7 +21,7 @@
                 </li>
                 <li>
                     <div class="contact-info">
-                        <img src="{{asset('assets/img/icon2.png')}}" alt="">
+                        <img width='25' src="{{asset('assets/img/icon2.png')}}" alt="">
                         <div class="contact-tt">
                             <h4>Jumıs waqtı</h4>
                             <span>Dúysenbi - Ekshenbi </span>
@@ -32,7 +32,7 @@
                 </li>
                 <li>
                     <div class="contact-info">
-                        <img src="{{asset('assets/img/icon3.png')}}" alt="">
+                        <img width='25' src="{{asset('assets/img/icon3.png')}}" alt="">
                         <div class="contact-tt">
                             <h4>Mánzil</h4>
                             <span>Ǵárezsizlik kóshesi 80/4</span>
