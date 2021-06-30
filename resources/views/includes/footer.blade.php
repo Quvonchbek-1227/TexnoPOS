@@ -52,11 +52,11 @@
                             <div class="widget widget-links">
                                 <h3 class="widget-title">Sayt kartası</h3>
                                 <ul>
-                                    <li><a href="about.html" title="">Biz haqqımızda </a></li>
-                                    <li><a href="classes.html" title="">Kurslar</a></li>
-                                    <li><a href="teachers.html" title="">Portfolio </a></li>
-                                    <li><a href="blog.html" title="">Blog </a></li>
-                                    <li><a href="schedule.html" title="">Baylanıs </a></li>
+                                    <li><a href="{{ route('about') }}" title="">Biz haqqımızda </a></li>
+                                    <li><a href="{{ route('get_courses') }}" title="">Kurslar</a></li>
+                                    <li><a href="#" title="">Portfolio </a></li>
+                                    <li><a href="{{ route('get_blogs') }}" title="">Blog </a></li>
+                                    <li><a href="{{ route('contacts') }}" title="">Baylanıs </a></li>
                                 </ul>
                             </div>
                             <!--widget-links end-->
@@ -77,12 +77,12 @@
                             <p>© Avtorlıq huquqı 2021 TexnoPOS Bárshe huqıqlar qorǵalǵan</p>
                         </div>
                         <div class="col-lg-6 col-md-6 col-sm-6">
-                            <ul class="social-links">
-                                <li><a href="#" title=""><i class="fab fa-facebook-f"></i></a></li>
-                                <li><a href="#" title=""><i class="fab fa-telegram"></i></a></li>
-                                <li><a href="#" title=""><i class="fab fa-instagram"></i></a></li>
-                                <li><a href="#" title=""><i class="fab fa-youtube"></i></a></li>
-                                <li><a href="#" title=""><i class="fab fa-tiktok"></i></a></li>
+                            <ul class="social-links ml-auto">
+                                {{-- <li><a href="https://" title=""><i class="fab fa-facebook-f"></i></a></li> --}}
+                                <li><a href="https://t.me/texnopos" title=""><i class="fab fa-telegram"></i></a></li>
+                                <li><a href="https://www.instagram.com/texnopos" title=""><i class="fab fa-instagram"></i></a></li>
+                                <li><a href="https://www.youtube.com/texnopos" title=""><i class="fab fa-youtube"></i></a></li>
+                                <li><a href="https://www.tiktok.com/@texnopos" title=""><i class="fab fa-tiktok"></i></a></li>
                             </ul>
                         </div>
                     </div>
