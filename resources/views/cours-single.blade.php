@@ -76,14 +76,14 @@
 											</a>
 										</div><!--class-gallery-img end-->
 									</div>
-								</div> --}}
+								</div> --}}		
 
 							</div><!--class-gallery end-->
 
 							<p>
 								{{$course[0]->description}}
 							</p>
-							<a href="classes.html" title="" class="btn-default">Dizimnen ótiw<i class="fa fa-long-arrow-alt-right"></i></a>
+							<a href="{{route('contacts')}}" title="" class="btn-default">Dizimnen ótiw<i class="fa fa-long-arrow-alt-right"></i></a>
 						</div><!--class-single-content end-->
 					</div>
 					<div class="col-xl-4 col-lg-4">
@@ -116,7 +116,7 @@
 											<span>{{$course[0]->name}} Mentor</span>
 										</div>
 									</div>
-									<a href="contacts.html" title="" class="btn-default">Dizimnen ótiw<i class="fa fa-long-arrow-alt-right"></i></a>
+									<a href="{{route('contacts')}}" title="" class="btn-default">Dizimnen ótiw<i class="fa fa-long-arrow-alt-right"></i></a>
 								</div>
 							</div><!--widget-information end-->
 							<div class="widget widget-class">
@@ -141,8 +141,8 @@
 									<div class="classes-col">
 										<div class="class-thumb">
 											<img src="{{ asset('assets/img/courses/'.$key->course_img) }}" alt="" class="w-100">
-											<a href="contacts.html" title="" class="crt-btn">
-												<img src="{{asset('assets/img/icon10.png')}}" alt="">
+											<a href="{{route('contacts')}}" title="" class="crt-btn">
+												<i class="fas fa-pen-alt"></i>
 											</a>
 										</div>
 										<div class="class-info">

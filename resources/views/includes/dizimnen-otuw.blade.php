@@ -1,3 +1,4 @@
+
 <section class="newsletter-section">
     <div class="container">
         <div class="newsletter-sec">
@@ -16,13 +17,13 @@
                         <div class="row">
                             <div class="col-md-4">
                                 <div class="form-group">
-                                    <input type="text" id="name" name="name" placeholder="Atıńız">
+                                    <input type="text" id="name" name="name" placeholder="Atıńız" required>
                                 </div>
                                 <!--form-group end-->
                             </div>
                             <div class="col-md-4">
                                 <div class="form-group">
-                                    <input type="phone" value="99" id="phone" name="phone">
+                                    <input type="phone" value="" placeholder="Telefon: +99890 123 45 67" name="phone" maxlength="12" minlength="12"  oninput="this.value = this.value.replace(/[^0-9.]/g, ''); this.value = this.value.replace(/(\..*)\./g, '$1');" required >
                                 </div>
                                 <!--form-group end-->
                             </div>

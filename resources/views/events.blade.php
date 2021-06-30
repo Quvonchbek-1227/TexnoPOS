@@ -45,165 +45,38 @@
 				<div class="course-section">
 					<div class="courses-list">
 						<div class="row">
+							@foreach ($events as $event)
+								
 							<div class="col-lg-6">
 								<div class="course-card">
 									<div class="d-flex flex-wrap align-items-center">
 										<ul class="course-meta">
 											<li>
-												<img src="assets/img/icon12.png" alt="">
-												29/07/2020
+												<img src="{{asset('assets/img/icon12.png')}}" alt="">
+												{{$event->date}}
 											</li>
 											<li>
-												11AM to 15PM
+												{{$event->time}}
 											</li>
 										</ul>
-										<span>FREE</span>
+										<span>{{$event->price}}</span>
 									</div>
-									<h3><a href="event-single.html" title="">Digital Transformation Conference</a></h3>
+									<h3><a href="{{ route('event', ['id'=>$event->id]) }}" title="">{{$event->title}}</a></h3>
 									<div class="d-flex flex-wrap">
 										<div class="posted-by">
 											<img src="https://via.placeholder.com/26x26" alt="">
-											<a href="#" title="">Amanda Kern</a>
+											<a href="#" title="">{{$event->full_name}}</a>
 										</div>
-										<span class="locat"><img src="assets/img/loct.png" alt="">43 castle road 517 district</span>
+										<span class="locat"><img src="{{asset('assets/img/loct.png')}}" alt="">{{$event->adress}}</span>
 									</div>
 								</div><!--course-card end-->
 							</div>
-							<div class="col-lg-6">
-								<div class="course-card">
-									<div class="d-flex flex-wrap align-items-center">
-										<ul class="course-meta">
-											<li>
-												<img src="assets/img/icon12.png" alt="">
-												29/07/2020
-											</li>
-											<li>
-												11AM to 15PM
-											</li>
-										</ul>
-										<span>$16</span>
-									</div>
-									<h3><a href="event-single.html" title="">Environment conference</a></h3>
-									<div class="d-flex flex-wrap">
-										<div class="posted-by">
-											<img src="https://via.placeholder.com/26x26" alt="">
-											<a href="#" title="">Cvita Doleschall</a>
-										</div>
-										<span class="locat"><img src="assets/img/loct.png" alt="">43 castle road 517 district</span>
-									</div>
-								</div><!--course-card end-->
-							</div>
-							<div class="col-lg-6">
-								<div class="course-card">
-									<div class="d-flex flex-wrap align-items-center">
-										<ul class="course-meta">
-											<li>
-												<img src="assets/img/icon12.png" alt="">
-												29/07/2020
-											</li>
-											<li>
-												11AM to 15PM
-											</li>
-										</ul>
-										<span>$8</span>
-									</div>
-									<h3><a href="event-single.html" title="">Campus clean workshop</a></h3>
-									<div class="d-flex flex-wrap">
-										<div class="posted-by">
-											<img src="https://via.placeholder.com/26x26" alt="">
-											<a href="#" title="">Helena Brauer</a>
-										</div>
-										<span class="locat"><img src="assets/img/loct.png" alt="">43 castle road 517 district</span>
-									</div>
-								</div><!--course-card end-->
-							</div>
-							<div class="col-lg-6">
-								<div class="course-card">
-									<div class="d-flex flex-wrap align-items-center">
-										<ul class="course-meta">
-											<li>
-												<img src="assets/img/icon12.png" alt="">
-												29/07/2020
-											</li>
-											<li>
-												11AM to 15PM
-											</li>
-										</ul>
-										<span>FREE</span>
-									</div>
-									<h3><a href="event-single.html" title="">Digital Transformation Conference</a></h3>
-									<div class="d-flex flex-wrap">
-										<div class="posted-by">
-											<img src="https://via.placeholder.com/26x26" alt="">
-											<a href="#" title="">Amanda Kern</a>
-										</div>
-										<span class="locat"><img src="assets/img/loct.png" alt="">43 castle road 517 district</span>
-									</div>
-								</div><!--course-card end-->
-							</div>
-							<div class="col-lg-6">
-								<div class="course-card">
-									<div class="d-flex flex-wrap align-items-center">
-										<ul class="course-meta">
-											<li>
-												<img src="assets/img/icon12.png" alt="">
-												29/07/2020
-											</li>
-											<li>
-												11AM to 15PM
-											</li>
-										</ul>
-										<span>$16</span>
-									</div>
-									<h3><a href="event-single.html" title="">Environment conference</a></h3>
-									<div class="d-flex flex-wrap">
-										<div class="posted-by">
-											<img src="https://via.placeholder.com/26x26" alt="">
-											<a href="#" title="">Cvita Doleschall</a>
-										</div>
-										<span class="locat"><img src="assets/img/loct.png" alt="">43 castle road 517 district</span>
-									</div>
-								</div><!--course-card end-->
-							</div>
-							<div class="col-lg-6">
-								<div class="course-card">
-									<div class="d-flex flex-wrap align-items-center">
-										<ul class="course-meta">
-											<li>
-												<img src="assets/img/icon12.png" alt="">
-												29/07/2020
-											</li>
-											<li>
-												11AM to 15PM
-											</li>
-										</ul>
-										<span>$8</span>
-									</div>
-									<h3><a href="event-single.html" title="">Campus clean workshop</a></h3>
-									<div class="d-flex flex-wrap">
-										<div class="posted-by">
-											<img src="https://via.placeholder.com/26x26" alt="">
-											<a href="#" title="">Helena Brauer</a>
-										</div>
-										<span class="locat"><img src="assets/img/loct.png" alt="">43 castle road 517 district</span>
-									</div>
-								</div><!--course-card end-->
-							</div>
+							
+							@endforeach
+							{{$events->links()}}
 						</div>
 					</div><!--courses-list end-->
 				</div>
-				<div class="mdp-pagiation">
-					<nav aria-label="Page navigation example">
-						<ul class="pagination">
-					    	<li class="page-item"><a class="page-link" href="#">1</a></li>
-					    	<li class="page-item"><a class="page-link active" href="#">2</a></li>
-					    	<li class="page-item"><a class="page-link" href="#">3</a></li>
-					    	<li class="page-item"><a class="page-link" href="#">4</a></li>
-					    	<li class="page-item"><a class="page-link" href="#">...</a></li>
-					    	<li class="page-item"><a class="page-link" href="#">15</a></li>
-					  	</ul>
-					</nav>
-				</div><!--pagination-end-->
 			</div>
 		</section><!--page-content end-->
 

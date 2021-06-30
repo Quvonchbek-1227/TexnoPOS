@@ -1,39 +1,40 @@
 $(document).ready(function() {
 
-    // if ($('#contact-form').length) {
+    if ($('#contact-form').length) {
 
-    //     $('#submit').on("click", function() {
+        $('#submit').on("click", function() {
 
-    //         var o = new Object();
-    //         var form = '#contact-form';
-    //         var name = $('#contact-form .name').val();
-    //         var email = $('#contact-form .email').val();
-    //         // tekseriw
-    //         if (name == '' || email == '') {
-    //             var email = $('#email').val();
+            var o = new Object();
+            var message = $('#msg').val();
+            var form = '#contact-form';
+            var name = $('#contact-form .name').val();
+            var email = $('#contact-form .email').val();
+            // tekseriw
+            if (name == '' || email == '' || message == '') {
+                var email = $('#email').val();
 
-    //             $('#contact-form .response').html('<div class="failed">Iltimas mag`luwmatlarin`izdi toliq kiritin`.</div>');
+                $('#contact-form .response').html('<div class="failed">Iltimas mag`luwmatlarin`izdi toliq kiritin`.</div>');
 
-    //             return false;
+                return false;
 
-    //         } else {
-    //             $('#contact-form .response').html('<div class="text-info"><img src="assets/img/preloader.gif" alt="Loading..."> Loading...</div>');
-    //             $('#submit').attr('type', 'submit');
-    //         }
+            } else {
+                $('#contact-form .response').html('<div class="text-info"><img src="assets/img/preloader.gif" alt="Loading..."> Loading...</div>');
+                $('#submit').attr('type', 'submit');
+            }
 
-    //     });
+        });
 
-    // }
+    }
 
-    $('#phone').usPhoneFormat({
-        format: '(+998) 99-999-99-99',
-    });
+    // $('#phone').usPhoneFormat({
+    //     format: '(+998) 99-999-99-99',
+    // });
 
-    $(document).ready(function() {
+    // $(document).ready(function() {
 
-        $('#phone').inputmask('(+998) 99-999-99-99');
+    //     $('#phone').inputmask('(+998) 99-999-99-99');
 
-    });
+    // });
 
 
     // $('#submit').click(function() {

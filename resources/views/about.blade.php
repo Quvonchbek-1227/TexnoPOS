@@ -64,7 +64,7 @@
 
 		</section><!--about-page-content end-->
 
-		<section class="benifit-section">
+		{{-- <section class="benifit-section">
 			<div class="container">
 				<div class="row align-items-center">
 					<div class="col-lg-6">
@@ -112,7 +112,7 @@
 					</div>
 				</div>
 			</div>
-		</section><!--benifit-section end-->
+		</section><!--benifit-section end--> --}}
 
 		<section class="classes-section">
 			<div class="container">
@@ -306,7 +306,7 @@
 		</section><!--classes-section end-->
 
        
-		@include('includes.dizimnen-otuw')
+		{{-- @include('includes.dizimnen-otuw') --}}
 		<!--newsletter-sec end-->
 
 		@include('includes.footer')

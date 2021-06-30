@@ -87,11 +87,18 @@ class MentorController extends Controller
             'courses.id as id_course'
         ]);
 
+        $courses = DB::table('courses')
+        ->get([
+            'courses.id as id_course',
+            'courses.name as course_name'
+        ]);
+
         return view('portfolio',[
             'texnalogies'=>$texnalogies,
             'mentor'=>$mentor,
             'mentors'=>$mentors,
-            'status'=>$status
+            'status'=>$status,
+            'courses'=>$courses
         ]);
          //return $mentors;
     }

@@ -7,12 +7,12 @@
 	<meta name="description" content="Shelly - Website" />
 	<meta name="author" content="merkulove">
 	<meta name="keywords" content="" />
-	<link rel="icon" href="assets/img/favicon.png">
-	<link rel="stylesheet" type="text/css" href="assets/css/animate.css">
-	<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="assets/css/font-awesome.min.css">
-	<link rel="stylesheet" type="text/css" href="assets/css/main.css">
-	<link rel="stylesheet" type="text/css" href="assets/css/responsive.css">
+	<link rel="icon" href="{{ asset('assets/img/favicon.png') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/animate.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/font-awesome.min.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{asset('assets/css/main.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/responsive.css') }}">
 </head>
 
 
@@ -47,12 +47,13 @@
 						<div class="event-single">
 							<div class="event-gallery-sec">
 								<div class="event-gallery">
-									<a href="https://via.placeholder.com/761x400" title="" class="html5lightbox" data-group="set1">
-										<img src="https://via.placeholder.com/761x400" alt="">
+									<a href="{{ asset('assets/img/events/'.$event[0]->event_img) }}" title="" class="html5lightbox" data-group="set1">
+										<img src="{{ asset('assets/img/events/'.$event[0]->event_img) }}" alt="">
 									</a>
-									<span class="price">$15</span>
+									<span class="price">{{$event[0]->price}}</span>
 								</div><!--event-gallery end-->
-								<div class="row">
+
+								{{-- <div class="row">
 									<div class="col-lg-3 col-md-3 col-sm-3 col-3">
 										<div class="event-gallery">
 											<a href="https://via.placeholder.com/1000x667" title="" class="html5lightbox" data-group="set1">
@@ -81,10 +82,11 @@
 											</a>
 										</div><!--event-gallery end-->
 									</div>
-								</div>
+								</div> --}}
+
 							</div><!--event-gallery-sec end-->
 							<p>
-								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vel venenatis felis. Fusce id lectus sit amet nisi ornare ultricies. In sagittis lacinia lorem et tristique. Quisque mauris neque, sollicitudin sit amet imperdiet in, scelerisque sit amet arcu. In vehicula sem eget nisi convallis, a mattis orci imperdiet. Curabitur vitae sapien vel lectus sagittis consequat. Nullam enim velit, dignissim vel viverra ac, eleifend ut tellus.
+								{{$event[0]->text}}
 							</p>
 						</div><!--event-single end-->
 					</div>
@@ -93,15 +95,15 @@
 							<div class="widget widget-information">
 								<ul class="clt">
 									<li>
-										<img src="assets/img/cir3.png" alt="">
+										<img src="{{asset('assets/img/cir3.png')}}" alt="">
 										<div class="clt-info">
-											<h3>43 castle road 517 district</h3>
+											<h3>{{$event[0]->adress}}</h3>
 										</div>
 									</li>
 									<li>
 										<img src="assets/img/cir4.png" alt="">
 										<div class="clt-info">
-											<h3>29/07/2020 <span>11AM to 15PM</span></h3>
+											<h3>{{$event[0]->date}}<span>{{$event[0]->time}}</span></h3>
 										</div>
 									</li>
 								</ul>
@@ -109,11 +111,11 @@
 									<div class="tech-tble">
 										<img src="https://via.placeholder.com/54x54" alt="">
 										<div class="tch-info">
-											<h3>Sharapat Kalabayev</h3>
+											<h3>{{$event[0]->full_name}}</h3>
 											<span>Android Mentor</span>
 										</div>
 									</div>
-									<a href="contacts.html" title="" class="btn-default">Baylanis<i class="fa fa-long-arrow-alt-right"></i></a>
+									<a href="{{route('contacts')}}" title="" class="btn-default">Baylanis<i class="fa fa-long-arrow-alt-right"></i></a>
 								</div>
 							</div><!--widget-information end-->
 							
@@ -128,7 +130,7 @@
 			</div>
 		</section><!--page-content end-->
 
-        @include('includes.dizimnen-otuw')
+        {{-- @include('includes.dizimnen-otuw') --}}
 		<!--newsletter-sec end-->
 
 		@include('includes.footer')

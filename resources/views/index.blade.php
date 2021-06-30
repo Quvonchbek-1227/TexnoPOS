@@ -14,6 +14,9 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/font-awesome.min.css') }}">
     <link rel="stylesheet" type="text/css" href="{{asset('assets/css/main.css')}}">
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/responsive.css') }}">
+    <style>
+        
+    </style>
 </head>
 
 
@@ -44,7 +47,7 @@
                         </div>
                         <div class="col-lg-5 col-md-5">
                             <div class="banner-img wow zoomIn" data-wow-duration="1000ms">
-                                <img width='500' src="assets/img/bala.jpg" alt="">
+                                <img width='500' src="{{asset('assets/img/bala.jpg')}}" alt="">
                             </div>
                             <!--banner-img end-->
                             <div class=" wow zoomIn" data-wow-duration="1000ms"></div>
@@ -187,7 +190,7 @@
                             <div class="classes-col wow fadeInUp" data-wow-duration="1000ms">
                                 <div class="class-thumb">
                                     <img src="{{asset('assets/img/courses/'.$course->course_img)}}" alt="" class="w-100">
-                                    <a href="contacts.html"  title="Baylanis" class="crt-btn fas fa-pen-alt"></a>
+                                    <a href="{{route('course_detail',['id'=>$course->id_course])}}"  title="Baylanis" class="crt-btn fas fa-pen-alt"></a>
                                 </div>
                                 <div class="class-info">
                                     <h3><a href="{{ route('course_detail', ['id'=>$course->id_course]) }}" title="">{{$course->course_name}}</a></h3>
@@ -228,89 +231,47 @@
                     <div class="col-lg-6">
                         <div class="find-course">
                             <div class="sec-title">
-                                <h2>Ózińizge mas kurstı saylań</h2>
-
-                                <h3><img src="assets/img/icon11.png" alt="">Baylanıs <strong>+99890 592 7117</strong></h3>
+                                <h2 style="">Ózińizge mas kurstı saylań</h2>
+                                <h3><img src="{{asset('assets/img/icon11.png')}}" alt="">Baylanıs <strong>+99890 592 7117</strong></h3>
                             </div>
                             <!--sec-title end-->
                             <div class="course-img">
-                                <img src="assets/img/img/4.jpg" alt="">
+                                <img src="{{asset('assets/img/img/4.jpg')}}" alt="">
                             </div>
                             <!--course-img end-->
                         </div>
                         <!--find-course end-->
                     </div>
-                    <div class="col-lg-6">
+                    <div class="col-lg-6" style="margin-top: 150px">
                         <div class="courses-list">
+                            @foreach ($events as $event)
+                                
                             <div class="course-card wow fadeInLeft" data-wow-duration="1000ms">
                                 <div class="d-flex flex-wrap align-items-center">
                                     <ul class="course-meta">
                                         <li>
-                                            <img src="assets/img/icon12.png" alt=""> 29/07/2020
+                                            <img src="{{asset('assets/img/icon12.png')}}" alt="">{{$event->date}}
                                         </li>
                                         <li>
-                                            11AM to 15PM
+                                            {{$event->time}}
                                         </li>
                                     </ul>
-                                    <span>60 mıń swm</span>
+                                    <span>{{$event->price}}</span>
                                 </div>
-                                <h3><a href="event-single.html" title="">Android Development</a></h3>
+                                <h3><a href="event-single.html" title="">{{$event->title}}</a></h3>
                                 <div class="d-flex flex-wrap">
                                     <div class="posted-by">
                                         <img src="https://via.placeholder.com/26x26" alt="">
-                                        <a href="#" title="">Sharapat Kalabaev</a>
+                                        <a href="#" title="">{{$event->full_name}}</a>
                                     </div>
-                                    <span class="locat"><img src="assets/img/loct.png" alt="" />6 saatlıq master klass</span>
+                                    <span class="locat"><img src="{{asset('assets/img/loct.png')}}" alt="" />{{$event->adress}}</span>
                                 </div>
                             </div>
-                            <!--course-card end-->
-                            <div class="course-card wow fadeInLeft" data-wow-duration="1000ms" data-wow-delay="400ms">
-                                <div class="d-flex flex-wrap align-items-center">
-                                    <ul class="course-meta">
-                                        <li>
-                                            <img src="assets/img/icon12.png" alt=""> 29/07/2020
-                                        </li>
-                                        <li>
-                                            11AM to 15PM
-                                        </li>
-                                    </ul>
-                                    <span>60 mıń swm</span>
-                                </div>
-                                <h3><a href="event-single.html" title="">Web Development</a></h3>
-                                <div class="d-flex flex-wrap">
-                                    <div class="posted-by">
-                                        <img src="https://via.placeholder.com/26x26" alt="">
-                                        <a href="#" title="">Alibek Embergenov</a>
-                                    </div>
-                                    <span class="locat"><img src="assets/img/loct.png" alt="" />6 saatlıq master klass</span>
-                                </div>
-                            </div>
-                            <!--course-card end-->
-                            <div class="course-card wow fadeInLeft" data-wow-duration="1000ms" data-wow-delay="600ms">
-                                <div class="d-flex flex-wrap align-items-center">
-                                    <ul class="course-meta">
-                                        <li>
-                                            <img src="assets/img/icon12.png" alt=""> 29/07/2020
-                                        </li>
-                                        <li>
-                                            11AM to 15PM
-                                        </li>
-                                    </ul>
-                                    <span>60 mıń swm</span>
-                                </div>
-                                <h3><a href="event-single.html" title="">Robototexnika</a></h3>
-                                <div class="d-flex flex-wrap">
-                                    <div class="posted-by">
-                                        <img src="https://via.placeholder.com/26x26" alt="">
-                                        <a href="#" title="">Dawletnazarov Jaqsiliq</a>
-                                    </div>
-                                    <span class="locat"><img src="assets/img/loct.png" alt="" />6 saatlıq master klass</span>
-                                </div>
-                            </div>
+                            @endforeach
                             <!--course-card end-->
                         </div>
                         <!--courses-list end-->
-                        <a href="events.html" title="" class="all-btn">All Events <i class="fa fa-long-arrow-alt-right"></i></a>
+                        <a href="{{route('get_events')}}" title="" class="all-btn">All Events <i class="fa fa-long-arrow-alt-right"></i></a>
                         <div class="clearfix"></div>
                     </div>
                 </div>
@@ -340,17 +301,18 @@
                                 </div>
                                 <div class="blog-info">
                                     <ul class="meta">
-                                        <li><a href="#" title="">{{$blog->date}}</a></li>
+                                        <li><a href="{{ route('get_post', ['id'=>$blog->id]) }}" title="">{{$blog->date}}</a></li>
                                         {{-- <li><a href="#" title="">by Admin</a></li> --}}
                                         <li><img src="{{asset('assets/img/icon13.png')}}" alt="" />TEXNOPOS IT MEKTEBI</li>
                                     </ul>
-                                    <h3><a href="post.html" title="">{{$blog->title}}</a></h3>
+                                    <h3><a href="{{ route('get_post', ['id'=>$blog->id]) }}" title="">{{$blog->title}}</a></h3>
                                     <p>
                                         <?php
                                             for ($i=0; $i < 50; $i++) { 
                                                 echo $text[$i];
-                                            }    
-                                        ?>
+                                            }
+                                            echo " ...";    
+                                        ?> 
                                     </p>
                                     <a href="{{ route('get_post', ['id'=>$blog->id]) }}" title="" class="read-more">Toliq Oqiw <i class="fa fa-long-arrow-alt-right"></i></a>
                                 </div>

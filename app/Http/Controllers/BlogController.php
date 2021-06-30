@@ -25,6 +25,7 @@ class BlogController extends Controller
             'courses'=>$courses
         ]);
     }
+    
     public function get_post($id){
         $post = DB::table('post')
         ->where('id','=',$id)
@@ -47,7 +48,6 @@ class BlogController extends Controller
             'blogs'=>$blogs
         ]);
 
-        //return $post;
 
     } 
 }

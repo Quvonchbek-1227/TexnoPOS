@@ -8,11 +8,13 @@
 	<meta name="author" content="merkulove">
 	<meta name="keywords" content="" />
 	<link rel="icon" href="{{ asset('assets/img/favicon.png') }}">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/animate.css') }}">
-    <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/bootstrap.min.css') }}">
+    {{-- <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/bootstrap.min.css') }}"> --}}
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/font-awesome.min.css') }}">
     <link rel="stylesheet" type="text/css" href="{{asset('assets/css/main.css')}}">
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/responsive.css') }}">
+	<link rel="stylesheet" href="{{asset('assets/css/mycss.css')}}">
 </head>
 
 
@@ -89,7 +91,7 @@
 					
 					@if ($q == 0)
 					<?php $q++; ?>
-					<div class="col-lg-3">{{-- O`ng tarafdagi yon menyu --}}
+					<div class="col-lg-3 left_section">{{-- O`ng tarafdagi yon menyu --}}
 						<div class="sidebar">
 							<div class="widget widget-categories">
 								<h3 class="widget-title">Categories</h3>

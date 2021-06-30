@@ -30,10 +30,25 @@ class MainController extends Controller
         ->take(3)
         ->get();
 
+        $events = DB::table('event')
+        ->take(3)
+        ->join('mentors','event.mentor_id','=','mentors.id')
+        ->get([
+            'event.date',
+            'time',
+            'text',
+            'title',
+            'adress',
+            'mentor_id',
+            'full_name',
+            'price'
+        ]);
+
         return view('index',[
             'courses'=>$courses,
-            'blogs'=>$blogs
+            'blogs'=>$blogs,
+            'events'=>$events
         ]);
-        //return $courses;
+        //return $events;
     }
 }

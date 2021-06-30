@@ -21,13 +21,20 @@ class ProgrammersController extends Controller
         'full_name',
         ])->paginate(12);
 
+        $courses = DB::table('courses')
+        ->get([
+            'courses.id as id_course',
+            'courses.name as course_name'
+        ]);
+
+
         return view('teachers',[
             'mentors'=>$programmers,
-            'status'=>$status
+            'status'=>$status,
+            'courses'=>$courses
         ]);
+
         //return $programmers;
-
-
 
     }
     public function programmer_portfolio($id){
@@ -74,11 +81,18 @@ class ProgrammersController extends Controller
             'facebook'
         ]);
 
+        $courses = DB::table('courses')
+        ->get([
+            'courses.id as id_course',
+            'courses.name as course_name'
+        ]);
+
         return view('portfolio',[
             'status'=>$status,
             'mentor'=>$programmer,
             'mentors'=>$programmers,
-            'texnalogies'=>$texnalogies
+            'texnalogies'=>$texnalogies,
+            'courses'=>$courses
         ]);
         //return $programmers;
         

@@ -67,7 +67,7 @@
 										</div>
 										<div class="col-lg-12">
 											<div class="form-group">
-												<textarea name="message" placeholder="Xabar"></textarea>
+												<textarea id='msg' name="message" placeholder="Xabar" required></textarea>
 											</div><!--form-group end-->
 										</div>
 										<div class="col-lg-12">
