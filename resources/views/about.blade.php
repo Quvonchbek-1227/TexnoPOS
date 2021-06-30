@@ -7,7 +7,8 @@
 	<meta name="description" content="Shelly - Website" />
 	<meta name="author" content="merkulove">
 	<meta name="keywords" content="" />
-	<link rel="icon" href="assets/img/favicon.png">
+<!-- 	<link rel="icon" href="assets/img/favicon.png"> -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/animate.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/font-awesome.min.css">
@@ -44,20 +45,23 @@
 
 				<div class="abt-page-row">
 					<div class="row align-items-center">
+						@foreach($abouts as $about)
 						<div class="col-lg-6 col-md-6">
 							<div class="section-title">
-								<h2>Welcome to <br /> <span>TexnoPOS</span> IT School</h2>
+								<!-- <h2>Welcome to <br /> <span>TexnoPOS</span> IT School</h2> -->
+								<h2>{{$about->title}}</h2>
 								<p class="mw-100">
-									Morbi vel augue et metus pellentesque lacinia eu non odio. Sed id purus urna. Maecenas ultrices ligula a nisi dictum tristique. Suspendisse potenti. Curabitur egestas ultrices sem, eu vestibulum leo sagittis et.
+									{{$about->text}}
 								</p>
-								<a href="classes.html" title="" class="btn-default">Kurslar <i class="fa fa-long-arrow-alt-right"></i></a>
+							<!-- 	<a href="classes.html" title="" class="btn-default">Kurslar <i class="fa fa-long-arrow-alt-right"></i></a> -->
 							</div><!--section-title end-->
 						</div>
-						<div class="col-lg-6 col-md-6">
+						<div class="col-lg-6 col-md-6 mb-5">
 							<div class="avt-img">
-								<img src="https://via.placeholder.com/601x645" alt="">
+								<img src="{{asset('assets/img/about/'.$about->img)}}" alt="">
 							</div><!--avt-img end-->
 						</div>
+						@endforeach
 					</div>
 				</div><!--abt-page-row end-->
 			</div>
@@ -120,188 +124,38 @@
 					<h2 class="no-bg">Bizdin` Kurslar</h2>
 				</div><!--sec-title end-->
 				<div class="classes-sec">
-					<div class="row classes-carousel">
-						<div class="col-lg-3">
-							<div class="classes-col">
-								<div class="class-thumb">
-									<img src="https://via.placeholder.com/1680x1120" alt="" class="w-100">
-									<a href="#" title="" class="crt-btn">
-										<img src="assets/img/icon10.png" alt="">
-									</a>
-								</div>
-								<div class="class-info">
-									<h3><a href="#" title="">Basic English Speaking and Grammar</a></h3>
-									<span>Mon-Fri</span>
-									<span>10 AM - 12 AM</span>
-									<div class="d-flex flex-wrap align-items-center">
-										<div class="posted-by">
-											<img src="https://via.placeholder.com/26x26" alt="">
-											<a href="#" title="">Amanda Kern</a>
-										</div>
-										<strong class="price">$45</strong>
-									</div>
-								</div>
-							</div><!--classes-col end-->
-						</div>
-						<div class="col-lg-3">
-							<div class="classes-col">
-								<div class="class-thumb">
-									<img src="https://via.placeholder.com/1970x1326" alt="" class="w-100">
-									<a href="#" title="" class="crt-btn">
-										<img src="assets/img/icon10.png" alt="">
-									</a>
-								</div>
-								<div class="class-info">
-									<h3><a href="#" title="">Natural Sciences & Mathematics Courses</a></h3>
-									<span>Mon-Fri</span>
-									<span>10 AM - 12 AM</span>
-									<div class="d-flex flex-wrap align-items-center">
-										<div class="posted-by">
-											<img src="https://via.placeholder.com/26x26" alt="">
-											<a href="#" title="">Gypsy Hardinge</a>
-										</div>
-										<strong class="price">$67</strong>
-									</div>
-								</div>
-							</div><!--classes-col end-->
-						</div>
-						<div class="col-lg-3">
-							<div class="classes-col">
-								<div class="class-thumb">
-									<img src="https://via.placeholder.com/1440x960" alt="" class="w-100">
-									<a href="#" title="" class="crt-btn">
-										<img src="assets/img/icon10.png" alt="">
-									</a>
-								</div>
-								<div class="class-info">
-									<h3><a href="class-single.html" title="">Environmental Studies & Earth Sciences</a></h3>
-									<span>Mon-Fri</span>
-									<span>10 AM - 12 AM</span>
-									<div class="d-flex flex-wrap align-items-center">
-										<div class="posted-by">
-											<img src="https://via.placeholder.com/26x26" alt="">
-											<a href="#" title="">Margje Jutten</a>
-										</div>
-										<strong class="price">$89</strong>
-									</div>
-								</div>
-							</div><!--classes-col end-->
-						</div>
-						<div class="col-lg-3">
-							<div class="classes-col">
-								<div class="class-thumb">
-									<img src="https://via.placeholder.com/1296x864" alt="" class="w-100">
-									<a href="#" title="" class="crt-btn">
-										<img src="assets/img/icon10.png" alt="">
-									</a>
-								</div>
-								<div class="class-info">
-									<h3><a href="class-single.html" title="">Hospitality, Leisure & Sports Courses</a></h3>
-									<span>Mon-Fri</span>
-									<span>10 AM - 12 AM</span>
-									<div class="d-flex flex-wrap align-items-center">
-										<div class="posted-by">
-											<img src="https://via.placeholder.com/26x26" alt="">
-											<a href="#" title="">Hubert Franck</a>
-										</div>
-										<strong class="price">$67</strong>
-									</div>
-								</div>
-							</div><!--classes-col end-->
-						</div>
-						<div class="col-lg-3">
-							<div class="classes-col">
-								<div class="class-thumb">
-									<img src="https://via.placeholder.com/1680x1120" alt="" class="w-100">
-									<a href="#" title="" class="crt-btn">
-										<img src="assets/img/icon10.png" alt="">
-									</a>
-								</div>
-								<div class="class-info">
-									<h3><a href="class-single.html" title="">Basic English Speaking and Grammar</a></h3>
-									<span>Mon-Fri</span>
-									<span>10 AM - 12 AM</span>
-									<div class="d-flex flex-wrap align-items-center">
-										<div class="posted-by">
-											<img src="https://via.placeholder.com/26x26" alt="">
-											<a href="#" title="">Amanda Kern</a>
-										</div>
-										<strong class="price">$45</strong>
-									</div>
-								</div>
-							</div><!--classes-col end-->
-						</div>
-						<div class="col-lg-3">
-							<div class="classes-col">
-								<div class="class-thumb">
-									<img src="https://via.placeholder.com/1970x1326" alt="" class="w-100">
-									<a href="#" title="" class="crt-btn">
-										<img src="assets/img/icon10.png" alt="">
-									</a>
-								</div>
-								<div class="class-info">
-									<h3><a href="class-single.html" title="">Natural Sciences & Mathematics Courses</a></h3>
-									<span>Mon-Fri</span>
-									<span>10 AM - 12 AM</span>
-									<div class="d-flex flex-wrap align-items-center">
-										<div class="posted-by">
-											<img src="https://via.placeholder.com/26x26" alt="">
-											<a href="#" title="">Gypsy Hardinge</a>
-										</div>
-										<strong class="price">$67</strong>
-									</div>
-								</div>
-							</div><!--classes-col end-->
-						</div>
-						<div class="col-lg-3">
-							<div class="classes-col">
-								<div class="class-thumb">
-									<img src="https://via.placeholder.com/1440x960" alt="" class="w-100">
-									<a href="#" title="" class="crt-btn">
-										<img src="assets/img/icon10.png" alt="">
-									</a>
-								</div>
-								<div class="class-info">
-									<h3><a href="class-single.html" title="">Environmental Studies & Earth Sciences</a></h3>
-									<span>Mon-Fri</span>
-									<span>10 AM - 12 AM</span>
-									<div class="d-flex flex-wrap align-items-center">
-										<div class="posted-by">
-											<img src="https://via.placeholder.com/26x26" alt="">
-											<a href="#" title="">Margje Jutten</a>
-										</div>
-										<strong class="price">$89</strong>
-									</div>
-								</div>
-							</div><!--classes-col end-->
-						</div>
-						<div class="col-lg-3">
-							<div class="classes-col">
-								<div class="class-thumb">
-									<img src="https://via.placeholder.com/1296x864" alt="" class="w-100">
-									<a href="#" title="" class="crt-btn">
-										<img src="assets/img/icon10.png" alt="">
-									</a>
-								</div>
-								<div class="class-info">
-									<h3><a href="class-single.html" title="">Hospitality, Leisure & Sports Courses</a></h3>
-									<span>Mon-Fri</span>
-									<span>10 AM - 12 AM</span>
-									<div class="d-flex flex-wrap align-items-center">
-										<div class="posted-by">
-											<img src="https://via.placeholder.com/26x26" alt="">
-											<a href="#" title="">Hubert Franck</a>
-										</div>
-										<strong class="price">$67</strong>
-									</div>
-								</div>
-							</div><!--classes-col end-->
-						</div>
-					</div>
-					<div class="lnk-dv text-center">
-						<a href="classes.html" title="" class="btn-default">Kurslar<i class="fa fa-long-arrow-alt-right"></i></a>
-					</div>
-				</div><!--classes-sec end-->
+                    <div class="row classes-carousel">
+                        <?php $i = 0;?>
+                        @foreach ($courses as $course)
+                        <?php $i++; ?>
+
+                            <div class="col-lg-3 col-xs-12 col-sm-12 col-md-3">
+                            <div class="classes-col wow fadeInUp" data-wow-duration="1000ms">
+                                <div class="class-thumb">
+                                    <img src="{{asset('assets/img/courses/'.$course->course_img)}}" alt="" class="w-100">
+                                    <a href="{{route('course_detail',['id'=>$course->id_course])}}"  title="Baylanis" class="crt-btn fas fa-pen-alt"></a>
+                                </div>
+                                <div class="class-info">
+                                    <h3><a href="{{ route('course_detail', ['id'=>$course->id_course]) }}" title="">{{$course->course_name}}</a></h3>
+                                    <span class="ml-1">{{$course->days}}</span>
+                                    <span>{{$course->sub_time}}</span>
+                                    <div class="d-flex flex-wrap align-items-center">
+                                        <div class="posted-by">
+                                            <img src="https://via.placeholder.com/26x26" alt="">
+                                            <a href="{{ route('mentor_portfolio', ['id'=>$course->id_mentor]) }}" title="Mentor Haqqinda"> {{$course->full_name}}</a>
+                                        </div>
+                                        <div class="container ml-4">
+                                            <strong class="price text-center">{{$course->price}}</strong>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--classes-col end-->
+                        </div>
+
+                        @endforeach
+                        
+                    </div>
 			</div>
 		</section><!--classes-section end-->
 

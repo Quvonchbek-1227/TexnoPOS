@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3307
--- Generation Time: Jun 29, 2021 at 11:59 AM
+-- Generation Time: Jun 30, 2021 at 03:42 PM
 -- Server version: 5.7.24
 -- PHP Version: 7.4.1
 
@@ -21,6 +21,29 @@ SET time_zone = "+00:00";
 --
 -- Database: `texnopos`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `about`
+--
+
+CREATE TABLE `about` (
+  `id` int(11) NOT NULL,
+  `title` varchar(255) NOT NULL,
+  `text` text NOT NULL,
+  `img` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `about`
+--
+
+INSERT INTO `about` (`id`, `title`, `text`, `img`) VALUES
+(1, 'Lorem Isum dolor sit emmet', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. In quisquam aspernatur doloribus quo explicabo tempora odio commodi, numquam esse maxime quaerat minima eveniet possimus enim. Cum incidunt rerum adipisci quae repudiandae esse nisi totam praesentium ocommodi, numquam esse maxime quaerat minima eveniet possimus enim. Cum incidunt rerum adipisci quae repudiandae esse nisi totam praesentium odit iure. Minima ipsum excepturi, maiores tempora, cupiditate sapiente ab distinctio obcaecati officiis enim maxime.dit iure. Minima ipsum excepturi, maiores tempora, cupiditate sapiente ab distinctio obcaecati officiis enim maxime.', '1.jpg'),
+(2, 'Assalawma A`leykum TexnoPOS IT Mektebine Xosh Keldin`iz!', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. In quisquam aspernatur doloribus quo explicabo tempora odio commodi, numquam esse maxime quaerat minima eveniet possimus enim. Cum incidunt rerum adipisci quae repudiandae esse nisi totam praesentium odit iure. Minima ipsum excepturi, maiores tempora, cupiditate sapiente ab distinctio obcaecati officiis enim maxime.aspernatur doloribus quo explicabo tempora odio commodi, numquam esse maxime quaerat minima eveniet possimus enim. Cum incidunt rerum adipisci quae repudiandae esse nisi totam praesentium odit iure. Minima ipsum excepturi, maiores tempora, cupiditate sapiente ab distinctio obcaecati officiis enim maxime.', '2.jpg'),
+(3, 'Lorem Isum dolor sit emmet', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. In quisquam aspernatur doloribus quo explicabo tempora odio commodi, numquam esse maxime quaerat minima eveniet possimus enim. Cum incidunt rerum adipisci quae repudiandae esse nisi totam praesentium ocommodi, numquam esse maxime quaerat minima eveniet possimus enim. Cum incidunt rerum adipisci quae repudiandae esse nisi totam praesentium odit iure. Minima ipsum excepturi, maiores tempora, cupiditate sapiente ab distinctio obcaecati officiis enim maxime.dit iure. Minima ipsum excepturi, maiores tempora, cupiditate sapiente ab distinctio obcaecati officiis enim maxime.', '1.jpg'),
+(4, 'Assalawma A`leykum TexnoPOS IT Mektebine Xosh Keldin`iz!', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. In quisquam aspernatur doloribus quo explicabo tempora odio commodi, numquam esse maxime quaerat minima eveniet possimus enim. Cum incidunt rerum adipisci quae repudiandae esse nisi totam praesentium odit iure. Minima ipsum excepturi, maiores tempora, cupiditate sapiente ab distinctio obcaecati officiis enim maxime.aspernatur doloribus quo explicabo tempora odio commodi, numquam esse maxime quaerat minima eveniet possimus enim. Cum incidunt rerum adipisci quae repudiandae esse nisi totam praesentium odit iure. Minima ipsum excepturi, maiores tempora, cupiditate sapiente ab distinctio obcaecati officiis enim maxime.', '2.jpg');
 
 -- --------------------------------------------------------
 
@@ -72,6 +95,23 @@ CREATE TABLE `event` (
   `text` text NOT NULL,
   `img` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `event`
+--
+
+INSERT INTO `event` (`id`, `date`, `price`, `adress`, `mentor_id`, `title`, `time`, `text`, `img`) VALUES
+(1, '2021-06-07', '100 min`', 'Texnopos Ofisinde', 2, 'Web da`sturlewge kirisiw', '14:00 - 16:00', '\r\nLorem ipsum dolor sit amet consectetur adipisicing elit. Omnis consectetur esse minima quasi perferendis autem consequatur, maiores ut modi distinctio aspernatur, harum illum. Et animi excepturi eum perspiciatis vero quia iusto distinctio. Libero reiciendis quae saepe aliquid, dolore similique atque aspernatur facilis veritatis provident qui laudantium, commodi deserunt accusamus cumque.', 'web.jpg'),
+(2, '2021-06-07', '100 min`', 'Texnopos Ofisinde', 2, 'Web da`sturlewge kirisiw', '14:00 - 16:00', '\r\nLorem ipsum dolor sit amet consectetur adipisicing elit. Omnis consectetur esse minima quasi perferendis autem consequatur, maiores ut modi distinctio aspernatur, harum illum. Et animi excepturi eum perspiciatis vero quia iusto distinctio. Libero reiciendis quae saepe aliquid, dolore similique atque aspernatur facilis veritatis provident qui laudantium, commodi deserunt accusamus cumque.', 'web.jpg'),
+(3, '2021-06-07', '100 min`', 'Texnopos Ofisinde', 2, 'Web da`sturlewge kirisiw', '14:00 - 16:00', '\r\nLorem ipsum dolor sit amet consectetur adipisicing elit. Omnis consectetur esse minima quasi perferendis autem consequatur, maiores ut modi distinctio aspernatur, harum illum. Et animi excepturi eum perspiciatis vero quia iusto distinctio. Libero reiciendis quae saepe aliquid, dolore similique atque aspernatur facilis veritatis provident qui laudantium, commodi deserunt accusamus cumque.', 'web.jpg'),
+(4, '2021-06-07', '100 min`', 'Texnopos Ofisinde', 2, 'Web da`sturlewge kirisiw', '14:00 - 16:00', '\r\nLorem ipsum dolor sit amet consectetur adipisicing elit. Omnis consectetur esse minima quasi perferendis autem consequatur, maiores ut modi distinctio aspernatur, harum illum. Et animi excepturi eum perspiciatis vero quia iusto distinctio. Libero reiciendis quae saepe aliquid, dolore similique atque aspernatur facilis veritatis provident qui laudantium, commodi deserunt accusamus cumque.', 'web.jpg'),
+(5, '2021-06-07', '100 min`', 'Texnopos Ofisinde', 2, 'Web da`sturlewge kirisiw', '14:00 - 16:00', '\r\nLorem ipsum dolor sit amet consectetur adipisicing elit. Omnis consectetur esse minima quasi perferendis autem consequatur, maiores ut modi distinctio aspernatur, harum illum. Et animi excepturi eum perspiciatis vero quia iusto distinctio. Libero reiciendis quae saepe aliquid, dolore similique atque aspernatur facilis veritatis provident qui laudantium, commodi deserunt accusamus cumque.', 'web.jpg'),
+(6, '2021-06-07', '100 min`', 'Texnopos Ofisinde', 2, 'Web da`sturlewge kirisiw', '14:00 - 16:00', '\r\nLorem ipsum dolor sit amet consectetur adipisicing elit. Omnis consectetur esse minima quasi perferendis autem consequatur, maiores ut modi distinctio aspernatur, harum illum. Et animi excepturi eum perspiciatis vero quia iusto distinctio. Libero reiciendis quae saepe aliquid, dolore similique atque aspernatur facilis veritatis provident qui laudantium, commodi deserunt accusamus cumque.', 'web.jpg'),
+(7, '2021-06-07', '100 min`', 'Texnopos Ofisinde', 2, 'Web da`sturlewge kirisiw', '14:00 - 16:00', '\r\nLorem ipsum dolor sit amet consectetur adipisicing elit. Omnis consectetur esse minima quasi perferendis autem consequatur, maiores ut modi distinctio aspernatur, harum illum. Et animi excepturi eum perspiciatis vero quia iusto distinctio. Libero reiciendis quae saepe aliquid, dolore similique atque aspernatur facilis veritatis provident qui laudantium, commodi deserunt accusamus cumque.', 'web.jpg'),
+(8, '2021-06-07', '100 min`', 'Texnopos Ofisinde', 2, 'Web da`sturlewge kirisiw', '14:00 - 16:00', '\r\nLorem ipsum dolor sit amet consectetur adipisicing elit. Omnis consectetur esse minima quasi perferendis autem consequatur, maiores ut modi distinctio aspernatur, harum illum. Et animi excepturi eum perspiciatis vero quia iusto distinctio. Libero reiciendis quae saepe aliquid, dolore similique atque aspernatur facilis veritatis provident qui laudantium, commodi deserunt accusamus cumque.', 'web.jpg'),
+(9, '2021-06-07', '100 min`', 'Texnopos Ofisinde', 2, 'Web da`sturlewge kirisiw', '14:00 - 16:00', '\r\nLorem ipsum dolor sit amet consectetur adipisicing elit. Omnis consectetur esse minima quasi perferendis autem consequatur, maiores ut modi distinctio aspernatur, harum illum. Et animi excepturi eum perspiciatis vero quia iusto distinctio. Libero reiciendis quae saepe aliquid, dolore similique atque aspernatur facilis veritatis provident qui laudantium, commodi deserunt accusamus cumque.', 'web.jpg'),
+(10, '2021-06-07', '100 min`', 'Texnopos Ofisinde', 2, 'Web da`sturlewge kirisiw', '14:00 - 16:00', '\r\nLorem ipsum dolor sit amet consectetur adipisicing elit. Omnis consectetur esse minima quasi perferendis autem consequatur, maiores ut modi distinctio aspernatur, harum illum. Et animi excepturi eum perspiciatis vero quia iusto distinctio. Libero reiciendis quae saepe aliquid, dolore similique atque aspernatur facilis veritatis provident qui laudantium, commodi deserunt accusamus cumque.', 'web.jpg'),
+(11, '2021-06-07', '100 min`', 'Texnopos Ofisinde', 2, 'Web da`sturlewge kirisiw', '14:00 - 16:00', '\r\nLorem ipsum dolor sit amet consectetur adipisicing elit. Omnis consectetur esse minima quasi perferendis autem consequatur, maiores ut modi distinctio aspernatur, harum illum. Et animi excepturi eum perspiciatis vero quia iusto distinctio. Libero reiciendis quae saepe aliquid, dolore similique atque aspernatur facilis veritatis provident qui laudantium, commodi deserunt accusamus cumque.', 'web.jpg');
 
 -- --------------------------------------------------------
 
@@ -136,7 +176,10 @@ INSERT INTO `messages` (`id`, `name`, `email`, `message`) VALUES
 (8, 'Quvonchbek', 'ecweecerce@gmail', 'ewewecwecw'),
 (9, 'Quvonchbek', 'ecweecerce@gmail', 'ewewecwecw'),
 (10, 'Quvonchbek', 'ecweecerce@gmail', 'ewewecwecw'),
-(11, 'Quvonchbek', 'yeadamQoysa@gmail.com', 'sxsxwsxswdsdsssdsd');
+(11, 'Quvonchbek', 'yeadamQoysa@gmail.com', 'sxsxwsxswdsdsssdsd'),
+(12, 'Quvonchbek', 'aaaa@gmail.com', 'fvrbrtbrtbr'),
+(13, 'Quvonchbek', 'aaaa@gmail.com', 'wsw'),
+(14, 'Quvonchbek', 'yeadamQoysa@gmail.com', 'erer');
 
 -- --------------------------------------------------------
 
@@ -211,7 +254,7 @@ CREATE TABLE `registratsiya` (
   `name` varchar(50) NOT NULL,
   `phone` varchar(50) NOT NULL,
   `id_course` int(20) NOT NULL,
-  `text` text NOT NULL
+  `text` text
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
@@ -223,7 +266,16 @@ INSERT INTO `registratsiya` (`id`, `name`, `phone`, `id_course`, `text`) VALUES
 (2, 'Quvonchbek', 'aaaa@gmail.com', 5, 'sdsdcsdccdcf'),
 (3, 'Quwanishbek', 'aaaa@gmail.com', 4, 'giyvyygbuhbugy'),
 (4, 'Quvonchbek', 'aaaa@gmail.com', 4, 'yifyigvbggbiugbigibgui'),
-(5, 'Quvonchbek', '(+998) 88-888-88-88', 1, 'sdcecece');
+(5, 'Quvonchbek', '(+998) 88-888-88-88', 1, 'sdcecece'),
+(6, 'Quwanishbek', '(+998) 99-682-27-12', 1, 'lorem ipsum dolor emmet ...'),
+(7, 'asd', '(+998) __-___-__-__', 1, NULL),
+(8, 'Quvonchbek', '(+998) __-___-__-__', 1, NULL),
+(9, 'asasd', '999565882', 1, NULL),
+(10, 'Quvonchbek', '+998', 1, NULL),
+(11, 'Quwanishbek', '996822712', 1, NULL),
+(12, 'Quvonchbek', '996822712', 1, NULL),
+(13, 'Quwanishbek', '76', 6, NULL),
+(14, 'Quvonchbek', '12', 1, NULL);
 
 -- --------------------------------------------------------
 
@@ -395,9 +447,21 @@ INSERT INTO `texnalogies_student` (`id`, `id_texnalogiy`, `id_student`, `procent
 --
 
 --
+-- Indexes for table `about`
+--
+ALTER TABLE `about`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `courses`
 --
 ALTER TABLE `courses`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `event`
+--
+ALTER TABLE `event`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -465,10 +529,22 @@ ALTER TABLE `texnalogies_student`
 --
 
 --
+-- AUTO_INCREMENT for table `about`
+--
+ALTER TABLE `about`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
 -- AUTO_INCREMENT for table `courses`
 --
 ALTER TABLE `courses`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
+--
+-- AUTO_INCREMENT for table `event`
+--
+ALTER TABLE `event`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT for table `mentors`
@@ -480,7 +556,7 @@ ALTER TABLE `mentors`
 -- AUTO_INCREMENT for table `messages`
 --
 ALTER TABLE `messages`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT for table `post`
@@ -498,7 +574,7 @@ ALTER TABLE `programmer`
 -- AUTO_INCREMENT for table `registratsiya`
 --
 ALTER TABLE `registratsiya`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT for table `students`

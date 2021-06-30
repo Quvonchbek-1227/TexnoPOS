@@ -86,7 +86,7 @@
 									<li>
 										<div class="d-flex flex-wrap">
 											<div class="icon-v">
-												<img src="assets/img/icon15.png" alt="">
+												<img width='40' src="assets/img/icon1.png" alt="">
 											</div>
 											<div class="dd-cont">
 												<h4>Telefon</h4>
@@ -97,7 +97,7 @@
 									<li>
 										<div class="d-flex flex-wrap">
 											<div class="icon-v">
-												<img src="assets/img/icon16.png" alt="">
+												<img width='40' src="assets/img/icon2.png" alt="">
 											</div>
 											<div class="dd-cont">
 												<h4>Jumis Waqti</h4>
@@ -109,7 +109,7 @@
 									<li>
 										<div class="d-flex flex-wrap">
 											<div class="icon-v">
-												<img src="assets/img/icon17.png" alt="">
+												<img width='40' src="assets/img/icon3.png" alt="">
 											</div>
 											<div class="dd-cont">
 												<h4>Mánzil</h4>

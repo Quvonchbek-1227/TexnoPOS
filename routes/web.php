@@ -10,6 +10,7 @@ use App\Http\Controllers\BlogController;
 use App\Http\Controllers\ContactsController;
 use App\Http\Controllers\MessageController;
 use App\Http\Controllers\EventController;
+use App\Http\Controllers\AboutController;
 
 
 /*
@@ -40,9 +41,7 @@ Route::post('/adduser',[ContactsController::class,'add_user'])->name('add_user')
 Route::get('/events',[EventController::class,'get_events'])->name('get_events');
 Route::get('/events/{id}',[EventController::class,'event'])->name('event');
 
-Route::get('/about', function () {
-    return view('about');
-});
+Route::get('/about',[AboutController::class,'about'])->name('about');
 
 
 Route::get('/es', function () {
@@ -54,5 +53,3 @@ Route::get('/post', function () {
 Route::get('/sle', function () {
     return view('schedule');
 });
-
-

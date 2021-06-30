@@ -3,7 +3,7 @@
         <div class="header-content d-flex flex-wrap align-items-center">
             <div class="logo">
                 <a href="{{ route('home_page') }}" title="">
-                    <img class="" width='250' src="{{asset('assets/img/logo.png')}}" alt="" srcset="{{asset('assets/img/logo.png')}} 2x">
+                    <img class="" width='180' src="{{asset('assets/img/logo.png')}}" alt="" srcset="{{asset('assets/img/logo.png')}} 2x">
                 </a>
             </div>
             <!--logo end-->

@@ -5,7 +5,7 @@
                     <div class="row">
                         <div class="col-lg-3 col-md-6 col-sm-6">
                             <div class="widget widget-about">
-                                <img width='280' src="{{asset('assets/img/logo.png')}}" alt="">
+                                <img width='180' src="{{asset('assets/img/logo.png')}}" alt="">
                                 <p><b> <i> Keleshekke biz benen birge qádem tasla - TexnoPOS penen keleshek kásibin iyele!</i></b></p>
                             </div>
                             <!--widget-about end-->

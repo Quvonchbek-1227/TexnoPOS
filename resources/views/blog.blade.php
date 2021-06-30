@@ -57,7 +57,7 @@
 								<div class="blog-post">
 									<div class="blog-thumbnail">
 										<a href="#" title="">
-											<img src="{{ asset('assets/img/blogs/'.$blog->img) }}" alt="" class="" style="width: 100%;">
+										<p align='center'>	<img width="600" src="{{ asset('assets/img/blogs/'.$blog->img) }}" alt="" class="" > </p>
 										</a>
 										<span class="category">TEXNOPOS IT MEKTEBI</span>
 									</div>

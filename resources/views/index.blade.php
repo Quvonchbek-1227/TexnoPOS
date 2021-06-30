@@ -186,7 +186,7 @@
                         
                         @foreach ($courses as $course)
 
-                            <div class="col-lg-3 col-xs-12 col-sm-12 col-md-3">
+                            <div class="col-lg-12 col-xs-12 col-sm-12 col-md-12">
                             <div class="classes-col wow fadeInUp" data-wow-duration="1000ms">
                                 <div class="class-thumb">
                                     <img src="{{asset('assets/img/courses/'.$course->course_img)}}" alt="" class="w-100">
