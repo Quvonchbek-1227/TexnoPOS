@@ -77,7 +77,7 @@
 								@elseif ($status == 'programmer')
 									<h3>Programmist</h3>
 								@elseif ($status == 'student')
-									<h3>Pitkeruwshi</h3>		
+									<h3>Pitkeruwshi</h3>
 								@endif
 
 									{{-- O`quvtuvchi yoki o`quvchi   ekanligi darajasi, kasibi END --}}

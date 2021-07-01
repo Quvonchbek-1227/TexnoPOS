@@ -73,10 +73,10 @@
 										<div class="sc-div">
 											<ul>
 												@if (isset($mentor->telegram))
-													<li><a href="https://www.instagram.com/{{$mentor->instagram}}/" title=""><i class="fab fa-instagram"></i></a></li>
+													<li><a href="https://www.instagram.com/{{$mentor->telegram}}" title=""><i class="fab fa-instagram"></i></a></li>
 												@endif
 												@if (isset($mentor->instagram))
-													<li><a href="https://t.me/{{$mentor->telegram}}/" title=""><i class="fab fa-telegram"></i></a></li>
+													<li><a href="https://t.me/{{$mentor->instagram}}/" title=""><i class="fab fa-telegram"></i></a></li>
 												@endif
 												@if (isset($mentor->facebook))
 													<li><a href="https://facebook.com/{{$mentor->facebook}}" title=""><i class="fab fa-facebook-f"></i></a></li>

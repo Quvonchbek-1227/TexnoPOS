@@ -34,6 +34,7 @@ class MainController extends Controller
         ->take(3)
         ->join('mentors','event.mentor_id','=','mentors.id')
         ->get([
+            'event.id as id_event',
             'event.date',
             'time',
             'text',

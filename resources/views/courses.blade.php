@@ -58,7 +58,7 @@
 								<div class="classes-col">
 									<div class="class-thumb">
 										<img src="{{asset('assets/img/courses/'.$course->course_img)}}" alt="Course Img" class="w-100">
-										 <a href="contacts.html"  title="Baylanis" class="crt-btn fas fa-pen-alt"></a>
+										 <a href="{{route('contacts')}}"  title="Baylanis" class="crt-btn fas fa-pen-alt"></a>
 									</div>
 									<div class="class-info">
 										<h3><a href="{{route('course_detail',['id'=>$course->id_course])}}" title="">{{$course->course_name}}</a></h3>

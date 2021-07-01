@@ -61,7 +61,7 @@
 										</ul>
 										<span>{{$event->price}}</span>
 									</div>
-									<h3><a href="{{ route('event', ['id'=>$event->id]) }}" title="">{{$event->title}}</a></h3>
+									<h3><a href="{{ route('event',['id'=>$event->id_event]) }}" title="">{{$event->title}}</a></h3>
 									<div class="d-flex flex-wrap">
 										<div class="posted-by">
 											<img src="https://via.placeholder.com/26x26" alt="">
