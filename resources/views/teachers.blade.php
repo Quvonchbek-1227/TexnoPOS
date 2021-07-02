@@ -38,20 +38,29 @@
 			<div class="container">
 				<div class="pager-content text-center">
 					@if ($status == 'mentor')
-						<h2>Teachers</h2>
+						<h2>Mentorlar</h2>
 					@elseif ($status == 'programmer')
-						<h2>Programmers</h2>
+						<h2>Programmistler</h2>
 					@elseif ($status == 'student')
-						<h2>Students</h2>
+						<h2>Pitkeriwshiler</h2>
 					@endif
 					<ul>
-						<li><a href="#" title="">Home</a></li>
-						<li><span>Teachers</span></li>
+						<li><a href="{{route('home_page')}}" title="">Bas Bet</a></li>
+						<li>
+							@if ($status == "mentor")
+								<span>Mentorlar</span>
+							@elseif ($status == 'programmer')
+								<span>Programmistler</span>
+							@elseif ($status == 'student')
+								<span>Pitkeriwshiler</span>
+							@endif
+						</li>
 					</ul>
 				</div><!--pager-content end-->
-				<h2 class="page-titlee">Shelly</h2>
+				<h2 class="page-titlee">   </h2>
 			</div>
-		</section><!--pager-section end-->
+		</section>
+		<!--pager-section end-->
 
 		<section class="page-content">
 			<div class="container">
@@ -79,7 +88,7 @@
 													<li><a href="https://t.me/{{$mentor->instagram}}/" title=""><i class="fab fa-telegram"></i></a></li>
 												@endif
 												@if (isset($mentor->facebook))
-													<li><a href="https://facebook.com/{{$mentor->facebook}}" title=""><i class="fab fa-facebook-f"></i></a></li>
+													<li><a href="https://www.facebook.com/search/top/?q={{$mentor->facebook}}" title=""><i class="fab fa-facebook-f"></i></a></li>
 												@endif
 											</ul>
 											<span><img src="{{asset('assets/img/plus.png')}}" alt=""></span>

@@ -33,8 +33,16 @@
 				<div class="pager-content text-center">
 					<h2>{{$mentor[0]->full_name}}</h2>
 					<ul>
-						<li><a href="{{route('home_page')}}" title="">Home</a></li>
-						<li><a href="#" title="">Mentor</a></li>
+						<li><a href="{{route('home_page')}}" title="">Bas Bet</a></li>
+						<li>
+							@if ($status == "mentor")
+								<span>Mentor</span>
+							@elseif ($status == 'programmer')
+								<span>Programmist</span>
+							@elseif ($status == 'student')
+								<span>Pitkeriwshi</span>
+							@endif
+						</li>
 					</ul>
 				</div><!--pager-content end-->
 				<h2 class="page-titlee" style="color: red;">{{$name}}</h2>
@@ -56,7 +64,7 @@
 								@endif
 								<ul class="social-icons">
 									@if (isset($mentor[0]->facebook))
-										<li><a href="https://facebook.com/{{$mentor[0]->facebook}}" title=""><i class="fab fa-facebook-f"></i></a></li>
+										<li><a href="https://www.facebook.com/search/top/?q={{$mentor[0]->facebook}}" title=""><i class="fab fa-facebook-f"></i></a></li>
 									@endif
 									@if (isset($mentor[0]->instagram))
 										<li><a href="https://www.instagram.com/{{$mentor[0]->instagram}}/" title=""><i class="fab fa-instagram"></i></a></li>
@@ -190,7 +198,7 @@
 												<li><a href="https://t.me/{{$user->telegram}}" title=""><i class="fab fa-telegram"></i></a></li>
 												@endisset
 												@isset($user->facebook)
-												<li><a href="https://facebook.com/{{$user->facebook}}" title=""><i class="fab fa-facebook-f"></i></a></li>
+												<li><a href="https://www.facebook.com/search/top/?q={{$user->facebook}}" title=""><i class="fab fa-facebook-f"></i></a></li>
 												@endisset
 											</ul>
 											<span><img src="{{asset('assets/img/plus.png')}}" alt=""></span>
