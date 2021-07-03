@@ -13,6 +13,7 @@
 	<link rel="stylesheet" type="text/css" href="{{asset('assets/css/font-awesome.min.css')}}">
 	<link rel="stylesheet" type="text/css" href="{{asset('assets/css/main.css')}}">
 	<link rel="stylesheet" type="text/css" href="{{asseT('assets/css/responsive.css')}}">
+	<link rel="stylesheet" href="{{asset('assets/css/mycss.css')}}">
 </head>
 
 
@@ -27,7 +28,9 @@
 		<!--responsive-menu end-->
 
 		<section class="class-single-banner">
-			<img src="https://via.placeholder.com/1919x700" alt="" class="w-100">
+			{{-- {{asset('assets/img/courses/'.$course[0]->course_img)}} class="w-80" style="height: 500px"--}}
+			<img src="{{asset('assets/img/kurs-bg.png')}}" class="w-100 course_img" style="">
+			{{-- <img src="https://via.placeholder.com/1919x700" alt="" class="w-100"> --}}
 		</section><!--class-single-banner end-->
 
 		<section class="page-content style2">
@@ -42,9 +45,9 @@
 							</ul>
 							<div class="class-gallery">
 								<div class="class-gallery-img">
-									<a href="{{ asset('assets/img/courses/'.$course[0]->course_img) }}" title="" class="html5lightbox" data-group="set1">
+									{{-- <a href="{{ asset('assets/img/courses/'.$course[0]->course_img) }}" title="" class="html5lightbox" data-group="set1">
 										<img src="{{ asset('assets/img/courses/'.$course[0]->course_img) }}" alt="">
-									</a>
+									</a> --}}
 								</div><!--class-gallery-img end-->
 
 								{{-- <div class="row">

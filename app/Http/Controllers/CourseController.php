@@ -69,7 +69,7 @@ class CourseController extends Controller
             'sub_time',
             'days'
         ])
-        ->paginate(4);
+        ->paginate(16);
         
         return view('courses',[
             'courses'=>$courses

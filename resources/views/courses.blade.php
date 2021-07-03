@@ -13,6 +13,8 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/font-awesome.min.css') }}">
     <link rel="stylesheet" type="text/css" href="{{asset('assets/css/main.css')}}">
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/responsive.css') }}">
+	<link rel="stylesheet" type="text/css" href="{{ asset('assets/css/mycss.css') }}">
+	<link rel="stylesheet" href="{{asset('assets/webfonts/bebasneue/bebasneue.css')}}">
 </head>
 
 
@@ -29,22 +31,18 @@
 		<section class="pager-section">
 			<div class="container">
 				<div class="pager-content text-center">
-					<h2>Kurslar</h2>
-					<ul>
-						<li><a href="{{ route('home_page')}}" title="">Home</a></li>
-						<li><span>Kurslar</span></li>
-					</ul>
+					<h2 class="myshadow">Kurslar</h2>
 				</div><!--pager-content end-->
-				<h2 class="page-titlee">Shelly</h2>
+				{{-- <h2 class="page-titlee">Shelly</h2> --}}
 			</div>
 		</section><!--pager-section end-->
 
 		<section class="classes-page">
 			<div class="container">
-				<div class="classes-banner">
-					<span>Try now </span>
+				<div class="classes-banner" style=" background-image: url({{asset('assets/img/kursbg.jpg')}});">
+					<span> </span>
 
-					<h2>Bilimge Ajiratilg`an Investitsiya En` Jaqsi <span class="text-center">Investitsiya!</span></h2>
+					<h2 class="uran">Bilimge Ajiratilg`an Investitsiya En` Jaqsi <span class="text-center">Investitsiya!</span></h2>
 					
 					{{-- <a href="classes.html" title="" class="btn-default">Kurslar<i class="fa fa-long-arrow-alt-right"></i></a> --}}
 				</div><!--classes-banner end-->

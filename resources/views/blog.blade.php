@@ -30,13 +30,9 @@
 		<section class="pager-section">
 			<div class="container">
 				<div class="pager-content text-center">
-					<h2>Blog</h2>
-					<ul>
-						<li><a href="#" title="">Home</a></li>
-						<li><span>Blog</span></li>
-					</ul>
+					<h2 class="myshadow">Blog</h2>
 				</div><!--pager-content end-->
-				<h2 class="page-titlee">Quwanishbek</h2>
+				<h2 class="page-titlee"> </h2>
 			</div>
 		</section><!--pager-section end-->
 
@@ -94,7 +90,7 @@
 					<?php $q++; ?>
 					<div class="col-lg-3 left_section">{{-- O`ng tarafdagi yon menyu --}}
 						<div class="sidebar">
-							<div class="widget widget-categories">
+							{{-- <div class="widget widget-categories">
 								<h3 class="widget-title">Categories</h3>
 								<ul>
 									<li>
@@ -114,7 +110,7 @@
 										<span>89</span>
 									</li>
 								</ul>
-							</div>
+							</div> --}}
 							<!--widget-categories end-->
 							<div class="widget widget-posts">
 								<h3 class="widget-title">En` song`i postlar</h3>

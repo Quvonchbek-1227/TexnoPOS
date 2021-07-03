@@ -13,6 +13,7 @@
 	<link rel="stylesheet" type="text/css" href="{{asset('assets/css/font-awesome.min.css')}}">
 	<link rel="stylesheet" type="text/css" href="{{asset('assets/css/main.css')}}">
 	<link rel="stylesheet" type="text/css" href="{{asset('assets/css/responsive.css')}}">
+	<link rel="stylesheet" href="{{asset('assets/css/mycss.css')}}">
 </head>
 
 
@@ -28,24 +29,12 @@
 		<?php 
 			$name = explode(' ',$mentor[0]->full_name)[0];
 		?>
-		<section class="pager-section" style="background-image: url({{asset('')}})">
+		<section class="pager-section">
 			<div class="container">
 				<div class="pager-content text-center">
-					<h2>{{$mentor[0]->full_name}}</h2>
-					<ul>
-						<li><a href="{{route('home_page')}}" title="">Bas Bet</a></li>
-						<li>
-							@if ($status == "mentor")
-								<span>Mentor</span>
-							@elseif ($status == 'programmer')
-								<span>Programmist</span>
-							@elseif ($status == 'student')
-								<span>Pitkeriwshi</span>
-							@endif
-						</li>
-					</ul>
+					<h2 class="myshadow">{{$name}}</h2>
 				</div><!--pager-content end-->
-				<h2 class="page-titlee" style="color: red;">{{$name}}</h2>
+				{{-- <h2 class="page-titlee myshadow" style="color: red;">{{$name}}</h2> --}}
 			</div>
 		</section><!--pager-section end-->
 
@@ -157,6 +146,17 @@
 								<p>
 									{{$mentor[0]->portfolio_detail}}
 								</p>
+								@if ($status == 'student')
+								<div class="row">
+									<div class="col-md-6">
+										{{
+											QrCode::style('dot',$size=0.777)
+											->eyeColor(1, 0, 0, 0, 200, 100, 123)
+											->eye('circle')->color(0, 0, 0)
+											->generate(Request::url())}}
+									</div>
+								</div>
+								@endif
 													{{-- O`quvtuvchi(o`quvchi) o`zlashtirgan texnalogiyalar bo`yicha qisqa malumot END --}}
 								
 							</div><!--teacher-content end-->

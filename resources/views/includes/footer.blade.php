@@ -4,11 +4,11 @@
                 <div class="top-footer">
                     <div class="row">
                         <div class="col-lg-3 col-md-6 col-sm-6">
-                            <div class="widget widget-about">
-                                <img width='180' src="{{asset('assets/img/logo.png')}}" alt="">
-                                <p><b> <i> Keleshekke biz benen birge qádem tasla - TexnoPOS penen keleshek kásibin iyele!</i></b></p>
+                            <div class="widget widget-iframe">
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2943.478873868036!2d59.6053283154205!3d42.46010287918027!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x41dd9b45e9466243%3A0xfaf3ec1bf09d22b1!2sTexnoPOS%20IT%20Mektebi!5e0!3m2!1sru!2sus!4v1620609905772!5m2!1sru!2sus"
+                                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                             </div>
-                            <!--widget-about end-->
+                            <!--widget-iframe end-->
                         </div>
                         <div class="col-lg-3 col-md-6 col-sm-6">
                             <div class="widget widget-contact">
@@ -62,11 +62,11 @@
                             <!--widget-links end-->
                         </div>
                         <div class="col-lg-3 col-md-6 col-sm-6">
-                            <div class="widget widget-iframe">
-                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2943.478873868036!2d59.6053283154205!3d42.46010287918027!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x41dd9b45e9466243%3A0xfaf3ec1bf09d22b1!2sTexnoPOS%20IT%20Mektebi!5e0!3m2!1sru!2sus!4v1620609905772!5m2!1sru!2sus"
-                                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                            <div class="widget widget-about">
+                                <img width='180' src="{{asset('assets/img/logo.png')}}" alt="">
+                                <p><b> <i> Keleshekke biz benen birge qádem tasla - TexnoPOS penen keleshek kásibin iyele!</i></b></p>
                             </div>
-                            <!--widget-iframe end-->
+                            <!--widget-about end-->
                         </div>
                     </div>
                 </div>

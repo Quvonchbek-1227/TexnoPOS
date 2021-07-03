@@ -19,6 +19,7 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/font-awesome.min.css') }}">
     <link rel="stylesheet" type="text/css" href="{{asset('assets/css/main.css')}}">
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/responsive.css') }}">
+	<link rel="stylesheet" type="text/css" href="{{ asset('assets/css/mycss.css') }}">
 </head>
 
 
@@ -38,24 +39,12 @@
 			<div class="container">
 				<div class="pager-content text-center">
 					@if ($status == 'mentor')
-						<h2>Mentorlar</h2>
+						<h2 class="myshadow">Mentorlar</h2>
 					@elseif ($status == 'programmer')
-						<h2>Programmistler</h2>
+						<h2 class="myshadow">Programmistler</h2>
 					@elseif ($status == 'student')
-						<h2>Pitkeriwshiler</h2>
+						<h2 class="myshadow">Pitkeriwshiler</h2>
 					@endif
-					<ul>
-						<li><a href="{{route('home_page')}}" title="">Bas Bet</a></li>
-						<li>
-							@if ($status == "mentor")
-								<span>Mentorlar</span>
-							@elseif ($status == 'programmer')
-								<span>Programmistler</span>
-							@elseif ($status == 'student')
-								<span>Pitkeriwshiler</span>
-							@endif
-						</li>
-					</ul>
 				</div><!--pager-content end-->
 				<h2 class="page-titlee">   </h2>
 			</div>

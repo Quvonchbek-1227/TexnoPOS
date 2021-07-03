@@ -1,5 +1,5 @@
 @media only screen and (max-width: 1366px) {
-    .avt-img > img {
+    .avt-img>img {
         width: 100%;
     }
     .error-page .error-text .btn-default {
@@ -9,6 +9,7 @@
         font-size: 200px;
     }
 }
+
 @media only screen and (max-width: 1200px) {
     header .navigation-bar nav ul li {
         margin-right: 36px;
@@ -18,7 +19,7 @@
         flex: 0 0 67%;
         max-width: 67%;
     }
-    .main-banner .banner-text > h2 {
+    .main-banner .banner-text>h2 {
         font-size: 54px;
         line-height: 72px;
     }
@@ -37,7 +38,7 @@
     .course-section {
         padding-bottom: 70px;
     }
-    .blog-section .blog-posts .blog-post .blog-info > h3 {
+    .blog-section .blog-posts .blog-post .blog-info>h3 {
         font-size: 18px;
     }
     .blog-section {
@@ -55,7 +56,7 @@
     .blog-section .blog-posts .blog-post .blog-info {
         padding: 0;
     }
-    .newsletter-section .newsletter-sec .newsz-ltr-text > h2 {
+    .newsletter-section .newsletter-sec .newsz-ltr-text>h2 {
         font-size: 30px;
         line-height: 44px;
         margin-bottom: 25px;
@@ -111,7 +112,7 @@
     .class-sidebar {
         top: 0;
     }
-    .pager-section .pager-content > h2 {
+    .pager-section .pager-content>h2 {
         font-size: 40px;
         line-height: 52px;
     }
@@ -121,26 +122,27 @@
     .teacher-col .teacher-thumb img {
         width: 100%;
     }
-    .schedule-page .schedule-content .schp-list li .mkd-info > h3 {
+    .schedule-page .schedule-content .schp-list li .mkd-info>h3 {
         font-size: 14px;
         line-height: 16px;
     }
-    .schedule-page .schedule-content .schp-list li .mkd-info > span {
+    .schedule-page .schedule-content .schp-list li .mkd-info>span {
         font-size: 14px;
     }
 }
+
 @media only screen and (max-width: 991px) {
     header .header-content .contact-add,
     header .navigation-bar {
         display: none !important;
     }
-    .banner-img > img {
+    .banner-img>img {
         max-width: 100%;
     }
     .main-section {
         background: #f2f7fd;
     }
-    .main-banner .banner-text > h2 {
+    .main-banner .banner-text>h2 {
         font-size: 44px;
         line-height: 58px;
     }
@@ -154,7 +156,7 @@
         padding: 0;
         margin-top: 25px;
     }
-    .teachers-section .teachers .teacher .teacher-info > h3 {
+    .teachers-section .teachers .teacher .teacher-info>h3 {
         font-size: 16px;
     }
     .course-img {
@@ -183,7 +185,7 @@
         border-radius: 10px;
         background: #fcbe31;
     }
-    .newsletter-section .newsletter-sec .newsz-ltr-text > h2 {
+    .newsletter-section .newsletter-sec .newsz-ltr-text>h2 {
         font-size: 40px;
         line-height: 54px;
     }
@@ -199,7 +201,7 @@
     .menu-btn {
         display: block;
     }
-    .pager-section .pager-content > h2 {
+    .pager-section .pager-content>h2 {
         font-size: 44px;
     }
     .pager-section .page-titlee {
@@ -225,9 +227,10 @@
         border-radius: 20px;
     }
     .classes-page {
-        padding: 100px 0;
+        padding: 0px 0;
     }
     .classes-page .classes-banner {
+        box-shadow: 1px 1px 30px red;
         padding: 90px 20px;
     }
     .mdp-contact .comment-area form .form-submit {
@@ -236,7 +239,7 @@
     .mdp-our-contacts {
         margin-top: 50px;
     }
-    .pager-section.blog-version .pager-content > h2 {
+    .pager-section.blog-version .pager-content>h2 {
         line-height: 52px;
         margin-bottom: 25px;
     }
@@ -252,11 +255,16 @@
     header .header-content {
         border-bottom: 0;
     }
-    .about-page-content .act-inffo > h2 {
+    .about-page-content .act-inffo>h2 {
         font-size: 36px;
     }
+    /* ttt */
     .pager-section {
-        background: #f2f7fd;
+        background: url('../img/pager-bg-new.png') #f2f7fd;
+        background-repeat: no-repeat;
+        background-size: 250%;
+        background-position: center;
+        /* padding: 75px 0 85px; */
     }
     .masonary li.width5 {
         padding-left: 9.5px;
@@ -291,6 +299,7 @@
         max-width: 100%;
     }
 }
+
 @media only screen and (max-width: 768px) {
     .banner-img {
         display: none;
@@ -304,8 +313,8 @@
     .main-banner .banner-text .search-form:before {
         right: -10px;
     }
-    .sec-title > h2,
-    .section-title > h2 {
+    .sec-title>h2,
+    .section-title>h2 {
         font-size: 40px;
     }
     .about-us-section {
@@ -317,7 +326,7 @@
     .teachers-section {
         padding-top: 25px;
     }
-    .teachers-section .section-title > h2 {
+    .teachers-section .section-title>h2 {
         font-size: 40px;
         line-height: 50px;
     }
@@ -354,7 +363,7 @@
     .blog-section.posts-page .blog-posts .blog-post.quote-post {
         padding: 50px 20px 51px;
     }
-    .classes-page .classes-banner > h2 {
+    .classes-page .classes-banner>h2 {
         font-size: 36px;
     }
     .blog-post.single blockquote {
@@ -367,7 +376,7 @@
         text-align: left;
     }
     .elements-bg,
-    .sec-title > h2:before {
+    .sec-title>h2:before {
         display: none;
     }
     .main-banner .banner-text .search-form {
@@ -423,7 +432,7 @@
     .class-gallery .row .col-md-3 {
         padding: 0 10px;
     }
-    .pager-section .pager-content > h2 {
+    .pager-section .pager-content>h2 {
         font-size: 30px;
         line-height: 42px;
     }
@@ -451,6 +460,7 @@
         display: none;
     }
 }
+
 @media only screen and (max-width: 576px) {
     .about-us-section .about-sec .abt-col,
     .blog-posts,
@@ -478,7 +488,7 @@
         top: 0;
         position: static;
     }
-    .pager-section .pager-content > h2 {
+    .pager-section .pager-content>h2 {
         font-size: 34px;
     }
     .page-content {
@@ -487,7 +497,7 @@
     .blog-section.posts-page .blog-posts .blog-post.without-title .blog-info p {
         font-size: 16px;
     }
-    .blog-section.posts-page .blog-posts .blog-post .blog-info .chat-format li > strong,
+    .blog-section.posts-page .blog-posts .blog-post .blog-info .chat-format li>strong,
     .blog-section.posts-page .blog-posts .blog-post .blog-info .chat-format li p {
         text-align: left;
     }
@@ -518,10 +528,10 @@
         width: 100%;
         margin-bottom: 20px;
     }
-    .mdp-schedule-list .mdp-schedule > h3 {
+    .mdp-schedule-list .mdp-schedule>h3 {
         padding: 0 20px 10px;
     }
-    .pager-section.blog-version .pager-content > h2 {
+    .pager-section.blog-version .pager-content>h2 {
         line-height: 40px;
     }
     .pager-section.blog-version {
@@ -603,8 +613,9 @@
         height: auto;
     }
 }
+
 @media only screen and (max-width: 480px) {
-    .main-banner .banner-text > h2 {
+    .main-banner .banner-text>h2 {
         padding-right: 0;
         font-size: 30px;
         line-height: 44px;
@@ -616,9 +627,9 @@
     .main-banner {
         padding: 50px 0;
     }
-    .sec-title > h2,
-    .section-title > h2,
-    .teachers-section .section-title > h2 {
+    .sec-title>h2,
+    .section-title>h2,
+    .teachers-section .section-title>h2 {
         font-size: 27px;
         line-height: 36px;
     }
@@ -651,7 +662,7 @@
     .course-meta {
         width: 100%;
     }
-    .course-section .courses-list .course-card .course-meta + span {
+    .course-section .courses-list .course-card .course-meta+span {
         width: 100%;
         text-align: center;
         margin-top: 10px;
@@ -670,7 +681,7 @@
         top: 50%;
         transform: translateY(-50%);
     }
-    .course-section .courses-list .course-card > h3 {
+    .course-section .courses-list .course-card>h3 {
         font-size: 18px;
         line-height: 25px;
     }
@@ -682,7 +693,7 @@
     .newsletter-section .newsletter-sec {
         padding: 40px 20px;
     }
-    .newsletter-section .newsletter-sec .newsz-ltr-text > h2 {
+    .newsletter-section .newsletter-sec .newsz-ltr-text>h2 {
         font-size: 30px;
         line-height: 44px;
     }
@@ -692,7 +703,7 @@
     .about-page-content {
         padding: 60px 0 0;
     }
-    .about-page-content .act-inffo > h2 {
+    .about-page-content .act-inffo>h2 {
         margin-top: 12px;
         font-size: 30px;
     }
@@ -707,7 +718,7 @@
         font-size: 20px;
         line-height: 28px;
     }
-    .classes-page .classes-banner > h2 {
+    .classes-page .classes-banner>h2 {
         font-size: 23px;
     }
     .classes-page .classes-banner {
@@ -716,14 +727,14 @@
     .mdp-map iframe {
         height: 220px;
     }
-    .mdp-schedule-list .mdp-schedule > h3 {
+    .mdp-schedule-list .mdp-schedule>h3 {
         font-size: 17px;
     }
-    .mdp-schedule-list .mdp-schedule ul li > span,
-    .mdp-schedule-list .mdp-schedule ul li > strong {
+    .mdp-schedule-list .mdp-schedule ul li>span,
+    .mdp-schedule-list .mdp-schedule ul li>strong {
         font-size: 14px;
     }
-    .pager-section.blog-version .pager-content > h2 {
+    .pager-section.blog-version .pager-content>h2 {
         font-size: 30px;
         margin-top: 10px;
     }
@@ -771,9 +782,9 @@
         font-size: 24px;
         line-height: 35px;
     }
-    .pager-section .pager-content > h2 {
+    /* .pager-section .pager-content>h2 {
         font-size: 23px;
-    }
+    } */
     .sg-event {
         margin-top: 20px;
         margin-bottom: 20px;
@@ -794,7 +805,7 @@
     .teacher-single-page .teacher-content .tech-detils {
         background: #fff;
     }
-    .schedule-mobile-content .ttb-list > ul li .dd-info h3 {
+    .schedule-mobile-content .ttb-list>ul li .dd-info h3 {
         line-height: 24px;
     }
 }

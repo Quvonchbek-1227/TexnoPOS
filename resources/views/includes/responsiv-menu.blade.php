@@ -2,10 +2,11 @@
 <div class="responsive-menu">
     <ul>
         <li><a href="{{ route('home_page') }}" title="">Bas Bet <i class="fas fa-home ml-2"></i></a></li>
-        <li><a href="{{route('about')}}" class="btn-group" title="">Biz Haqqimizda  <i class="fas fa-angle-down ml-2 mt-1"></i></a>
+        <li><a href="{{route('about')}}" class="btn-group" title="">Biz Haqqimizda<i class="fas fa-angle-down ml-2 mt-1"></i></a>
             <ul class="ml-3 mt-3">
                 <li><a href="{{route('mentors')}}" title="">Mentorlar</a></li>
                 <li><a href="{{route('get_programmers')}}" title="">Programmistler</a></li>
+                <li><a href="{{route('get_students')}}" title="">Pitkeriwshiler</a></li>
                 {{-- <li><a href="error.html" title="">Dizaynerler</a></li> --}}
             </ul>
         </li>

@@ -1,3 +1,4 @@
+<?php use SimpleSoftwareIO\QrCode\Facades\QrCode; ?>
 <!DOCTYPE html>
 <html lang="en">
 

@@ -32,11 +32,11 @@
 		<section class="pager-section blog-version" style="background-image: url('{{asset('assets/img/blogs/'.$post[0]->img)}}');">
 			<div class="container">
 				<div class="pager-content text-center">
-					<ul>
+					{{-- <ul>
 						<li><a href="#" title="">Home</a></li>
 						<li><a href="#" title="">Blog</a></li>
 						<li><span>{{$post[0]->title}}</span></li>
-					</ul>
+					</ul> --}}
 					<h2>{{$post[0]->title}}</h2>
 					{{-- <span class="categry">English, Teachers, Shelly</span> --}}
 					<ul class="meta">
@@ -62,7 +62,8 @@
 					</div>
 					<div class="col-lg-3">
 						<div class="sidebar">
-							<div class="widget widget-categories">
+
+							{{-- <div class="widget widget-categories">
 								<h3 class="widget-title">Categories</h3>
 								<ul>
 									<li>
@@ -82,7 +83,8 @@
 										<span>89</span>
 									</li>
 								</ul>
-							</div><!--widget-categories end-->
+							</div> --}}
+							<!--widget-categories end-->
 							<div class="widget widget-posts">
 								<h3 class="widget-title">Latest Posts</h3>
 								<div class="wd-posts">

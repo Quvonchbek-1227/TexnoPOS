@@ -1,27 +1,31 @@
+/* @font-face {
+    font-family: "CustomFont";
+    src: url("CustomFont.eot");
+    src: url("CustomFont.woff") format("woff"),
+    url("CustomFont.otf") format("opentype"),
+    url("CustomFont.svg#filename") format("svg");
+    } */
+
 @media only screen and (max-width: 576px) {
     .left_section {
         display: none;
     }
-    /* .blog-img {
+    .course_img {
         width: 100%;
-        height: 100%;
-        
-    } */
-    /* .blog-img>a>p>img {
-        width: 50% !important;
-        height: 50% !important;
-    } */
-    /* .in-block-img {
-        width: 100%;
-    } */
+        /* height: 180px!important; */
+    }
 }
 
-
-/* .blog-img {
-    width: 70%;
-    margin-left: 00px;
+.height1 {
+    height: 430px!important;
 }
 
-.in-block-img {
-    width: 100%;
-} */
+.myshadow {
+    color: white!important;
+    text-transform: uppercase!important;
+    margin-top: 10px!important;
+}
+
+.uran {
+    font-family: 'Bebas Neue';
+}
