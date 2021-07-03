@@ -149,11 +149,15 @@
 								@if ($status == 'student')
 								<div class="row">
 									<div class="col-md-6">
-										{{
-											QrCode::style('dot',$size=0.777)
-											->eyeColor(1, 0, 0, 0, 200, 100, 123)
+										<img src="data:image/png;base64, {{
+										base64_encode(
+											QrCode::format('png')
+											->merge(public_path('/logo.png'),0.3,true)
+											->style('square',$size=0.5)
 											->eye('circle')->color(0, 0, 0)
-											->generate(Request::url())}}
+											->generate(Request::url())
+										);
+										}}">
 									</div>
 								</div>
 								@endif
