@@ -15,6 +15,11 @@
                 @for ($i=0;$i < 4;$i++)
                             <li><a href="{{route('course_detail',['id'=>$courses[$i]->id_course])}}">{{$courses[$i]->course_name}}</a></li>
                 @endfor
+                <li>
+                    <div class="lnk-dv">
+                        <a href="{{ route('get_courses') }}" style="color: white" class="btn-default">Toliq<i class="fa fa-long-arrow-alt-right"></i></a>
+                    </div>
+                </li>
             </ul>
         </li>
         <li><a href="#" title="">Portfolio <i class="fas fa-angle-down ml-2 mt-1"></i></a></li>
