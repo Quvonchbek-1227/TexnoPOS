@@ -12,9 +12,9 @@
         </li>
         <li><a href="{{route('get_courses')}}" title="">Kurslar <i class="fas fa-angle-down ml-2 mt-1"></i></a>
             <ul class="ml-3 mt-3">
-                @for ($i=0;$i < 4;$i++)
+                {{-- @for ($i=0;$i < 4;$i++)
                             <li><a href="{{route('course_detail',['id'=>$courses[$i]->id_course])}}">{{$courses[$i]->course_name}}</a></li>
-                @endfor
+                @endfor --}}
                 <li>
                     <div class="lnk-dv">
                         <a href="{{ route('get_courses') }}" style="color: white" class="btn-default">Toliq<i class="fa fa-long-arrow-alt-right"></i></a>

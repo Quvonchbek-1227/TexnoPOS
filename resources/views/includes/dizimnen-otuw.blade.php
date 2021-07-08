@@ -30,9 +30,9 @@
                             <div class="col-md-4">
                                 <div class="form-group select-tg">
                                     <select name="course" id="course">
-                                        @foreach ($courses as $course)
+                                        {{-- @foreach ($courses as $course)
                                             <option value="{{$course->id_course}}">{{$course->course_name}}</option>
-                                        @endforeach
+                                        @endforeach --}}
                                       
                                     </select>
                                 </div>

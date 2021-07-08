@@ -45,4 +45,6 @@ Route::get('/about',[AboutController::class,'about'])->name('about');
 Route::get('/sle', function () {
     return view('schedule');
 });
-/***********            QR          ****************/
+Route::get('/all',function(){
+    return view('allportfolio');
+});
