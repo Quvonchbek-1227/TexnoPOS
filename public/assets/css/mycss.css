@@ -1,5 +1,31 @@
+/* @font-face {
+    font-family: "CustomFont";
+    src: url("CustomFont.eot");
+    src: url("CustomFont.woff") format("woff"),
+    url("CustomFont.otf") format("opentype"),
+    url("CustomFont.svg#filename") format("svg");
+    } */
+
 @media only screen and (max-width: 576px) {
     .left_section {
         display: none;
     }
+    .course_img {
+        width: 100%;
+        /* height: 180px!important; */
+    }
+}
+
+.height1 {
+    height: 430px!important;
+}
+
+.myshadow {
+    color: white!important;
+    text-transform: uppercase!important;
+    margin-top: 10px!important;
+}
+
+.uran {
+    font-family: 'Bebas Neue';
 }

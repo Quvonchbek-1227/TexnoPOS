@@ -17,6 +17,16 @@ class EventController extends Controller
 
         $events = DB::table('event')
         ->join('mentors','event.mentor_id','=','mentors.id')
+        ->select([
+            'date',
+            'time',
+            'price',
+            'event.id as id_event',
+            'full_name',
+            'adress',
+            'title',
+            'full_name'
+        ])
         ->paginate(10);
 
         return view('events',[

@@ -27,14 +27,10 @@ class BlogController extends Controller
     }
     
     public function get_post($id){
-        $post = DB::table('post')
-        ->where('id','=',$id)
-        ->get();
-
         $blogs = DB::table('post')
         ->orderBy('id','desc')
         ->get();
-
+        $post =  $blogs->where('id','=',$id);
 
         $courses = DB::table('courses')
         ->get([

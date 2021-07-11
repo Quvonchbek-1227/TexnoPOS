@@ -4,15 +4,16 @@
 	<meta charset="UTF-8">
 	<title>{{$mentor[0]->full_name}}</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="description" content="Shelly - Website" />
-	<meta name="author" content="merkulove">
-	<meta name="keywords" content="" />
+	<meta name="description" content="TexnoPOS IT Mektebi" />
+	<meta name="author" content="TEXNOPOS DEVELOPERS!">
+	<meta name="keywords" content="TexnoPOS" />
 	{{-- <link rel="icon" href="assets/img/favicon.png"> --}}
 	<link rel="stylesheet" type="text/css" href="{{asset('assets/css/animate.css')}}">
 	<link rel="stylesheet" type="text/css" href="{{asset('assets/css/bootstrap.min.css')}}">
 	<link rel="stylesheet" type="text/css" href="{{asset('assets/css/font-awesome.min.css')}}">
 	<link rel="stylesheet" type="text/css" href="{{asset('assets/css/main.css')}}">
 	<link rel="stylesheet" type="text/css" href="{{asset('assets/css/responsive.css')}}">
+	<link rel="stylesheet" href="{{asset('assets/css/mycss.css')}}">
 </head>
 
 
@@ -28,16 +29,12 @@
 		<?php 
 			$name = explode(' ',$mentor[0]->full_name)[0];
 		?>
-		<section class="pager-section" style="background-image: url({{asset('')}})">
+		<section class="pager-section">
 			<div class="container">
 				<div class="pager-content text-center">
-					<h2>{{$mentor[0]->full_name}}</h2>
-					<ul>
-						<li><a href="{{route('home_page')}}" title="">Home</a></li>
-						<li><a href="#" title="">Mentor</a></li>
-					</ul>
+					<h2 class="myshadow">{{$name}}</h2>
 				</div><!--pager-content end-->
-				<h2 class="page-titlee" style="color: red;">{{$name}}</h2>
+				{{-- <h2 class="page-titlee myshadow" style="color: red;">{{$name}}</h2> --}}
 			</div>
 		</section><!--pager-section end-->
 
@@ -56,7 +53,7 @@
 								@endif
 								<ul class="social-icons">
 									@if (isset($mentor[0]->facebook))
-										<li><a href="https://facebook.com/{{$mentor[0]->facebook}}" title=""><i class="fab fa-facebook-f"></i></a></li>
+										<li><a href="https://www.facebook.com/search/top/?q={{$mentor[0]->facebook}}" title=""><i class="fab fa-facebook-f"></i></a></li>
 									@endif
 									@if (isset($mentor[0]->instagram))
 										<li><a href="https://www.instagram.com/{{$mentor[0]->instagram}}/" title=""><i class="fab fa-instagram"></i></a></li>
@@ -77,7 +74,7 @@
 								@elseif ($status == 'programmer')
 									<h3>Programmist</h3>
 								@elseif ($status == 'student')
-									<h3>Pitkeruwshi</h3>		
+									<h3>Pitkeruwshi</h3>
 								@endif
 
 									{{-- O`quvtuvchi yoki o`quvchi   ekanligi darajasi, kasibi END --}}
@@ -149,6 +146,21 @@
 								<p>
 									{{$mentor[0]->portfolio_detail}}
 								</p>
+								@if ($status == 'student')
+								<div class="row">
+									<div class="col-md-6">
+										<img src="data:image/png;base64, {{
+										base64_encode(
+											QrCode::format('png')
+											->merge(public_path('/logo.png'),0.3,true)
+											->style('square',$size=0.5)
+											->eye('circle')->color(0, 0, 0)
+											->generate(Request::url())
+										);
+										}}">
+									</div>
+								</div>
+								@endif
 													{{-- O`quvtuvchi(o`quvchi) o`zlashtirgan texnalogiyalar bo`yicha qisqa malumot END --}}
 								
 							</div><!--teacher-content end-->
@@ -190,7 +202,7 @@
 												<li><a href="https://t.me/{{$user->telegram}}" title=""><i class="fab fa-telegram"></i></a></li>
 												@endisset
 												@isset($user->facebook)
-												<li><a href="https://facebook.com/{{$user->facebook}}" title=""><i class="fab fa-facebook-f"></i></a></li>
+												<li><a href="https://www.facebook.com/search/top/?q={{$user->facebook}}" title=""><i class="fab fa-facebook-f"></i></a></li>
 												@endisset
 											</ul>
 											<span><img src="{{asset('assets/img/plus.png')}}" alt=""></span>

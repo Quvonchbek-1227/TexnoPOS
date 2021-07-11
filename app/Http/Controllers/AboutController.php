@@ -11,7 +11,6 @@ class AboutController extends Controller
 
         $courses = DB::table('courses')
         ->join('mentors','courses.id_mentor','=','mentors.id')
-        ->take(1)
         ->get([
             'courses.id as id_course',
             'courses.name as course_name',

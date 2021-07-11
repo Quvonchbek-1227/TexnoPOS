@@ -13,7 +13,6 @@ class MainController extends Controller
 
         $courses = DB::table('courses')
         ->join('mentors','courses.id_mentor','=','mentors.id')
-        ->take(1)
         ->get([
             'courses.id as id_course',
             'mentors.id as id_mentor',
@@ -35,6 +34,7 @@ class MainController extends Controller
         ->take(3)
         ->join('mentors','event.mentor_id','=','mentors.id')
         ->get([
+            'event.id as id_event',
             'event.date',
             'time',
             'text',

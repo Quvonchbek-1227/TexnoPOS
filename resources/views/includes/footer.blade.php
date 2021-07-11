@@ -4,11 +4,11 @@
                 <div class="top-footer">
                     <div class="row">
                         <div class="col-lg-3 col-md-6 col-sm-6">
-                            <div class="widget widget-about">
-                                <img width='180' src="{{asset('assets/img/logo.png')}}" alt="">
-                                <p><b> <i> Keleshekke biz benen birge qádem tasla - TexnoPOS penen keleshek kásibin iyele!</i></b></p>
+                            <div class="widget widget-iframe">
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2943.478873868036!2d59.6053283154205!3d42.46010287918027!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x41dd9b45e9466243%3A0xfaf3ec1bf09d22b1!2sTexnoPOS%20IT%20Mektebi!5e0!3m2!1sru!2sus!4v1620609905772!5m2!1sru!2sus"
+                                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                             </div>
-                            <!--widget-about end-->
+                            <!--widget-iframe end-->
                         </div>
                         <div class="col-lg-3 col-md-6 col-sm-6">
                             <div class="widget widget-contact">
@@ -52,21 +52,21 @@
                             <div class="widget widget-links">
                                 <h3 class="widget-title">Sayt kartası</h3>
                                 <ul>
-                                    <li><a href="about.html" title="">Biz haqqımızda </a></li>
-                                    <li><a href="classes.html" title="">Kurslar</a></li>
-                                    <li><a href="teachers.html" title="">Portfolio </a></li>
-                                    <li><a href="blog.html" title="">Blog </a></li>
-                                    <li><a href="schedule.html" title="">Baylanıs </a></li>
+                                    <li><a href="{{ route('about') }}" title="">Biz haqqımızda </a></li>
+                                    <li><a href="{{ route('get_courses') }}" title="">Kurslar</a></li>
+                                    <li><a href="#" title="">Portfolio </a></li>
+                                    <li><a href="{{ route('get_blogs') }}" title="">Blog </a></li>
+                                    <li><a href="{{ route('contacts') }}" title="">Baylanıs </a></li>
                                 </ul>
                             </div>
                             <!--widget-links end-->
                         </div>
                         <div class="col-lg-3 col-md-6 col-sm-6">
-                            <div class="widget widget-iframe">
-                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2943.478873868036!2d59.6053283154205!3d42.46010287918027!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x41dd9b45e9466243%3A0xfaf3ec1bf09d22b1!2sTexnoPOS%20IT%20Mektebi!5e0!3m2!1sru!2sus!4v1620609905772!5m2!1sru!2sus"
-                                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                            <div class="widget widget-about">
+                                <img width='180' src="{{asset('assets/img/logo.png')}}" alt="">
+                                <p><b> <i> Keleshekke biz benen birge qádem tasla - TexnoPOS penen keleshek kásibin iyele!</i></b></p>
                             </div>
-                            <!--widget-iframe end-->
+                            <!--widget-about end-->
                         </div>
                     </div>
                 </div>
@@ -77,12 +77,12 @@
                             <p>© Avtorlıq huquqı 2021 TexnoPOS Bárshe huqıqlar qorǵalǵan</p>
                         </div>
                         <div class="col-lg-6 col-md-6 col-sm-6">
-                            <ul class="social-links">
-                                <li><a href="#" title=""><i class="fab fa-facebook-f"></i></a></li>
-                                <li><a href="#" title=""><i class="fab fa-telegram"></i></a></li>
-                                <li><a href="#" title=""><i class="fab fa-instagram"></i></a></li>
-                                <li><a href="#" title=""><i class="fab fa-youtube"></i></a></li>
-                                <li><a href="#" title=""><i class="fab fa-tiktok"></i></a></li>
+                            <ul class="social-links ml-auto">
+                                {{-- <li><a href="https://" title=""><i class="fab fa-facebook-f"></i></a></li> --}}
+                                <li><a href="https://t.me/texnopos" title=""><i class="fab fa-telegram"></i></a></li>
+                                <li><a href="https://www.instagram.com/texnopos" title=""><i class="fab fa-instagram"></i></a></li>
+                                <li><a href="https://www.youtube.com/texnopos" title=""><i class="fab fa-youtube"></i></a></li>
+                                <li><a href="https://www.tiktok.com/@texnopos" title=""><i class="fab fa-tiktok"></i></a></li>
                             </ul>
                         </div>
                     </div>

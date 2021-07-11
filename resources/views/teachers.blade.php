@@ -10,15 +10,16 @@
 		<title>TexnoPOS Pikeruwshileri</title>
 	@endif
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="description" content="Shelly - Website" />
-	<meta name="author" content="merkulove">
-	<meta name="keywords" content="" />
-	{{-- <link rel="icon" href="assets/img/favicon.png"> --}}
-	<link rel="stylesheet" type="text/css" href="assets/css/animate.css">
-	<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="assets/css/font-awesome.min.css">
-	<link rel="stylesheet" type="text/css" href="assets/css/main.css">
-	<link rel="stylesheet" type="text/css" href="assets/css/responsive.css">
+	<meta name="description" content="TexnoPOS IT Mektebi" />
+	<meta name="author" content="TEXNOPOS DEVELOPERS!">
+	<meta name="keywords" content="TexnoPOS" />
+    <link rel="icon" href="{{ asset('assets/img/favicon.png') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/animate.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/font-awesome.min.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{asset('assets/css/main.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/responsive.css') }}">
+	<link rel="stylesheet" type="text/css" href="{{ asset('assets/css/mycss.css') }}">
 </head>
 
 
@@ -38,20 +39,17 @@
 			<div class="container">
 				<div class="pager-content text-center">
 					@if ($status == 'mentor')
-						<h2>Teachers</h2>
+						<h2 class="myshadow">Mentorlar</h2>
 					@elseif ($status == 'programmer')
-						<h2>Programmers</h2>
+						<h2 class="myshadow">Programmistler</h2>
 					@elseif ($status == 'student')
-						<h2>Students</h2>
+						<h2 class="myshadow">Pitkeriwshiler</h2>
 					@endif
-					<ul>
-						<li><a href="#" title="">Home</a></li>
-						<li><span>Teachers</span></li>
-					</ul>
 				</div><!--pager-content end-->
-				<h2 class="page-titlee">Shelly</h2>
+				<h2 class="page-titlee">   </h2>
 			</div>
-		</section><!--pager-section end-->
+		</section>
+		<!--pager-section end-->
 
 		<section class="page-content">
 			<div class="container">
@@ -73,13 +71,13 @@
 										<div class="sc-div">
 											<ul>
 												@if (isset($mentor->telegram))
-													<li><a href="https://www.instagram.com/{{$mentor->instagram}}/" title=""><i class="fab fa-instagram"></i></a></li>
+													<li><a href="https://www.instagram.com/{{$mentor->telegram}}" title=""><i class="fab fa-instagram"></i></a></li>
 												@endif
 												@if (isset($mentor->instagram))
-													<li><a href="https://t.me/{{$mentor->telegram}}/" title=""><i class="fab fa-telegram"></i></a></li>
+													<li><a href="https://t.me/{{$mentor->instagram}}/" title=""><i class="fab fa-telegram"></i></a></li>
 												@endif
 												@if (isset($mentor->facebook))
-													<li><a href="https://facebook.com/{{$mentor->facebook}}" title=""><i class="fab fa-facebook-f"></i></a></li>
+													<li><a href="https://www.facebook.com/search/top/?q={{$mentor->facebook}}" title=""><i class="fab fa-facebook-f"></i></a></li>
 												@endif
 											</ul>
 											<span><img src="{{asset('assets/img/plus.png')}}" alt=""></span>

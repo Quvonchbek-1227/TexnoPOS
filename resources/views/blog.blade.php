@@ -2,15 +2,14 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Shelly School HTML Template</title>
+	<title>TexnoPOS Bloglari</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="description" content="Shelly - Website" />
-	<meta name="author" content="merkulove">
-	<meta name="keywords" content="" />
+	<meta name="description" content="TexnoPOS IT Mektebi" />
+	<meta name="author" content="TEXNOPOS DEVELOPERS!">
+	<meta name="keywords" content="TexnoPOS" />
 	<link rel="icon" href="{{ asset('assets/img/favicon.png') }}">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/animate.css') }}">
-    {{-- <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/bootstrap.min.css') }}"> --}}
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/font-awesome.min.css') }}">
     <link rel="stylesheet" type="text/css" href="{{asset('assets/css/main.css')}}">
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/responsive.css') }}">
@@ -31,13 +30,9 @@
 		<section class="pager-section">
 			<div class="container">
 				<div class="pager-content text-center">
-					<h2>Blog</h2>
-					<ul>
-						<li><a href="#" title="">Home</a></li>
-						<li><span>Blog</span></li>
-					</ul>
+					<h2 class="myshadow">Blog</h2>
 				</div><!--pager-content end-->
-				<h2 class="page-titlee">Quwanishbek</h2>
+				<h2 class="page-titlee"> </h2>
 			</div>
 		</section><!--pager-section end-->
 
@@ -55,9 +50,11 @@
 							<div class="blog-posts">
 
 								<div class="blog-post">
-									<div class="blog-thumbnail">
-										<a href="#" title="">
-										<p align='center'>	<img width="600" src="{{ asset('assets/img/blogs/'.$blog->img) }}" alt="" class="" > </p>
+									<div class="blog-thumbnail blog-img">
+										<a href="#" title="" class="">
+										<p align='center' class="">
+											<img class="in-block-img w-100" src="{{ asset('assets/img/blogs/'.$blog->img) }}" >
+										</p>
 										</a>
 										<span class="category">TEXNOPOS IT MEKTEBI</span>
 									</div>
@@ -93,7 +90,7 @@
 					<?php $q++; ?>
 					<div class="col-lg-3 left_section">{{-- O`ng tarafdagi yon menyu --}}
 						<div class="sidebar">
-							<div class="widget widget-categories">
+							{{-- <div class="widget widget-categories">
 								<h3 class="widget-title">Categories</h3>
 								<ul>
 									<li>
@@ -113,7 +110,7 @@
 										<span>89</span>
 									</li>
 								</ul>
-							</div>
+							</div> --}}
 							<!--widget-categories end-->
 							<div class="widget widget-posts">
 								<h3 class="widget-title">En` song`i postlar</h3>

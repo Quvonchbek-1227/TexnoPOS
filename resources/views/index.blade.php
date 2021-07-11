@@ -1,3 +1,4 @@
+<?php use SimpleSoftwareIO\QrCode\Facades\QrCode; ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,9 +6,9 @@
     <meta charset="UTF-8">
     <title>TexnoPOS IT Mektebi</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Shelly - Website" />
-    <meta name="author" content="merkulove">
-    <meta name="keywords" content="" />
+	<meta name="description" content="TexnoPOS IT Mektebi" />
+	<meta name="author" content="TEXNOPOS DEVELOPERS!">
+	<meta name="keywords" content="TexnoPOS" />
     <link rel="icon" href="{{ asset('assets/img/favicon.png') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/animate.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/bootstrap.min.css') }}">
@@ -92,7 +93,7 @@
             <div class="container">
                 <div class="section-title text-center">
                     <h2><span>TexnoPOS IT Mektebi</span>ne xosh kelipsiz! </h2>
-                    <p>Nunc consectetur ex nunc, id porttitor leo semper eget. Vivamus interdum, mauris quis cursus sodales, urn</p>
+                    <p>Sapali Keleshek Ushin Sapali Ta`lim!</p>
                 </div>
                 <!--section-title end-->
                 <div class="about-sec">
@@ -258,7 +259,7 @@
                                     </ul>
                                     <span>{{$event->price}}</span>
                                 </div>
-                                <h3><a href="event-single.html" title="">{{$event->title}}</a></h3>
+                                <h3><a href="{{ route('event',['id'=>$event->id_event]) }}" title="">{{$event->title}}</a></h3>
                                 <div class="d-flex flex-wrap">
                                     <div class="posted-by">
                                         <img src="https://via.placeholder.com/26x26" alt="">

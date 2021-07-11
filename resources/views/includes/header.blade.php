@@ -1,9 +1,9 @@
 <header>
     <div class="container">
-        <div class="header-content d-flex flex-wrap align-items-center">
+        <div class="header-content d-flex flex-wrap align-items-start">
             <div class="logo">
                 <a href="{{ route('home_page') }}" title="">
-                    <img class="" width='180' src="{{asset('assets/img/logo.png')}}" alt="" srcset="{{asset('assets/img/logo.png')}} 2x">
+                    <img class="" style="" width='120' src="{{asset('assets/img/logo.png')}}" srcset="{{asset('assets/img/logo.png')}} 2x">
                 </a>
             </div>
             <!--logo end-->
@@ -56,7 +56,7 @@
             <nav>
                 <ul>
                     <li><a href="{{ route('home_page') }}" title="">Bas Bet</a></li>
-                    <li><a href="#" title="">Biz haqqımızda</a>
+                    <li><a href="{{route('about')}}" title="">Biz haqqımızda</a>
                         <ul>
                             <li><a href="{{route('mentors')}}" title="">Mentorlar</a>
                                 {{-- <ul>
@@ -68,13 +68,13 @@
                             {{-- <li><a href="error.html" title="">Dizaynerler</a></li> --}}
                         </ul>
                     </li>
-                    <li><a href="#" title="">Kurslar</a>
+                    <li><a href="{{ route('get_courses') }}" title="">Kurslar</a>
                         <ul>
                             {{-- @for ($i=0;$i < 4;$i++)
-                            <li><a href="{{route('course_detail',['id'=>$courses[$i]->id_course])}}">{{$courses[$i]->course_name}}</a></li>
+                                <li class=""><a href="{{route('course_detail',['id'=>$courses[$i]->id_course])}}">{{$courses[$i]->course_name}}</a></li>
                             @endfor --}}
                             <li>
-                                <div class="lnk-dv text-center">
+                                <div class="lnk-dv text-center mt-1">
                                     <a href="{{ route('get_courses') }}" style="color: white" class="btn-default">Toliq<i class="fa fa-long-arrow-alt-right"></i></a>
                                 </div>
                             </li>
@@ -96,11 +96,11 @@
             </nav>
             <!--nav end-->
             <ul class="social-links ml-auto">
-                <li><a href="#" title=""><i class="fab fa-facebook-f"></i></a></li>
-                <li><a href="#" title=""><i class="fab fa-telegram"></i></a></li>
-                <li><a href="#" title=""><i class="fab fa-instagram"></i></a></li>
-                <li><a href="#" title=""><i class="fab fa-youtube"></i></a></li>
-                <li><a href="#" title=""><i class="fab fa-tiktok"></i></a></li>
+                {{-- <li><a href="https://" title=""><i class="fab fa-facebook-f"></i></a></li> --}}
+                <li><a href="https://t.me/texnopos" title=""><i class="fab fa-telegram"></i></a></li>
+                <li><a href="https://www.instagram.com/texnopos" title=""><i class="fab fa-instagram"></i></a></li>
+                <li><a href="https://www.youtube.com/texnopos" title=""><i class="fab fa-youtube"></i></a></li>
+                <li><a href="https://www.tiktok.com/@texnopos" title=""><i class="fab fa-tiktok"></i></a></li>
             </ul>
         </div>
         <!--navigation-bar end-->

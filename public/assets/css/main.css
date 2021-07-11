@@ -800,7 +800,7 @@ header .navigation-bar nav ul ul ul {
     height: 42px;
     line-height: 42px;
     border-radius: 100px;
-    background:  #141518;
+    background: #141518;
     text-align: center;
     color: white;
 }
@@ -1370,10 +1370,10 @@ footer .bottom-footer .social-links {
 }
 
 .pager-section {
-    background: #f2f7fd;
+    background: url('../img/pager-bg-new.png') #f2f7fd;
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: 100%;
+    background-position: center;
     padding: 75px 0 85px;
 }
 
@@ -1588,10 +1588,10 @@ footer .bottom-footer .social-links {
 }
 
 .classes-page .classes-banner {
-    background-image: url(https://via.placeholder.com/1680x1120);
+    box-shadow: 1px 1px 30px #7b91d2;
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: 50%;
+    background-position: 100%;
     padding: 115px 80px 127px;
     position: relative;
     z-index: 1;
@@ -1620,9 +1620,13 @@ footer .bottom-footer .social-links {
 }
 
 .classes-page .classes-banner>h2 {
-    color: #2b2b2b;
-    font-size: 48.78px;
+    color: #fff;
+    /* font-size: 48.78px; */
+    font-size: 60px;
+    font-weight: 800;
+    /* text-shadow: 10px 5px 17px white; */
     margin-bottom: 21px;
+    text-align: center;
 }
 
 .classes-page .classes-section {

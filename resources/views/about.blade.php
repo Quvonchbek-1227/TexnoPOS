@@ -2,18 +2,18 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Shelly School HTML Template</title>
+	<title>Biz Haqimizda!</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="description" content="Shelly - Website" />
-	<meta name="author" content="merkulove">
-	<meta name="keywords" content="" />
+	<meta name="description" content="TexnoPOS IT Mektebi" />
+	<meta name="author" content="TEXNOPOS DEVELOPERS!">
+	<meta name="keywords" content="TexnoPOS" />
 <!-- 	<link rel="icon" href="assets/img/favicon.png"> -->
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="assets/css/animate.css">
-	<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="assets/css/font-awesome.min.css">
-	<link rel="stylesheet" type="text/css" href="assets/css/main.css">
-	<link rel="stylesheet" type="text/css" href="assets/css/responsive.css">
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/animate.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/font-awesome.min.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{asset('assets/css/main.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/responsive.css') }}">
+	<link rel="stylesheet" type="text/css" href="{{ asset('assets/css/mycss.css') }}">
 </head>
 
 
@@ -30,13 +30,9 @@
 		<section class="pager-section">
 			<div class="container">
 				<div class="pager-content text-center">
-					<h2>About Us</h2>
-					<ul>
-						<li><a href="#" title="">Home</a></li>
-						<li><span>About</span></li>
-					</ul>
+					<h2 class="myshadow">Haqqimizda</h2>
 				</div><!--pager-content end-->
-				<h2 class="page-titlee">Shelly</h2>
+				{{-- <h2 class="page-titlee">Shelly</h2> --}}
 			</div>
 		</section><!--pager-section end-->
 
@@ -125,11 +121,10 @@
 				</div><!--sec-title end-->
 				<div class="classes-sec">
                     <div class="row classes-carousel">
-                        <?php $i = 0;?>
+						
                         @foreach ($courses as $course)
-                        <?php $i++; ?>
 
-                            <div class="col-lg-3 col-xs-12 col-sm-12 col-md-3">
+                        <div class="col-lg-3 col-xs-12 col-sm-12 col-md-3" style="margin: 5px">
                             <div class="classes-col wow fadeInUp" data-wow-duration="1000ms">
                                 <div class="class-thumb">
                                     <img src="{{asset('assets/img/courses/'.$course->course_img)}}" alt="" class="w-100">
