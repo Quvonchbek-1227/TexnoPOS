@@ -61,13 +61,7 @@
 							<div class="col-lg-3 col-md-3 col-sm-6 col-6 full-wdth">
 								<div class="teacher">
 									<div class="teacher-img">
-										@if ($status == 'mentor')
-											<img src="{{asset('assets/img/mentors/'.$mentor->mentor_img)}}" class="w-100">
-										@elseif ($status == 'programmer')
-											<img src="{{asset('assets/img/programmers/'.$mentor->mentor_img)}}" class="w-100">
-										@elseif ($status == 'student')
-											<img src="{{asset('assets/img/students/'.$mentor->mentor_img)}}" class="w-100">
-										@endif
+											<img src="{{asset('assets/img/portfolio_user.png')}}" class="w-100">
 										<div class="sc-div">
 											<ul>
 												@if (isset($mentor->telegram))

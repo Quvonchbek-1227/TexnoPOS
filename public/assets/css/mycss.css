@@ -29,3 +29,56 @@
 .uran {
     font-family: 'Bebas Neue';
 }
+
+.card-price {
+    opacity: .6;
+    height: 24px;
+    padding: 5px;
+    background-color: black;
+    color: gold;
+    font-weight: 800;
+}
+
+.parda {
+    width: 100%!important;
+    height: 100vh!important;
+    position: fixed;
+    z-index: -99;
+    opacity: .4;
+    background-color: rgb(255, 254, 254);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.shadows {
+    font-weight: 700;
+    position: relative;
+    text-transform: uppercase;
+    text-shadow: -15px 5px 20px #010203;
+    color: rgb(110, 95, 95);
+    letter-spacing: -0.05em;
+    font-family: 'Anton', Arial, sans-serif;
+    user-select: none;
+    text-transform: uppercase;
+    font-size: 150px;
+    transition: all 0.25s ease-out;
+}
+
+.shadows:hover {
+    text-shadow: -16px 6px 15px #ced0d3;
+}
+
+@media only screen and (max-width: 576px) {
+    .shadows {
+        color: rgb(12, 0, 0);
+        display: flex;
+        flex-direction: column;
+        font-weight: 600;
+        font-size: 60px;
+    }
+}
+
+.card {
+    box-shadow: 1px 1px 40px rgb(129, 108, 108);
+}

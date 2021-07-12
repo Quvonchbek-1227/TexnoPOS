@@ -44,13 +44,9 @@
 					<div class="row">
 						<div class="col-lg-4">
 							<div class="teacher-coly">
-								@if ($status == 'mentor')
-									<img src="{{asset('assets/img/mentors/'.$mentor[0]->mentor_img)}}" alt="">
-								@elseif ($status == 'programmer')
-									<img src="{{asset('assets/img/programmers/'.$mentor[0]->mentor_img)}}" alt="">
-								@elseif ($status == 'student')
-									<img src="{{asset('assets/img/students/'.$mentor[0]->mentor_img)}}" alt="">
-								@endif
+								
+									<img src="{{asset('assets/img/portfolio_user.png')}}" alt="">
+								
 								<ul class="social-icons">
 									@if (isset($mentor[0]->facebook))
 										<li><a href="https://www.facebook.com/search/top/?q={{$mentor[0]->facebook}}" title=""><i class="fab fa-facebook-f"></i></a></li>
@@ -186,13 +182,7 @@
 							<div class="col-lg-3 col-md-3 col-sm-6 col-6 full-wdth">
 								<div class="teacher">
 									<div class="teacher-img">
-										@if ($status == 'mentor')
-											<img src="{{asset('assets/img/mentors/'.$user->mentor_img)}}" alt="" class="w-100">							
-										@elseif ($status == 'programmer')
-											<img src="{{asset('assets/img/programmers/'.$user->mentor_img)}}" alt="" class="w-100">
-										@elseif ($status == 'student')
-											<img src="{{asset('assets/img/students/'.$user->mentor_img)}}" alt="" class="w-100">
-										@endif
+											<img src="{{asset('assets/img/portfolio_user.png')}}" alt="" class="w-100">
 										<div class="sc-div">
 											<ul>
 												@isset($user->instagram)

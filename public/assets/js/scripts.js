@@ -99,12 +99,13 @@
         /**
          * Responsive Mobile Menu
          */
+
         $(".menu-btn").on("click", function() {
 
             $(this).toggleClass("active");
             $(".responsive-menu").toggleClass("active");
             $("body").toggleClass("scroll-hide");
-
+            $('.responsive-menu ul li').addClass('active');
         });
 
         $(".responsive-menu ul ul").parent().addClass("menu-item-has-children");

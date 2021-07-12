@@ -13,6 +13,7 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/font-awesome.min.css') }}">
     <link rel="stylesheet" type="text/css" href="{{asset('assets/css/main.css')}}">
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/responsive.css') }}">
+	<link rel="stylesheet" href="{{asset('assets/css/mycss.css')}}">
 </head>
 
 
@@ -29,14 +30,9 @@
 		<section class="pager-section">
 			<div class="container">
 				<div class="pager-content text-center">
-					<h2>Environment conference</h2>
-					<ul>
-						<li><a href="#" title="">Home</a></li>
-						<li><a href="#" title="">Classes</a></li>
-						<li><span>Events</span></li>
-					</ul>
+					<h2 class="myshadow">Event Single</h2>
 				</div><!--pager-content end-->
-				<h2 class="page-titlee">Shelly</h2>
+				<h2 class="page-titlee"></h2>
 			</div>
 		</section><!--pager-section end-->
 
@@ -130,7 +126,7 @@
 			</div>
 		</section><!--page-content end-->
 
-        {{-- @include('includes.dizimnen-otuw') --}}
+        @include('includes.dizimnen-otuw')
 		<!--newsletter-sec end-->
 
 		@include('includes.footer')

@@ -13,6 +13,7 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/font-awesome.min.css') }}">
     <link rel="stylesheet" type="text/css" href="{{asset('assets/css/main.css')}}">
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/responsive.css') }}">
+	<link rel="stylesheet" type="text/css" href="{{asset('assets/css/mycss.css')}}">
 </head>
 
 
@@ -30,13 +31,9 @@
 		<section class="pager-section">
 			<div class="container">
 				<div class="pager-content text-center">
-					<h2>Events</h2>
-					<ul>
-						<li><a href="#" title="">Home</a></li>
-						<li><span>Events</span></li>
-					</ul>
+					<h2 class="myshadow">Events</h2>
 				</div><!--pager-content end-->
-				<h2 class="page-titlee">Shelly</h2>
+				<h2 class="page-titlee"></h2>
 			</div>
 		</section><!--pager-section end-->
 
