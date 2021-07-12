@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MainController;
 use App\Http\Controllers\CourseController;
+use App\Http\Controllers\Admin\AdminCoursesController;
 use App\Http\Controllers\MentorController;
 use App\Http\Controllers\ProgrammersController;
 use App\Http\Controllers\StudentController;
@@ -11,8 +12,23 @@ use App\Http\Controllers\ContactsController;
 use App\Http\Controllers\MessageController;
 use App\Http\Controllers\EventController;
 use App\Http\Controllers\AboutController;
+<<<<<<< HEAD
 use App\Http\Controllers\ProectsController;
 
+=======
+use App\Http\Controllers\PostsController;
+use App\Http\Controllers\RegistrationsController;
+use App\Http\Controllers\Admin\AdminController;
+use App\Http\Controllers\Admin\AdminStudentsController;
+use App\Http\Controllers\TexnologiesController;
+use App\Http\Controllers\Admin\AdminMentorsController;
+use App\Http\Controllers\Admin\AdminAboutsController;
+use App\Http\Controllers\Admin\AdminEventsController;
+use App\Http\Controllers\Admin\AdminMessagesController;
+use App\Http\Controllers\Admin\AdminPostsController;
+use App\Http\Controllers\Admin\AdminProgrammersController;
+use App\Http\Controllers\Admin\AdminTexnologiesController;
+>>>>>>> fadde314c04de3069e28ce5a9ad1879f7f91091c
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -49,5 +65,32 @@ Route::get('/allproects',[ProectsController::class,'allproects'])->name('allproe
 Route::get('/allproects/{id}',[ProectsController::class,'get_proect'])->name('get_proect');
 
 Route::get('/sle', function () {
+<<<<<<< HEAD
     return view('schedule'); 
 });
+=======
+    return view('schedule');
+});
+<<<<<<< HEAD
+
+
+Route::get('admin', [AdminController::class, 'gettables']);
+Route::resource('admincourse', AdminCoursesController::class);
+Route::resource('adminmentors', AdminMentorsController::class);
+Route::resource('adminabouts', AdminAboutsController::class);
+Route::resource('adminevents', AdminEventsController::class);
+Route::resource('adminmessages', AdminMessagesController::class);
+Route::resource('adminposts', AdminPostsController::class);
+Route::resource('adminprogrammers', AdminProgrammersController::class);
+Route::resource('adminregistrations', RegistrationsController::class);
+Route::resource('adminstudents', AdminStudentsController::class);
+Route::resource('admintexnologies', AdminTexnologiesController::class);
+
+
+
+=======
+Route::get('/all',function(){
+    return view('allportfolio');
+});
+>>>>>>> c20f21b831d824a669abe9be663302b9c118d0e5
+>>>>>>> fadde314c04de3069e28ce5a9ad1879f7f91091c

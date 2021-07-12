@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Programmer;
-use Illuminate\Support\Facades\DB;
+
 
 
 class ProgrammersController extends Controller
@@ -97,4 +97,11 @@ class ProgrammersController extends Controller
         //return $programmers;
         
     }
+
+    
+
+    
+    
+    
+
 }
