@@ -12,10 +12,8 @@ use App\Http\Controllers\ContactsController;
 use App\Http\Controllers\MessageController;
 use App\Http\Controllers\EventController;
 use App\Http\Controllers\AboutController;
-<<<<<<< HEAD
 use App\Http\Controllers\ProectsController;
 
-=======
 use App\Http\Controllers\PostsController;
 use App\Http\Controllers\RegistrationsController;
 use App\Http\Controllers\Admin\AdminController;
@@ -28,7 +26,6 @@ use App\Http\Controllers\Admin\AdminMessagesController;
 use App\Http\Controllers\Admin\AdminPostsController;
 use App\Http\Controllers\Admin\AdminProgrammersController;
 use App\Http\Controllers\Admin\AdminTexnologiesController;
->>>>>>> fadde314c04de3069e28ce5a9ad1879f7f91091c
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -64,15 +61,13 @@ Route::get('/allproects',[ProectsController::class,'allproects'])->name('allproe
 
 Route::get('/allproects/{id}',[ProectsController::class,'get_proect'])->name('get_proect');
 
+Route::get('/proect',function(){
+    return view('proect');
+});
 Route::get('/sle', function () {
-<<<<<<< HEAD
+
     return view('schedule'); 
 });
-=======
-    return view('schedule');
-});
-<<<<<<< HEAD
-
 
 Route::get('admin', [AdminController::class, 'gettables']);
 Route::resource('admincourse', AdminCoursesController::class);
@@ -88,9 +83,7 @@ Route::resource('admintexnologies', AdminTexnologiesController::class);
 
 
 
-=======
 Route::get('/all',function(){
     return view('allportfolio');
 });
->>>>>>> c20f21b831d824a669abe9be663302b9c118d0e5
->>>>>>> fadde314c04de3069e28ce5a9ad1879f7f91091c
+

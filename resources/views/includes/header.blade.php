@@ -80,7 +80,7 @@
                             </li>
                         </ul>
                     </li>
-                    <li><a href="#" title="">Portfolio</a>
+                    <li><a href="{{route('allproects')}}" title="">Portfolio</a>
                         {{-- <ul>
                             <li><a href="schedule.html" title="">TexnoPOS</a></li>
                             <li><a href="teacher-single.html" title="">Pitkeruwshiler</a></li>
