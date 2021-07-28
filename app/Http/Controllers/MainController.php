@@ -45,11 +45,15 @@ class MainController extends Controller
             'price'
         ]);
 
+        $gallery = DB::table('galerya')
+        ->get();
+
         return view('index',[
             'courses'=>$courses,
             'blogs'=>$blogs,
-            'events'=>$events
+            'events'=>$events,
+            'images'=>$gallery
         ]);
-        //return $events;
+
     }
 }

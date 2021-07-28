@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 use Illuminate\Support\Facades\DB;
 use App\Models\proect;
 use Illuminate\Http\Request;
+use Illuminate\Support\Arr;
+
+use function PHPSTORM_META\type;
 
 class ProectsController extends Controller
 {
@@ -27,6 +30,11 @@ class ProectsController extends Controller
     }
     public function get_proect($id){
         $project = proect::find($id);
+        $type = $project->type;
+        $sidebar = proect::where('type',$type)
+        ->orderby('id','asc')
+        ->inRandomOrder()
+        ->get();
 
         if($project['is_mentor']){
             $show = proect::select('mentors.full_name', 'proects.*')
@@ -51,12 +59,15 @@ class ProectsController extends Controller
             'courses.name as course_name'
         ]);
 
-        //  return $show;
+
+
+        //  return $sidebar;
         return view('proect',[
             'courses'=>$courses,
             'proect'=>$show,
             'images'=>$images,
             'id'=>$id,
+            'types'=>$sidebar
         ]);
     }
 }

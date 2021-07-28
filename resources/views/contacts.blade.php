@@ -30,7 +30,7 @@
 		<section class="pager-section">
 			<div class="container">
 				<div class="pager-content text-center">
-					<h2 class="myshadow">Contacts</h2>
+					<h2 class="myshadow">Baylanis</h2>
 					
 				</div><!--pager-content end-->
 				<h2 class="page-titlee"></h2>

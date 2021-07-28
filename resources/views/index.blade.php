@@ -1,4 +1,6 @@
-<?php use SimpleSoftwareIO\QrCode\Facades\QrCode; ?>
+<?php
+
+use SimpleSoftwareIO\QrCode\Facades\QrCode; ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,9 +8,10 @@
     <meta charset="UTF-8">
     <title>TexnoPOS IT Mektebi</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="description" content="TexnoPOS IT Mektebi" />
-	<meta name="author" content="TEXNOPOS DEVELOPERS!">
-	<meta name="keywords" content="TexnoPOS" />
+    <meta name="description" content="TexnoPOS IT Mektebi" />
+    <meta name="author" content="TEXNOPOS DEVELOPERS!">
+    <meta name="keywords" content="TexnoPOS" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
     <link rel="icon" href="{{ asset('assets/img/favicon.png') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/animate.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/bootstrap.min.css') }}">
@@ -16,7 +19,7 @@
     <link rel="stylesheet" type="text/css" href="{{asset('assets/css/main.css')}}">
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/responsive.css') }}">
     <style>
-        
+
     </style>
 </head>
 
@@ -136,38 +139,20 @@
                 </div>
                 <!--about-rw end-->
                 <div class="abt-img">
-                    <ul class="masonary">
-                        <li class="width1 wow zoomIn" data-wow-duration="1000ms">
-                            <a href="assets/img/img/1.jpg" data-group="set1" title="" class="html5lightbox"><img src="assets/img/img/1.jpg" alt=""></a>
-                        </li>
-                        <li class="width2 wow zoomIn" data-wow-duration="1000ms">
-                            <a href="assets/img/img/2.jpg" data-group="set1" title="" class="html5lightbox"><img src="assets/img/img/2.jpg" alt=""></a>
-                        </li>
-                        <li class="width3 wow zoomIn" data-wow-duration="1000ms">
-                            <a href="assets/img/img/3.jpg" data-group="set1" title="" class="html5lightbox"><img src="assets/img/img/3.jpg" alt=""></a>
-                        </li>
-                        <li class="width4 wow zoomIn" data-wow-duration="1000ms">
-                            <a href="assets/img/img/4.jpg" data-group="set1" title="" class="html5lightbox"><img src="assets/img/img/4.jpg" alt=""></a>
-                        </li>
-                        <li class="width5 wow zoomIn" data-wow-duration="1000ms">
-                            <a href="assets/img/img/5.jpg" data-group="set1" title="" class="html5lightbox"><img src="assets/img/img/5.jpg" alt=""></a>
-                        </li>
-                        <li class="width6 wow zoomIn" data-wow-duration="1000ms">
-                            <a href="assets/img/img/6.jpg" data-group="set1" title="" class="html5lightbox"><img src="assets/img/img/6.jpg" alt=""></a>
-                        </li>
-                        <li class="width7 wow zoomIn" data-wow-duration="1000ms">
-                            <a href="assets/img/img/7.jpg" data-group="set1" title="" class="html5lightbox"><img src="assets/img/img/7.jpg" alt=""></a>
-                        </li>
-                        <li class="width8 wow zoomIn" data-wow-duration="1000ms">
-                            <a href="assets/img/img/8.jpg" data-group="set1" title="" class="html5lightbox"><img src="assets/img/img/8.jpg" alt=""></a>
-                        </li>
-                        <li class="width9 wow zoomIn" data-wow-duration="1000ms">
-                            <a href="assets/img/img/9.jpg" data-group="set1" title="" class="html5lightbox"><img src="assets/img/img/9.jpg" alt=""></a>
-                        </li>
-                        <li class="width10 wow zoomIn" data-wow-duration="1000ms">
-                            <a href="assets/img/img/10.jpg" data-group="set1" title="" class="html5lightbox"><img src="assets/img/img/10.jpg" alt=""></a>
-                        </li>
-                    </ul>
+                     <ul class="masonary">
+                     <?php $i = 1;?>
+                         @foreach($images as $image)
+                         <?php
+                            if($i === 11){
+                                $i=1;
+                            }
+                         ?>
+                            <li class="width{{$i}} wow zoomIn" data-wow-duration="1000ms">
+                                <a href="{{asset('assets/img/img/'.$image->img)}}" data-group="set1" title="" class="html5lightbox"><img src="{{asset('assets/img/img/'.$image->img)}}" alt=""></a>
+                            </li>
+                            <?php $i++; ?>
+                        @endforeach
+                    </ul> 
                 </div>
                 <!-- abt-img end-->
             </div>
@@ -184,14 +169,14 @@
                 <!--sec-title end-->
                 <div class="classes-sec">
                     <div class="row classes-carousel">
-                        
+
                         @foreach ($courses as $course)
 
-                            <div class="col-lg-12 col-xs-12 col-sm-12 col-md-12">
+                        <div class="col-lg-12 col-xs-12 col-sm-12 col-md-12">
                             <div class="classes-col wow fadeInUp" data-wow-duration="1000ms">
                                 <div class="class-thumb">
                                     <img src="{{asset('assets/img/courses/'.$course->course_img)}}" alt="" class="w-100">
-                                    <a href="{{route('course_detail',['id'=>$course->id_course])}}"  title="Baylanis" class="crt-btn fas fa-pen-alt"></a>
+                                    <a href="{{route('course_detail',['id'=>$course->id_course])}}" title="Baylanis" class="crt-btn fas fa-pen-alt"></a>
                                 </div>
                                 <div class="class-info">
                                     <h3><a href="{{ route('course_detail', ['id'=>$course->id_course]) }}" title="">{{$course->course_name}}</a></h3>
@@ -212,7 +197,7 @@
                         </div>
 
                         @endforeach
-                        
+
                     </div>
                     <div class="lnk-dv text-center">
                         <a href="{{ route('get_courses') }}" title="" class="btn-default">Bárshe kurslar <i class="fa fa-long-arrow-alt-right"></i></a>
@@ -232,7 +217,7 @@
                     <div class="col-lg-6">
                         <div class="find-course">
                             <div class="sec-title">
-                                <h2 style="">Ózińizge mas kurstı saylań</h2>
+                                <h2>Ózińizge mas kurstı saylań</h2>
                                 <h3><img src="{{asset('assets/img/icon11.png')}}" alt="">Baylanıs <strong>+99890 592 7117</strong></h3>
                             </div>
                             <!--sec-title end-->
@@ -246,7 +231,7 @@
                     <div class="col-lg-6" style="margin-top: 150px">
                         <div class="courses-list">
                             @foreach ($events as $event)
-                                
+
                             <div class="course-card wow fadeInLeft" data-wow-duration="1000ms">
                                 <div class="d-flex flex-wrap align-items-center">
                                     <ul class="course-meta">
@@ -288,11 +273,11 @@
                 <!--section-title end-->
                 <div class="blog-posts">
                     <div class="row">
-                        
+
                         @foreach ($blogs as $blog)
                         <?php
-                        $text = str_split($blog->text);    
-                    ?>
+                        $text = str_split($blog->text);
+                        ?>
 
                         <div class="col-lg-4 col-md-6 col-sm-6">
                             <div class="blog-post">
@@ -309,18 +294,18 @@
                                     <h3><a href="{{ route('get_post', ['id'=>$blog->id]) }}" title="">{{$blog->title}}</a></h3>
                                     <p>
                                         <?php
-                                            for ($i=0; $i < 50; $i++) { 
-                                                echo $text[$i];
-                                            }
-                                            echo " ...";    
-                                        ?> 
+                                        for ($i = 0; $i < 50; $i++) {
+                                            echo $text[$i];
+                                        }
+                                        echo " ...";
+                                        ?>
                                     </p>
                                     <a href="{{ route('get_post', ['id'=>$blog->id]) }}" title="" class="read-more">Toliq Oqiw <i class="fa fa-long-arrow-alt-right"></i></a>
                                 </div>
                             </div>
                             <!--blog-post end-->
                         </div>
-                        
+
                         @endforeach
 
                     </div>
@@ -328,7 +313,7 @@
                 <!--blog-posts end-->
             </div>
         </section>
-        
+
         <!--blog-section end-->
 
         @include('includes.dizimnen-otuw')

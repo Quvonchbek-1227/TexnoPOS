@@ -2,10 +2,10 @@
 -- version 4.9.5
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost:3307
--- Generation Time: Jun 30, 2021 at 03:42 PM
--- Server version: 5.7.24
--- PHP Version: 7.4.1
+-- Хост: localhost:3307
+-- Время создания: Июл 28 2021 г., 08:59
+-- Версия сервера: 5.7.24
+-- Версия PHP: 7.4.1
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -19,24 +19,24 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `texnopos`
+-- База данных: `texnopos`
 --
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `about`
+-- Структура таблицы `about`
 --
 
 CREATE TABLE `about` (
   `id` int(11) NOT NULL,
   `title` varchar(255) NOT NULL,
   `text` text NOT NULL,
-  `img` varchar(255) NOT NULL
+  `img` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `about`
+-- Дамп данных таблицы `about`
 --
 
 INSERT INTO `about` (`id`, `title`, `text`, `img`) VALUES
@@ -48,7 +48,7 @@ INSERT INTO `about` (`id`, `title`, `text`, `img`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `courses`
+-- Структура таблицы `courses`
 --
 
 CREATE TABLE `courses` (
@@ -61,27 +61,32 @@ CREATE TABLE `courses` (
   `id_mentor` int(11) NOT NULL,
   `img` varchar(255) NOT NULL,
   `description` text NOT NULL,
-  `file_id` int(11) NOT NULL,
+  `file1` varchar(11) DEFAULT NULL,
+  `file2` varchar(255) DEFAULT NULL,
+  `file3` varchar(255) DEFAULT NULL,
   `price` varchar(50) NOT NULL,
   `days` varchar(40) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `courses`
+-- Дамп данных таблицы `courses`
 --
 
-INSERT INTO `courses` (`id`, `name`, `hour`, `age`, `sub_time`, `student_count`, `id_mentor`, `img`, `description`, `file_id`, `price`, `days`) VALUES
-(1, 'Android', '25 sabaq', '16-25 jas', '18:00 - 20:00', '20 adam', 1, 'android.jpg', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, consequuntur maxime! Officiis quidem minus laudantium ad. Minus laboriosam at libero.', 1, '290 min` som', 'Taq kúnleri'),
-(2, 'Web(Frontend)', '20', '13-30 Jas', '14:00 - 16:00', '30 adam', 2, 'front.jpg', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, consequuntur maxime! Officiis quidem minus laudantium ad. Minus laboriosam at libero. Necessitatibus, consequuntur maxime! Officiis quidem minus laudantium ad. Minus laboriosam at libero.', 2, '150 min` som', 'Taq kúnleri'),
-(3, 'Kotlin', '35 sabaq', '15-27 jas', '18:00 - 20:00', '24 adam', 3, 'kotlin.jpg', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, consequuntur maxime! Officiis quidem minus laudantium ad. Minus laboriosam at libero.', 3, '200 min` som', 'Jup kúnleri'),
-(4, 'Web(Backend)', '20', '13-30 Jas', '14:00 - 16:00', '30 adam', 4, 'web.jpg', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, consequuntur maxime! Officiis quidem minus laudantium ad. Minus laboriosam at libero. Necessitatibus, consequuntur maxime! Officiis quidem minus laudantium ad. Minus laboriosam at libero.', 2, '390 min` som', 'Taq kúnleri'),
-(5, 'Moushn Dizayner', '25 sabaq', '16-25 jas', '18:00 - 20:00', '23', 6, 'android.jpg', ' <!--blog-posts end--> <!--blog-posts end--> <!--blog-posts end--> <!--blog-posts end--> <!--blog-posts end--> <!--blog-posts end-->', 6, '120 min` sum', 'Taq kúnleri'),
-(6, 'Lorem Ipsum Dolor', '25 sabaq', '16-25 jas', '18:00 - 20:00', '23', 6, 'android.jpg', ' <!--blog-posts end--> <!--blog-posts end--> <!--blog-posts end--> <!--blog-posts end--> <!--blog-posts end--> <!--blog-posts end-->', 2, '120 min` sum', 'Taq kúnleri');
+INSERT INTO `courses` (`id`, `name`, `hour`, `age`, `sub_time`, `student_count`, `id_mentor`, `img`, `description`, `file1`, `file2`, `file3`, `price`, `days`) VALUES
+(1, 'Android', '25 sabaq', '16-25 jas', '18:00 - 20:00', '20 adam', 1, 'android.jpg', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, consequuntur maxime! Officiis quidem minus laudantium ad. Minus laboriosam at libero.', '1', NULL, NULL, '290 min` som', 'Taq kúnleri'),
+(2, 'Web(Frontend)', '20', '13-30 Jas', '14:00 - 16:00', '30 adam', 2, 'front.jpg', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, consequuntur maxime! Officiis quidem minus laudantium ad. Minus laboriosam at libero. Necessitatibus, consequuntur maxime! Officiis quidem minus laudantium ad. Minus laboriosam at libero.', '2', NULL, NULL, '150 min` som', 'Taq kúnleri'),
+(3, 'Kotlin', '35 sabaq', '15-27 jas', '18:00 - 20:00', '24 adam', 3, 'kotlin.jpg', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, consequuntur maxime! Officiis quidem minus laudantium ad. Minus laboriosam at libero.', '3', NULL, NULL, '200 min` som', 'Jup kúnleri'),
+(4, 'Web(Backend)', '20', '13-30 Jas', '14:00 - 16:00', '30 adam', 4, 'web.jpg', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, consequuntur maxime! Officiis quidem minus laudantium ad. Minus laboriosam at libero. Necessitatibus, consequuntur maxime! Officiis quidem minus laudantium ad. Minus laboriosam at libero.', '2', NULL, NULL, '390 min` som', 'Taq kúnleri'),
+(5, 'Moushn Dizayner', '25 sabaq', '16-25 jas', '18:00 - 20:00', '23', 6, 'android.jpg', ' <!--blog-posts end--> <!--blog-posts end--> <!--blog-posts end--> <!--blog-posts end--> <!--blog-posts end--> <!--blog-posts end-->', '6', NULL, NULL, '120 min` sum', 'Taq kúnleri'),
+(6, 'Web (Frontend)', '25 sabaq', '16-25 jas', '18:00 - 20:00', '23', 6, 'android.jpg', ' <!--blog-posts end--> <!--blog-posts end--> <!--blog-posts end--> <!--blog-posts end--> <!--blog-posts end--> <!--blog-posts end-->', '2', NULL, NULL, '120 min` sum', 'Taq kúnleri'),
+(7, 'Python For Kids', '22', '22', '22', '22', 1, 'python.jpg', 'wcwecwecweweweecwcw', '2', NULL, NULL, '12000000', 'eee'),
+(8, 'Python', 'Neshe Sabaq Boladi', 'Neshe jaq araliq qabillanadi', 'sabaq waqti', 'neshe adam alinadi', 1, 'python.jpg', 'Kurs turali qosimsha mag`liwmat', '2', NULL, NULL, 'Neshe som kurs?', 'Taq kunleri/Jup kunleri'),
+(9, 'IT Future', '12 sabaq', '12-30', '12:14', '20 adam', 3, 'img', 'sssddddddddddddddddddddddddddddddddddddddddddddddddddddddddddf', 'file1', 'file1', 'file1', '123 000 000', 'taq kunleri');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `event`
+-- Структура таблицы `event`
 --
 
 CREATE TABLE `event` (
@@ -97,11 +102,11 @@ CREATE TABLE `event` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `event`
+-- Дамп данных таблицы `event`
 --
 
 INSERT INTO `event` (`id`, `date`, `price`, `adress`, `mentor_id`, `title`, `time`, `text`, `img`) VALUES
-(1, '2021-06-07', '100 min`', 'Texnopos Ofisinde', 2, 'Web da`sturlewge kirisiw', '14:00 - 16:00', '\r\nLorem ipsum dolor sit amet consectetur adipisicing elit. Omnis consectetur esse minima quasi perferendis autem consequatur, maiores ut modi distinctio aspernatur, harum illum. Et animi excepturi eum perspiciatis vero quia iusto distinctio. Libero reiciendis quae saepe aliquid, dolore similique atque aspernatur facilis veritatis provident qui laudantium, commodi deserunt accusamus cumque.', 'web.jpg'),
+(1, '2021-06-07', '100 min`', 'erferfrrgrrvtr', 2, 'fvrvtrvrvr rg rt rtrt rt', '14:00 - 16:00', '\r\nececrecececececececerc', 'web.jpg'),
 (2, '2021-06-07', '100 min`', 'Texnopos Ofisinde', 2, 'Web da`sturlewge kirisiw', '14:00 - 16:00', '\r\nLorem ipsum dolor sit amet consectetur adipisicing elit. Omnis consectetur esse minima quasi perferendis autem consequatur, maiores ut modi distinctio aspernatur, harum illum. Et animi excepturi eum perspiciatis vero quia iusto distinctio. Libero reiciendis quae saepe aliquid, dolore similique atque aspernatur facilis veritatis provident qui laudantium, commodi deserunt accusamus cumque.', 'web.jpg'),
 (3, '2021-06-07', '100 min`', 'Texnopos Ofisinde', 2, 'Web da`sturlewge kirisiw', '14:00 - 16:00', '\r\nLorem ipsum dolor sit amet consectetur adipisicing elit. Omnis consectetur esse minima quasi perferendis autem consequatur, maiores ut modi distinctio aspernatur, harum illum. Et animi excepturi eum perspiciatis vero quia iusto distinctio. Libero reiciendis quae saepe aliquid, dolore similique atque aspernatur facilis veritatis provident qui laudantium, commodi deserunt accusamus cumque.', 'web.jpg'),
 (4, '2021-06-07', '100 min`', 'Texnopos Ofisinde', 2, 'Web da`sturlewge kirisiw', '14:00 - 16:00', '\r\nLorem ipsum dolor sit amet consectetur adipisicing elit. Omnis consectetur esse minima quasi perferendis autem consequatur, maiores ut modi distinctio aspernatur, harum illum. Et animi excepturi eum perspiciatis vero quia iusto distinctio. Libero reiciendis quae saepe aliquid, dolore similique atque aspernatur facilis veritatis provident qui laudantium, commodi deserunt accusamus cumque.', 'web.jpg'),
@@ -116,7 +121,44 @@ INSERT INTO `event` (`id`, `date`, `price`, `adress`, `mentor_id`, `title`, `tim
 -- --------------------------------------------------------
 
 --
--- Table structure for table `mentors`
+-- Структура таблицы `galerya`
+--
+
+CREATE TABLE `galerya` (
+  `id` int(11) NOT NULL,
+  `img` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Дамп данных таблицы `galerya`
+--
+
+INSERT INTO `galerya` (`id`, `img`) VALUES
+(1, '1.jpg'),
+(2, '2.jpg'),
+(3, '3.jpg'),
+(4, '4.jpg'),
+(5, '5.jpg'),
+(6, '6.jpg'),
+(7, '7.jpg'),
+(8, '8.jpg'),
+(9, '9.jpg'),
+(10, '10.jpg'),
+(11, '1.jpg'),
+(12, '2.jpg'),
+(13, '3.jpg'),
+(14, '4.jpg'),
+(15, '5.jpg'),
+(16, '6.jpg'),
+(17, '7.jpg'),
+(18, '8.jpg'),
+(19, '9.jpg'),
+(20, '10.jpg');
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `mentors`
 --
 
 CREATE TABLE `mentors` (
@@ -137,7 +179,7 @@ CREATE TABLE `mentors` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `mentors`
+-- Дамп данных таблицы `mentors`
 --
 
 INSERT INTO `mentors` (`id`, `full_name`, `phone`, `email`, `about`, `portfolio_detail`, `experiense`, `bitirgen`, `id_course`, `telegram`, `facebook`, `instagram`, `img`, `birthday`) VALUES
@@ -151,7 +193,7 @@ INSERT INTO `mentors` (`id`, `full_name`, `phone`, `email`, `about`, `portfolio_
 -- --------------------------------------------------------
 
 --
--- Table structure for table `messages`
+-- Структура таблицы `messages`
 --
 
 CREATE TABLE `messages` (
@@ -162,7 +204,7 @@ CREATE TABLE `messages` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `messages`
+-- Дамп данных таблицы `messages`
 --
 
 INSERT INTO `messages` (`id`, `name`, `email`, `message`) VALUES
@@ -179,12 +221,13 @@ INSERT INTO `messages` (`id`, `name`, `email`, `message`) VALUES
 (11, 'Quvonchbek', 'yeadamQoysa@gmail.com', 'sxsxwsxswdsdsssdsd'),
 (12, 'Quvonchbek', 'aaaa@gmail.com', 'fvrbrtbrtbr'),
 (13, 'Quvonchbek', 'aaaa@gmail.com', 'wsw'),
-(14, 'Quvonchbek', 'yeadamQoysa@gmail.com', 'erer');
+(14, 'Quvonchbek', 'yeadamQoysa@gmail.com', 'erer'),
+(15, 'Quvonchbek', 'aaaa@gmail.com', 'dedwedwedwewe');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `post`
+-- Структура таблицы `post`
 --
 
 CREATE TABLE `post` (
@@ -196,21 +239,88 @@ CREATE TABLE `post` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `post`
+-- Дамп данных таблицы `post`
 --
 
 INSERT INTO `post` (`id`, `title`, `date`, `text`, `img`) VALUES
 (1, 'Lorem ipsum dolor 1', '2021-06-21', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. In quisquam aspernatur doloribus quo explicabo tempora odio commodi, numquam esse maxime quaerat minima eveniet possimus enim. Cum incidunt rerum adipisci quae repudiandae esse nisi totam praesentium odit iure. Minima ipsum excepturi, maiores tempora, cupiditate sapiente ab distinctio obcaecati officiis enim maxime.', 'android.jpg'),
 (2, 'Lorem ipsum dolor 1', '2021-06-21', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. In quisquam aspernatur doloribus quo explicabo tempora odio commodi, numquam esse maxime quaerat minima eveniet possimus enim. Cum incidunt rerum adipisci quae repudiandae esse nisi totam praesentium odit iure. Minima ipsum excepturi, maiores tempora, cupiditate sapiente ab distinctio obcaecati officiis enim maxime.', 'kotlin.jpg'),
 (3, 'Lorem ipsum dolor 3', '2021-06-21', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. In quisquam aspernatur doloribus quo explicabo tempora odio commodi, numquam esse maxime quaerat minima eveniet possimus enim. Cum incidunt rerum adipisci quae repudiandae esse nisi totam praesentium odit iure. Minima ipsum excepturi, maiores tempora, cupiditate sapiente ab distinctio obcaecati officiis enim maxime.', 'kotlinrus.jpg'),
-(4, 'Lorem ipsum dolor 4', '2021-06-21', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. In quisquam aspernatur doloribus quo explicabo tempora odio commodi, numquam esse maxime quaerat minima eveniet possimus enim. Cum incidunt rerum adipisci quae repudiandae esse nisi totam praesentium odit iure. Minima ipsum excepturi, maiores tempora, cupiditate sapiente ab distinctio obcaecati officiis enim maxime.', 'python.jpg'),
 (5, 'Lorem ipsum dolor 5', '2021-06-21', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. In quisquam aspernatur doloribus quo explicabo tempora odio commodi, numquam esse maxime quaerat minima eveniet possimus enim. Cum incidunt rerum adipisci quae repudiandae esse nisi totam praesentium odit iure. Minima ipsum excepturi, maiores tempora, cupiditate sapiente ab distinctio obcaecati officiis enim maxime.', 'front.jpg'),
-(6, 'Lorem ipsum dolor 6', '2021-06-21', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. In quisquam aspernatur doloribus quo explicabo tempora odio commodi, numquam esse maxime quaerat minima eveniet possimus enim. Cum incidunt rerum adipisci quae repudiandae esse nisi totam praesentium odit iure. Minima ipsum excepturi, maiores tempora, cupiditate sapiente ab distinctio obcaecati officiis enim maxime.', 'web.jpg');
+(6, 'Lorem ipsum dolor 6', '2021-06-21', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. In quisquam aspernatur doloribus quo explicabo tempora odio commodi, numquam esse maxime quaerat minima eveniet possimus enim. Cum incidunt rerum adipisci quae repudiandae esse nisi totam praesentium odit iure. Minima ipsum excepturi, maiores tempora, cupiditate sapiente ab distinctio obcaecati officiis enim maxime.', 'web.jpg'),
+(8, 'Lorem ipsum dolor 4', '2021-06-21', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. In quisquam aspernatur doloribus quo explicabo tempora odio commodi, numquam esse maxime quaerat minima eveniet possimus enim. Cum incidunt rerum adipisci quae repudiandae esse nisi totam praesentium odit iure. Minima ipsum excepturi, maiores tempora, cupiditate sapiente ab distinctio obcaecati officiis enim maxime.', 'python.jpg');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `programmer`
+-- Структура таблицы `proects`
+--
+
+CREATE TABLE `proects` (
+  `id` int(11) NOT NULL,
+  `is_mentor` tinyint(1) DEFAULT '0',
+  `is_programmer` tinyint(1) DEFAULT '0',
+  `type` varchar(255) NOT NULL,
+  `text` text,
+  `title` varchar(19) NOT NULL,
+  `is_student` tinyint(1) DEFAULT '0',
+  `id_person` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Дамп данных таблицы `proects`
+--
+
+INSERT INTO `proects` (`id`, `is_mentor`, `is_programmer`, `type`, `text`, `title`, `is_student`, `id_person`) VALUES
+(1, 0, 1, 'website', 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus aliquam, accusamus velit quibusdam provident nisi tempora consequatur dolorem quaerat. Illum, ipsa nulla eaque eligendi accusantium totam corrupti magni temporibus odit.', 'This is a title', 0, 2),
+(2, 0, 0, 'app', 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus aliquam, Lorem, ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus aliquam, accusamus velit quibusdam provident nisi tempora consequatur dolorem quaerat. Illum, ipsa nulla eaque eligendi accusantium totam corrupti magni temporibus odit.', 'This is a title', 0, 9),
+(3, 0, 1, 'website', 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus aliquam, accusamus velit quibusdam provident nisi tempora consequatur dolorem quaerat. Illum, ipsa nulla eaque eligendi accusantium totam corrupti magni temporibus odit.', 'This is a title', 0, 8),
+(4, 1, 0, 'app', 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus aliquam, Lorem, ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus aliquam, accusamus velit quibusdam provident nisi tempora consequatur dolorem quaerat. Illum, ipsa nulla eaque eligendi accusantium totam corrupti magni temporibus odit.', 'This is a title', 0, 6),
+(5, 0, 0, 'app', 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus aliquam, Lorem, ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus aliquam, accusamus velit quibusdam provident nisi tempora consequatur dolorem quaerat. Illum, ipsa nulla eaque eligendi accusantium totam corrupti magni temporibus odit.', 'This is a title', 1, 12),
+(6, 0, 1, 'app', 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus aliquam, accusamus velit quibusdam provident nisi tempora consequatur dolorem quaerat. Illum, ipsa nulla eaque eligendi accusantium totam corrupti magni temporibus odit.', 'This is a title', 0, 2),
+(7, 1, 0, 'app', 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus aliquam, Lorem, ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus aliquam, accusamus velit quibusdam provident nisi tempora consequatur dolorem quaerat. Illum, ipsa nulla eaque eligendi accusantium totam corrupti magni temporibus odit.', 'This is a title', 0, 9),
+(8, 0, 1, 'website', 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus aliquam, accusamus velit quibusdam provident nisi tempora consequatur dolorem quaerat. Illum, ipsa nulla eaque eligendi accusantium totam corrupti magni temporibus odit.', 'This is a title', 0, 11),
+(9, 1, 0, 'app', 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus aliquam, Lorem, ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus aliquam, accusamus velit quibusdam provident nisi tempora consequatur dolorem quaerat. Illum, ipsa nulla eaque eligendi accusantium totam corrupti magni temporibus odit.', 'This is a title', 0, 3),
+(10, 0, 0, 'app', 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus aliquam, Lorem, ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus aliquam, accusamus velit quibusdam provident nisi tempora consequatur dolorem quaerat. Illum, ipsa nulla eaque eligendi accusantium totam corrupti magni temporibus odit.', 'This is a title', 1, 12);
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `proect_img`
+--
+
+CREATE TABLE `proect_img` (
+  `id` int(11) NOT NULL,
+  `img` varchar(255) NOT NULL,
+  `id_proect` int(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Дамп данных таблицы `proect_img`
+--
+
+INSERT INTO `proect_img` (`id`, `img`, `id_proect`) VALUES
+(1, '1.jpg', 1),
+(2, '2.jpg', 2),
+(3, '3.jpg', 9),
+(4, '4.jpg', 10),
+(5, '5.jpg', 5),
+(6, '6.jpg', 1),
+(7, '7.jpg', 7),
+(8, '8.jpg', 4),
+(9, '1a.jpg', 6),
+(10, '2a.jpg', 6),
+(11, '3a.jpg', 3),
+(12, '4a.jpg', 4),
+(13, '5a.jpg', 6),
+(14, '6a.jpg', 1),
+(15, '7a.jpg', 8),
+(16, '8a.jpg', 4);
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `programmer`
 --
 
 CREATE TABLE `programmer` (
@@ -230,7 +340,7 @@ CREATE TABLE `programmer` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `programmer`
+-- Дамп данных таблицы `programmer`
 --
 
 INSERT INTO `programmer` (`id`, `full_name`, `phone`, `email`, `about`, `portfolio_detail`, `experiense`, `bitirgen`, `telegram`, `facebook`, `instagram`, `img`, `birthday`) VALUES
@@ -246,7 +356,7 @@ INSERT INTO `programmer` (`id`, `full_name`, `phone`, `email`, `about`, `portfol
 -- --------------------------------------------------------
 
 --
--- Table structure for table `registratsiya`
+-- Структура таблицы `registratsiya`
 --
 
 CREATE TABLE `registratsiya` (
@@ -258,7 +368,7 @@ CREATE TABLE `registratsiya` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `registratsiya`
+-- Дамп данных таблицы `registratsiya`
 --
 
 INSERT INTO `registratsiya` (`id`, `name`, `phone`, `id_course`, `text`) VALUES
@@ -275,12 +385,36 @@ INSERT INTO `registratsiya` (`id`, `name`, `phone`, `id_course`, `text`) VALUES
 (11, 'Quwanishbek', '996822712', 1, NULL),
 (12, 'Quvonchbek', '996822712', 1, NULL),
 (13, 'Quwanishbek', '76', 6, NULL),
-(14, 'Quvonchbek', '12', 1, NULL);
+(14, 'Quvonchbek', '12', 1, NULL),
+(15, 'Quvonchbek', '996822712', 1, NULL),
+(16, 'Quvonchbek', '4444444', 3, 'sdfadsdsdsdsdsdsdscdwwwwsxwsxswsx'),
+(17, 'Quvonchbek', '9983333', 1, 'qwxqwqwwswwwww'),
+(18, 'dqc', '4444444', 5, 'ecerceevr');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `students`
+-- Структура таблицы `status`
+--
+
+CREATE TABLE `status` (
+  `id` int(11) NOT NULL,
+  `status` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Дамп данных таблицы `status`
+--
+
+INSERT INTO `status` (`id`, `status`) VALUES
+(1, 'mentors'),
+(2, 'programmer'),
+(3, 'students');
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `students`
 --
 
 CREATE TABLE `students` (
@@ -301,23 +435,19 @@ CREATE TABLE `students` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `students`
+-- Дамп данных таблицы `students`
 --
 
 INSERT INTO `students` (`id`, `full_name`, `about`, `phone`, `email`, `portfolio_detail`, `experiense`, `bitirgen`, `id_course`, `telegram`, `facebook`, `instagram`, `img`, `birthday`) VALUES
-(1, 'Azamat Saparov', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Error consequatur minus, nulla, atque quis repellat eveniet dolore quidem tenetur maxime aspernatur itaque natus ratione aperiam excepturi ducimus placeat deserunt. In!', '+998993457689', 'dddsxw', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Error consequatur minus, nulla, atque quis repellat eveniet dolore quidem tenetur maxime aspernatur itaque natus ratione aperiam excepturi ducimus placeat deserunt. In!nulla, atque quis repellat eveniet dolore quidem tenetur maxime aspernatur itaque natus ratione aperiam excepturi ducimus placeat deserunt. In!', '5 jil', 'TATUNF', 4, '@student_1', 'Azamat Saparov', 'aza_001', 'bala.jpg', '12.02.1999'),
-(2, 'Azamat Saparov', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Error consequatur minus, nulla, atque quis repellat eveniet dolore quidem tenetur maxime aspernatur itaque natus ratione aperiam excepturi ducimus placeat deserunt. In!', '+998993457689', 'dddsxw', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Error consequatur minus, nulla, atque quis repellat eveniet dolore quidem tenetur maxime aspernatur itaque natus ratione aperiam excepturi ducimus placeat deserunt. In!nulla, atque quis repellat eveniet dolore quidem tenetur maxime aspernatur itaque natus ratione aperiam excepturi ducimus placeat deserunt. In!', '5 jil', 'TATUNF', 4, '@student_1', 'Azamat Saparov', 'aza_001', 'bala.jpg', '12.02.1999'),
-(3, 'Azamat Saparov', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Error consequatur minus, nulla, atque quis repellat eveniet dolore quidem tenetur maxime aspernatur itaque natus ratione aperiam excepturi ducimus placeat deserunt. In!', '+998993457689', 'dddsxw', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Error consequatur minus, nulla, atque quis repellat eveniet dolore quidem tenetur maxime aspernatur itaque natus ratione aperiam excepturi ducimus placeat deserunt. In!nulla, atque quis repellat eveniet dolore quidem tenetur maxime aspernatur itaque natus ratione aperiam excepturi ducimus placeat deserunt. In!', '5 jil', 'TATUNF', 4, '@student_1', 'Azamat Saparov', 'aza_001', 'bala.jpg', '12.02.1999'),
-(4, 'Azamat Saparov', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Error consequatur minus, nulla, atque quis repellat eveniet dolore quidem tenetur maxime aspernatur itaque natus ratione aperiam excepturi ducimus placeat deserunt. In!', '+998993457689', 'dddsxw', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Error consequatur minus, nulla, atque quis repellat eveniet dolore quidem tenetur maxime aspernatur itaque natus ratione aperiam excepturi ducimus placeat deserunt. In!nulla, atque quis repellat eveniet dolore quidem tenetur maxime aspernatur itaque natus ratione aperiam excepturi ducimus placeat deserunt. In!', '5 jil', 'TATUNF', 4, '@student_1', 'Azamat Saparov', 'aza_001', 'bala.jpg', '12.02.1999'),
-(5, 'Azamat Saparov', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Error consequatur minus, nulla, atque quis repellat eveniet dolore quidem tenetur maxime aspernatur itaque natus ratione aperiam excepturi ducimus placeat deserunt. In!', '+998993457689', 'dddsxw', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Error consequatur minus, nulla, atque quis repellat eveniet dolore quidem tenetur maxime aspernatur itaque natus ratione aperiam excepturi ducimus placeat deserunt. In!nulla, atque quis repellat eveniet dolore quidem tenetur maxime aspernatur itaque natus ratione aperiam excepturi ducimus placeat deserunt. In!', '5 jil', 'TATUNF', 4, '@student_1', 'Azamat Saparov', 'aza_001', 'bala.jpg', '12.02.1999'),
-(6, 'Azamat Saparov', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Error consequatur minus, nulla, atque quis repellat eveniet dolore quidem tenetur maxime aspernatur itaque natus ratione aperiam excepturi ducimus placeat deserunt. In!', '+998993457689', 'dddsxw', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Error consequatur minus, nulla, atque quis repellat eveniet dolore quidem tenetur maxime aspernatur itaque natus ratione aperiam excepturi ducimus placeat deserunt. In!nulla, atque quis repellat eveniet dolore quidem tenetur maxime aspernatur itaque natus ratione aperiam excepturi ducimus placeat deserunt. In!', '5 jil', 'TATUNF', 4, '@student_1', 'Azamat Saparov', 'aza_001', 'bala.jpg', '12.02.1999'),
-(7, 'Azamat Saparov', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Error consequatur minus, nulla, atque quis repellat eveniet dolore quidem tenetur maxime aspernatur itaque natus ratione aperiam excepturi ducimus placeat deserunt. In!', '+998993457689', 'dddsxw', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Error consequatur minus, nulla, atque quis repellat eveniet dolore quidem tenetur maxime aspernatur itaque natus ratione aperiam excepturi ducimus placeat deserunt. In!nulla, atque quis repellat eveniet dolore quidem tenetur maxime aspernatur itaque natus ratione aperiam excepturi ducimus placeat deserunt. In!', '5 jil', 'TATUNF', 4, '@student_1', 'Azamat Saparov', 'aza_001', 'bala.jpg', '12.02.1999'),
-(8, 'Azamat Saparov', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Error consequatur minus, nulla, atque quis repellat eveniet dolore quidem tenetur maxime aspernatur itaque natus ratione aperiam excepturi ducimus placeat deserunt. In!', '+998993457689', 'dddsxw', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Error consequatur minus, nulla, atque quis repellat eveniet dolore quidem tenetur maxime aspernatur itaque natus ratione aperiam excepturi ducimus placeat deserunt. In!nulla, atque quis repellat eveniet dolore quidem tenetur maxime aspernatur itaque natus ratione aperiam excepturi ducimus placeat deserunt. In!', '5 jil', 'TATUNF', 4, '@student_1', 'Azamat Saparov', 'aza_001', 'bala.jpg', '12.02.1999');
+(9, 'Jamiyla Joldasova ', NULL, '99 567 77 77 ', 'dddd@gmail.com', 'Portfolio Turali Mag`liwat', '5 jil', 'QA`yerlerdi bitirgen', 7, 'see', 'eee', 'eee', '4.jpg', '2000-12-27'),
+(10, 'Abatbayev Jaxangir', NULL, '99 567 77 77 ', 'dddd@gmail.com', 'Portfolio Turali Mag`liwat', '5 jil', 'QA`yerlerdi bitirgen', 7, 'see', 'eee', 'eee', '4.jpg', '2000-12-27'),
+(11, 'baxtibayev Erkinbay', NULL, '99 567 77 77 ', 'dddd@gmail.com', 'Portfolio Turali Mag`liwat', '5 jil', 'QA`yerlerdi bitirgen', 7, 'see', 'eee', 'eee', '4.jpg', '2000-12-27'),
+(12, 'Saburov Sherzat', NULL, '99 567 77 77 ', 'dddd@gmail.com', 'Portfolio Turali Mag`liwat', '5 jil', 'QA`yerlerdi bitirgen', 7, 'see', 'eee', 'eee', '4.jpg', '2000-12-27');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `texnalogies`
+-- Структура таблицы `texnalogies`
 --
 
 CREATE TABLE `texnalogies` (
@@ -326,7 +456,7 @@ CREATE TABLE `texnalogies` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `texnalogies`
+-- Дамп данных таблицы `texnalogies`
 --
 
 INSERT INTO `texnalogies` (`id`, `name`) VALUES
@@ -350,7 +480,7 @@ INSERT INTO `texnalogies` (`id`, `name`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `texnalogies_mentors`
+-- Структура таблицы `texnalogies_mentors`
 --
 
 CREATE TABLE `texnalogies_mentors` (
@@ -361,7 +491,7 @@ CREATE TABLE `texnalogies_mentors` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `texnalogies_mentors`
+-- Дамп данных таблицы `texnalogies_mentors`
 --
 
 INSERT INTO `texnalogies_mentors` (`id`, `id_texnalogiy`, `id_mentor`, `procent`) VALUES
@@ -389,7 +519,7 @@ INSERT INTO `texnalogies_mentors` (`id`, `id_texnalogiy`, `id_mentor`, `procent`
 -- --------------------------------------------------------
 
 --
--- Table structure for table `texnalogies_programmer`
+-- Структура таблицы `texnalogies_programmer`
 --
 
 CREATE TABLE `texnalogies_programmer` (
@@ -400,7 +530,7 @@ CREATE TABLE `texnalogies_programmer` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `texnalogies_programmer`
+-- Дамп данных таблицы `texnalogies_programmer`
 --
 
 INSERT INTO `texnalogies_programmer` (`id`, `id_texnalogiy`, `id_programmer`, `procent`) VALUES
@@ -424,7 +554,7 @@ INSERT INTO `texnalogies_programmer` (`id`, `id_texnalogiy`, `id_programmer`, `p
 -- --------------------------------------------------------
 
 --
--- Table structure for table `texnalogies_student`
+-- Структура таблицы `texnalogies_student`
 --
 
 CREATE TABLE `texnalogies_student` (
@@ -435,173 +565,221 @@ CREATE TABLE `texnalogies_student` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `texnalogies_student`
+-- Дамп данных таблицы `texnalogies_student`
 --
 
 INSERT INTO `texnalogies_student` (`id`, `id_texnalogiy`, `id_student`, `procent`) VALUES
-(1, 1, 1, 44),
+(1, 8, 9, 20),
 (2, 5, 2, 55);
 
 --
--- Indexes for dumped tables
+-- Индексы сохранённых таблиц
 --
 
 --
--- Indexes for table `about`
+-- Индексы таблицы `about`
 --
 ALTER TABLE `about`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `courses`
+-- Индексы таблицы `courses`
 --
 ALTER TABLE `courses`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `event`
+-- Индексы таблицы `event`
 --
 ALTER TABLE `event`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `mentors`
+-- Индексы таблицы `galerya`
+--
+ALTER TABLE `galerya`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Индексы таблицы `mentors`
 --
 ALTER TABLE `mentors`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `messages`
+-- Индексы таблицы `messages`
 --
 ALTER TABLE `messages`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `post`
+-- Индексы таблицы `post`
 --
 ALTER TABLE `post`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `programmer`
+-- Индексы таблицы `proects`
+--
+ALTER TABLE `proects`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Индексы таблицы `proect_img`
+--
+ALTER TABLE `proect_img`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Индексы таблицы `programmer`
 --
 ALTER TABLE `programmer`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `registratsiya`
+-- Индексы таблицы `registratsiya`
 --
 ALTER TABLE `registratsiya`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `students`
+-- Индексы таблицы `status`
+--
+ALTER TABLE `status`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Индексы таблицы `students`
 --
 ALTER TABLE `students`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `texnalogies`
+-- Индексы таблицы `texnalogies`
 --
 ALTER TABLE `texnalogies`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `texnalogies_mentors`
+-- Индексы таблицы `texnalogies_mentors`
 --
 ALTER TABLE `texnalogies_mentors`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `texnalogies_programmer`
+-- Индексы таблицы `texnalogies_programmer`
 --
 ALTER TABLE `texnalogies_programmer`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `texnalogies_student`
+-- Индексы таблицы `texnalogies_student`
 --
 ALTER TABLE `texnalogies_student`
   ADD PRIMARY KEY (`id`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT для сохранённых таблиц
 --
 
 --
--- AUTO_INCREMENT for table `about`
+-- AUTO_INCREMENT для таблицы `about`
 --
 ALTER TABLE `about`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
--- AUTO_INCREMENT for table `courses`
+-- AUTO_INCREMENT для таблицы `courses`
 --
 ALTER TABLE `courses`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
--- AUTO_INCREMENT for table `event`
+-- AUTO_INCREMENT для таблицы `event`
 --
 ALTER TABLE `event`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
--- AUTO_INCREMENT for table `mentors`
+-- AUTO_INCREMENT для таблицы `galerya`
+--
+ALTER TABLE `galerya`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+
+--
+-- AUTO_INCREMENT для таблицы `mentors`
 --
 ALTER TABLE `mentors`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
--- AUTO_INCREMENT for table `messages`
+-- AUTO_INCREMENT для таблицы `messages`
 --
 ALTER TABLE `messages`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
--- AUTO_INCREMENT for table `post`
+-- AUTO_INCREMENT для таблицы `post`
 --
 ALTER TABLE `post`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
--- AUTO_INCREMENT for table `programmer`
+-- AUTO_INCREMENT для таблицы `proects`
+--
+ALTER TABLE `proects`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+
+--
+-- AUTO_INCREMENT для таблицы `proect_img`
+--
+ALTER TABLE `proect_img`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+
+--
+-- AUTO_INCREMENT для таблицы `programmer`
 --
 ALTER TABLE `programmer`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
--- AUTO_INCREMENT for table `registratsiya`
+-- AUTO_INCREMENT для таблицы `registratsiya`
 --
 ALTER TABLE `registratsiya`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
--- AUTO_INCREMENT for table `students`
+-- AUTO_INCREMENT для таблицы `status`
+--
+ALTER TABLE `status`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT для таблицы `students`
 --
 ALTER TABLE `students`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
--- AUTO_INCREMENT for table `texnalogies`
+-- AUTO_INCREMENT для таблицы `texnalogies`
 --
 ALTER TABLE `texnalogies`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
--- AUTO_INCREMENT for table `texnalogies_mentors`
+-- AUTO_INCREMENT для таблицы `texnalogies_mentors`
 --
 ALTER TABLE `texnalogies_mentors`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 
 --
--- AUTO_INCREMENT for table `texnalogies_programmer`
+-- AUTO_INCREMENT для таблицы `texnalogies_programmer`
 --
 ALTER TABLE `texnalogies_programmer`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
--- AUTO_INCREMENT for table `texnalogies_student`
+-- AUTO_INCREMENT для таблицы `texnalogies_student`
 --
 ALTER TABLE `texnalogies_student`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;

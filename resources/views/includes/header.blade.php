@@ -3,7 +3,7 @@
         <div class="header-content d-flex flex-wrap align-items-start">
             <div class="logo">
                 <a href="{{ route('home_page') }}" title="">
-                    <img class="" style="" width='120' src="{{asset('assets/img/logo.png')}}" srcset="{{asset('assets/img/logo.png')}} 2x">
+                    <img class="" style="" width='130' src="{{asset('assets/img/logo.png')}}" srcset="{{asset('assets/img/logo.png')}} 2x">
                 </a>
             </div>
             <!--logo end-->
@@ -59,20 +59,16 @@
                     <li><a href="{{route('about')}}" title="">Biz haqqımızda</a>
                         <ul>
                             <li><a href="{{route('mentors')}}" title="">Mentorlar</a>
-                                {{-- <ul>
-                                    <li><a href="event-single.html" title="">Event Single</a></li>
-                                </ul> --}}
                             </li>
                             <li><a href="{{route('get_programmers')}}" title="">Programmistler</a></li>
                             <li><a href="{{route('get_students')}}" title="">Pitkeruwshiler</a></li>
-                            {{-- <li><a href="error.html" title="">Dizaynerler</a></li> --}}
                         </ul>
                     </li>
                     <li><a href="{{ route('get_courses') }}" title="">Kurslar</a>
                         <ul>
-                            {{-- @for ($i=0;$i < 4;$i++)
+                            @for ($i=0;$i < 4;$i++)
                                 <li class=""><a href="{{route('course_detail',['id'=>$courses[$i]->id_course])}}">{{$courses[$i]->course_name}}</a></li>
-                            @endfor --}}
+                            @endfor
                             <li>
                                 <div class="lnk-dv text-center mt-1">
                                     <a href="{{ route('get_courses') }}" style="color: white" class="btn-default">Toliq<i class="fa fa-long-arrow-alt-right"></i></a>

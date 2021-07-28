@@ -54,16 +54,9 @@ Route::post('/adduser',[ContactsController::class,'add_user'])->name('add_user')
 Route::get('/events',[EventController::class,'get_events'])->name('get_events');
 Route::get('/events/{id}',[EventController::class,'event'])->whereNumber('id')->name('event');
 Route::get('/about',[AboutController::class,'about'])->name('about');
-
-
-
 Route::get('/allproects',[ProectsController::class,'allproects'])->name('allproects');
 
 Route::get('/allproects/{id}',[ProectsController::class,'get_proect'])->name('get_proect');
-
-Route::get('/proect',function(){
-    return view('proect');
-});
 Route::get('/sle', function () {
 
     return view('schedule'); 
@@ -81,9 +74,4 @@ Route::resource('adminregistrations', RegistrationsController::class);
 Route::resource('adminstudents', AdminStudentsController::class);
 Route::resource('admintexnologies', AdminTexnologiesController::class);
 
-
-
-Route::get('/all',function(){
-    return view('allportfolio');
-});
 

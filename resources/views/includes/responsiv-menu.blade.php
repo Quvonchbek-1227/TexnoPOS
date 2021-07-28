@@ -1,29 +1,32 @@
 
 <div class="responsive-menu">
-    <ul>
-        <li><a href="{{ route('home_page') }}" title="">Bas Bet <i class="fas fa-home ml-2"></i></a></li>
-        <li class=""><a href="{{route('about')}}" class="btn-group" title="">Biz Haqqimizda<i class="fas fa-angle-down ml-2 mt-1"></i></a>
-            <ul class="ml-3 mt-3">
-                <li><a href="{{route('mentors')}}" title="">Mentorlar</a></li>
-                <li><a href="{{route('get_programmers')}}" title="">Programmistler</a></li>
-                <li><a href="{{route('get_students')}}" title="">Pitkeriwshiler</a></li>
-                {{-- <li><a href="error.html" title="">Dizaynerler</a></li> --}}
-            </ul>
+    <ul class="">
+        <li>
+            <a href="{{ route('home_page') }}" class="in-item" title=""><i class="fas fapp mr-3 fa-home"></i>Bas Bet</a>
         </li>
-        <li><a href="#" title="">Kurslar <i class="fas fa-angle-down ml-2 mt-1"></i></a>
-            <ul class="ml-3 mt-3">
-                {{-- @for ($i=0;$i < 4;$i++)
-                            <li><a href="{{route('course_detail',['id'=>$courses[$i]->id_course])}}">{{$courses[$i]->course_name}}</a></li>
-                @endfor --}}
-                <li>
-                    <div class="lnk-dv">
-                        <a href="{{ route('get_courses') }}" style="color: white" class="btn-default">Toliq<i class="fa fa-long-arrow-alt-right"></i></a>
-                    </div>
-                </li>
-            </ul>
+        <li>
+            <a href="{{route('about')}}" class="in-item" title=""><i class="fas fapp mr-3 fa-users"></i>Biz Haqqimizda</a>
         </li>
-        <li><a href="#" title="">Portfolio <i class="fas fa-angle-down ml-2 mt-1"></i></a></li>
-        <li><a href="{{route('get_blogs')}}" title="">Blog</a></li>
-        <li><a href="{{route('contacts')}}" title="">Baylanis</a></li>
+        <li>
+            <a href="{{route('mentors')}}" class="in-item" title=""><i class="fab mr-3 fa-maxcdn"></i>Mentorlar</a>
+        </li>
+        <li>
+            <a href="{{route('get_programmers')}}" class="in-item" title=""><i class="fas mr-3 fa-laptop-code"></i>Programmistler</a>
+        </li>
+        <li>
+            <a href="{{route('get_students')}}" class="in-item" title=""><i class="fas mr-3 fa-user-graduate"></i>Pitkeriwshiler</a>
+        </li>
+        <li>
+            <a href="{{ route('get_courses') }}" class="in-item" title=""><i class="fas mr-3 fapp fa-book-reader"></i>Kurslar</a>
+        </li>
+        <li>
+            <a href="{{ route('allproects') }}" class="in-item" title=""><i class="fas mr-3 fapp fa-project-diagram"></i>Portfolio</a>
+        </li>
+        <li>
+            <a href="{{route('get_blogs')}}" class="in-item" title=""><i class="fas fapp mr-3 fa-blog"></i>Blog</a>
+        </li>
+        <li>
+            <a href="{{route('contacts')}}" class="in-item" title=""><i class="fas mr-3 fapp fa-mobile-alt"></i>Baylanis</a>
+        </li>
     </ul>
 </div>

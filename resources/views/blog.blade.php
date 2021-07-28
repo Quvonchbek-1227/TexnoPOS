@@ -9,7 +9,8 @@
 	<meta name="keywords" content="TexnoPOS" />
 	<link rel="icon" href="{{ asset('assets/img/favicon.png') }}">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/animate.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/bootstrap.min.css') }}">
+	<link rel="stylesheet" type="text/css" href="{{ asset('assets/css/animate.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/font-awesome.min.css') }}">
     <link rel="stylesheet" type="text/css" href="{{asset('assets/css/main.css')}}">
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/responsive.css') }}">
@@ -64,7 +65,7 @@
 											{{-- <li><a href="#" title="">by Admin</a></li> --}}
 											{{-- <li><img src="{{asset('assets/img/icon13.png')}}" alt="" /><a href="#" title="">Teachers,</a><a href="#" title=""> School</a></li> --}}
 										</ul>
-										<h3 class="stick"><a href="#" title="">{{$blog->title}}</a></h3>
+										<h3 class="stick"><a href="{{ route('get_post', ['id'=>$blog->id]) }}" title="">{{$blog->title}}</a></h3>
 										<p>
 											<?php 
 
@@ -134,7 +135,7 @@
 								</div><!--wd-posts end-->
 							</div><!--widget-posts end-->
 							
-							<div class="widget widget-calendar">
+							{{-- <div class="widget widget-calendar">
 								<h3 class="widget-title">Calendar</h3>
 								<div class="mdp-calendar">
 									<h3 class="month">July 2020</h3>
@@ -206,7 +207,9 @@
 										</li>
 									</ul>
 								</div><!--mdp-calendar end-->
-							</div><!--widget-calendar end-->
+							</div> --}}
+							
+							<!--widget-calendar end-->
 						</div><!--sidebar end-->
 					</div>
 					@endif

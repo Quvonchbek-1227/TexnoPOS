@@ -11,7 +11,7 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/animate.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/bootstrap.min.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/font-awesome.min.css') }}">
-    <link rel="stylesheet" type="text/css" href="{{asset('assets/css/main.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/main.css')}}">
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/responsive.css') }}">
 </head>
 
@@ -32,17 +32,10 @@
 		<section class="pager-section blog-version" style="background-image: url('{{asset('assets/img/blogs/'.$post[0]->img)}}');">
 			<div class="container">
 				<div class="pager-content text-center">
-					{{-- <ul>
-						<li><a href="#" title="">Home</a></li>
-						<li><a href="#" title="">Blog</a></li>
-						<li><span>{{$post[0]->title}}</span></li>
-					</ul> --}}
 					<h2>{{$post[0]->title}}</h2>
-					{{-- <span class="categry">English, Teachers, Shelly</span> --}}
 					<ul class="meta">
-						<li><a href="#" title="">{{$post[0]->date}}</a></li>
-						{{-- <li><a href="#" title="">by Admin</a></li> --}}
-						<li><img src="{{asset('assets/img/icon13.png')}}" alt="" />TEXNOPOS IT MEKTEBI</li>
+						<li><a title="">{{$post[0]->date}}</a></li>
+						<li><img src="{{asset('assets/img/icon13.png')}}"/>TEXNOPOS IT MEKTEBI</li>
 					</ul>
 				</div><!--pager-content end-->
 			</div>
@@ -57,8 +50,6 @@
 								{{$post[0]->text}}
 							</p>
 						</div><!--blog-post single end-->
-
-
 					</div>
 					<div class="col-lg-3">
 						<div class="sidebar">
@@ -84,9 +75,10 @@
 									</li>
 								</ul>
 							</div> --}}
+
 							<!--widget-categories end-->
 							<div class="widget widget-posts">
-								<h3 class="widget-title">Latest Posts</h3>
+								<h3 class="widget-title">Basqada Postlar</h3>
 								<div class="wd-posts">
 									@for ($i=0; $i < count($blogs); $i++)
 									@if ($i >= 5)
@@ -105,7 +97,8 @@
 
 								</div><!--wd-posts end-->
 							</div><!--widget-posts end-->
-							<div class="widget widget-calendar">
+							
+							{{-- <div class="widget widget-calendar">
 								<h3 class="widget-title">Calendar</h3>
 								<div class="mdp-calendar">
 									<h3 class="month">July 2020</h3>
@@ -177,7 +170,9 @@
 										</li>
 									</ul>
 								</div><!--mdp-calendar end-->
-							</div><!--widget-calendar end-->
+							</div> --}}
+
+							<!--widget-calendar end-->
 						</div><!--sidebar end-->
 					</div>
 				</div>
@@ -186,10 +181,8 @@
 
         @include('includes.dizimnen-otuw')
 		<!--newsletter-sec end-->
-
-		@include('includes.footer') 
+		@include('includes.footer')
 		<!--footer end-->
-
 	</div>
 
 

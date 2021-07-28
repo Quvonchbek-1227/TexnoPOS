@@ -7,12 +7,14 @@
 	<meta name="description" content="TexnoPOS IT Mektebi" />
 	<meta name="author" content="TEXNOPOS DEVELOPERS!">
 	<meta name="stkeywords" content="TexnoPOS" />
+	<link rel="icon" href="{{ asset('assets/img/favicon.png') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/bootstrap.min.css') }}">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/animate.css') }}">
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/font-awesome.min.css') }}">
     <link rel="stylesheet" type="text/css" href="{{asset('assets/css/main.css')}}">
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/responsive.css') }}">
-	<link rel="stylesheet" href="{{asset('assets/css/mycss.css')}}">
+	<link rel="stylesheet" type="text/css" href="{{ asset('assets/css/mycss.css') }}">
 </head>
 
 <body>
@@ -62,10 +64,10 @@
 								<div class="row">
 									@foreach ($images->where('id_proect', $id) as $img)
 									@if(!$loop->first)
-									<div class="col-lg-3 col-md-3 col-sm-3 col-3">
+									<div class="col-lg-4 col-md-4 col-sm-4 col-4">
 										<div class="event-gallery">
 											<a href="{{asset('assets/img/proects/'.$img->img)}}" title="" class="html5lightbox" data-group="set1">
-												<img src="{{asset('assets/img/proects/'.$img->img)}}" alt="">
+												<img src="{{asset('assets/img/proects/'.$img->img)}}" class="pr-img2" alt="">
 											</a>
 										</div><!--event-gallery end-->
 									</div>
@@ -83,16 +85,26 @@
 						</div><!--event-single end-->
 					</div>
 					<div class="col-lg-3">
-						<div class="sidebar class-sidebar position-static">
-							{{-- sidebar content --}}
-							<div class="container">
-								<div class="row">
-									<div class="col-md-12">
+						<div class="sidebar">
+							<div class="widget widget-posts">
+								<h3 class="widget-title">Basqada Proectler</h3>
+								<div class="wd-posts">
 									
+									@foreach ($types as $tip)
+									<div class="wd-post d-flex flex-wrap">
+										<div class="wd-thumb">
+											<i class="fas fa-greater-than"></i>
+										</div>
+										<div class="wd-info">
+											<h4><a href="{{ route('get_proect', ['id'=>$tip->id]) }}">{{$tip->title}}</a></h4>
+											<span>#{{$tip->type}}</span>
+										</div>
 									</div>
-								</div>
-							</div>
-						</div><!--sidebar end-->
+									@endforeach
+									
+								</div><!--wd-posts end-->
+							</div><!--widget-posts end-->
+						</div>
 					</div>
 				</div>
 			</div>

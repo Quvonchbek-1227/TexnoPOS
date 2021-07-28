@@ -7,7 +7,9 @@
 	<meta name="description" content="TexnoPOS IT Mektebi" />
 	<meta name="author" content="TEXNOPOS DEVELOPERS!">
 	<meta name="keywords" content="TexnoPOS" />
-	{{-- <link rel="icon" href="assets/img/favicon.png"> --}}
+	<link rel="icon" href="{{ asset('assets/img/favicon.png') }}">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
+	{{--  --}}
 	<link rel="stylesheet" type="text/css" href="{{asset('assets/css/animate.css')}}">
 	<link rel="stylesheet" type="text/css" href="{{asset('assets/css/bootstrap.min.css')}}">
 	<link rel="stylesheet" type="text/css" href="{{asset('assets/css/font-awesome.min.css')}}">

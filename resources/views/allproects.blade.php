@@ -10,7 +10,8 @@
 	<meta name="stkeywords" content="TexnoPOS" />
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/animate.css') }}">
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/font-awesome.min.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/bootstrap.min.css') }}">
+	<link rel="stylesheet" type="text/css" href="{{ asset('assets/css/font-awesome.min.css') }}">
     <link rel="stylesheet" type="text/css" href="{{asset('assets/css/main.css')}}">
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/responsive.css') }}">
 	<link rel="stylesheet" href="{{asset('assets/css/mycss.css')}}">
@@ -61,11 +62,11 @@
 									@foreach ($imgs->where('id_proect', $proect->id) as $img)
 									@if($loop->first)
 										<div class="carousel-item active rounded" >
-											<img  height="100" width="100" src="{{asset('assets/img/proects/'.$img->img)}}" class="d-block pr-img" alt="...">
+											<img src="{{asset('assets/img/proects/'.$img->img)}}" class="d-block pr-img" alt="...">
 										</div>
 									@else
 									<div class="carousel-item rounded" >
-										<img  height="100" width="100" src="{{asset('assets/img/proects/'.$img->img)}}" class="d-block w-100" alt="...">
+										<img src="{{asset('assets/img/proects/'.$img->img)}}" class="d-block pr-img" alt="...">
 									</div>
 									@endif
 									@endforeach
