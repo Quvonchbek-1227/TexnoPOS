@@ -50,8 +50,7 @@
 		</section><!--pager-section end-->
 
 		<section class="page-content">
-
-			<div class="container d-flex" style="justify-content: space-around">
+			<div class="container">
 				<div class="row">
 					@foreach ($proects as $proect)
 						
@@ -62,11 +61,11 @@
 									@foreach ($imgs->where('id_proect', $proect->id) as $img)
 									@if($loop->first)
 										<div class="carousel-item active rounded" >
-											<img src="{{asset('assets/img/proects/'.$img->img)}}" class="d-block pr-img" alt="...">
+											<img src="{{$img->img}}" class="d-block pr-img" alt="...">
 										</div>
 									@else
 									<div class="carousel-item rounded" >
-										<img src="{{asset('assets/img/proects/'.$img->img)}}" class="d-block pr-img" alt="...">
+										<img src="{{$img->img}}" class="d-block pr-img" alt="...">
 									</div>
 									@endif
 									@endforeach

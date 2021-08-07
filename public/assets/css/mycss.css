@@ -43,8 +43,8 @@
     width: 100%!important;
     height: 100vh!important;
     position: fixed;
-    z-index: -99;
-    opacity: .4;
+    z-index: -999;
+    opacity: .2;
     background-color: rgb(255, 254, 254);
     display: flex;
     align-items: center;

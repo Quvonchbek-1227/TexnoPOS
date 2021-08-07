@@ -59,9 +59,6 @@ class ProectsController extends Controller
             'courses.name as course_name'
         ]);
 
-
-
-        //  return $sidebar;
         return view('proect',[
             'courses'=>$courses,
             'proect'=>$show,

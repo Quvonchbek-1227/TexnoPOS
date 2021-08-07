@@ -373,12 +373,13 @@
                         <li><a href="{{url('/adminmentors')}}">Mentorlar</a></li>
                         <li><a href="{{url('/adminabouts')}}">About</a></li>
                         <li><a href="{{url('/adminevents')}}">Event</a></li>
-                        <li><a href="{{url('/adminmessages')}}">Messages</a></li>
-                        <li><a href="{{url('/adminposts')}}">Posts</a></li>
-                        <li><a href="{{url('/adminprogrammers')}}">Programmers</a></li>
+                        <li><a href="{{url('/adminmessages')}}">Xabarlar</a></li>
+                        <li><a href="{{url('/adminposts')}}">Postlar</a></li>
+                        <li><a href="{{url('/adminprogrammers')}}">Programmistler</a></li>
                         <li><a href="{{url('/adminregistrations')}}">Registrations</a></li>
-                        <li><a href="{{url('/adminstudents')}}">Students</a></li>
+                        <li><a href="{{url('/adminstudents')}}">Studentler</a></li>
                         <li><a href="{{url('/admintexnologies')}}">Texnologiyalar</a></li>
+                        <li><a href="{{url('/adminproects')}}">Proektler</a></li>
                     </ul>
                   </li>
     

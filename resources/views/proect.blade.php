@@ -53,9 +53,9 @@
 								<div class="event-gallery">
 									@foreach ($images->where('id_proect', $id) as $img)
 										@if($loop->first)
-										<a href="{{asset('assets/img/proects/'.$img->img)}}" title="" class="html5lightbox" data-group="set1">
+										<a href="{{$img->img}}" title="" class="html5lightbox" data-group="set1">
 										
-											<img src="{{asset('assets/img/proects/'.$img->img)}}">
+											<img src="{{$img->img}}">
 											
 										</a>
 										@endif
@@ -66,8 +66,8 @@
 									@if(!$loop->first)
 									<div class="col-lg-4 col-md-4 col-sm-4 col-4">
 										<div class="event-gallery">
-											<a href="{{asset('assets/img/proects/'.$img->img)}}" title="" class="html5lightbox" data-group="set1">
-												<img src="{{asset('assets/img/proects/'.$img->img)}}" class="pr-img2" alt="">
+											<a href="{{$img->img}}" title="" class="html5lightbox" data-group="set1">
+												<img src="{{$img->img}}" class="pr-img2" alt="">
 											</a>
 										</div><!--event-gallery end-->
 									</div>

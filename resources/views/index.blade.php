@@ -18,6 +18,7 @@ use SimpleSoftwareIO\QrCode\Facades\QrCode; ?>
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/font-awesome.min.css') }}">
     <link rel="stylesheet" type="text/css" href="{{asset('assets/css/main.css')}}">
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/responsive.css') }}">
+    <link rel="stylesheet" href="{{asset('assets/css/mycss.css')}}">
     <style>
 
     </style>
@@ -25,6 +26,18 @@ use SimpleSoftwareIO\QrCode\Facades\QrCode; ?>
 
 
 <body>
+            <div class="parda">
+                <div class="shadows">
+                    <span class="t">T</span>
+                    <span class="e">E</span>
+                    <span class="x">X</span>
+                    <span class="n">N</span>
+                    <span class="o">O</span>
+                    <span class="p">P</span>
+                    <span class="o">O</span>
+                    <span class="s">S</span>
+                </div>
+	        </div>
 
     <div class="wrapper">
 
@@ -60,34 +73,6 @@ use SimpleSoftwareIO\QrCode\Facades\QrCode; ?>
                 </div>
             </section>
             <!--main-banner end TexnoPOS IT Mektebi-->
-
-            <h2 class="main-title col-sm-12 col-md-12 col-lg-12">
-                <div class="words word-1">
-                    <span>T</span>
-                    <span>E</span>
-                    <span>X</span>
-                    <span>N</span>
-                    <span>O</span>
-                    <span>P</span>
-                    <span>O</span>
-                    <span>S</span>
-                </div>
-
-                <div class="words word-2">
-                    <span>I</span>
-                    <span>T</span>
-                </div>
-
-                <div class="words word-3">
-                    <span>M</span>
-                    <span>E</span>
-                    <span>K</span>
-                    <span>T</span>
-                    <span>E</span>
-                    <span>B</span>
-                    <span>I</span>
-                </div>
-            </h2>
 
         </div>
         <!--main-section end-->
