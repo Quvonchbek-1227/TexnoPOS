@@ -5,6 +5,9 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\URL;
+use App\Models\Events;
+
 
 class AdminEventsController extends Controller
 {
@@ -47,10 +50,11 @@ class AdminEventsController extends Controller
         $title = $r->title;
         $time = $r->time;
         $text = $r->text;
-        $img = $r->img;
-        if(empty($img)){
-            $img = "dsda";
-        }
+        $img = $r->file('img');
+        $img_name = $img->getClientOriginalName();
+        $path = public_path('assets/img/events/');
+        $img_url = asset('assets/img/events/' . $img_name);
+        $img->move($path,$img_name);
 
         $created = DB::table('event')->insert([
             'date' => $date,
@@ -60,12 +64,10 @@ class AdminEventsController extends Controller
             'title' => $title,
             'time' => $time,
             'text' => $text,
-            'img' => $img,
+            'img' => $img_url,
         ]);
-        
-        if($created){
-            return redirect('adminevents');
-        }
+
+        return redirect('adminevents');
     }
 
     /**
@@ -112,11 +114,18 @@ class AdminEventsController extends Controller
         $title = $r->title;
         $time = $r->time;
         $text = $r->text;
-        $img = $r->img;
-        if(empty($img)){
-            $img = "dsda";
+        $img_url = '';
+        $img_oldurl = Events::find($id)->img;
+        if($r->file('img')){
+            $img = $r->file('img');
+            $img_name = $img->getClientOriginalName();
+            $path = public_path('assets/img/events/');
+            $img_url = asset('assets/img/events/'.$img_name);
+            unlink(public_path(explode(URL::to('/'),$img_oldurl)[1]));
+            $img->move($path,$img_name);
+        }else{
+            $img_url = $img_oldurl;
         }
-
         $created = DB::table('event')->where('id', $id)->update([
             'date' => $date,
             'price' => $price,
@@ -125,12 +134,10 @@ class AdminEventsController extends Controller
             'title' => $title,
             'time' => $time,
             'text' => $text,
-            'img' => $img,
+            'img' => $img_url,
         ]);
         
-        if($created){
-            return redirect('adminevents');
-        }
+        return redirect('adminevents');
     }
 
     /**
@@ -140,6 +147,8 @@ class AdminEventsController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function destroy($id){
+        $img = Events::find($id)->img;
+        unlink(public_path(explode(URL::to('/'),$img)[1]));
         $deleted = DB::table('event')->where('id', $id)->delete();
         if($deleted){
             return back();

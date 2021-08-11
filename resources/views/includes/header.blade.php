@@ -66,9 +66,12 @@
                     </li>
                     <li><a href="{{ route('get_courses') }}" title="">Kurslar</a>
                         <ul>
-                            @for ($i=0;$i < 4;$i++)
-                                <li class=""><a href="{{route('course_detail',['id'=>$courses[$i]->id_course])}}">{{$courses[$i]->course_name}}</a></li>
-                            @endfor
+                            @foreach ($courses as $course)
+                                @if ($loop->index >= 4)
+                                    @break
+                                @endif
+                                <li class=""><a href="{{route('course_detail',['id'=>$course->id_course])}}">{{$course->course_name}}</a></li>
+                            @endforeach
                             <li>
                                 <div class="lnk-dv text-center mt-1">
                                     <a href="{{ route('get_courses') }}" style="color: white" class="btn-default">Toliq<i class="fa fa-long-arrow-alt-right"></i></a>

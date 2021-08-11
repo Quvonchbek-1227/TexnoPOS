@@ -41,15 +41,9 @@
             <div class="page-title">
               <div class="row">
                 <div class="col-6">
-                  <h3>Basic DataTables</h3>
+                  <h3>Mentorlar</h3>
                 </div>
-                <div class="col-6">
-                  <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="index.html">                                       <i data-feather="home"></i></a></li>
-                    <li class="breadcrumb-item">Data Tables</li>
-                    <li class="breadcrumb-item active">Basic DataTables</li>
-                  </ol>
-                </div>
+                
               </div>
             </div>
           </div>
@@ -61,7 +55,7 @@
                 <div class="card">
                   <div class="card-header">
                   <a class="btn btn-primary active" href="{{url('adminmentors/create')}}">Qosiw</a>
-                    <h5>Kurslar</h5><span></span>
+                    <h5></h5><span></span>
                   </div>
                   <div class="card-body">
                   
@@ -92,7 +86,7 @@
                                                 </thead>
                                                 <tbody>
                                       
-                                                    @foreach($mentors as $mentor)
+                                                  @foreach($mentors as $mentor)
                                                     <tr>
                                                     <td>{{$mentor->full_name}}</td>
                                                     <td>{{$mentor->phone}}</td>
@@ -101,7 +95,6 @@
                                                     <td>{{$mentor->portfolio_detail}}</td>
                                                     <td>{{$mentor->experiense}}</td>
                                                     <td>{{$mentor->bitirgen}}</td>
-                                                    <td>{{$mentor->course_name}}</td>
                                                     <td>{{$mentor->telegram}}</td>
                                                     <td>{{$mentor->facebook}}</td>
                                                     <td>{{$mentor->instagram}}</td>
@@ -110,16 +103,20 @@
 
                                                    
                                                     
-                                                   <td>
-                                                   <form action="{{ url('adminmentors/'.$mentor->id)}}" method="POST">
-                                                  @csrf
-                                                  @method('DELETE')
-                                                  <button type="submit" class="btn btn-danger btn-sm"><i class="fa fa-trash"></button>
-                                                  </form> 
+                                                    <td>
+                                                      <form action="{{ route('adminmentors.destroy',['adminmentor'=>$mentor->id]) }}" method="POST">
+                                                        @csrf
+                                                        @method('DELETE')
+                                                        <input type="submit" class="btn btn-danger" value="Delete">
+                                                      </form> 
                                                     </td>
-                                                    <td><a class="btn btn-danger btn-sm" href="{{route('adminmentors.edit', ['adminmentor' => $mentor->id])}}"><i class="fa fa-pencil"></i></a></td>
+                                                    <td>
+                                                      <a class="btn btn-danger btn-sm" href="{{route('adminmentors.edit', ['adminmentor' => $mentor->id])}}">
+                                                        <i class="fa fa-pencil"></i>
+                                                      </a>
+                                                    </td>
                                                     </tr>
-                                                    @endforeach
+                                                  @endforeach
                                                 </tbody>
                       
                       

@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use App\Models\Mentor;
 
 class AdminMentorsController extends Controller
 {
@@ -16,8 +17,7 @@ class AdminMentorsController extends Controller
     public function index()
     {
         $mentors = DB::table('mentors')
-        ->select('courses.*', 'mentors.*', 'mentors.id as mentor_id', 'courses.id as course_id', 'courses.name as course_name')
-        ->join('courses','mentors.id_course','=','courses.id')
+        ->select('mentors.*', 'mentors.id as mentor_id')
         ->get();
         //return dd($mentors);
         return view('admin.datas.mentors', ['mentors' => $mentors]);
@@ -48,7 +48,6 @@ class AdminMentorsController extends Controller
         $portfolio_detail = $r->portfolio_detail;
         $experiense = $r->experiense;
         $bitirgen = $r->bitirgen;
-        $id_course = $r->id_course;
         $telegram = $r->telegram;
         $facebook = $r->facebook;
         $instagram = $r->instagram;
@@ -67,7 +66,6 @@ class AdminMentorsController extends Controller
             'portfolio_detail' => $portfolio_detail,
             'experiense' => $experiense,
             'bitirgen' => $bitirgen,
-            'id_course' => $id_course,
             'telegram' => $telegram,
             'facebook' => $facebook,
             'instagram' => $instagram,
@@ -103,8 +101,7 @@ class AdminMentorsController extends Controller
     {
         $courses = DB::table('courses')->get();
         $mentors = DB::table('mentors')
-        ->select('mentors.*','courses.id as course_id', 'courses.name as course_name')
-        ->join('courses', 'courses.id', '=', 'mentors.id_course')
+        ->select('mentors.*')
         ->get();
         return view('admin.edit.editmentor', ['mentors' => $mentors, 'courses' => $courses]);
     }
@@ -125,7 +122,6 @@ class AdminMentorsController extends Controller
         $portfolio_detail = $r->portfolio_detail;
         $experiense = $r->experiense;
         $bitirgen = $r->bitirgen;
-        $id_course = $r->id_course;
         $telegram = $r->telegram;
         $facebook = $r->facebook;
         $instagram = $r->instagram;
@@ -144,7 +140,6 @@ class AdminMentorsController extends Controller
             'portfolio_detail' => $portfolio_detail,
             'experiense' => $experiense,
             'bitirgen' => $bitirgen,
-            'id_course' => $id_course,
             'telegram' => $telegram,
             'facebook' => $facebook,
             'instagram' => $instagram,
@@ -165,6 +160,7 @@ class AdminMentorsController extends Controller
      */
     public function destroy($id)
     {
-        //
+        Mentor::find($id)->delete();
+        return redirect()->route('adminmentors.index');
     }
 }

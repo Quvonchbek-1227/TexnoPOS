@@ -43,8 +43,8 @@
 						<div class="event-single">
 							<div class="event-gallery-sec">
 								<div class="event-gallery">
-									<a href="{{ asset('assets/img/events/'.$event[0]->event_img) }}" title="" class="html5lightbox" data-group="set1">
-										<img src="{{ asset('assets/img/events/'.$event[0]->event_img) }}" alt="">
+									<a href="{{ $event[0]->event_img }}" title="" class="html5lightbox" data-group="set1">
+										<img src="{{ $event[0]->event_img }}" alt="">
 									</a>
 									<span class="price">{{$event[0]->price}}</span>
 								</div><!--event-gallery end-->

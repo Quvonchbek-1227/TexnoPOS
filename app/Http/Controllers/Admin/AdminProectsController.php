@@ -190,7 +190,10 @@ class AdminProectsController extends Controller
             foreach($old_img_url as $img){
                 PrImg::where('id_proect', $id)->delete();
                 unlink(public_path(explode(URL::to('/'), $img->img)[1]));
+                // return public_path(explode(URL::to('/'), $img->img)[1]);
             }
+            
+            
             
             for ($i = 0; $i < 4; $i++) {
                 if (isset($request->file('suretler')[$i])) {

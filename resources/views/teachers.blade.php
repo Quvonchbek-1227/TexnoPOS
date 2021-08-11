@@ -64,11 +64,11 @@
 											<img src="{{asset('assets/img/portfolio_user.png')}}" class="w-100">
 										<div class="sc-div">
 											<ul>
-												@if (isset($mentor->telegram))
-													<li><a href="https://www.instagram.com/{{$mentor->telegram}}" title=""><i class="fab fa-instagram"></i></a></li>
-												@endif
 												@if (isset($mentor->instagram))
-													<li><a href="https://t.me/{{$mentor->instagram}}/" title=""><i class="fab fa-telegram"></i></a></li>
+													<li><a href="https://www.instagram.com/{{$mentor->instagram}}" title=""><i class="fab fa-instagram"></i></a></li>
+												@endif
+												@if (isset($mentor->telegram))
+													<li><a href="https://t.me/{{$mentor->telegram}}/" title=""><i class="fab fa-telegram"></i></a></li>
 												@endif
 												@if (isset($mentor->facebook))
 													<li><a href="https://www.facebook.com/search/top/?q={{$mentor->facebook}}" title=""><i class="fab fa-facebook-f"></i></a></li>
@@ -86,9 +86,7 @@
 											<h3><a href="{{ route('student_portfolio', ['id'=>$mentor->id_mentor]) }}" title="">{{$mentor->full_name}}</a></h3>
 										@endif
 
-										@if ($status == 'mentor')
-											<span><a href="{{route('course_detail',['id'=>$mentor->id_course])}}">{{$mentor->course_name}} Mentor</a></span>
-										@elseif ($status == 'student')
+										@if ($status == 'student')
 											<span><a href="{{route('course_detail',['id'=>$mentor->id_course])}}">{{$mentor->course_name}} Pitkerushisi</a></span>
 										@endif
 									</div>

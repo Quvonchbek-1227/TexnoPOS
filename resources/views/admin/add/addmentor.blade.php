@@ -11,6 +11,7 @@
     <link rel="icon" href="../assets2/images/favicon.png" type="image/x-icon">
     <link rel="shortcut icon" href="../assets2/images/favicon.png" type="image/x-icon">
     <title>Cuba - Premium Admin Template</title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
     <!-- Google font-->
     <link href="https://fonts.googleapis.com/css?family=Rubik:400,400i,500,500i,700,700i&amp;display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i,900&amp;display=swap" rel="stylesheet">
@@ -96,16 +97,6 @@
                                                         <input class="form-control" name="bitirgen" type="text " placeholder="TATU No`kis Filiali...">
                                                     </div>
                                                 </div>
-                                                <div class="col-md-6 ">
-                                                    <div class="mb-3 ">
-                                                        <label>Qaysi Kursdin` Mentori</label><br>
-                                                        <select class="form-control" name="id_course" id="">
-                                                            @foreach($courses as $course)
-                                                            <option class="form-control" value="{{$course->id}}">{{$course->name}}</option>
-                                                            @endforeach
-                                                        </select>
-                                                    </div>
-                                                </div>
                                             </div>
                                             <div class="row">
                                                 <div class="col-md-3">
@@ -162,18 +153,6 @@
                                                 </div>
                                             </div>
                                     </form>
-                                    <div class="row ">
-                                        <div class="col ">
-                                            <div class="mb-3 ">
-                                                <label>Suret Kiritin` (1 dana)</label>
-                                                <form class="dropzone " id="singleFileUpload " action="/upload.php ">
-                                                    <div class="dz-message needsclick "><i class="icon-cloud-up "></i>
-                                                        <h6></h6><span class="note needsclick ">(This is just a demo dropzone. Selected files are <strong>not</strong> actually uploaded.)</span>
-                                                    </div>
-                                                </form>
-                                            </div>
-                                        </div>
-                                    </div>
                                     </div>
                                 </div>
                             </div>

@@ -43,10 +43,7 @@ class CourseController extends Controller
           'mentors.full_name'
 
       ]);
-
       
-
-      //return $course;
 
       return view('cours-single',[
           'course'=>$course,
@@ -76,80 +73,80 @@ class CourseController extends Controller
         ]);
         //return $courses;
     }
-    public function index(){
-        $courses = DB::table('courses')
-        ->select('courses.*', 'mentors.*', 'mentors.id as mentor_id', 'courses.id as course_id')
-        ->join('mentors', 'mentors.id', '=', 'courses.id_mentor')
-        ->get();
-        //return dd($courses);
-        return view('admin.datas.courses', ['courses' => $courses]);   
-    }
-    public function destroy($id){
-        $deleted = DB::table('courses')->where('id', $id)->delete();
-        if($deleted){
-            return back();
-        }
-    }
-    public function create(){
-        $mentors = DB::table('mentors')->get();
-        return view('admin.add.addcourse', ['mentors' => $mentors]);
-    }
+    // public function index(){
+    //     $courses = DB::table('courses')
+    //     ->select('courses.*', 'mentors.*', 'mentors.id as mentor_id', 'courses.id as course_id')
+    //     ->join('mentors', 'mentors.id', '=', 'courses.id_mentor')
+    //     ->get();
+    //     //return dd($courses);
+    //     return view('admin.datas.courses', ['courses' => $courses]);   
+    // }
+    // public function destroy($id){
+    //     $deleted = DB::table('courses')->where('id', $id)->delete();
+    //     if($deleted){
+    //         return back();
+    //     }
+    // }
+    // public function create(){
+    //     $mentors = DB::table('mentors')->get();
+    //     return view('admin.add.addcourse', ['mentors' => $mentors]);
+    // }
 
-    public function store(Request $request){
-        $name = $request->name;
-        $hour = $request->hour;
-        $age = $request->age;
-        $sub_time = $request->sub_time;
-        $student_count = $request->student_count;
-        $id_mentor = $request->id_mentor;
-        $img = $request->img;
-        $price = $request->price;
-        $days = $request->days;
-        $file1 = $request->file1;
-        $file2 = $request->file2;
-        $file3 = $request->file3;
-        $description = $request->description;
-        if(empty($file1)){
-            $file1 = "file1";
-        }if(empty($file2)){
-            $file2 = "file1";
-        }
-        if(empty($file3)){
-            $file3 = "file1";
-        }
-        if(empty($img)){
-            $img = "img";
-        }
+    // public function store(Request $request){
+    //     $name = $request->name;
+    //     $hour = $request->hour;
+    //     $age = $request->age;
+    //     $sub_time = $request->sub_time;
+    //     $student_count = $request->student_count;
+    //     $id_mentor = $request->id_mentor;
+    //     $img = $request->img;
+    //     $price = $request->price;
+    //     $days = $request->days;
+    //     $file1 = $request->file1;
+    //     $file2 = $request->file2;
+    //     $file3 = $request->file3;
+    //     $description = $request->description;
+    //     if(empty($file1)){
+    //         $file1 = "file1";
+    //     }if(empty($file2)){
+    //         $file2 = "file1";
+    //     }
+    //     if(empty($file3)){
+    //         $file3 = "file1";
+    //     }
+    //     if(empty($img)){
+    //         $img = "img";
+    //     }
         
         
-        $created = DB::table('courses')->insert([
-            'name' => $name,
-            'hour' => $hour,
-            'age' => $age,
-            'sub_time' => $sub_time,
-            'student_count' => $student_count,
-            'id_mentor' => $id_mentor,
-            'price' => $price,
-            'days' => $days,
-            'file1' => $file1,
-            'file2' => $file2,
-            'file3' => $file3,
-            'img' => $img,
-            'description' => $description   
-        ]);
-        if($created){
-            return redirect('admincourse');
-        }
+    //     $created = DB::table('courses')->insert([
+    //         'name' => $name,
+    //         'hour' => $hour,
+    //         'age' => $age,
+    //         'sub_time' => $sub_time,
+    //         'student_count' => $student_count,
+    //         'id_mentor' => $id_mentor,
+    //         'price' => $price,
+    //         'days' => $days,
+    //         'file1' => $file1,
+    //         'file2' => $file2,
+    //         'file3' => $file3,
+    //         'img' => $img,
+    //         'description' => $description   
+    //     ]);
+    //     if($created){
+    //         return redirect('admincourse');
+    //     }
         
-    }
+    // }
 
 
-    public function show($id){
+    // public function show($id){
         
-    }
-    public function edit($id){
-        $data = DB::table('courses')->where('id', $id)->get();
-        return view('admin.add.addcourse', ['data' => $data]);
-    }
+    // }
+    // public function edit($id){
+    //     $data = DB::table('courses')->where('id', $id)->get();
+    //     return view('admin.add.addcourse', ['data' => $data]);
+    // }
 
 }

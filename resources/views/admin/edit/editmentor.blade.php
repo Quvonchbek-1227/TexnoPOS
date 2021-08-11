@@ -11,6 +11,7 @@
     <title>Cuba - Premium Admin Template</title>
     <link rel="icon" href="{{asset('../assets2/images/favicon.png')}}" type="image/x-icon">
     <link rel="shortcut icon" href="{{asset('../assets2/images/favicon.png')}}" type="image/x-icon">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
     <!-- Google font-->
     <link href="https://fonts.googleapis.com/css?family=Rubik:400,400i,500,500i,700,700i&amp;display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i,900&amp;display=swap" rel="stylesheet">
@@ -94,19 +95,6 @@
                                                     <div class="mb-3">
                                                         <label>Qa`yerdi Bitirgen</label>
                                                         <input class="form-control" value="{{$mentors[0]->bitirgen}}" name="bitirgen" type="text " placeholder="TATU No`kis Filiali...">
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-6 ">
-                                                    <div class="mb-3 ">
-                                                        <label>Qaysi Kursdin` Mentori</label><br>
-                                                        <select class="form-control" name="id_course" id="">
-                                                            <option value="{{$mentors[0]->course_id}}">{{$mentors[0]->course_name}}</option>
-                                                            @foreach($courses as $course)
-                                                            @if($mentors[0]->course_id != $course->id)
-                                                            <option class="form-control" value="{{$course->id}}">{{$course->name}}</option>
-                                                            @endif
-                                                            @endforeach
-                                                        </select>
                                                     </div>
                                                 </div>
                                             </div>

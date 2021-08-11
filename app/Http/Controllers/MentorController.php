@@ -14,10 +14,7 @@ class MentorController extends Controller
     public function get_mentors(){
         $status = 'mentor';
         $mentors = DB::table('mentors')
-        ->join('courses','mentors.id_course','=','courses.id')
         ->select([
-            'courses.name as course_name',
-            'courses.id as id_course',
             'mentors.id as id_mentor',
             'mentors.img as mentor_img',
             'mentors.full_name',
@@ -36,7 +33,7 @@ class MentorController extends Controller
         return view('teachers',[
             'mentors'=>$mentors,
             'courses'=>$courses,
-            'status'=>$status     
+            'status'=>$status
         ]);
     }
 
@@ -53,7 +50,6 @@ class MentorController extends Controller
             'procent'
         ]);
         $mentor = DB::table('mentors')
-        ->join('courses','mentors.id_course','=','courses.id')
         ->where('mentors.id','=',$id)
         ->get([
             'mentors.full_name',
@@ -67,24 +63,20 @@ class MentorController extends Controller
             'instagram',
             'facebook',
             'mentors.img as mentor_img',
-            'courses.name as course_name',
             'mentors.birthday as mentor_birth'
         ]);
 
         //img,full_name,tg.ins,face,course_name,mentor_id||mentors=>
         $mentors = DB::table('mentors')
-        ->join('courses','mentors.id_course','=','courses.id')
         ->take(4)
         ->inRandomOrder()
         ->get([
             'full_name',
             'mentors.img as mentor_img',
-            'courses.name as course_name',
             'mentors.id as id_mentor',
             'telegram',
             'instagram',
             'facebook',
-            'courses.id as id_course'
         ]);
 
         $courses = DB::table('courses')

@@ -67,9 +67,7 @@
 
 									{{-- O`quvtuvchi yoki o`quvchi   ekanligi darajasi, kasibi START --}}
 
-								@if ($status == 'mentor')
-									<h3>{{$mentor[0]->course_name}} Mentor</h3>	
-								@elseif ($status == 'programmer')
+								@if ($status == 'programmer')
 									<h3>Programmist</h3>
 								@elseif ($status == 'student')
 									<h3>Pitkeruwshi</h3>
@@ -209,11 +207,6 @@
 											<h3><a href="{{route('student_portfolio',['id'=>$user->id_mentor])}}" title="">{{$user->full_name}}</a></h3>
 										@endif
 
-										@if ($status == 'mentor')
-											<a href="{{ route('course_detail', ['id'=>$user->id_course]) }}">
-												<span>{{$user->course_name}} Mentor</span>
-											</a>
-										@endif
 										@if ($status == 'student')
 											<a href="{{ route('course_detail', ['id'=>$user->id_course]) }}">
 												<span>{{$user->course_name}} Pitkerushisi</span>

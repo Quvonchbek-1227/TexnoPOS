@@ -45,7 +45,7 @@
                     <div class="page-title">
                         <div class="row">
                             <div class="col-12">
-                                <h3>Taza Kurs Kirituw!</h3>
+                                <h3 style="text-transform: initial">Kursdi O`zgertiw!</h3>
                             </div>
                         </div>
                     </div>
@@ -56,8 +56,9 @@
                         <div class="col-sm-12">
                             <div class="card">
                                 <div class="card-body">
-                                    <form action="{{url('admincourse')}}" method="POST">
-                                    @csrf
+                                    <form enctype="multipart/form-data" action="{{route('admincourse.update',['admincourse'=>$courses[0]->id])}}" method="POST">
+                                        @csrf
+                                        @method('PATCH')
                                         <div class="form theme-form">
                                             <div class="row">
                                                 <div class="col-md-6">
@@ -145,12 +146,14 @@
                                                 </div>
                                             </div>
 
-
-
-
-
                                             <div class="row ">
-                                                <div class="col ">
+                                                <div class="col-md-4">
+                                                    <div class="mb-3 ">
+                                                        <label>Suret Kiritin`!</label>
+                                                        <input type="file" name="img" class="form-control">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-8">
                                                     <div class="mb-3 ">
                                                         <label>Qosimsha</label>
                                                         <textarea class="form-control " name="description" placeholder="Qosimsha mag`liwmat... " id=" " cols="30 " rows="10 ">{{$courses[0]->description}}</textarea>
@@ -159,27 +162,11 @@
                                             </div>
 
                                             <div class="row ">
-
-                                            </div>
-
-                                            <div class="row ">
                                                 <div class="col ">
                                                     <div class="text-end "><input type="submit" class="btn btn-success me-3"></div>
                                                 </div>
                                             </div>
                                     </form>
-                                    <div class="row ">
-                                        <div class="col ">
-                                            <div class="mb-3 ">
-                                                <label>Suret Kiritin` (1 dana)</label>
-                                                <form class="dropzone " id="singleFileUpload " action="/upload.php ">
-                                                    <div class="dz-message needsclick "><i class="icon-cloud-up "></i>
-                                                        <h6>Kursqa Tiyisli Suret Kiritin`</h6><span class="note needsclick ">(This is just a demo dropzone. Selected files are <strong>not</strong> actually uploaded.)</span>
-                                                    </div>
-                                                </form>
-                                            </div>
-                                        </div>
-                                    </div>
                                     </div>
                                 </div>
                             </div>

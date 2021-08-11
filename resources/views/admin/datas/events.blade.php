@@ -41,13 +41,13 @@
             <div class="page-title">
               <div class="row">
                 <div class="col-6">
-                  <h3>Basic DataTables</h3>
+                  <h3>Events</h3>
                 </div>
                 <div class="col-6">
                   <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a href="index.html">                                       <i data-feather="home"></i></a></li>
-                    <li class="breadcrumb-item">Data Tables</li>
-                    <li class="breadcrumb-item active">Basic DataTables</li>
+                    <li class="breadcrumb-item"></li>
+                    <li class="breadcrumb-item active"></li>
                   </ol>
                 </div>
               </div>
@@ -61,7 +61,7 @@
                 <div class="card">
                   <div class="card-header">
                   <a class="btn btn-primary active" href="{{url('adminevents/create')}}">Qosiw</a>
-                    <h5>Kurslar</h5><span></span>
+                    <h5></h5><span></span>
                   </div>
                   <div class="card-body">
                   
@@ -98,16 +98,20 @@
                                                     <td>{{$event->img}}</td>
                                                     <td>{{$event->full_name}}</td>
                                                     
-                                                   <td>
-                                                   <form action="{{ url('adminevents/'.$event->id)}}" method="POST">
-                                                  @csrf
-                                                  @method('DELETE')
-                                                  <button type="submit" class="btn btn-danger btn-sm"><i class="fa fa-trash"></button>
-                                                  </form> 
+                                                    <td>
+                                                      <form action="{{ route('adminevents.destroy',['adminevent'=>$event->id]) }}" method="POST">
+                                                        @csrf
+                                                        @method('DELETE')
+                                                        <button type="submit" class="btn btn-danger btn-sm"><i class="fa fa-trash"></button>
+                                                      </form> 
                                                     </td>
-                                                    <td><a class="btn btn-danger btn-sm" href="{{route('adminevents.edit', ['adminevent' => $event->id])}}"><i class="fa fa-pencil"></i></a></td>
-                                                    </tr>
-                                                    @endforeach
+                                                    <td>
+                                                      <a class="btn btn-danger" style="margin-bottom: 20px" href="{{route('adminevents.edit', ['adminevent' => $event->id])}}">
+                                                        <i class="fa fa-pencil"></i>
+                                                      </a>
+                                                    </td>
+                                                  </tr>
+                                                @endforeach
                                                 </tbody>
                       
                       

@@ -46,7 +46,7 @@
                         <div class="row">
                             <div class="col-6">
                                 <h3>
-                                    Project Create</h3>
+                                    </h3>
                             </div>
                             <div class="col-6">
                                 <ol class="breadcrumb">
@@ -54,7 +54,7 @@
                                         <a href="index.html"> <i data-feather="home"></i></a>
                                     </li>
                                     <li class="breadcrumb-item">Apps</li>
-                                    <li class="breadcrumb-item active">Project Create </li>
+                                    <li class="breadcrumb-item active"> </li>
                                 </ol>
                             </div>
                         </div>
@@ -66,7 +66,7 @@
                         <div class="col-sm-12">
                             <div class="card">
                                 <div class="card-body">
-                                    <form action="{{url('adminabouts')}}" method="POST">
+                                    <form enctype="multipart/form-data" action="{{url('adminabouts')}}" method="POST">
                                     @csrf
                                         <div class="form theme-form">
                                             <div class="row">
@@ -85,7 +85,14 @@
                                                     </div>
                                                 </div>
                                             </div>
-
+                                            <div class="row">
+                                                <div class="col">
+                                                    <div class="mb-3">
+                                                        <label>Suret Kiritin`</label>
+                                                        <input class="form-control" type="file" name = 'img'>
+                                                    </div>
+                                                </div>
+                                            </div>
 
                                             <div class="row">
                                                 <div class="col">
@@ -93,18 +100,6 @@
                                                 </div>
                                             </div>
                                     </form>
-                                    <div class="row">
-                                        <div class="col">
-                                            <div class="mb-3">
-                                                <label>Suret Kiritin` (1 dana)</label>
-                                                <form class="dropzone" id="singleFileUpload" action="/upload.php">
-                                                    <div class="dz-message needsclick"><i class="icon-cloud-up"></i>
-                                                        <h6>Drop files here or click to upload.</h6><span class="note needsclick">(This is just a demo dropzone. Selected files are <strong>not</strong> actually uploaded.)</span>
-                                                    </div>
-                                                </form>
-                                            </div>
-                                        </div>
-                                    </div>
                                     </div>
                                 </div>
                             </div>

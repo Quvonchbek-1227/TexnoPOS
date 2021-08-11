@@ -58,20 +58,20 @@
                         <div class="col-sm-12">
                             <div class="card">
                                 <div class="card-body">
-                                    <form action="{{url('adminevents')}}" method="POST">
+                                    <form enctype="multipart/form-data" action="{{url('adminevents')}}" method="POST">
                                     @csrf
                                         <div class="form theme-form">
                                             <div class="row">
                                                 <div class="col-md-6">
                                                     <div class="mb-3">
                                                         <label>Waqit</label>
-                                                        <input class="form-control" name="date" type="date" placeholder="12.03.2021">
+                                                        <input required class="form-control" name="date" type="date" placeholder="12.03.2021">
                                                     </div>
                                                 </div>
                                                 <div class="col-md-6">
                                                     <div class="mb-3">
                                                         <label>Summa</label>
-                                                        <input class="form-control" name="price" type="text" placeholder="150 min`">
+                                                        <input required class="form-control" name="price" type="text" placeholder="150 min`">
                                                     </div>
                                                 </div>
                                             </div>
@@ -79,13 +79,13 @@
                                                 <div class="col-md-6">
                                                     <div class="mb-3">
                                                         <label>Adress</label>
-                                                        <input class="form-control" name="adress" type="text" placeholder="TexnoPOS Ofisinde">
+                                                        <input required class="form-control" name="adress" type="text" placeholder="TexnoPOS Ofisinde">
                                                     </div>
                                                 </div>
                                                 <div class="col-md-6 ">
                                                     <div class="mb-3 ">
                                                         <label>Mentor Atin Saylan`</label><br>
-                                                        <select class="form-control " name="mentor_id" id=" ">
+                                                        <select required class="form-control " name="mentor_id" id=" ">
                                                             @foreach($mentors as $mentor)
                                                             <option class="form-control " value="{{$mentor->id}}">{{$mentor->full_name}}</option>
                                                             @endforeach
@@ -97,13 +97,13 @@
                                                 <div class="col-md-6">
                                                     <div class="mb-3">
                                                         <label>Title</label>
-                                                        <input class="form-control" name="title" type="text " placeholder="Title...">
+                                                        <input required class="form-control" name="title" type="text " placeholder="Title...">
                                                     </div>
                                                 </div>
                                                 <div class="col-md-6 ">
                                                     <div class="mb-3 ">
                                                         <label>Waqtin Kiritin`</label><br>
-                                                        <input class="form-control" name="time" type="text " placeholder="14:00 - 16:00">
+                                                        <input required class="form-control" name="time" type="text " placeholder="14:00 - 16:00">
                                                     </div>
                                                 </div>
                                             </div>
@@ -112,10 +112,16 @@
 
 
                                             <div class="row ">
-                                                <div class="col ">
+                                                <div class="col-md-4">
+                                                    <div class="mb-3 ">
+                                                        <label>Suret Juklen`!</label>
+                                                        <input required type="file" name="img" class="form-control">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-8">
                                                     <div class="mb-3 ">
                                                         <label>Qosimsha</label>
-                                                        <textarea class="form-control " name="text" placeholder="Qosimsha mag`liwmat... " id=" " cols="30 " rows="10 "></textarea>
+                                                        <textarea required class="form-control " name="text" placeholder="Qosimsha mag`liwmat... " id=" " cols="30 " rows="10 "></textarea>
                                                     </div>
                                                 </div>
                                             </div>
@@ -130,18 +136,6 @@
                                                 </div>
                                             </div>
                                     </form>
-                                    <div class="row ">
-                                        <div class="col ">
-                                            <div class="mb-3 ">
-                                                <label>Suret Kiritin` (1 dana)</label>
-                                                <form class="dropzone " id="singleFileUpload " action="/upload.php ">
-                                                    <div class="dz-message needsclick "><i class="icon-cloud-up "></i>
-                                                        <h6></h6><span class="note needsclick ">(This is just a demo dropzone. Selected files are <strong>not</strong> actually uploaded.)</span>
-                                                    </div>
-                                                </form>
-                                            </div>
-                                        </div>
-                                    </div>
                                     </div>
                                 </div>
                             </div>

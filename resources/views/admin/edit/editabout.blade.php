@@ -67,7 +67,7 @@
                         <div class="col-sm-12">
                             <div class="card">
                                 <div class="card-body">
-                                    <form action="{{route('adminabouts.update', ['adminabout' => $about[0]->id])}}" method="POST">
+                                    <form enctype="multipart/form-data" action="{{route('adminabouts.update', ['adminabout' => $about[0]->id])}}" method="POST">
                                     @csrf
                                     @method('PATCH')
                                         <div class="form theme-form">
@@ -87,6 +87,14 @@
                                                     </div>
                                                 </div>
                                             </div>
+                                            <div class="row">
+                                                <div class="col">
+                                                    <div class="mb-3">
+                                                        <label>Suret Kiritin`</label>
+                                                        <input class="form-control" type="file" name = 'img'>
+                                                    </div>
+                                                </div>
+                                            </div>
 
 
                                             <div class="row">
@@ -95,18 +103,6 @@
                                                 </div>
                                             </div>
                                     </form>
-                                    <div class="row">
-                                        <div class="col">
-                                            <div class="mb-3">
-                                                <label>Suret Kiritin` (1 dana)</label>
-                                                <form class="dropzone" id="singleFileUpload" action="/upload.php">
-                                                    <div class="dz-message needsclick"><i class="icon-cloud-up"></i>
-                                                        <h6>Drop files here or click to upload.</h6><span class="note needsclick">(This is just a demo dropzone. Selected files are <strong>not</strong> actually uploaded.)</span>
-                                                    </div>
-                                                </form>
-                                            </div>
-                                        </div>
-                                    </div>
                                     </div>
                                 </div>
                             </div>

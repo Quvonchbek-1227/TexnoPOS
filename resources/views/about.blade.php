@@ -55,7 +55,7 @@
 						</div>
 						<div class="col-lg-6 col-md-6 mb-5">
 							<div class="avt-img">
-								<img src="{{asset('assets/img/about/'.$about->img)}}" alt="">
+								<img src="{{$about->img}}" alt="">
 							</div><!--avt-img end-->
 						</div>
 						@endforeach

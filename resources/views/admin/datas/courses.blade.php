@@ -40,6 +40,7 @@
           <div class="container-fluid">
             <div class="page-title">
               <div class="row">
+                <h3>Kurslar</h3>
               </div>
             </div>
           </div>
@@ -51,7 +52,7 @@
                 <div class="card">
                   <div class="card-header">
                   <a class="btn btn-primary active" href="{{url('admincourse/create')}}">Qosiw</a>
-                    <h5>Kurslar</h5><span></span>
+                    <h5></h5><span></span>
                   </div>
                   <div class="card-body">
                   
@@ -92,7 +93,7 @@
                                                     <td>{{$course->file1}}</td>
                                                     <td>{{$course->file2}}</td>
                                                     <td>{{$course->file3}}</td>
-                                                    <td>{{$course->img}}</td>
+                                                    <td>{{$course->course_img}}</td>
                                                     <td>{{$course->description}}</td>
                                                     <td>{{$course->price}}</td>
                                                     <td>{{$course->days}}</td>

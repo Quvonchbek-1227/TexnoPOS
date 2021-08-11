@@ -61,7 +61,7 @@
                 <div class="card">
                   <div class="card-header">
                   <a class="btn btn-primary active" href="{{url('adminabouts/create')}}">Qosiw</a>
-                    <h5>Kurslar</h5><span></span>
+                    <h5>Abouts</h5><span></span>
                   </div>
                   <div class="card-body">
                   
