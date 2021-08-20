@@ -383,6 +383,7 @@
                         <li><a href="{{ url('adminmentortex') }}">Mentorlar Texnalogiyasi</a></li>
                         <li><a href="{{ url('adminprogrammertex') }}">Programmistler Texnalogiyasi</a></li>
                         <li><a href="{{ url('adminstudenttex') }}">Studentler Texnalogiyasi</a></li>
+                        <li><a href="{{ url('admingallery') }}">Galerya</a></li>
                     </ul>
                   </li>
     

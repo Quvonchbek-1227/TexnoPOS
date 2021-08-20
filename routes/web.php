@@ -22,6 +22,7 @@ use App\Http\Controllers\TexnologiesController;
 use App\Http\Controllers\Admin\AdminMentorsController;
 use App\Http\Controllers\Admin\AdminAboutsController;
 use App\Http\Controllers\Admin\AdminEventsController;
+use App\Http\Controllers\admin\AdminGallery;
 use App\Http\Controllers\Admin\AdminMessagesController;
 use App\Http\Controllers\Admin\AdminPostsController;
 use App\Http\Controllers\Admin\AdminProgrammersController;
@@ -82,4 +83,5 @@ Route::resource('adminproects', AdminProectsController::class);
 Route::resource('adminmentortex', AdminMentorTexController::class);
 Route::resource('adminprogrammertex',AdminProgrammerTex::class);
 Route::resource('adminstudenttex',AdminStudentTexController::class);
+Route::resource('admingallery',AdminGallery::class);
 

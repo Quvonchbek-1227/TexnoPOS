@@ -75,9 +75,7 @@
 
         <div class="page-body-wrapper default-menu default-menu">
             @include('admin.includes.sidebar')
-
-
-
+            
             <div class="page-body">
                 <div class="container-fluid">
                     <div class="page-title">

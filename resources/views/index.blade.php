@@ -133,7 +133,9 @@ use SimpleSoftwareIO\QrCode\Facades\QrCode; ?>
                             }
                          ?>
                             <li class="width{{$i}} wow zoomIn" data-wow-duration="1000ms">
-                                <a href="{{asset('assets/img/img/'.$image->img)}}" data-group="set1" title="" class="html5lightbox"><img src="{{asset('assets/img/img/'.$image->img)}}" alt=""></a>
+                                <a href="{{ $image->img }}" data-group="set1" title="" class="html5lightbox">
+                                    <img src="{{ $image->img }}" >
+                                </a>
                             </li>
                             <?php $i++; ?>
                         @endforeach
@@ -160,7 +162,7 @@ use SimpleSoftwareIO\QrCode\Facades\QrCode; ?>
                         <div class="col-lg-12 col-xs-12 col-sm-12 col-md-12">
                             <div class="classes-col wow fadeInUp" data-wow-duration="1000ms">
                                 <div class="class-thumb">
-                                    <img src="{{asset('assets/img/courses/'.$course->course_img)}}" alt="" class="w-100">
+                                    <img src="{{ $course->course_img }}" alt="" class="w-100">
                                     <a href="{{route('course_detail',['id'=>$course->id_course])}}" title="Baylanis" class="crt-btn fas fa-pen-alt"></a>
                                 </div>
                                 <div class="class-info">
