@@ -102,7 +102,7 @@
                                                 <div class="col-md-3">
                                                     <div class="mb-3">
                                                         <label class="">Telegram<i class="fab fa-telegram fa-2x"></i></label>
-                                                        <input class="form-control" name="telegram" type="text " placeholder="@ati...">
+                                                        <input class="form-control" name="telegram" type="text " placeholder="ati...">
                                                     </div>
                                                 </div>
                                                 <div class="col-md-3 ">

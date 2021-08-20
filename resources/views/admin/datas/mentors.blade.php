@@ -108,7 +108,7 @@
                                                         @csrf
                                                         @method('DELETE')
                                                         <input type="submit" class="btn btn-danger" value="Delete">
-                                                      </form> 
+                                                      </form>
                                                     </td>
                                                     <td>
                                                       <a class="btn btn-danger btn-sm" href="{{route('adminmentors.edit', ['adminmentor' => $mentor->id])}}">

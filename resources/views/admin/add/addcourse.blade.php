@@ -138,20 +138,32 @@
                                                         <input class="form-control " name="file3" type="file" placeholder="Taq kunleri ">
                                                     </div>
                                                 </div>
+                                                <p>
+                                                    <i>
+                                                    Fayillardi kiritgende ushewinede bir tur(Ati birdey) fayil kiritpen` o`shirgende qa`telik shig`adi!
+                                                    </i>
+                                                </p>
+                                                <hr>
                                             </div>
 
 
                                             <div class="row ">
-                                                <div class="col-md-2">
+                                                <div class="col-md-4">
                                                     <div class="mb-3 ">
-                                                        <label>Suret Kiritin`!</label>
-                                                        <input type="file" name="img" class="form-control">
+                                                        <label><b>Suret Kiritin`!</b></label>
+                                                        <input required type="file" name="img" class="form-control">
                                                     </div>
+                                                    <p>
+                                                        <i>
+                                                            Suret kiritgende eki(ha`m onnanda ko`p)kurslarg`a birdey(ati birdey)suret kiritpen` o`shirgenda qa`telik kelip shig`adi!
+                                                            Eger birdey suret kirituw kerek bolsa suretlerdin` atin o`zgertip kiritin`.
+                                                        </i>
+                                                    </p>
                                                 </div>
-                                                <div class="col-md-10">
+                                                <div class="col-md-8">
                                                     <div class="mb-3 ">
-                                                        <label>Qosimsha</label>
-                                                        <textarea class="form-control " name="description" placeholder="Qosimsha mag`liwmat... " id=" " cols="30 " rows="10 "></textarea>
+                                                        <label><b>Qosimsha</b></label>
+                                                        <textarea required class="form-control " name="description" placeholder="Qosimsha mag`liwmat... " id=" " cols="30 " rows="10 "></textarea>
                                                     </div>
                                                 </div>
                                             </div>
@@ -162,7 +174,7 @@
 
                                             <div class="row ">
                                                 <div class="col ">
-                                                    <div class="text-end "><input required type="submit" class="btn btn-success me-3"></div>
+                                                    <div class="text-end "><input type="submit" class="btn btn-success me-3"></div>
                                                 </div>
                                             </div>
                                     </form>

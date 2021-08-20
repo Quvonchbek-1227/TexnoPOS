@@ -41,14 +41,7 @@
             <div class="page-title">
               <div class="row">
                 <div class="col-6">
-                  <h3>Basic DataTables</h3>
-                </div>
-                <div class="col-6">
-                  <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="index.html">                                       <i data-feather="home"></i></a></li>
-                    <li class="breadcrumb-item">Data Tables</li>
-                    <li class="breadcrumb-item active">Basic DataTables</li>
-                  </ol>
+                  <h3>Biz Haqqimizda</h3>
                 </div>
               </div>
             </div>
@@ -61,7 +54,7 @@
                 <div class="card">
                   <div class="card-header">
                   <a class="btn btn-primary active" href="{{url('adminabouts/create')}}">Qosiw</a>
-                    <h5>Abouts</h5><span></span>
+                    <h5></h5><span></span>
                   </div>
                   <div class="card-body">
                   

@@ -99,11 +99,12 @@ class AdminMentorsController extends Controller
      */
     public function edit($id)
     {
-        $courses = DB::table('courses')->get();
         $mentors = DB::table('mentors')
+        ->where('id',$id)
         ->select('mentors.*')
         ->get();
-        return view('admin.edit.editmentor', ['mentors' => $mentors, 'courses' => $courses]);
+        // return $mentors;
+        return view('admin.edit.editmentor', ['mentors' => $mentors]);
     }
 
     /**
@@ -160,7 +161,9 @@ class AdminMentorsController extends Controller
      */
     public function destroy($id)
     {
+        
         Mentor::find($id)->delete();
         return redirect()->route('adminmentors.index');
     }
+    
 }

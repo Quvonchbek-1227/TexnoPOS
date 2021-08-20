@@ -144,6 +144,11 @@
                                                         <input class="form-control " name="file3" type="file" placeholder="Taq kunleri ">
                                                     </div>
                                                 </div>
+                                                <p>
+                                                    <i>
+                                                        Fayillardi kiritgende ushewinede bir tur(Ati birdey) fayil kiritpen` o`shirgende qa`telik shig`adi!
+                                                    </i>
+                                                </p>
                                             </div>
 
                                             <div class="row ">
@@ -152,6 +157,12 @@
                                                         <label>Suret Kiritin`!</label>
                                                         <input type="file" name="img" class="form-control">
                                                     </div>
+                                                    <p>
+                                                        <i>
+                                                            Suret kiritgende eki(ha`m onnanda ko`p)kurslarg`a birdey(ati birdey)suret kiritpen` o`shirgenda qa`telik kelip shig`adi!
+                                                            Eger birdey suret kirituw kerek bolsa suretlerdin` atin o`zgertip kiritin`.
+                                                        </i>
+                                                    </p>
                                                 </div>
                                                 <div class="col-md-8">
                                                     <div class="mb-3 ">

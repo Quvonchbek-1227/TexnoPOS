@@ -45,9 +45,9 @@ class AdminProgrammersController extends Controller
         $birthday = $r->birthday;
         $about = $r->about;
         $portfolio_detail = $r->portfolio_detail;
-        $img = $r->img;
+        $img = $r->file('img');
         if(empty($img)){
-            $img = "dsad";
+            $img = "null";
         }
         
         $created = DB::table('programmer')->insert([
@@ -116,7 +116,7 @@ class AdminProgrammersController extends Controller
         $portfolio_detail = $r->portfolio_detail;
         $img = $r->img;
         if(empty($img)){
-            $img = "dsad";
+            $img = "null";
         }
         
         $created = DB::table('programmer')->where('id', $id)->update([

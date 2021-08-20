@@ -53,8 +53,8 @@
 								<div class="blog-post">
 									<div class="blog-thumbnail blog-img">
 										<a href="#" title="" class="">
-										<p align='center' class="">
-											<img class="in-block-img w-100" src="{{ asset('assets/img/blogs/'.$blog->img) }}" >
+										<p align ='center' class="">
+											<img class="in-block-img w-100" src="{{ $blog->img }}" >
 										</p>
 										</a>
 										<span class="category">TEXNOPOS IT MEKTEBI</span>
@@ -67,16 +67,7 @@
 										</ul>
 										<h3 class="stick"><a href="{{ route('get_post', ['id'=>$blog->id]) }}" title="">{{$blog->title}}</a></h3>
 										<p>
-											<?php 
-
-												$arr = str_split($blog->text);
-												// $mas = str_split($arr,2);
-
-												for($i=0;$i<50;$i++){
-													echo $arr[$i];
-												}	
-												echo '...';
-											?>
+											{{Str::limit($blog->text,50,'...')}}
 										</p>
 										<a href="{{ route('get_post', ['id'=>$blog->id]) }}" title="" class="read-more">Toliq Post <i class="fa fa-long-arrow-alt-right"></i></a>
 									</div>
@@ -123,7 +114,7 @@
 									@endif
 									<div class="wd-post d-flex flex-wrap">
 										<div class="wd-thumb">
-											<img src="{{ asset('assets/img/blogs/'.$blogs[$i]->img) }}" width="50px" height="60px">
+											<img src="{{ $blogs[$i]->img }}" width="50px" height="60px">
 										</div>
 										<div class="wd-info">
 											<h4><a href="{{ route('get_post', ['id'=>$blogs[$i]->id]) }}" title="">{{$blogs[$i]->title}}</a></h4>

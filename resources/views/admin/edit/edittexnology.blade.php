@@ -64,7 +64,7 @@
                                             <div class="row">
                                                 <div class="col-md-4">
                                                     <div class="form-group d-flex flex-column">
-                                                        <label for="tex" class="form-label">Texnalogiya Saylan`</label>
+                                                        <label for="tex" class="form-label">Texnalogiya Kiritin`</label>
                                                         <input type="text" value="{{$texnology[0]->name}}" name="name" id="tex">
                                                          
                                                     </div>

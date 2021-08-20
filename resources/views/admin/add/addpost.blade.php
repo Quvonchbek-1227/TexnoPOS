@@ -49,7 +49,7 @@
                                     <h5>Ck Editor</h5>
                                 </div>
                                 <div class="card-body">
-                                    <form class="form" action="{{url('/adminposts')}}" method="POST">
+                                    <form enctype="multipart/form-data" class="form" action="{{route('adminposts.store')}}" method="POST">
                                     @csrf
                                         <div class="row mb-5">
 
@@ -59,12 +59,12 @@
                                                     <input type="text" name="title" class="form-control" placeholder="title...">
                                                 </div>
                                             </div>
-                                            <div class="col-md-4">
+                                            {{-- <div class="col-md-4">
                                                 <div class="form-group">
                                                     <label for="date">Sa`neni Kiritin`</label>
                                                     <input type="date" name="date" class="form-control">
                                                 </div>
-                                            </div>
+                                            </div> --}}
                                             <div class="col-md-4">
                                                 <label for="img" class="form-label">Suret Kiritin`</label>
                                                 <input id="img" type="file" name="img" class="form-control">
@@ -72,63 +72,8 @@
                                         </div>
                                         <div class="row">
                                             <div class="col-md-12">
-                                                <div class="form-group">
-                                                    <label for="" class="form-label">Content</label>
-                                                    <textarea id="editor1" name="text" cols="30" rows="10">
-                                            
-                                                    <a id="tech-details" name="tech-details"></a>
-                                               
-                                                <table align="right"
-                                                    border="1"
-                                                    cellpadding="5"
-                                                    cellspacing="0"
-                                                >
-                                                    <caption>
-                                                        <strong>Mission crew</strong>
-                                                    </caption>
-                                                    <thead>
-                                                        <tr>
-                                                            <th scope="col">Position</th>
-                                                            <th scope="col">Astronaut</th>
-                                                        </tr>
-                                                    </thead>
-                                                    <tbody>
-                                                        <tr>
-                                                            <td>Commander</td>
-                                                            <td>Neil A. Armstrong</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Command Module Pilot</td>
-                                                            <td>Michael Collins</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Lunar Module Pilot</td>
-                                                            <td>Edwin "Buzz" E. Aldrin, Jr.</td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                                <p>Launched by a
-                                                    <strong>Saturn V</strong> rocket from
-                                                    <a href="#">Kennedy Space Center</a> in Merritt Island, Florida on July 16, Apollo 11 was the fifth manned mission of
-                                                    <a href="#">NASA</a>'s Apollo program. The Apollo spacecraft had three parts:
-                                                </p>
-                                                <ol>
-                                                    <li>
-                                                        <strong>Command Module</strong> with a cabin for the three astronauts which was the only part which landed back on Earth
-                                                    </li>
-                                                    <li>
-                                                        <strong>Service Module</strong> which supported the Command Module with propulsion, electrical power, oxygen and water
-                                                    </li>
-                                                    <li>
-                                                        <strong>Lunar Module</strong> for landing on the Moon.
-                                                    </li>
-                                                </ol>
-                                                <p>After being sent to the Moon by the Saturn V's upper stage, the astronauts separated the spacecraft from it and travelled for three days until they entered into lunar orbit. Armstrong and Aldrin then moved into the Lunar Module and landed in the
-                                                    <a href="#">Sea of Tranquility</a>. They stayed a total of about 21 and a half hours on the lunar surface. After lifting off in the upper part of the Lunar Module and rejoining Collins in the Command Module, they returned to Earth and landed in the
-                                                    <a href="#">Pacific Ocean</a> on July 24.
-                                                </p>
-                                        </textarea>
-                                                </div>
+                                                <label for="" class="form-label">Text Kiritin`!</label>
+                                                <textarea name="text" class="form-control" cols="30" rows="10" placeholder="Text..."></textarea>
                                             </div>
                                             <div class="col-md-3 mt-5">
                                                 <div class="form-group">

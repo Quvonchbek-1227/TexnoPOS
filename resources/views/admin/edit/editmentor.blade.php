@@ -153,18 +153,6 @@
                                                 </div>
                                             </div>
                                     </form>
-                                    <div class="row ">
-                                        <div class="col ">
-                                            <div class="mb-3 ">
-                                                <label>Suret Kiritin` (1 dana)</label>
-                                                <form class="dropzone " id="singleFileUpload " action="/upload.php ">
-                                                    <div class="dz-message needsclick "><i class="icon-cloud-up "></i>
-                                                        <h6></h6><span class="note needsclick ">(This is just a demo dropzone. Selected files are <strong>not</strong> actually uploaded.)</span>
-                                                    </div>
-                                                </form>
-                                            </div>
-                                        </div>
-                                    </div>
                                     </div>
                                 </div>
                             </div>

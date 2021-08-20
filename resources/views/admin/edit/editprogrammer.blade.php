@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-
+    
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,6 +11,7 @@
     <link rel="icon" href="{{asset('../assets2/images/favicon.png')}}" type="image/x-icon">
     <link rel="shortcut icon" href="{{asset('../assets2/images/favicon.png')}}" type="image/x-icon">
     <title>Cuba - Premium Admin Template</title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
     <!-- Google font-->
     <link href="https://fonts.googleapis.com/css?family=Rubik:400,400i,500,500i,700,700i&amp;display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i,900&amp;display=swap" rel="stylesheet">
@@ -56,20 +57,20 @@
                             <div class="card">
                                 <div class="card-body">
                                     <form action="{{route('adminprogrammers.update', ['adminprogrammer' => $programmer[0]->id])}}" method="POST">
-                                    @csrf
-                                    @method('PATCH')
+                                        @csrf
+                                        @method('PATCH')
                                         <div class="form theme-form">
                                             <div class="row">
                                                 <div class="col-md-6">
                                                     <div class="mb-3">
                                                         <label>Mentordin` Toliq Ati (Ati Familiyasi)</label>
-                                                        <input class="form-control" value="{{$programmer[0]->full_name}}" name="full_name" type="text" placeholder="Sharapat Kalabayev">
+                                                        <input required class="form-control" value="{{$programmer[0]->full_name}}" name="full_name" type="text" placeholder="Sharapat Kalabayev">
                                                     </div>
                                                 </div>
                                                 <div class="col-md-6">
                                                     <div class="mb-3">
                                                         <label>Telefon Nomeri</label>
-                                                        <input class="form-control" value="{{$programmer[0]->phone}}" name="phone" type="text" placeholder="+998991234678">
+                                                        <input required class="form-control" value="{{$programmer[0]->phone}}" name="phone" type="text" placeholder="+998991234678">
                                                     </div>
                                                 </div>
                                             </div>
@@ -77,13 +78,13 @@
                                                 <div class="col-md-6">
                                                     <div class="mb-3">
                                                         <label>Email</label>
-                                                        <input class="form-control" value="{{$programmer[0]->email}}" name="email" type="text" placeholder="...@...mail.com">
+                                                        <input required class="form-control" value="{{$programmer[0]->email}}" name="email" type="text" placeholder="...@...mail.com">
                                                     </div>
                                                 </div>
                                                 <div class="col-md-6 ">
                                                     <div class="mb-3 ">
                                                         <label>Taj`ribesi</label><br>
-                                                        <input class="form-control" value="{{$programmer[0]->experiense}}" name="experiense" type="text" placeholder="10 jil">
+                                                        <input required class="form-control" value="{{$programmer[0]->experiense}}" name="experiense" type="text" placeholder="10 jil">
                                                     </div>
                                                 </div>
                                             </div>
@@ -91,7 +92,7 @@
                                                 <div class="col-md-6">
                                                     <div class="mb-3">
                                                         <label>Qa`yerdi Bitirgen</label>
-                                                        <input class="form-control" value="{{$programmer[0]->bitirgen}}" name="bitirgen" type="text " placeholder="TATU No`kis Filiali...">
+                                                        <input required class="form-control" value="{{$programmer[0]->bitirgen}}" name="bitirgen" type="text " placeholder="TATU No`kis Filiali...">
                                                     </div>
                                                 </div>
                                                 
@@ -122,10 +123,6 @@
                                                     </div>
                                                 </div>
                                             </div>
-
-
-
-
                                             <div class="row ">
                                                 <div class="col-md-6">
                                                     <div class="mb-3 ">
@@ -151,18 +148,6 @@
                                                 </div>
                                             </div>
                                     </form>
-                                    <div class="row ">
-                                        <div class="col ">
-                                            <div class="mb-3 ">
-                                                <label>Suret Kiritin` (1 dana)</label>
-                                                <form class="dropzone " id="singleFileUpload " action="/upload.php ">
-                                                    <div class="dz-message needsclick "><i class="icon-cloud-up "></i>
-                                                        <h6></h6><span class="note needsclick ">(This is just a demo dropzone. Selected files are <strong>not</strong> actually uploaded.)</span>
-                                                    </div>
-                                                </form>
-                                            </div>
-                                        </div>
-                                    </div>
                                     </div>
                                 </div>
                             </div>

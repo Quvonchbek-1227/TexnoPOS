@@ -267,7 +267,7 @@ use SimpleSoftwareIO\QrCode\Facades\QrCode; ?>
                         <div class="col-lg-4 col-md-6 col-sm-6">
                             <div class="blog-post">
                                 <div class="blog-thumbnail">
-                                    <img src="{{ asset('assets/img/blogs/'.$blog->img) }}" alt="" class="w-100">
+                                    <img src="{{ $blog->img }}" alt="" class="w-100">
                                     <span class="category">TEXNOPOS</span>
                                 </div>
                                 <div class="blog-info">
@@ -278,12 +278,7 @@ use SimpleSoftwareIO\QrCode\Facades\QrCode; ?>
                                     </ul>
                                     <h3><a href="{{ route('get_post', ['id'=>$blog->id]) }}" title="">{{$blog->title}}</a></h3>
                                     <p>
-                                        <?php
-                                        for ($i = 0; $i < 50; $i++) {
-                                            echo $text[$i];
-                                        }
-                                        echo " ...";
-                                        ?>
+                                        {{Str::limit($blog->text,50,'...')}}
                                     </p>
                                     <a href="{{ route('get_post', ['id'=>$blog->id]) }}" title="" class="read-more">Toliq Oqiw <i class="fa fa-long-arrow-alt-right"></i></a>
                                 </div>

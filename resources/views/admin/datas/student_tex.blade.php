@@ -10,6 +10,7 @@
     <link rel="icon" href="../assets2/images/favicon.png" type="image/x-icon">
     <link rel="shortcut icon" href="../assets2/images/favicon.png" type="image/x-icon">
     <title>Cuba - Premium Admin Template</title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
     <!-- Google font-->
     <link href="https://fonts.googleapis.com/css?family=Rubik:400,400i,500,500i,700,700i&amp;display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i,900&amp;display=swap" rel="stylesheet">
@@ -41,8 +42,9 @@
             <div class="page-title">
               <div class="row">
                 <div class="col-6">
-                  <h3>Postlar</h3>
+                  <h3>Student Texnalogiyalari</h3>
                 </div>
+                
               </div>
             </div>
           </div>
@@ -53,99 +55,46 @@
               <div class="col-sm-12">
                 <div class="card">
                   <div class="card-header">
-                  <a class="btn btn-primary active" href="{{url('adminposts/create ')}}">Qosiw</a>
+                  <a class="btn btn-primary active" href="{{ route('adminstudenttex.create') }}">Qosiw</a>
                     <h5></h5><span></span>
                   </div>
                   <div class="card-body">
-                  
-                  
                     <div class="table-responsive">
-                     
-                      <table class="display" id="basic-1">
-                        
-                                                <thead>
-                                                <tr>
-                                                <th>title</th>
-                                                <th>date</th>
-                                                <th>text</th>
-                                                <th>img</th>
-                                                
-                                                
-                                                <th btn btn-danger btn-sm><i class="fa fa-trash"></th>
-                                                <th><i class="fa fa-pencil"></th>
-                                                </tr>
-                                                </thead>
-                                                <tbody>
-                                      
-                                                    @foreach($posts as $post)
-                                                    <tr>
-                                                    <td>{{$post->title}}</td>
-                                                    <td>{{$post->date}}</td>
-                                                    <td>{{$post->text}}</td>
-                                                    <td>{{$post->img}}</td>
-                                                   
-                                                    
-                                                   <td>
-                                                   <form action="{{ url('adminposts/'.$post->id)}}" method="POST">
-                                                  @csrf
-                                                  @method('DELETE')
-                                                  <button type="submit" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></button>
-                                                  </form> 
-                                                    </td>
-                                                    <td><a class="btn btn-danger btn-sm" href="{{route('adminposts.edit', ['adminpost' => $post->id])}}"><i class="fa fa-pencil"></i></a></td>
-                                                    </tr>
-                                                    @endforeach
-                                                </tbody>
-                      
-                      
-                      
-                      </table>
-                      
+                        <table class="display" id="basic-1">
+                          <thead>
+                            <tr>
+                              <th>Mentorlar</th>
+                              <th>texnalogiyalar</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            @foreach ($datas as $data)
+                              <tr>
+                                <td>
+                                    {{$data['student']}}
+                                </td>
+                                <td>
+                                  @foreach ($data['texnalogiya'] as $tex)
+                                  <hr>
+                                      <div class="d-flex align-items-center">
+                                        <b>{{$tex->name}} => {{$tex->procent}} %,</b>
+                                        <form class="form" method="POST"  action="{{ route('adminstudenttex.destroy', ['adminstudenttex'=>$tex->id]) }}">
+                                          @method('DELETE')
+                                          @csrf
+                                          <button type="submit" class="btn bg-primary"><i class="fas fa-trash"></i></button>
+                                        </form>
+                                      </div>
+                                  @endforeach
+                                </td>
+                              </tr>
+                            @endforeach
+                            
+                          </tbody>
+                        </table>
                     </div>
                   </div>
                 </div>
               </div>
-              <!-- Zero Configuration  Ends-->
-              <!-- Feature Unable /Disable Order Starts-->
-             
-              <!-- Feature Unable /Disable Ends-->
-              <!-- Default ordering (sorting) Starts-->
-              
-              <!-- Default ordering (sorting) Ends-->
-              <!-- Multi-Column Starts-->
-              
-              <!-- Multi-Column Ends-->
-              <!-- Multiple tables Start-->
-             
-              <!-- Multiple tables Ends-->
-              <!-- Hidden Starts-->
-              
-              <!-- Hidden Ends-->
-              <!-- Complex headers (rowspan and colspan) Starts-->
-              
-              <!-- Complex headers (rowspan and colspan) Ends-->
-              <!-- DOM Positioning Starts-->
-             
-              <!-- DOM positioning Ends-->
-              <!-- Flexible table width Starts-->
-              
-              <!-- Flexible table width  Ends-->
-              <!-- State saving Starts-->
-              
-              <!-- State saving Ends-->
-              <!-- Alternative pagination Starts-->
-              
-              <!-- Alternative pagination Ends-->
-              <!-- Scroll - vertical Starts-->
-              
-              <!-- Scroll - vertical Ends-->
-              <!-- Scroll - vertical dynamic Starts-->
-              
-              <!-- Scroll - vertical dynamic Ends-->
-              <!-- Scroll - horizontal Starts-->
-              
-              <!-- Scroll - horizontal Ends-->
-              <!-- Language Starts-->
               
             </div>
           </div>

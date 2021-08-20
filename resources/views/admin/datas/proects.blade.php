@@ -83,7 +83,7 @@
                     <div class="page-title">
                         <div class="row">
                             <div class="col-12">
-                                <h3 class="text-center" style="text-transform: unset">Praectler</h3>
+                                <h3 class="text-center" style="text-transform: unset">Praektler</h3>
                             </div>
                         </div>
                     </div>
@@ -110,7 +110,7 @@
                                                 <tr>
                                                     <td>{{$proect->id}}</td>
                                                     <td>#{{$proect->type}}</td>
-                                                    <td>{{$proect->text}}</td>
+                                                    <td class="text-center">{{$proect->text}}</td>
                                                     <td>{{$proect->title}}</td>
                                                     <td>{{$proect->full_name}}</td>
                                                     <td class="d-flex">

@@ -67,7 +67,7 @@ class AdminCoursesController extends Controller
             $file1->move($path,$file1_name);
             $file1_url = asset('assets/img/courses/files/'.$file1_name);
         }else{
-            $file1_url = "file11";
+            $file1_url = "null";
         }
         if($request->file('file2')){
             $file2 = $request->file('file2');
@@ -76,7 +76,7 @@ class AdminCoursesController extends Controller
             $file2->move($path,$file2_name);
             $file2_url = asset('assets/img/courses/files/'.$file2_name);
         }else{
-            $file2_url = "file2";
+            $file2_url = "null";
         }
         if($request->file('file3')){
             $file3 = $request->file('file3');
@@ -85,7 +85,7 @@ class AdminCoursesController extends Controller
             $file3->move($path,$file3_name);
             $file3_url = asset('assets/img/courses/files/'.$file3_name);
         }else{
-            $file3_url = "file3";
+            $file3_url = "null";
         }
 
 
@@ -170,11 +170,13 @@ class AdminCoursesController extends Controller
         $description = $request->description;
         $path = public_path('assets/img/courses/files/');
 
-        if($request->file('file1')){
+        if($request->hasFile('file1')){
             $file1 = $request->file('file1');
             $file1_name = $file1->getClientOriginalName();
-            $file1_oldurl = Course::find($id);
-            unlink(public_path(explode(URL::to('/'), $file1_oldurl->file1)[1]));
+            $file1_oldurl = Course::find($id)->file1;
+            if($file1_oldurl !== 'null'){
+                unlink(public_path(explode(URL::to('/'), $file1_oldurl)[1]));
+            }
             $path = public_path('assets/img/courses/files/');
             $file1_url = asset('assets/img/courses/files/'.$file1_name);
             $file1->move($path, $file1_name);
@@ -185,8 +187,10 @@ class AdminCoursesController extends Controller
         if($request->file('file2')){
             $file2 = $request->file('file2');
             $file2_name = $file2->getClientOriginalName();
-            $file2_oldurl = Course::find($id);
-            unlink(public_path(explode(URL::to('/'), $file2_oldurl->file2)[1]));
+            $file2_oldurl = Course::find($id)->file2;
+            if($file2_oldurl !== 'null'){
+                unlink(public_path(explode(URL::to('/'), $file2_oldurl)[1]));
+            }
             $path = public_path('assets/img/courses/files/');
             $file2_url = asset('assets/img/courses/files/'.$file2_name);
             $file2->move($path, $file2_name);
@@ -198,8 +202,10 @@ class AdminCoursesController extends Controller
         if($request->file('file3')){
             $file3 = $request->file('file3');
             $file3_name = $file3->getClientOriginalName();
-            $file3_oldurl = Course::find($id);
-            unlink(public_path(explode(URL::to('/'), $file3_oldurl->file3)[1]));
+            $file3_oldurl = Course::find($id)->file3;
+            if($file3_oldurl !== 'null'){
+                unlink(public_path(explode(URL::to('/'), $file3_oldurl)[1]));
+            }
             $path = public_path('assets/img/courses/files/');
             $file3_url = asset('assets/img/courses/files/'.$file3_name);
             $file3->move($path, $file3_name);
@@ -255,9 +261,15 @@ class AdminCoursesController extends Controller
         $file3 = $course->file3;
         $img = $course->img;
         
-        unlink(public_path(explode(URL::to('/'), $file1)[1]));
-        unlink(public_path(explode(URL::to('/'), $file2)[1]));
-        unlink(public_path(explode(URL::to('/'), $file3)[1]));
+        if($file1 != 'null'){
+            unlink(public_path(explode(URL::to('/'), $file1)[1]));
+        }
+        if($file2 != 'null'){
+            unlink(public_path(explode(URL::to('/'), $file2)[1]));
+        }
+        if($file3 != 'null'){
+            unlink(public_path(explode(URL::to('/'), $file3)[1]));
+        }
         unlink(public_path(explode(URL::to('/'), $img)[1]));
         Course::find($id)->delete();
         return redirect()->route('admincourse.index');

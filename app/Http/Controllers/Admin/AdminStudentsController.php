@@ -54,9 +54,9 @@ class AdminStudentsController extends Controller
         $id_course = $r->id_course;
         $about = $r->about;
         $portfolio_detail = $r->portfolio_detail;
-        $img = $r->img;
+        $img = $r->file('img');
         if(empty($img)){
-            $img = "dsad";
+            $img = "null";
         }
         
         $created = DB::table('students')->insert([
@@ -132,7 +132,7 @@ class AdminStudentsController extends Controller
         $portfolio_detail = $r->portfolio_detail;
         $img = $r->img;
         if(empty($img)){
-            $img = "dsad";
+            $img = "null";
         }
         
         $edited = DB::table('students')->where('id', $id)->update([
@@ -151,9 +151,7 @@ class AdminStudentsController extends Controller
             'img' => $img,
         ]);
 
-        if($edited){
             return redirect('adminstudents');
-        }
     }
 
     /**

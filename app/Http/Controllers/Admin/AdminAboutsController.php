@@ -126,6 +126,8 @@ class AdminAboutsController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function destroy($id){
+        $img = Abouts::find($id)->img;
+        unlink(public_path(explode(URL::to('/'),$img)[1]));
         $deleted = DB::table('about')->where('id', $id)->delete();
         if($deleted){
             return back();

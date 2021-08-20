@@ -57,7 +57,7 @@
 										<li><a href="https://www.instagram.com/{{$mentor[0]->instagram}}/" title=""><i class="fab fa-instagram"></i></a></li>
 									@endif
 									@if (isset($mentor[0]->telegram))
-										<li><a href="https://t.me.com/{{$mentor[0]->telegram}}" title=""><i class="fab fa-telegram"></i></a></li>
+										<li><a href="https://t.me/{{$mentor[0]->telegram}}" title=""><i class="fab fa-telegram"></i></a></li>
 									@endif
 								</ul>
 							</div><!--teacher-coly end-->

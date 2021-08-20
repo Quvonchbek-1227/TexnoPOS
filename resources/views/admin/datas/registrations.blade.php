@@ -41,14 +41,7 @@
             <div class="page-title">
               <div class="row">
                 <div class="col-6">
-                  <h3>Basic DataTables</h3>
-                </div>
-                <div class="col-6">
-                  <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="index.html">                                       <i data-feather="home"></i></a></li>
-                    <li class="breadcrumb-item">Data Tables</li>
-                    <li class="breadcrumb-item active">Basic DataTables</li>
-                  </ol>
+                  <h3 style="text-transform: inherit">Registratciyadan O`tgenler</h3>
                 </div>
               </div>
             </div>
@@ -59,10 +52,6 @@
               <!-- Zero Configuration  Starts-->
               <div class="col-sm-12">
                 <div class="card">
-                  <div class="card-header">
-                  <a class="btn btn-primary active" href="">Qosiw</a>
-                    <h5>Kurslar</h5><span></span>
-                  </div>
                   <div class="card-body">
                   
                   
@@ -72,10 +61,10 @@
                         
                                                 <thead>
                                                 <tr>
-                                                <th>name</th>
-                                                <th>phone</th>
-                                                <th>course_name</th>
-                                                <th>text</th>
+                                                <th>Ati</th>
+                                                <th>Telefon Nomeri</th>
+                                                <th>Jazilg`an Kursi!</th>
+                                                <th>Xabar</th>
                                                 
                                                 <th btn btn-danger btn-sm><i class="fa fa-trash"></th>
                                                 <th><i class="fa fa-pencil"></th>
@@ -90,14 +79,13 @@
                                                     <td>{{$registration->course_name}}</td>
                                                     <td>{{$registration->text}}</td>
                                                     
-                                                   <td>
-                                                   <form action="{{ url('adminregistrations/'.$registration->id)}}" method="POST">
-                                                  @csrf
-                                                  @method('DELETE')
-                                                  <button type="submit" class="btn btn-danger btn-sm"><i class="fa fa-trash"></button>
-                                                  </form> 
+                                                    <td>
+                                                      <form action="{{ url('adminregistrations/'.$registration->id)}}" method="POST">
+                                                        @csrf
+                                                        @method('DELETE')
+                                                        <button type="submit" class="btn btn-danger"><i class="fa fa-trash"></i></button>
+                                                      </form> 
                                                     </td>
-                                                    <td><a class="btn btn-danger btn-sm" href=""><i class="fa fa-pencil"></i></a></td>
                                                     </tr>
                                                     @endforeach
                                                 </tbody>

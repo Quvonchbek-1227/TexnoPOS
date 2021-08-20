@@ -380,6 +380,9 @@
                         <li><a href="{{url('/adminstudents')}}">Studentler</a></li>
                         <li><a href="{{url('/admintexnologies')}}">Texnologiyalar</a></li>
                         <li><a href="{{url('/adminproects')}}">Proektler</a></li>
+                        <li><a href="{{ url('adminmentortex') }}">Mentorlar Texnalogiyasi</a></li>
+                        <li><a href="{{ url('adminprogrammertex') }}">Programmistler Texnalogiyasi</a></li>
+                        <li><a href="{{ url('adminstudenttex') }}">Studentler Texnalogiyasi</a></li>
                     </ul>
                   </li>
     

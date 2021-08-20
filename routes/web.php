@@ -27,6 +27,10 @@ use App\Http\Controllers\Admin\AdminPostsController;
 use App\Http\Controllers\Admin\AdminProgrammersController;
 use App\Http\Controllers\Admin\AdminTexnologiesController;
 use App\Http\Controllers\Admin\AdminProectsController;
+use App\Http\Controllers\Admin\AdminMentorTexController;
+use App\Http\Controllers\admin\AdminProgrammerTex;
+use App\Http\Controllers\admin\AdminStudentTexController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -75,4 +79,7 @@ Route::resource('adminregistrations', RegistrationsController::class);
 Route::resource('adminstudents', AdminStudentsController::class);
 Route::resource('admintexnologies', AdminTexnologiesController::class);
 Route::resource('adminproects', AdminProectsController::class);
+Route::resource('adminmentortex', AdminMentorTexController::class);
+Route::resource('adminprogrammertex',AdminProgrammerTex::class);
+Route::resource('adminstudenttex',AdminStudentTexController::class);
 

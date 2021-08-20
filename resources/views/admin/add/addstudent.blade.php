@@ -11,6 +11,7 @@
     <link rel="icon" href="../assets2/images/favicon.png" type="image/x-icon">
     <link rel="shortcut icon" href="../assets2/images/favicon.png" type="image/x-icon">
     <title>Cuba - Premium Admin Template</title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
     <!-- Google font-->
     <link href="https://fonts.googleapis.com/css?family=Rubik:400,400i,500,500i,700,700i&amp;display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i,900&amp;display=swap" rel="stylesheet">
@@ -56,19 +57,19 @@
                             <div class="card">
                                 <div class="card-body">
                                     <form action="{{url('adminstudents')}}" method="POST">
-                                    @csrf
+                                        @csrf
                                         <div class="form theme-form">
                                             <div class="row">
                                                 <div class="col-md-6">
                                                     <div class="mb-3">
-                                                        <label>Mentordin` Toliq Ati (Ati Familiyasi)</label>
-                                                        <input class="form-control" name="full_name" type="text" placeholder="Sharapat Kalabayev">
+                                                        <label>Pitkerushinin` Toliq Ati (Ati Familiyasi)</label>
+                                                        <input required class="form-control" name="full_name" type="text" placeholder="Sharapat Kalabayev">
                                                     </div>
                                                 </div>
                                                 <div class="col-md-6">
                                                     <div class="mb-3">
                                                         <label>Telefon Nomeri</label>
-                                                        <input class="form-control" name="phone" type="text" placeholder="+998991234678">
+                                                        <input required class="form-control" name="phone" type="text" placeholder="+998991234678">
                                                     </div>
                                                 </div>
                                             </div>
@@ -76,13 +77,13 @@
                                                 <div class="col-md-6">
                                                     <div class="mb-3">
                                                         <label>Email</label>
-                                                        <input class="form-control" name="email" type="text" placeholder="...@...mail.com">
+                                                        <input required class="form-control" name="email" type="text" placeholder="...@...mail.com">
                                                     </div>
                                                 </div>
                                                 <div class="col-md-6 ">
                                                     <div class="mb-3 ">
                                                         <label>Taj`ribesi</label><br>
-                                                        <input class="form-control" name="experiense" type="text" placeholder="10 jil">
+                                                        <input required class="form-control" name="experiense" type="text" placeholder="10 jil">
                                                     </div>
                                                 </div>
                                             </div>
@@ -90,13 +91,13 @@
                                                 <div class="col-md-6">
                                                     <div class="mb-3">
                                                         <label>Qa`yerdi Bitirgen</label>
-                                                        <input class="form-control" name="bitirgen" type="text " placeholder="TATU No`kis Filiali...">
+                                                        <input required class="form-control" name="bitirgen" type="text " placeholder="TATU No`kis Filiali...">
                                                     </div>
                                                 </div>
                                                 <div class="col-md-6 ">
                                                     <div class="mb-3 ">
                                                         <label>Qaysi Kursdi Bitirgen</label><br>
-                                                        <select class="form-control" name="id_course" id="">
+                                                        <select required class="form-select" name="id_course" id="">
                                                             @foreach($courses as $course)
                                                             <option class="form-control" value="{{$course->id}}">{{$course->name}}</option>
                                                             @endforeach
@@ -108,13 +109,13 @@
                                                 <div class="col-md-3">
                                                     <div class="mb-3">
                                                         <label class="">Telegram<i class="fab fa-telegram fa-2x"></i></label>
-                                                        <input class="form-control" name="telegram" type="text " placeholder="@ati...">
+                                                        <input class="form-control" name="telegram" type="text " placeholder="ati...">
                                                     </div>
                                                 </div>
                                                 <div class="col-md-3 ">
                                                     <div class="mb-3 ">
                                                         <label>Facebook Accounti<i class="fab fa-facebook fa-2x"></i></label><br>
-                                                        <input class="form-control" name="facebook" type="text " placeholder="Facabookdag`i atin jazin`">
+                                                        <input class="form-control" name="facebook" type="text " placeholder="Facebookdag`i atin jazin`">
                                                     </div>
                                                 </div>
                                                 <div class="col-md-3 ">
@@ -126,7 +127,7 @@
                                                 <div class="col-md-3 ">
                                                     <div class="mb-3 ">
                                                         <label class="mb-1 form-label">Tuwilg`an Kuni<i class="fas fa-birthday-cake fa-2x"></i></label><br>
-                                                        <input class="form-control" name="birthday" type="text " placeholder="12.03.1998">
+                                                        <input required class="form-control" name="birthday" type="text " placeholder="12.03.1998">
                                                     </div>
                                                 </div>
                                             </div>
@@ -159,18 +160,6 @@
                                                 </div>
                                             </div>
                                     </form>
-                                    <div class="row ">
-                                        <div class="col ">
-                                            <div class="mb-3 ">
-                                                <label>Suret Kiritin` (1 dana)</label>
-                                                <form class="dropzone " id="singleFileUpload " action="/upload.php ">
-                                                    <div class="dz-message needsclick "><i class="icon-cloud-up "></i>
-                                                        <h6></h6><span class="note needsclick ">(This is just a demo dropzone. Selected files are <strong>not</strong> actually uploaded.)</span>
-                                                    </div>
-                                                </form>
-                                            </div>
-                                        </div>
-                                    </div>
                                     </div>
                                 </div>
                             </div>

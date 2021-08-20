@@ -29,7 +29,7 @@
 
 		<?php $text = $post[0]->text;?>
 
-		<section class="pager-section blog-version" style="background-image: url('{{asset('assets/img/blogs/'.$post[0]->img)}}');">
+		<section class="pager-section blog-version" style="background-image: url('{{ $post[0]->img }}');">
 			<div class="container">
 				<div class="pager-content text-center">
 					<h2>{{$post[0]->title}}</h2>
@@ -86,7 +86,7 @@
 									@endif
 									<div class="wd-post d-flex flex-wrap">
 										<div class="wd-thumb">
-											<img src="{{ asset('assets/img/blogs/'.$blogs[$i]->img) }}" width="50px" height="60px">
+											<img src="{{ $blogs[$i]->img }}" width="50px" height="60px">
 										</div>
 										<div class="wd-info">
 											<h4><a href="{{ route('get_post', ['id'=>$blogs[$i]->id]) }}" title="">{{$blogs[$i]->title}}</a></h4>
