@@ -143,7 +143,7 @@
 
 									<div class="classes-col">
 										<div class="class-thumb">
-											<img src="{{ asset('assets/img/courses/'.$key->course_img) }}" alt="" class="w-100">
+											<img src="{{ $key->course_img }}" alt="" class="w-100">
 											<a href="{{route('contacts')}}" title="" class="crt-btn">
 												<i class="fas fa-pen-alt"></i>
 											</a>

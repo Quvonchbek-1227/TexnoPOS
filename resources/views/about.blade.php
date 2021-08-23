@@ -1,71 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-	<meta charset="UTF-8">
-	<title>Biz Haqimizda!</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="description" content="TexnoPOS IT Mektebi" />
-	<meta name="author" content="TEXNOPOS DEVELOPERS!">
-	<meta name="keywords" content="TexnoPOS" />
-	<link rel="icon" href="{{ asset('assets/img/favicon.png') }}">
+    <meta charset="UTF-8">
+    <title>Biz Haqimizda!</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="TexnoPOS IT Mektebi" />
+    <meta name="author" content="TEXNOPOS DEVELOPERS!">
+    <meta name="keywords" content="TexnoPOS" />
+    <link rel="icon" href="{{ asset('assets/img/favicon.png') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/bootstrap.min.css') }}">
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/animate.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/font-awesome.min.css') }}">
-    <link rel="stylesheet" type="text/css" href="{{asset('assets/css/main.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/main.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/responsive.css') }}">
-	<link rel="stylesheet" type="text/css" href="{{ asset('assets/css/mycss.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/mycss.css') }}">
 </head>
 
 
 <body>
 
-	<div class="wrapper">
-		
-			@include('includes.header')
-		<!--header end-->
+    <div class="wrapper">
 
-		@include('includes.responsiv-menu')
-		<!--responsive-menu end-->
+        @include('includes.header')
+        <!--header end-->
 
-		<section class="pager-section">
-			<div class="container">
-				<div class="pager-content text-center">
-					<h2 class="myshadow">Haqqimizda</h2>
-				</div><!--pager-content end-->
-				{{-- <h2 class="page-titlee">Shelly</h2> --}}
-			</div>
-		</section><!--pager-section end-->
+        @include('includes.responsiv-menu')
+        <!--responsive-menu end-->
 
-		<section class="about-page-content">
-			<div class="container">
+        <section class="pager-section">
+            <div class="container">
+                <div class="pager-content text-center">
+                    <h2 class="myshadow">Haqqimizda</h2>
+                </div>
+                <!--pager-content end-->
+                {{-- <h2 class="page-titlee">Shelly</h2> --}}
+            </div>
+        </section>
+        <!--pager-section end-->
 
-				<div class="abt-page-row">
-					<div class="row align-items-center">
-						@foreach($abouts as $about)
-						<div class="col-lg-6 col-md-6">
-							<div class="section-title">
-								<!-- <h2>Welcome to <br /> <span>TexnoPOS</span> IT School</h2> -->
-								<h2>{{$about->title}}</h2>
-								<p class="mw-100">
-									{{$about->text}}
-								</p>
-							<!-- 	<a href="classes.html" title="" class="btn-default">Kurslar <i class="fa fa-long-arrow-alt-right"></i></a> -->
-							</div><!--section-title end-->
-						</div>
-						<div class="col-lg-6 col-md-6 mb-5">
-							<div class="avt-img">
-								<img src="{{$about->img}}" alt="">
-							</div><!--avt-img end-->
-						</div>
-						@endforeach
-					</div>
-				</div><!--abt-page-row end-->
-			</div>
+        <section class="about-page-content">
+            <div class="container">
 
-		</section><!--about-page-content end-->
+                <div class="abt-page-row">
+                    <div class="row align-items-center">
+                        @foreach ($abouts as $about)
+                            <div class="col-lg-6 col-md-6">
+                                <div class="section-title">
+                                    <!-- <h2>Welcome to <br /> <span>TexnoPOS</span> IT School</h2> -->
+                                    <h2>{{ $about->title }}</h2>
+                                    <p class="mw-100">
+                                        {{ $about->text }}
+                                    </p>
+                                    <!-- 	<a href="classes.html" title="" class="btn-default">Kurslar <i class="fa fa-long-arrow-alt-right"></i></a> -->
+                                </div>
+                                <!--section-title end-->
+                            </div>
+                            <div class="col-lg-6 col-md-6 mb-5">
+                                <div class="avt-img">
+                                    <img src="{{ $about->img }}" alt="">
+                                </div>
+                                <!--avt-img end-->
+                            </div>
+                        @endforeach
+                    </div>
+                </div>
+                <!--abt-page-row end-->
+            </div>
 
-		{{-- <section class="benifit-section">
+        </section>
+        <!--about-page-content end-->
+
+        {{-- <section class="benifit-section">
 			<div class="container">
 				<div class="row align-items-center">
 					<div class="col-lg-6">
@@ -115,21 +122,22 @@
 			</div>
 		</section><!--benifit-section end--> --}}
 
-		<section class="classes-section">
-			<div class="container">
-				<div class="sec-title">
-					<h2 class="no-bg">Bizdin` Kurslar</h2>
-				</div><!--sec-title end-->
-				<div class="classes-sec">
+        <section class="classes-section">
+            <div class="container">
+                <div class="sec-title">
+                    <h2>Kurslar</h2>
+                </div>
+                <!--sec-title end-->
+                <div class="classes-sec">
                     <div class="row classes-carousel">
-						
+
                         @foreach ($courses as $course)
 
-                        <div class="col-lg-3 col-xs-12 col-sm-12 col-md-3" style="margin: 5px">
+                        <div class="col-lg-12 col-xs-12 col-sm-12 col-md-12">
                             <div class="classes-col wow fadeInUp" data-wow-duration="1000ms">
                                 <div class="class-thumb">
-                                    <img src="{{asset('assets/img/courses/'.$course->course_img)}}" alt="" class="w-100">
-                                    <a href="{{route('course_detail',['id'=>$course->id_course])}}"  title="Baylanis" class="crt-btn fas fa-pen-alt"></a>
+                                    <img src="{{ $course->course_img }}" alt="" class="w-100">
+                                    <a href="{{route('course_detail',['id'=>$course->id_course])}}" title="Baylanis" class="crt-btn fas fa-pen-alt"></a>
                                 </div>
                                 <div class="class-info">
                                     <h3><a href="{{ route('course_detail', ['id'=>$course->id_course]) }}" title="">{{$course->course_name}}</a></h3>
@@ -150,24 +158,30 @@
                         </div>
 
                         @endforeach
-                        
+
                     </div>
-			</div>
-		</section><!--classes-section end-->
-
-       
-		{{-- @include('includes.dizimnen-otuw') --}}
-		<!--newsletter-sec end-->
-
-		@include('includes.footer')
-		<!--footer end-->
-
-
-	</div>
+                    <div class="lnk-dv text-center">
+                        <a href="{{ route('get_courses') }}" title="" class="btn-default">Bárshe kurslar <i class="fa fa-long-arrow-alt-right"></i></a>
+                    </div>
+                </div>
+                <!--classes-sec end-->
+            </div>
+        </section>
+        <!--classes-section end-->
 
 
+        {{-- @include('includes.dizimnen-otuw') --}}
+        <!--newsletter-sec end-->
 
-	@include('includes.script')
+        @include('includes.footer')
+        <!--footer end-->
+
+
+    </div>
+
+
+
+    @include('includes.script')
 
 </body>
 

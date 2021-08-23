@@ -307,7 +307,7 @@
               <li class="maximize"><a class="text-dark" href="#!" onclick="javascript:toggleFullScreen()"><i data-feather="maximize"></i></a></li>
               <li class="profile-nav onhover-dropdown p-0 me-0">
                 <div class="media profile-media"><img class="b-r-10" src="../assets2/images/dashboard/profile.jpg" alt="">
-                  <div class="media-body"><span>Emay Walter</span>
+                  <div class="media-body"><span>Admin</span>
                     <p class="mb-0 font-roboto">Admin <i class="middle fa fa-angle-down"></i></p>
                   </div>
                 </div>
@@ -369,6 +369,7 @@
                   
                   <li class="sidebar-list"><a class="sidebar-link sidebar-title" href="#"><i data-feather="server"></i><span>Tables</span></a>
                     <ul class="sidebar-submenu">
+                        <li><a href="{{url('/frontend_seeimg')}}">Frontend</a></li>
                         <li><a href="{{url('/admincourse')}}">Kurslar</a></li>
                         <li><a href="{{url('/adminmentors')}}">Mentorlar</a></li>
                         <li><a href="{{url('/adminabouts')}}">About</a></li>

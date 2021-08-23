@@ -1,11 +1,4 @@
-/* @font-face {
-    font-family: "CustomFont";
-    src: url("CustomFont.eot");
-    src: url("CustomFont.woff") format("woff"),
-    url("CustomFont.otf") format("opentype"),
-    url("CustomFont.svg#filename") format("svg");
-    } */
-
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 @media only screen and (max-width: 576px) {
     .left_section {
         display: none;
@@ -27,7 +20,7 @@
 }
 
 .uran {
-    font-family: 'Bebas Neue';
+    font-family: 'Bebas Neue', cursive;
 }
 
 .card-price {
@@ -40,6 +33,7 @@
 }
 
 .parda {
+    border: solid red;
     width: 100%!important;
     height: 100vh!important;
     position: fixed;
@@ -52,17 +46,21 @@
 }
 
 .shadows {
+    border: solid;
+    background-color: #141518;
+    padding: 0px;
+    padding-left: 7%;
+    padding-right: 7%;
     font-weight: 700;
     position: relative;
     text-transform: uppercase;
-    text-shadow: -15px 5px 20px #010203;
-    color: rgb(110, 95, 95);
     letter-spacing: -0.05em;
-    font-family: 'Anton', Arial, sans-serif;
     user-select: none;
     text-transform: uppercase;
-    font-size: 150px;
+    font-size: 200px;
     transition: all 0.25s ease-out;
+    font-family: 'Bebas Neue', cursive;
+    color: white;
 }
 
 .shadows:hover {
@@ -71,11 +69,14 @@
 
 @media only screen and (max-width: 576px) {
     .shadows {
-        color: rgb(12, 0, 0);
+        border: none;
+        background-color: #141518;
+        color: rgb(255, 255, 255);
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
+        letter-spacing: 0.05em;
         font-weight: 600;
-        font-size: 60px;
+        font-size: 80px;
     }
 }
 

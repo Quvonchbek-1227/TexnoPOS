@@ -165,7 +165,7 @@ use SimpleSoftwareIO\QrCode\Facades\QrCode; ?>
                                     <img src="{{ $course->course_img }}" alt="" class="w-100">
                                     <a href="{{route('course_detail',['id'=>$course->id_course])}}" title="Baylanis" class="crt-btn fas fa-pen-alt"></a>
                                 </div>
-                                <div class="class-info">
+                                <div class="class-info" style="background-color:white">
                                     <h3><a href="{{ route('course_detail', ['id'=>$course->id_course]) }}" title="">{{$course->course_name}}</a></h3>
                                     <span class="ml-1">{{$course->days}}</span>
                                     <span>{{$course->sub_time}}</span>
@@ -272,7 +272,7 @@ use SimpleSoftwareIO\QrCode\Facades\QrCode; ?>
                                     <img src="{{ $blog->img }}" alt="" class="w-100">
                                     <span class="category">TEXNOPOS</span>
                                 </div>
-                                <div class="blog-info">
+                                <div class="blog-info" style="opacity: 1; background-color: white">
                                     <ul class="meta">
                                         <li><a href="{{ route('get_post', ['id'=>$blog->id]) }}" title="">{{$blog->date}}</a></li>
                                         {{-- <li><a href="#" title="">by Admin</a></li> --}}

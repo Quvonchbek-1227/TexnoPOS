@@ -31,6 +31,7 @@ use App\Http\Controllers\Admin\AdminProectsController;
 use App\Http\Controllers\Admin\AdminMentorTexController;
 use App\Http\Controllers\admin\AdminProgrammerTex;
 use App\Http\Controllers\admin\AdminStudentTexController;
+use App\Http\Controllers\admin\AdminCoursesBladeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -69,6 +70,17 @@ Route::get('/sle', function () {
 });
 
 Route::get('admin', [AdminController::class, 'gettables']);
+Route::get('logintoadmin', [AdminController::class, 'admincheck']);
+
+//Bas betdegi birinshi suretdi update qiluw ushin url lar
+Route::get('frontend_seeimg', [AdminController::class, 'frontend_seeimg']);
+Route::get('indexbladesetimg', [AdminController::class, 'indexbladesetimg']);
+Route::post('indexupdateimg', [AdminController::class, 'indexupdateimg']);
+
+Route::get('courses_index', [AdminController::class, 'courses_index']);
+Route::post('courses_update', [AdminController::class, 'courses_update']);
+
+
 Route::resource('admincourse', AdminCoursesController::class);
 Route::resource('adminmentors', AdminMentorsController::class);
 Route::resource('adminabouts', AdminAboutsController::class);
