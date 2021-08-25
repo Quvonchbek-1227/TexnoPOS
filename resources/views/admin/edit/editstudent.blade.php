@@ -99,11 +99,8 @@
                                                     <div class="mb-3 ">
                                                         <label>Qaysi Kursdi Bitirgen</label><br>
                                                         <select class="form-control" name="id_course" id="">
-                                                            <option value="{{$students[0]->id_course}}">{{$students[0]->course_name}}</option>
                                                             @foreach($courses as $course)
-                                                            @if($students[0]->id_course != $course->id)
-                                                            <option class="form-control" value="{{$course->id}}">{{$course->name}}</option>
-                                                            @endif
+                                                                <option class="form-control" value="{{$course->id}}">{{$course->name}}</option>
                                                             @endforeach
                                                         </select>
                                                     </div>

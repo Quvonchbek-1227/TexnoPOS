@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\student;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -101,11 +102,22 @@ class AdminStudentsController extends Controller
     public function edit($id)
     {
         $courses = DB::table('courses')->get();
+        // $students = DB::table('students')->where('id',$id)
+        // ->join('courses', 'courses.id', '=', 'students.id_course')
+        // ->get([
+        //     'students.*',
+        //     'courses.id as course_id',
+        //     'courses.name as course_name'
+        // ]);
         $students = DB::table('students')
-        ->select('students.*','courses.id as course_id', 'courses.name as course_name')
-        ->join('courses', 'courses.id', '=', 'students.id_course')
+        ->where('id',$id)
         ->get();
-        return view('admin.edit.editstudent', ['students' => $students, 'courses' => $courses]);
+
+        return view('admin.edit.editstudent', [
+            'students' => $students,
+             'courses' => $courses,
+             'id'=>$id
+            ]);
     }
     
 
