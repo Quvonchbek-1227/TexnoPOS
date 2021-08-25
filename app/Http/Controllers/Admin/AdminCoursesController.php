@@ -174,12 +174,13 @@ class AdminCoursesController extends Controller
             $file1 = $request->file('file1');
             $file1_name = $file1->getClientOriginalName();
             $file1_oldurl = Course::find($id)->file1;
-            if($file1_oldurl !== 'null'){
-                unlink(public_path(explode(URL::to('/'), $file1_oldurl)[1]));
-            }
+            
             $path = public_path('assets/img/courses/files/');
             $file1_url = asset('assets/img/courses/files/'.$file1_name);
             $file1->move($path, $file1_name);
+            if($file1_oldurl !== 'null'){
+                unlink(public_path(explode(URL::to('/'), $file1_oldurl)[1]));
+            }
         }
         else{
             $file1_url = Course::find($id)->file1;
@@ -188,12 +189,13 @@ class AdminCoursesController extends Controller
             $file2 = $request->file('file2');
             $file2_name = $file2->getClientOriginalName();
             $file2_oldurl = Course::find($id)->file2;
-            if($file2_oldurl !== 'null'){
-                unlink(public_path(explode(URL::to('/'), $file2_oldurl)[1]));
-            }
+            
             $path = public_path('assets/img/courses/files/');
             $file2_url = asset('assets/img/courses/files/'.$file2_name);
             $file2->move($path, $file2_name);
+            if($file2_oldurl !== 'null'){
+                unlink(public_path(explode(URL::to('/'), $file2_oldurl)[1]));
+            }
             
         }
         else{
@@ -203,12 +205,13 @@ class AdminCoursesController extends Controller
             $file3 = $request->file('file3');
             $file3_name = $file3->getClientOriginalName();
             $file3_oldurl = Course::find($id)->file3;
+           
+            $path = public_path('assets/img/courses/files/');
+            $file3_url = asset('assets/img/courses/files/'.$file3_name);
+            $file3->move($path, $file3_name); 
             if($file3_oldurl !== 'null'){
                 unlink(public_path(explode(URL::to('/'), $file3_oldurl)[1]));
             }
-            $path = public_path('assets/img/courses/files/');
-            $file3_url = asset('assets/img/courses/files/'.$file3_name);
-            $file3->move($path, $file3_name);
             
         }
         else{
@@ -219,10 +222,11 @@ class AdminCoursesController extends Controller
             $img = $request->img;
             $img_name = $img->getClientOriginalName();
             $img_oldurl = Course::find($id);
-            unlink(public_path(explode(URL::to('/'),$img_oldurl->img)[1]));
             $path = public_path('assets/img/courses/');
             $img_url = asset('assets/img/courses/'.$img_name);
-            $img->move($path,$img_name);
+            $img->move($path,$img_name); 
+            unlink(public_path(explode(URL::to('/'),$img_oldurl->img)[1]));
+            
         }else{
             $img_url = Course::find($id)->img;;
         }

@@ -45,7 +45,7 @@
                     <div class="page-title">
                         <div class="row">
                             <div class="col-12">
-                                <h3>Taza Kurs Kirituw!</h3>
+                                <h3>Bas Betge Suret Kiritiw!</h3>
                             </div>
                         </div>
                     </div>
@@ -56,7 +56,7 @@
                         <div class="col-sm-12">
                             <div class="card">
                                 <div class="card-body">
-                                    <form enctype="multipart/form-data" action="{{ url('courses_update') }}" method="post">
+                                    <form enctype="multipart/form-data" action="{{ url('index_addimg') }}" method="post">
                                         @csrf
                                         <div class="form theme-form">
                                             <div class="row">

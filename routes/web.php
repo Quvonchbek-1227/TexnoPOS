@@ -79,7 +79,7 @@ Route::get('frontend_seeimg', [AdminController::class, 'frontend_seeimg']);
 Route::get('indexbladesetimg', [AdminController::class, 'indexbladesetimg']);
 Route::post('indexupdateimg', [AdminController::class, 'indexupdateimg']);
 Route::get('index_createimg', [AdminController::class, 'index_createimg']);
-Route::get('index_addimg', [AdminController::class, 'index_addimg']);
+Route::post('index_addimg', [AdminController::class, 'index_addimg']);
 
 Route::get('courses_index', [AdminController::class, 'courses_index']);
 Route::post('courses_update', [AdminController::class, 'courses_update']);
