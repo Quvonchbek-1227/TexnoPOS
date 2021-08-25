@@ -47,12 +47,14 @@ class MainController extends Controller
 
         $gallery = DB::table('galerya')
         ->get();
+        $frontimg = DB::table('indexblade')->get();
 
         return view('index',[
             'courses'=>$courses,
             'blogs'=>$blogs,
             'events'=>$events,
-            'images'=>$gallery
+            'images'=>$gallery,
+            'frontimg'=>$frontimg
         ]);
 
     }

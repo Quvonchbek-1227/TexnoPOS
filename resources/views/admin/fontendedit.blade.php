@@ -66,30 +66,42 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
-                                        <div class="carousel-inner">
-                                            <div class="carousel-item active">
-                                                <img class="d-block img-thumbnail img-fluid"
-                                                    src="{{$index_img[0]->image}}">
-                                                <div class="carousel-caption d-md-block">
-                                                    <a href="{{ url('indexbladesetimg') }}" class="btn btn-success"><i class="fas fa-edit"></i></a>
-                                                    <p class="h6 bg-dark">Birinshi betdegi Suret</p>
+                                        <div class="d-flex justify-content-between">
+                                            <h4 class="">Bas Bet Sureti</h4>
+                                            <a href="{{ url('index_createimg') }}" class="btn btn-success"><i class="fas fa-plus"></i></a>
+                                        </div>
+                                        @if(count($index_img) != 0)
+                                            <div class="carousel-inner">
+                                                <div class="carousel-item active">
+                                                    <img class="d-block img-thumbnail img-fluid"
+                                                        src="{{$index_img[0]->image}}">
+                                                    <div class="carousel-caption d-md-block">
+                                                        <a href="{{ url('indexbladesetimg') }}" class="btn btn-success"><i class="fas fa-edit"></i></a>
+                                                        <p class="h6 bg-dark">Birinshi betdegi Suret</p>
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </div>
+                                        @endif
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
-                                        <div class="carousel-inner">
-                                            <div class="carousel-item active">
-                                                <img class="d-block img-thumbnail img-fluid"
-                                                    src="{{$courses_img[0]->image}}">
-                                                <div class="carousel-caption d-md-block">
-                                                    <a href="{{ url('courses_index')}}" class="btn btn-success"><i class="fas fa-edit"></i></a>
-                                                    <p class="h6 bg-dark">Kurslar betdegi Suret</p>
+                                        <div class="d-flex justify-content-between">
+                                            <h4 class="">Courses Betdegi Suret</h4>
+                                            <a href="{{ url('courses_create') }}" class="btn btn-success"><i class="fas fa-plus"></i></a>
+                                        </div>
+                                        @if (count($courses_img) != 0)
+                                            <div class="carousel-inner">
+                                                <div class="carousel-item active">
+                                                    <img class="d-block img-thumbnail img-fluid"
+                                                        src="{{$courses_img[0]->image}}">
+                                                    <div class="carousel-caption d-md-block">
+                                                        <a href="{{ url('courses_index')}}" class="btn btn-success"><i class="fas fa-edit"></i></a>
+                                                        <p class="h6 bg-dark">Kurslar betdegi Suret</p>
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </div>
+                                        @endif
                                     </div>
                                 </div>
                             </div>

@@ -45,7 +45,7 @@
                     <div class="page-title">
                         <div class="row">
                             <div class="col-12">
-                                <h3></h3>
+                                <h3>Taza Kurs Kirituw!</h3>
                             </div>
                         </div>
                     </div>
@@ -73,6 +73,9 @@
                                                 </div>
                                             </div>
                                     </form>
+                                    @isset($error)
+                                        <h5 style="color: red;">Bazada Suret Juklengen Iltimas Suretdi O`zgertin`!</h5>
+                                    @endisset
                                     </div>
                                 </div>
                             </div>

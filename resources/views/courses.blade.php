@@ -39,13 +39,16 @@
 
 		<section class="classes-page">
 			<div class="container">
-				<div class="classes-banner" style=" background-image: url({{asset('assets/img/kursbg.jpg')}});">
-					<span> </span>
+				@if (count($front_img) != 0)
+					<div class="classes-banner" style=" background-image: url({{ $front_img[0]->image }});">
+						<span> </span>
 
-					<h2 class="uran">Bilimge Ajiratilg`an Investitsiya En` Jaqsi <span class="text-center">Investitsiya!</span></h2>
-					
-					{{-- <a href="classes.html" title="" class="btn-default">Kurslar<i class="fa fa-long-arrow-alt-right"></i></a> --}}
-				</div><!--classes-banner end-->
+						<h2 class="uran">Bilimge Ajiratilg`an Investitsiya En` Jaqsi <span class="text-center">Investitsiya!</span></h2>
+						
+						{{-- <a href="classes.html" title="" class="btn-default">Kurslar<i class="fa fa-long-arrow-alt-right"></i></a> --}}
+					</div><!--classes-banner end-->
+				@endif
+
 				<div class="classes-section">
 					<div class="classes-sec">
 						<div class="row">

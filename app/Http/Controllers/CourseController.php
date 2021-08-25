@@ -67,9 +67,12 @@ class CourseController extends Controller
             'days'
         ])
         ->paginate(16);
+
+        $front_img = DB::table('coursesblade')->get();
         
         return view('courses',[
-            'courses'=>$courses
+            'courses'=>$courses,
+            'front_img'=>$front_img
         ]);
         //return $courses;
     }

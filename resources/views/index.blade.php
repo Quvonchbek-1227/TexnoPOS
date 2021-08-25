@@ -64,7 +64,9 @@ use SimpleSoftwareIO\QrCode\Facades\QrCode; ?>
                         </div>
                         <div class="col-lg-5 col-md-5">
                             <div class="banner-img wow zoomIn" data-wow-duration="1000ms">
-                                <img width='500' src="{{asset('assets/img/bala.jpg')}}" alt="">
+                                @if (count($frontimg) != 0)
+                                    <img width='500' src="{{ $frontimg[0]->image }}" alt="">
+                                @endif
                             </div>
                             <!--banner-img end-->
                             <div class=" wow zoomIn" data-wow-duration="1000ms"></div>

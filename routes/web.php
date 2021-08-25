@@ -72,13 +72,19 @@ Route::get('/sle', function () {
 Route::get('admin', [AdminController::class, 'gettables']);
 Route::get('logintoadmin', [AdminController::class, 'admincheck']);
 
-//Bas betdegi birinshi suretdi update qiluw ushin url lar
+
 Route::get('frontend_seeimg', [AdminController::class, 'frontend_seeimg']);
+
+//Bas betdegi birinshi suretdi update qiluw ushin url lar
 Route::get('indexbladesetimg', [AdminController::class, 'indexbladesetimg']);
 Route::post('indexupdateimg', [AdminController::class, 'indexupdateimg']);
+Route::get('index_createimg', [AdminController::class, 'index_createimg']);
+Route::get('index_addimg', [AdminController::class, 'index_addimg']);
 
 Route::get('courses_index', [AdminController::class, 'courses_index']);
 Route::post('courses_update', [AdminController::class, 'courses_update']);
+Route::get('courses_create', [AdminController::class, 'courses_create']);
+Route::post('courses_store', [AdminController::class, 'courses_store']);
 
 
 Route::resource('admincourse', AdminCoursesController::class);

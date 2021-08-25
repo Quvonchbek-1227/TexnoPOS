@@ -34,6 +34,7 @@ class AdminController extends Controller
     }
 
     public function frontend_seeimg(){
+        //Frontend degi suretlerdi admin panelde korsetip beruwshi funksiya
         $index_img = DB::table('indexblade')->get();
         $courses_img = DB::table('coursesblade')->get();
         return view('admin.fontendedit',[
@@ -42,9 +43,44 @@ class AdminController extends Controller
         ]);
     }
     public function indexbladesetimg(){
+        //Bas betdegi suretdin` ornina basqa suret qosuwshi viewdi ashatin funkciya
         return view('admin.edit.editindeximg');
     }
+
+    public function index_createimg(){
+        return view('admin.add.addindeximg');
+    }
+
+    public function index_addimg(Request $request){
+        if($request->hasFile('img')){
+            $db = DB::table('indexblade')->get();
+
+            if(count($db) === 0){
+                $img = $request->file('img');
+                $imgName = $img->getClientOriginalName();
+                $img_url = asset('assets/img/frontend/indexpage/' . $imgName);
+                $path = public_path('assets/img/frontend/indexpage/');
+                $img->move($path,$imgName);
+                DB::table('indexblade')->insert([
+                    'image'=>$img_url
+                ]);
+                return redirect('frontend_seeimg');
+
+            }else{
+                $error = true;
+                return view('admin.add.addcoursesimg',[
+                    'error'=>$error
+                ]);
+            }
+        }else{
+            return 'Error Suret Juklenbedi!';
+        }
+
+    }
+
     public function indexupdateimg(Request $request){
+        //Bas bet ushin kelgen suretdi update qilip beretin funkciya
+
        if($request->hasFile('rasim')){
         
         $img_oldurl = DB::table('indexblade')->get()[0]->image;
@@ -88,6 +124,33 @@ class AdminController extends Controller
             return 'error';
         }
 
+    }
+    
+    public function courses_create(){
+        return view('admin.add.addcoursesimg');
+    }
+    public function courses_store(Request $request){
+        
+        if($request->hasFile('img')){
+            $db = DB::table('coursesblade')->get();
+            if(count($db) === 0){
+                $img = $request->file('img');
+                $imgName = $img->getClientOriginalName();
+                $img_url = asset('assets/img/frontend/coursespage/' . $imgName);
+                $path = public_path('assets/img/frontend/coursespage/');
+                $img->move($path,$imgName);
+                DB::table('coursesblade')->insert([
+                    'image'=>$img_url
+                ]);
+                return redirect('frontend_seeimg');
+                
+            }else{
+                $error = true;
+                return view('admin.add.addcoursesimg',['error'=>$error]);
+            }
+        }else{
+            return 'Suret Kiritilmedi!';
+        }
     }
 
 
