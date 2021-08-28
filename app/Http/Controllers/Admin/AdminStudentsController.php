@@ -102,13 +102,6 @@ class AdminStudentsController extends Controller
     public function edit($id)
     {
         $courses = DB::table('courses')->get();
-        // $students = DB::table('students')->where('id',$id)
-        // ->join('courses', 'courses.id', '=', 'students.id_course')
-        // ->get([
-        //     'students.*',
-        //     'courses.id as course_id',
-        //     'courses.name as course_name'
-        // ]);
         $students = DB::table('students')
         ->where('id',$id)
         ->get();
@@ -116,7 +109,6 @@ class AdminStudentsController extends Controller
         return view('admin.edit.editstudent', [
             'students' => $students,
              'courses' => $courses,
-             'id'=>$id
             ]);
     }
     

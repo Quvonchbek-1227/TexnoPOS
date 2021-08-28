@@ -73,12 +73,11 @@
                                                 <th>portfolio_detail</th>
                                                 <th>experiense</th>
                                                 <th>bitirgen</th>
-                                                <th>course_name</th>
                                                 <th>telegram</th>
                                                 <th>facebook</th>
                                                 <th>instagram</th>
-                                                <th>img</th>
                                                 <th>birthday</th>
+                                                <th>img</th>
                                                 
                                                 <th btn btn-danger btn-sm><i class="fa fa-trash"></th>
                                                 <th><i class="fa fa-pencil"></th>
@@ -98,9 +97,8 @@
                                                     <td>{{$mentor->telegram}}</td>
                                                     <td>{{$mentor->facebook}}</td>
                                                     <td>{{$mentor->instagram}}</td>
-                                                    <td>{{$mentor->img}}</td>
                                                     <td>{{$mentor->birthday}}</td>
-
+                                                    <td>{{$mentor->img}}</td>
                                                    
                                                     
                                                     <td>

@@ -51,12 +51,7 @@ class AdminMentorsController extends Controller
         $telegram = $r->telegram;
         $facebook = $r->facebook;
         $instagram = $r->instagram;
-        $img = $r->img;
         $birthday = $r->birthday;
-
-        if(empty($img)){
-            $img = "file1";
-        }
 
         $created = DB::table('mentors')->insert([
             'full_name' => $full_name,
@@ -69,7 +64,7 @@ class AdminMentorsController extends Controller
             'telegram' => $telegram,
             'facebook' => $facebook,
             'instagram' => $instagram,
-            'img' => $img,
+            'img' => 'null',
             'birthday' => $birthday,
         ]);
 
